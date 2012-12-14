@@ -1,0 +1,53 @@
+
+
+Lottozahlen
+								posNr=4
+[0]		[1] 	[2]		[3]		[4]		[5]
+
+3		5		9		1		43		12
+
+
+3   <   5   stimmt
+
+3   <           9 stimmt
+
+3   <                   1 stimmt nicht --> tausche Ziffern
+
+1      5        9       3       43      12
+
+1   <                           43 stimmt
+
+1   <                                   12 stimmt
+
+---- erste Ziffer steht am richtigen Platz
+
+1     5   <  9 ....
+
+--- zweite Ziffer steht ---
+
+...
+
+
+[0]    [1]
+
+5       3
+
+merker = z[0] (==5)
+z[0] = z[1];
+
+3       3
+
+z[1] = merker
+
+3       5
+
+
+
+
+
+
+
+for(int i = 0, i<=5, i++){
+
+	System.out.println(lottozahlen[i]);
+}
