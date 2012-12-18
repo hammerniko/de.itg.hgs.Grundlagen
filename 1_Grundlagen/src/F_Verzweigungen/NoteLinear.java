@@ -12,23 +12,22 @@ public class NoteLinear {
         String meldung;
 
         System.out.print("Punkte maximal:\t");
-        punkteMax=s.nextDouble();
-        
+        punkteMax = s.nextDouble();
+
         System.out.print("Punkte erreicht:\t");
-        punkteErreicht=s.nextDouble();
-        
-        //VERARBEITUNG
-        if(punkteMax>punkteErreicht && punkteMax>0 && punkteErreicht>=0){
-            note = -5/punkteMax * punkteErreicht + 6;
-            meldung = "Ihre Note: \t"+note;
-        }
-        else{
+        punkteErreicht = s.nextDouble();
+
+        // VERARBEITUNG
+        if (punkteMax > punkteErreicht && punkteMax > 0 && punkteErreicht >= 0) {
+            note = -5 / punkteMax * punkteErreicht + 6;
+            meldung = "Ihre Note: \t" + note;
+        } else {
             meldung = "ungültige Eingabe";
         }
-        
-        //AUSGABE
+
+        // AUSGABE
         System.out.println(meldung);
-        
+
     }
 
 }
