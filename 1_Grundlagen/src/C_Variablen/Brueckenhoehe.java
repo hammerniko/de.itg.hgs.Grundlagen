@@ -13,12 +13,10 @@ public class Brueckenhoehe {
 				
 		System.out.print("Geben Sie die Zeit ein: ");
 		double zeit=sc.nextDouble();
-		
-		
 		double beschleunigung = 9.81; //Erdbeschleunigung in m/s^2
 		
 		//Verarbeitung
-		weg = 0.5 * beschleunigung * Math.pow(zeit, 2);
+		weg = 0.5 * beschleunigung * zeit * zeit;
 		
 		
 		//Ausgabe
