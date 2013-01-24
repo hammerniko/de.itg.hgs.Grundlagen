@@ -22,7 +22,7 @@ public class ErrateDieZahl {
 			
 			if(diff<diffVorher){
 				diffVorher = diff;
-				System.out.println("heiß");
+				System.out.println("heiss");
 			}
 			else if (diff==diffVorher){
 				System.out.println("lauwarm");
