@@ -9,7 +9,7 @@ public class Zufallszahl {
         do {
             zufallfzahl= (int) (Math.random()*100+1);
             System.out.println(zufallfzahl);
-        } while (zufallfzahl>20);
+        } while (zufallfzahl!=53);
        
         
         
