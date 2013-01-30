@@ -1,4 +1,4 @@
-package B_Ausgabe;
+package D_Eingabe;
 import java.util.Scanner;
 
 public class Eingabe {
