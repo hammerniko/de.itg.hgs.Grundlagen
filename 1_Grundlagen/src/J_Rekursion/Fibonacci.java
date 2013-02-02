@@ -3,7 +3,7 @@
  *
  * By Nikolai Hammer
  */
-package Rekursion;
+package J_Rekursion;
 
 public class Fibonacci {
     public static void main (String []args){

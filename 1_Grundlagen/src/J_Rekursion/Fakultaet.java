@@ -1,4 +1,4 @@
-package Rekursion;
+package J_Rekursion;
 
 public class Fakultaet {
     public static void main (String []args){
