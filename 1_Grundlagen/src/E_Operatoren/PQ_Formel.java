@@ -35,27 +35,3 @@ public class PQ_Formel {
 	}
 }
 
-/*
-
-Z:\java\Übungen\Pino.java> java PQ_Formel 4 6 9
-Dieses Polynom hat keine Nullstellen im reellen Zahlenraum
-
-Z:\java\Übungen\Pino.java> java PQ_Formel 4 -16 16
-Dieses Polynom biestzt nur eine Nullstelle:
- x=2.0
-
-Z:\java\Übungen\Pino.java> java PQ_Formel 4 -16 4
-Dieses Polynom besitzt zwei Nullstellen:
- x1=0.2679491924311228
- x2=3.732050807568877
-
-Z:\java\Übungen\Pino.java> java PQ_Formel 4 -16 0
-Dieses Polynom besitzt zwei Nullstellen:
- x1=0.0
- x2=4.0
-
-Z:\java\Übungen\Pino.java> java PQ_Formel 0 -16 0
-Es handelt sich nicht um ein Polynom zweiten Grades!
-Die Nullstele des eingegeben Polynoms ist:
- x=0.0
-*/
