@@ -2,7 +2,6 @@ package E_Operatoren;
 
 import java.util.Scanner;
 
-
 public class Brueckenhoehe {
 
     public static void main(String[] args) {
@@ -20,7 +19,7 @@ public class Brueckenhoehe {
         strecke = 0.5*g*zeit*zeit;
         
         //Ausgabe
-        System.out.println("Die Höhe der Brücke:"+strecke);
+        System.out.println("Die Höhe der Brücke:"+strecke+" m hoch");
         
 
     }
