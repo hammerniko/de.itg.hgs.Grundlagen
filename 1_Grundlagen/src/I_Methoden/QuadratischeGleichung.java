@@ -9,6 +9,11 @@ import java.util.Scanner;
 //Diskriminate  >0 -> 2 Lšsungen
 //Diskriminante <0 -> keine Lšsung
 //diskriminante =0 -> 1 Lšsung
+
+
+
+
+
 public class QuadratischeGleichung {
     // Eingabe
     static double a, b, c, d;
@@ -16,44 +21,71 @@ public class QuadratischeGleichung {
     public static void main(String[] args) {
 
         // Eingabe
-        String lšsung;
+        String ergebnis;
         eingabe();
+        
 
         // Verarbeitung
-        lšsung = loeseQuadratischeGleichung(a, b, c, d);
+        ergebnis = loeseQuadratischeGleichung(a, b, c, d);
 
         // Ausgabe
-        System.out.println(lšsung);
+        System.out.println(ergebnis);
     }
 
-    private static String loeseQuadratischeGleichung(double a, double b,
+    public static String loeseQuadratischeGleichung(double a, double b,
             double c, double d) {
+        
+        
         double x1;
         double x2;
         double diskriminante;
-        String lšsung;
-        // 7x^2+3x-17=0
+        String loesung;
+        
+        // 7x^2+3x-17=5
+        
         c = c - d;
         d = 0;
-        // x^2 + 3/7x -17/7 = 0
+        //7x^2+3x-22=0
+       
+        
+        // x^2 + 3/7x -22/7 = 0
         b = b / a;
         c = c / a;
         a = 1;
+        
         // Diskriminante
         diskriminante = (b * b / 4) - c;
+        
         if (diskriminante > 0) {
             x1 = -b / 2 + Math.sqrt(diskriminante);
             x2 = -b / 2 - Math.sqrt(diskriminante);
-            lšsung = "x1 = " + x1 + "\nx2 = " + x2;
+            loesung = "x1 = " + x1 + "\nx2 = " + x2;
         } else if (diskriminante == 0) {
             x1 = -b / 2;
-            lšsung = "x1 = " + x1;
+            loesung = "x1 = " + x1;
         } else {
-            lšsung = "Es gibt keine Lšsung";
+            loesung = "Es gibt keine Lšsung";
         }
-        return lšsung;
+        
+        
+        return loesung;
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public static void eingabe() {
         Scanner s = new Scanner(System.in);
         // 7x^2+3x-5=12
@@ -71,4 +103,16 @@ public class QuadratischeGleichung {
         d = s.nextDouble();
 
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
