@@ -10,10 +10,6 @@ import java.util.Scanner;
 //Diskriminante <0 -> keine Lšsung
 //diskriminante =0 -> 1 Lšsung
 
-
-
-
-
 public class QuadratischeGleichung {
     // Eingabe
     static double a, b, c, d;
@@ -22,75 +18,55 @@ public class QuadratischeGleichung {
 
         // Eingabe
         String ergebnis;
-        eingabe();
         
 
         // Verarbeitung
-        ergebnis = loeseQuadratischeGleichung(a, b, c, d);
+        ergebnis = loeseQuadratischeGleichung(2, 3, 5, 6);
 
         // Ausgabe
         System.out.println(ergebnis);
+        
+        
     }
 
-    public static String loeseQuadratischeGleichung(double a, double b,
-            double c, double d) {
-        
-        
+    public static String loeseQuadratischeGleichung(double a, double b, double c, double d) {
         double x1;
         double x2;
         double diskriminante;
         String loesung;
-        
-        // 7x^2+3x-17=5
-        
+
+        // bsp: 7x^2+3x-17=5
+        // wird umgeformt in 7x^2+3x-22=0
         c = c - d;
         d = 0;
-        //7x^2+3x-22=0
        
-        
+
         // x^2 + 3/7x -22/7 = 0
         b = b / a;
         c = c / a;
         a = 1;
-        
+
         // Diskriminante
         diskriminante = (b * b / 4) - c;
-        
+
         if (diskriminante > 0) {
             x1 = -b / 2 + Math.sqrt(diskriminante);
             x2 = -b / 2 - Math.sqrt(diskriminante);
             loesung = "x1 = " + x1 + "\nx2 = " + x2;
         } else if (diskriminante == 0) {
             x1 = -b / 2;
-            loesung = "x1 = " + x1;
+            loesung = "x = " + x1;
         } else {
             loesung = "Es gibt keine Lšsung";
         }
-        
-        
+
         return loesung;
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     public static void eingabe() {
         Scanner s = new Scanner(System.in);
-        // 7x^2+3x-5=12
-        System.out
-                .println("Geben sie die Koeffizienten der Quadratischen Gleichung ein:");
+       
+        System.out.println("Geben sie die Koeffizienten der Quadratischen Gleichung ein:");
         System.out.print("a: ");
         a = s.nextDouble();
         System.out.print("b: ");
@@ -103,16 +79,5 @@ public class QuadratischeGleichung {
         d = s.nextDouble();
 
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
 }

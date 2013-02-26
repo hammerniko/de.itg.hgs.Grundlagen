@@ -6,6 +6,8 @@ import javax.swing.JPanel;
 
 public class MeinPanel extends JPanel {
 
+    
+    
 	@Override
     protected void paintComponent(Graphics g) {
 	    
@@ -16,8 +18,13 @@ public class MeinPanel extends JPanel {
     }
 	
 	public void zeichneHaus(Graphics g, int posX, int posY){
-		g.drawLine(posX,posY,200,200);
+		g.drawLine(200,posY,200,200);
+		g.drawOval(10, 10, 50, 70);
+		
+	
 	}
+	
+	
 	
 	
 }
