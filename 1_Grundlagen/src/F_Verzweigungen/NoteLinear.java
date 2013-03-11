@@ -8,18 +8,18 @@ public class NoteLinear {
 
         // EINGABE
         Scanner s = new Scanner(System.in);
-        double punkteErreicht, punkteMax, note;
+        double pErr, pMax, note;
         String meldung;
 
         System.out.print("Punkte maximal:\t");
-        punkteMax = s.nextDouble();
+        pMax = s.nextDouble();
 
         System.out.print("Punkte erreicht:\t");
-        punkteErreicht = s.nextDouble();
+        pErr = s.nextDouble();
 
         // VERARBEITUNG
-        if (punkteMax > punkteErreicht && punkteMax > 0 && punkteErreicht >= 0) {
-            note = -5 / punkteMax * punkteErreicht + 6;
+        if (pMax > pErr && pMax > 0 && pErr >= 0) {
+            note = -5 / pMax * pErr + 6;
             meldung = "Ihre Note: \t" + note;
         } else {
             meldung = "ungültige Eingabe";
