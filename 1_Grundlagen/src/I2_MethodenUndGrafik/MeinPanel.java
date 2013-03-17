@@ -12,6 +12,7 @@ public class MeinPanel extends JPanel {
         super.paintComponent(g);
 
         zeichneRasen(g, 50);
+        zeichneZaun(g,this.getHeight()-80, 50,15,5);
 
     }
 
@@ -36,6 +37,21 @@ public class MeinPanel extends JPanel {
         
         g.drawLine(posX, this.getHeight() - hoehe, posX + deltaX,
                 this.getHeight() - hoehe - deltaHoehe);
+    }
+    
+    public void zeichneZaun(Graphics g, int posY,int hoehe,int lattenbreite, int lueckenbreite){
+        g.setColor(new Color(90,90,0));
+        
+        for (int x = 0; x < this.getWidth() - 1; x = x + lattenbreite+lueckenbreite) {
+            zeichneZaunpfahl(g, x, posY,hoehe,lattenbreite);
+        }
+        
+       g.drawRect(0, posY+hoehe/3, this.getWidth(), posY+(hoehe/3)+lattenbreite);
+        
+    }
+    
+    public void zeichneZaunpfahl(Graphics g, int posX,int posY, int hoehe,int breite){
+        g.fillRect(posX, posY, breite, hoehe);
     }
 
 }

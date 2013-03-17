@@ -5,15 +5,15 @@ public class Aufgabe1 {
 	public static void main(String[] args) {
 		
 		//Direkte initialisierung und Deklaration
-		String[] himmelsrichtung = {"Nord","Ost","Süd","West"};
+		String[] himmelsrichtung = {"Nord","Ost","SŸd","West"};
 		
 		//Ausgabe
 		//System.out.println(himmelsrichtung[3]);
-		System.out.println(himmelsrichtung.length);
+		himmelsrichtung[1]="Osten";
 		
 		
 		//Ausgabe des ganzen Arrays
-		for (int i = 0; i <= himmelsrichtung.length; i++) {
+		for (int i = 0; i < himmelsrichtung.length; i++) {
 			System.out.println(himmelsrichtung[i]);
 			
 		}
