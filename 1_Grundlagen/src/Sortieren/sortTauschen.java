@@ -1,7 +1,7 @@
-package H_Arrays;
+package Sortieren;
 
 
-public class sort {
+public class sortTauschen {
 
 	/**
 	 * @param args
