@@ -1,12 +1,18 @@
 package H_Arrays;
 public class Namen {
 
-	public static String[] namen = new String[29]; 
+	
 	
 	public static void main(String[] args) {
-		namen[0]="Assfalg";
-		namen[1]="Müller";
-		
+	    
+	    int[] lotto = {42,5,3,18,1,23}; 
+	    
+	    
+	    
+	    for (int i = 0; i < lotto.length; i++) {
+            System.out.println(lotto[i]);
+        }
+	    
 
 	}
 
