@@ -1,4 +1,14 @@
 package G_Schleifen;
+/**
+ * In diesem Spiel wird zu Beginn zufŠllig eine Zahl zwischen
+ * 1 und 100 gezogen.
+ * Dannach wird der Spieler aufgefordert eine Zahl einzugeben.
+ * Je nachdem wie nah die geratene Zahl beim Ergebnis
+ * liegt, sollen die Meldungen "hei§","lauwarm" und "kalt"
+ * ausgegeben werden.
+ * Die Anzahl der Versuche wird mitgezŠhlt und ausgegeben,
+ * wenn die Zahl erraten wurde.
+ */
 
 import java.util.Scanner;
 
