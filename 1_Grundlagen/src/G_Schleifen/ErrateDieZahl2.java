@@ -1,4 +1,8 @@
 package G_Schleifen;
+
+
+import java.util.Scanner;
+
 /**
  * In diesem Spiel wird zu Beginn zufällig eine Zahl zwischen
  * 1 und 100 gezogen.
@@ -9,9 +13,6 @@ package G_Schleifen;
  * Die Anzahl der Versuche wird mitgezählt und ausgegeben,
  * wenn die Zahl erraten wurde.
  */
-
-import java.util.Scanner;
-
 public class ErrateDieZahl2 {
 
     public static void main(String[] args) {
