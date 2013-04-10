@@ -38,7 +38,6 @@ public class ErrateDieZahl {
 		
 		System.out.println("Sie haben gewonnen mit "+anzahlVersuche+" Versuchen");
 		
-		
 	}
 
 }
