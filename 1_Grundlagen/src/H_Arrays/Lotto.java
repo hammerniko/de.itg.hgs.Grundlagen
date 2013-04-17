@@ -10,6 +10,9 @@ public class Lotto {
 
     }// end main
 
+    
+    
+    
     public static int[] sortiereLottoZahlen(int[] dieLottozahlen) {
         int[] sortierteLottozahlen = dieLottozahlen.clone();
         int merke;
@@ -21,38 +24,44 @@ public class Lotto {
                     merke = sortierteLottozahlen[i];
                     sortierteLottozahlen[i] = sortierteLottozahlen[j];
                     sortierteLottozahlen[j] = merke;
-                }
+                }//end if
 
                
-            }
-        }
+            }//End for (j)
+        }//End for (i)
         return sortierteLottozahlen;
     }
 
+    
+    
+    
+    
+    
+    
     public static int[] ziehe6aus49() {
-        int[] dieLottoZahlen = new int[6];
+        int[] dieLottozahlen = new int[6];
         boolean[] gezogeneZahlen = new boolean[49];
 
         // ZŠhle von 0 bis 5
-        for (int i = 0; i < dieLottoZahlen.length; i++) {
+        for (int i = 0; i < dieLottozahlen.length; i++) {
             // Wiederhole solange bis keine vorhandene Zahl
             // gezogen wird
 
             do {
                 // ziehe eine Zufallszahl zw. 1 und 49
-                dieLottoZahlen[i] = (int) (Math.random() * 49 + 1);
+                dieLottozahlen[i] = (int) (Math.random() * 49 + 1);
 
-            } while (gezogeneZahlen[dieLottoZahlen[i] - 1] == true);
+            } while (gezogeneZahlen[dieLottozahlen[i] - 1] == true);
 
             // Merke die gerade gezogene Zahl
-            gezogeneZahlen[dieLottoZahlen[i] - 1] = true;
-            haeufigkeitLotto[dieLottoZahlen[i]]++;
+            gezogeneZahlen[dieLottozahlen[i] - 1] = true;
+           
 
         }// end for
 
-        dieLottoZahlen = sortiereLottoZahlen(dieLottoZahlen);
+        dieLottozahlen = sortiereLottoZahlen(dieLottozahlen);
 
-        return dieLottoZahlen;
+        return dieLottozahlen;
     }
 
     public static void ausgabeLottozahlen(int[] dieLottozahlen) {
@@ -61,9 +70,7 @@ public class Lotto {
         }
         System.out.println("SZ:"+gibSuperzahl());
         
-        for (int i = 0; i < haeufigkeitLotto.length; i++) {
-            System.out.print(haeufigkeitLotto[i]+" ");
-        }
+       
     }
     
     public static int gibSuperzahl(){
