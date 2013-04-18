@@ -1,4 +1,4 @@
-package Sortieren;
+package N_Sortieren;
 
 
 public class sortTauschen {
