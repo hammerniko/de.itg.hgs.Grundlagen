@@ -9,8 +9,6 @@ public class Lotto {
         ausgabeLottozahlen(ziehe6aus49());
 
     }// end main
-
-    
     
     
     public static int[] sortiereLottoZahlen(int[] dieLottozahlen) {
@@ -25,8 +23,7 @@ public class Lotto {
                     sortierteLottozahlen[i] = sortierteLottozahlen[j];
                     sortierteLottozahlen[j] = merke;
                 }//end if
-
-               
+             
             }//End for (j)
         }//End for (i)
         return sortierteLottozahlen;
