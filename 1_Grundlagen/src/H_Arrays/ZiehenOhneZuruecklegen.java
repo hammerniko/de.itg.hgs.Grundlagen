@@ -7,8 +7,12 @@ public class ZiehenOhneZuruecklegen {
         int anz = 3;
         int[] zahlen = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-        ausgabe(ziehenOhneZuruecklegen(8, zahlen));
-        System.out.println("--");
+//        ausgabe(ziehenOhneZuruecklegen(8, zahlen));
+//        System.out.println("--");
+//        ausgabe(zahlen);
+        
+        zahlen = ziehenOhneZuruecklegen(3, zahlen);
+        
         ausgabe(zahlen);
 
     }
