@@ -1,4 +1,4 @@
-package Sortieren;
+package M_Sortieren;
 
 public class CopyOfInsertionSort {
 
