@@ -5,7 +5,7 @@ public class Aufgabe1 {
 	public static void main(String[] args) {
 		
 		//Direkte initialisierung und Deklaration
-		String[] himmelsrichtung = {"Nord","Ost","SŸd","West"};
+		String himmelsrichtung[] = {"Nord","Ost","SŸd","West"};
 		
 		
 		//System.out.println(himmelsrichtung[3]);
