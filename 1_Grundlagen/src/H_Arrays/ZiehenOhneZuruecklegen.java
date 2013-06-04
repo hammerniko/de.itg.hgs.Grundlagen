@@ -9,7 +9,7 @@ public class ZiehenOhneZuruecklegen {
         int[] zahlen = { 11, 23, 3, 41, 53, 632, 71, 8, 9 };
         String[] meineNamen = {"Max","leo","Gudrun","Hildegard"};
       
-        String[] gruppe = ziehenOhneZuruecklegen(4,meineNamen);
+        int[] gruppe = ziehenOhneZuruecklegen(3, zahlen);
        
         ausgabe(gruppe);
 
