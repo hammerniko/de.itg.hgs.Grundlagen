@@ -70,7 +70,7 @@ public class Getraenkeautomat {
 		System.out.println("2 Cent: \t"+zweiCent);
 		System.out.println("1 Cent: \t"+cent);
 		
-		
+		 
 		
 	}
 	
