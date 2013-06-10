@@ -1,5 +1,5 @@
 package H_Arrays;
-import java.text.Format;
+
 import java.util.Scanner;
 
 public class Getraenkeautomat {

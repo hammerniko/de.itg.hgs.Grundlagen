@@ -8,7 +8,6 @@ public class Gruppen {
     public static void main(String[] args) {
         //Eingabe
         int[] lotto = eingabe();
-        int merke;
         
         //VERARBEITUNG
         sortList(lotto);
