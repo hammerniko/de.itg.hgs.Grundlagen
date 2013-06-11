@@ -8,14 +8,21 @@ public class TTT {
 	static int[][] spielFeldDaten = new int[3][3];
 	static String[][] ausgabeSpielfeld= new String[3][3]; 
 	static int[] summe = new int[8];
+	
+	//Spielstatus
 	static final int FREI = 0;
 	static final int X = 1;
 	static final int O = -1;
+	static final int UNENTSCHIEDEN = 2;
+	
+	//Startzustand
 	static int aktuellerSpieler = X;
 	static int aktuellerStatus = 0;
-	static final int UNENTSCHIEDEN = 2;
+	static int anzahlFreierFelder=0;
+	
 	static Scanner s;
-	static int x,y;
+	static int x,y; //fŸr Umrechnung Ziffernblockeingabe in 2 Dim. Array
+	
 	
 	//***************Hauptprogramm*************************************
 	public static void main(String[] args) {
@@ -29,8 +36,9 @@ public class TTT {
 			setzeFeld();
 			wechsleSpieler();
 			ausgabeSpielFeld();			
+			
 	        
-		}while(Math.abs(pruefeObGewonnen())!=1);
+		}while(Math.abs(pruefeObGewonnen())!=1 && anzahlFreierFelder>0);
 		
 		
 		ausgabeErgebnis();
@@ -111,22 +119,31 @@ public class TTT {
     }
 
 	private static void ausgabeSpielFeld(){
+		setAnzahlFreieFelder();
+		System.out.println();
 		System.out.println("|-----------|");
 		System.out.println("| "+ausgabeSpielfeld[0][0]+" | "+ausgabeSpielfeld[0][1]+" | "+ausgabeSpielfeld[0][2]+" |");
 		System.out.println("|-----------|");
 		System.out.println("| "+ausgabeSpielfeld[1][0]+" | "+ausgabeSpielfeld[1][1]+" | "+ausgabeSpielfeld[1][2]+" |");
 		System.out.println("|-----------|");
 		System.out.println("| "+ausgabeSpielfeld[2][0]+" | "+ausgabeSpielfeld[2][1]+" | "+ausgabeSpielfeld[2][2]+" |");
+		System.out.println("|-----------|");
+		System.out.println();
 	}
 	
 	private static void setSpielStand(){
 		spielFeldDaten[0][0] = -1; spielFeldDaten[0][1] = -1; spielFeldDaten[0][2] = 1;
 		spielFeldDaten[1][0] = 1; spielFeldDaten[1][1] = 1;  spielFeldDaten[1][2] = +1;
-		spielFeldDaten[2][0] = 1; spielFeldDaten[2][1] = -1;  spielFeldDaten[2][2] = 0;
+		spielFeldDaten[2][0] = 1; spielFeldDaten[2][1] = -1;  spielFeldDaten[2][2] = 1;
+		
 	}
 	
 	private static int pruefeObGewonnen(){
 		
+		if (anzahlFreierFelder==0) {
+	        aktuellerStatus = UNENTSCHIEDEN;
+        }
+		else{
 		for (int i = 0; i < summe.length; i++) {
 	        summe[i]=0;
         }
@@ -152,8 +169,20 @@ public class TTT {
 			}//end if
 		}//end for summen prüfen
 
-		
+		}
 		return aktuellerStatus;
 	}
+	
+	private static void setAnzahlFreieFelder(){
+		anzahlFreierFelder=0;
+		for (int i = 0; i < spielFeldDaten.length; i++) {
+	        for (int j = 0; j < spielFeldDaten.length; j++) {
+	            if(spielFeldDaten[i][j]==FREI){
+	            	anzahlFreierFelder++;
+	            }
+            }
+        }
+	}
+	
 
 }
