@@ -1,65 +1,159 @@
 package H_Arrays;
+
+import java.util.Scanner;
+
 public class TTT {
 	
 	//Klassenvariable
-	static int[][] spielFeld = new int[3][3];
+	static int[][] spielFeldDaten = new int[3][3];
+	static String[][] ausgabeSpielfeld= new String[3][3]; 
 	static int[] summe = new int[8];
+	static final int FREI = 0;
+	static final int X = 1;
+	static final int O = -1;
+	static int aktuellerSpieler = X;
+	static int aktuellerStatus = 0;
+	static final int UNENTSCHIEDEN = 2;
+	static Scanner s;
+	static int x,y;
 	
 	//***************Hauptprogramm*************************************
 	public static void main(String[] args) {
-		
+		s = new Scanner(System.in);
 		initSpielFeld();
-		setSpielStand();	
-		ausgabeSpielFeld();
-		pruefeObGewonnen();
+		zeigeBegruessung();
+		
+		
+		
+		do {
+			setzeFeld();
+			wechsleSpieler();
+			ausgabeSpielFeld();			
+	        
+		}while(Math.abs(pruefeObGewonnen())!=1);
+		
+		
+		ausgabeErgebnis();
+		
+		
 		
 	}//Ende *************Mainmethode***********************************
+
+	private static void ausgabeErgebnis() {
+	    if(aktuellerStatus==UNENTSCHIEDEN){
+			System.out.println("UNENTSCHIEDEN");
+		}
+		else{
+			System.out.println("Spieler "+aktuellerStatus+" hat gewonnen.");
+		}
+    }
 	
+	private static void wechsleSpieler() {
+	    aktuellerSpieler = aktuellerSpieler*-1;
+	    
+    }
+
+	private static boolean setzeFeld() {
+		boolean gesetzt=false;
+		System.out.println("Geben Sie Ihr Feld ein:");
+		System.out.println("Spieler "+aktuellerSpieler+":");
+	    int feldNr = s.nextInt();
+	    switch (feldNr) {
+		case 1: x=0; y=2;break;
+		case 2: x=1; y=2;break;
+		case 3: x=2; y=2;break;
+		case 4: x=0; y=1;break;
+		case 5: x=1; y=1;break;
+		case 6: x=2; y=1;break;
+		case 7: x=0; y=0;break;
+		case 8: x=1; y=0;break;
+		case 9: x=2; y=0;break;
+		
+	    }
+	    if(spielFeldDaten[y][x]==FREI){
+			spielFeldDaten[y][x]=aktuellerSpieler;
+			gesetzt=true;
+	    }
+	    else{
+	    	setzeFeld();
+	    	
+	    }
+	    setzeAusgabeFeld(y, x);
+	    return gesetzt;
+	}
+
+    
+
+	private static void zeigeBegruessung() {
+	    System.out.println("Tic TAc Toe 1.0");
+	    System.out.println("***************");
+	    System.out.println();
+    }
+
 	//neue Methode zur Initialisierung des Spielfeldes
-	public static void initSpielFeld(){
-		//quelltext, was die Methode tun soll.
-		System.out.println("initSpielFeld ausgeführt");
-		spielFeld[0][0] = 0; spielFeld[0][1] = 0; spielFeld[0][2] = 0;
-		spielFeld[1][0] = 0; spielFeld[1][1] = 0;  spielFeld[1][2] = 0;
-		spielFeld[2][0] = 0; spielFeld[2][1] = 0;  spielFeld[2][2] = 0;
+	private static void initSpielFeld(){
+		for (int i = 0; i < spielFeldDaten.length; i++) {
+	        for (int j = 0; j < spielFeldDaten.length; j++) {
+	        	spielFeldDaten[i][j] = FREI;
+	        	setzeAusgabeFeld(i,j);
+            }
+        }
 	}
 	
-	public static void ausgabeSpielFeld(){
-		System.out.println(""+spielFeld[0][0]+"\t"+spielFeld[0][1]+"\t"+spielFeld[0][2]);
-		System.out.println(""+spielFeld[1][0]+"\t"+spielFeld[1][1]+"\t"+spielFeld[1][2]);
-		System.out.println(""+spielFeld[2][0]+"\t"+spielFeld[2][1]+"\t"+spielFeld[2][2]);
+	private static void setzeAusgabeFeld(int i, int j) {
+	   switch (spielFeldDaten[i][j]) {
+	   case 1: ausgabeSpielfeld[i][j]="X";break;
+	   case -1: ausgabeSpielfeld[i][j]="O";break;
+	   case 0: ausgabeSpielfeld[i][j]=" ";break;
+	
+	   }
+	
+    }
+
+	private static void ausgabeSpielFeld(){
+		System.out.println("|-----------|");
+		System.out.println("| "+ausgabeSpielfeld[0][0]+" | "+ausgabeSpielfeld[0][1]+" | "+ausgabeSpielfeld[0][2]+" |");
+		System.out.println("|-----------|");
+		System.out.println("| "+ausgabeSpielfeld[1][0]+" | "+ausgabeSpielfeld[1][1]+" | "+ausgabeSpielfeld[1][2]+" |");
+		System.out.println("|-----------|");
+		System.out.println("| "+ausgabeSpielfeld[2][0]+" | "+ausgabeSpielfeld[2][1]+" | "+ausgabeSpielfeld[2][2]+" |");
 	}
 	
-	public static void setSpielStand(){
-		spielFeld[0][0] = -1; spielFeld[0][1] = -1; spielFeld[0][2] = 1;
-		spielFeld[1][0] = 1; spielFeld[1][1] = 1;  spielFeld[1][2] = +1;
-		spielFeld[2][0] = 1; spielFeld[2][1] = -1;  spielFeld[2][2] = 0;
+	private static void setSpielStand(){
+		spielFeldDaten[0][0] = -1; spielFeldDaten[0][1] = -1; spielFeldDaten[0][2] = 1;
+		spielFeldDaten[1][0] = 1; spielFeldDaten[1][1] = 1;  spielFeldDaten[1][2] = +1;
+		spielFeldDaten[2][0] = 1; spielFeldDaten[2][1] = -1;  spielFeldDaten[2][2] = 0;
 	}
 	
-	public static void pruefeObGewonnen(){
-		//Prüfung...
-		System.out.println("prüfe...");
-		int gewinner=0;
+	private static int pruefeObGewonnen(){
+		
+		for (int i = 0; i < summe.length; i++) {
+	        summe[i]=0;
+        }
+		
+		
 		
 		for (int i = 0; i <= 2; i++) {
-			summe[0] += spielFeld[0][i];
-			summe[1] += spielFeld[1][i];
-			summe[2] += spielFeld[2][i];
-			summe[3] += spielFeld[i][0];
-			summe[4] += spielFeld[i][1];
-			summe[5] += spielFeld[i][2];
-			summe[6] += spielFeld[i][i];
-			summe[7] += spielFeld[2 - i][i];
+			summe[0] += spielFeldDaten[0][i];
+			summe[1] += spielFeldDaten[1][i];
+			summe[2] += spielFeldDaten[2][i];
+			summe[3] += spielFeldDaten[i][0];
+			summe[4] += spielFeldDaten[i][1];
+			summe[5] += spielFeldDaten[i][2];
+			summe[6] += spielFeldDaten[i][i];
+			summe[7] += spielFeldDaten[2 - i][i];
 		}//end for summen bilden
 		
 		for (int i = 0; i <= 7; i++) {
 			if (Math.abs(summe[i]) == 3) {
-				gewinner = summe[i] / 3;
+				aktuellerStatus = summe[i] / 3;
+				
 				break;
 			}//end if
 		}//end for summen prüfen
 
-		System.out.println(""+gewinner+" hat gewonnen");
+		
+		return aktuellerStatus;
 	}
 
 }
