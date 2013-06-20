@@ -1,6 +1,7 @@
 package H_Arrays;
 
 import java.util.Scanner;
+import org.omg.CosNaming.IstringHelper;
 
 public class TTT {
 	
@@ -30,14 +31,11 @@ public class TTT {
 		initSpielFeld();
 		zeigeBegruessung();
 		
-		
-		
 		do {
 			setzeFeld();
 			wechsleSpieler();
 			ausgabeSpielFeld();			
 			
-	        
 		}while(Math.abs(pruefeObGewonnen())!=1 && anzahlFreierFelder>0);
 		
 		
@@ -63,6 +61,7 @@ public class TTT {
 
 	private static boolean setzeFeld() {
 		boolean gesetzt=false;
+		boolean istEingabeGueltig=true;
 		System.out.println("Geben Sie Ihr Feld ein:");
 		System.out.println("Spieler "+aktuellerSpieler+":");
 	    int feldNr = s.nextInt();
@@ -77,8 +76,10 @@ public class TTT {
 		case 8: x=1; y=0;break;
 		case 9: x=2; y=0;break;
 		
+		default:  istEingabeGueltig = false;
+		
 	    }
-	    if(spielFeldDaten[y][x]==FREI){
+	    if(spielFeldDaten[y][x]==FREI && istEingabeGueltig){
 			spielFeldDaten[y][x]=aktuellerSpieler;
 			gesetzt=true;
 	    }
