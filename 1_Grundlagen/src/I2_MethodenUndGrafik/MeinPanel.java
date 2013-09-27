@@ -12,7 +12,7 @@ public class MeinPanel extends JPanel {
         super.paintComponent(g);
 
         zeichneRasen(g, 50);
-        zeichneZaun(g,this.getHeight()-80, 50,15,5);
+        //zeichneZaun(g,this.getHeight()-80, 50,15,5);
 
     }
 
