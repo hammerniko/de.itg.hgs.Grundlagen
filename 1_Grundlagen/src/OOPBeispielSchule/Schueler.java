@@ -1,7 +1,8 @@
 package OOPBeispielSchule;
 
 public class Schueler {
-    
+	
+    private Schulklasse schulklasse;
     private String name;
     private String vorname;
     private String strasse;
@@ -80,17 +81,25 @@ public class Schueler {
 
     @Override
     public String toString() {
-        String str = this.name+", "+this.vorname+" "
+        String str = this.name+", "+this.vorname+" \n"
                      +this.strasse+" "
-                     +this.hausnummer+" "
+                     +this.hausnummer+" \n"
                      +this.plz+" "
-                     +this.ort;
+                     +this.ort
+                     +this.schulklasse.toString();
         
         return str;
     }
 
 
-    
+    public Schulklasse getSchulklasse() {
+    	return schulklasse;
+    }
+
+
+	public void setSchulklasse(Schulklasse schulklasse){
+    	this.schulklasse = schulklasse;
+    }
     
 
 }
