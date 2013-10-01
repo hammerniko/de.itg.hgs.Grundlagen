@@ -1,6 +1,6 @@
 package I_Methoden;
 
-public class MethodenMitRŸckgabewert {
+public class MethodenMitRueckgabewert {
 
     public static void main(String[] args) {
         //Eingabe
