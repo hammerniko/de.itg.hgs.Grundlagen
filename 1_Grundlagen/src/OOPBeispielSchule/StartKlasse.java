@@ -20,6 +20,9 @@ public class StartKlasse {
      
      //Ausgabe der SchŸlerdaten Ÿber toString Methoden beider Objekte
      System.out.println(s1);
+     
+     //Nur Klassendaten ausgeben
+     System.out.println(s1.getSchulklasse());
        
     }
 
