@@ -5,25 +5,32 @@ public class StartKlasse {
     
     public static void main(String[] args) {
      
-     //Schuelerobjekt erstellen	
-     Schueler s1 = new Schueler("Maier","Max");
-     s1.setOrt("Singen");
-     s1.setPlz(78224);
+     Schueler dieSchueler[] = new Schueler[3];
      
-     //Objekt einerSchulklasse erstellen
-     Schulklasse tg113 = new Schulklasse("TG11-3");
-     tg113.setBeschreibung("Erstes Jahr am Informationstechnischen Gymnasium");
+     dieSchueler[0] = new Schueler("Sdrenka", "Steffen");
+     dieSchueler[1] = new Schueler("Widmann", "Manuel");
+     dieSchueler[2] = new Schueler("Renault", "Yves");
      
-     //Assoziation "Schueler kennt seine Klasse" setzen
-     s1.setSchulklasse(tg113);
-    
+     dieSchueler[1].setOrt("Hilzingen");
      
-     //Ausgabe der Schuelerdaten Ÿber toString Methoden beider Objekte
-     System.out.println(s1);
      
-     //Nur Klassendaten ausgeben
-     System.out.println(s1.getSchulklasse());
-       
+     
+     Schulklasse tg113 = new Schulklasse("Tg11-3");
+     Schulklasse tg123 = new Schulklasse("Tg12-3");
+     tg123.setBeschreibung("Jahrgangsstufe 1");
+     
+     for (int i = 0; i < dieSchueler.length; i++) {
+        dieSchueler[i].setSchulklasse(tg123);
+   
+    }
+     
+    dieSchueler[1].setSchulklasse(tg113); 
+     
+    for (int i = 0; i < dieSchueler.length; i++) {
+        System.out.println(dieSchueler[i]); ;
+   
+    }
+     
     }
 
 }

@@ -3,6 +3,7 @@ package P1_OOPBeispielSchule;
 public class Schueler {
 	
     private Schulklasse schulklasse;
+    
     private String name;
     private String vorname;
     private String strasse;
@@ -86,7 +87,7 @@ public class Schueler {
                      +this.hausnummer+" \n"
                      +this.plz+" "
                      +this.ort
-                     +this.schulklasse.toString();
+                     +this.schulklasse;
         
         return str;
     }
@@ -98,7 +99,12 @@ public class Schueler {
 
 
 	public void setSchulklasse(Schulklasse schulklasse){
+    
+    	if(this.schulklasse != null){
+    	    this.schulklasse.setAnzahlSchueler(this.schulklasse.getAnzahlSchueler()-1);
+    	}
     	this.schulklasse = schulklasse;
+    	schulklasse.setAnzahlSchueler(schulklasse.getAnzahlSchueler()+1);
     }
     
 

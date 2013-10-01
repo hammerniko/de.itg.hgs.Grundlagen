@@ -4,9 +4,9 @@ public class Schulklasse {
 	
 	private String klassenname;
 	private String beschreibung;
+	private int anzahlSchueler;
 
 	public Schulklasse(String klassenname) {
-	    super();
 	    this.klassenname = klassenname;
     }
 
@@ -29,8 +29,16 @@ public class Schulklasse {
 	@Override
     public String toString() {
 	    String str;
-	    str = "\nKlasse:"+klassenname + " " + beschreibung;
+	    str = "\n"+anzahlSchueler+" Klasse:"+klassenname + " " + beschreibung;
 	    return str;
+    }
+
+    public int getAnzahlSchueler() {
+        return anzahlSchueler;
+    }
+
+    public void setAnzahlSchueler(int anzahlSchueler) {
+        this.anzahlSchueler = anzahlSchueler;
     }
 	
 	
