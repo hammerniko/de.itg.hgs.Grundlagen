@@ -1,6 +1,6 @@
-package OOP;
+package P_OOP;
 
-import OOPBeispielSchule.Lehrer;
+import P1_OOPBeispielSchule.Lehrer;
 
 public class ErzeugeLehrerObjekte {
 

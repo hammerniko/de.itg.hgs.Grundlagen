@@ -1,4 +1,4 @@
-package OOP;
+package P_OOP;
 
 import java.awt.Event;
 import java.awt.EventQueue;

@@ -1,4 +1,4 @@
-package OOP;
+package P_OOP;
 
 //Minimalbeispiel für
 //bidirektionale Assoziation

@@ -1,4 +1,4 @@
-package OOPBeispielSchule;
+package P1_OOPBeispielSchule;
 
 public class Lehrer {
     
