@@ -2,7 +2,8 @@ package P1_OOPBeispielSchule;
 
 public class Schueler {
 	
-    private Schulklasse schulklasse;
+    //Attribut für Assoziation
+    private Schulklasse dieSchulklasse;
     
     private String name;
     private String vorname;
@@ -16,6 +17,7 @@ public class Schueler {
     //Standard Konstruktor
     //initialisiert alle Attribute
     private Schueler() {
+        
         this.name = "Mustermann";
         this.vorname = "Max";
         this.strasse ="Uhlandstrasse";
@@ -87,25 +89,31 @@ public class Schueler {
                      +this.hausnummer+" \n"
                      +this.plz+" "
                      +this.ort
-                     +this.schulklasse;
+                     +this.dieSchulklasse+"\n-----";
         
         return str;
     }
 
 
     public Schulklasse getSchulklasse() {
-    	return schulklasse;
+    	return dieSchulklasse;
     }
 
 
+    //Methode zur Herstellung der Assoziation
+    //auf ein bestehendes Schulklassenobjekt
+    //Sobald ein Schüler einer Schulklasse zugeordnet wird, wird geprüft,
+    //ob er schon in einer Klasse war. Ist dies der Fall, wird die Anzahl der Schüler in dieser
+    //Klasse um 1 erniedrigt.
+    //In der neuen Klasse wird die Anzahl der Schüler dann um 1 erhöht.
 	public void setSchulklasse(Schulklasse schulklasse){
     
-    	if(this.schulklasse != null){
-    	    this.schulklasse.setAnzahlSchueler(this.schulklasse.getAnzahlSchueler()-1);
+    	if(this.dieSchulklasse != null){
+    	    this.dieSchulklasse.setAnzahlSchueler(this.dieSchulklasse.getAnzahlSchueler()-1);
     	}
-    	this.schulklasse = schulklasse;
+    	
+    	this.dieSchulklasse = schulklasse;
     	schulklasse.setAnzahlSchueler(schulklasse.getAnzahlSchueler()+1);
     }
-    
-
+ 
 }

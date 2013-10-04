@@ -29,7 +29,7 @@ public class Schulklasse {
 	@Override
     public String toString() {
 	    String str;
-	    str = "\n"+anzahlSchueler+" Klasse:"+klassenname + " " + beschreibung;
+	    str = "\n"+"Klasse:"+klassenname + " ("+anzahlSchueler+" Schüler) \n" + beschreibung;
 	    return str;
     }
 
