@@ -10,6 +10,8 @@ public class Dreieck {
 	public static void main(String[] args) {
 	    //**********************************EINGABE
 	    Scanner s = new Scanner(System.in);
+	    //
+	    
 	    
 	    //Deklaration
 	    double hoehe, grundseite, flaeche;
