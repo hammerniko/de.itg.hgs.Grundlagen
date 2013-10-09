@@ -1,6 +1,10 @@
 package P1_OOPBeispielSchule;
 
+
+
 public class Schueler {
+	
+	
 	
     private Schulklasse schulklasse;
     private String name;
