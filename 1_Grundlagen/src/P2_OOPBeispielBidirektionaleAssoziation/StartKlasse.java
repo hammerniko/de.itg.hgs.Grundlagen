@@ -2,16 +2,14 @@ package P2_OOPBeispielBidirektionaleAssoziation;
 
 public class StartKlasse {
 
-    /**
-     * @param args
-     */
+    //Im Einstiegspunkt des Programms
+    //wird ein Objekt der grafischen Oberfläche
+    //erzeugt und sichtbar gemacht.
+    
     public static void main(String[] args) {
         Gui s1 = new Gui();
         s1.setVisible(true);
-        
        
-        
-        
     }
 
 }
