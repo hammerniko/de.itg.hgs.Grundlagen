@@ -1,0 +1,22 @@
+package P3b_BidirektionaleAssoziation_n_m;
+
+public class Bewertung {
+	
+	int schuelerNr;
+	int fachNr;
+	
+	double note;
+	double gewichtung;
+	
+	public Bewertung(int schuelerNr, int fachNr, double note, double gewichtung) {
+	    super();
+	    this.schuelerNr = schuelerNr;
+	    this.fachNr = fachNr;
+	    this.note = note;
+	    this.gewichtung = gewichtung;
+    }
+	
+	
+	
+	
+}
