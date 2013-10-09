@@ -14,4 +14,11 @@ public class Kind extends Person{
 			m.addKind(this);
 		}
 	}
+
+	@Override
+    public String toString() {
+	    return super.toString()+ " Mutter=" + mutter.getVorname() + "]";
+    }
+	
+	
 }

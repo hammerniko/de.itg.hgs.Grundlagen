@@ -1,4 +1,4 @@
-package P3b_BidirektionaleAssoziation_n_m;
+package P3b_BidirektionaleAssoziation_n_m_DAO_Pattern;
 
 public class Fach {
 	private int idFach;
