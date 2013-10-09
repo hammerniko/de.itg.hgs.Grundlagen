@@ -1,4 +1,4 @@
-package D_Eingabe;
+package A5_Eingabe;
 import java.util.Scanner;
 
 public class Eingabe {

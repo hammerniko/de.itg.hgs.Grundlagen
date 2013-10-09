@@ -1,4 +1,4 @@
-package B_Ausgabe;
+package A2_Ausgabe;
 
 public class KonsolenAusgabe {
   

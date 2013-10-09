@@ -1,4 +1,4 @@
-package C_Variablen;
+package A3_Variablen;
 
 import java.util.Scanner;
 

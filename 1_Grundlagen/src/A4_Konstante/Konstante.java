@@ -1,4 +1,4 @@
-package C1_Konstante;
+package A4_Konstante;
 import java.awt.Color;
 import java.util.Scanner;
 
