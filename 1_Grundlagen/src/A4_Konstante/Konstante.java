@@ -13,7 +13,7 @@ public class Konstante implements Physik,Elektrotechnik	{
 		fallzeit = s.nextDouble();
 				
 		//************************************VERABEITUNG
-		hoehe = 0.5 * FALLBESCHLEUNIGUNG * fallzeit*fallzeit;
+		hoehe = 0.5 * Physik.FALLBESCHLEUNIGUNG * fallzeit*fallzeit;
 		
 		
 		//************************************AUSGABE

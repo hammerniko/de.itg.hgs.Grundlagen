@@ -4,27 +4,19 @@ import java.util.Scanner;
 
 public class Dreieck {
 
-    
+  
  
 	
 	public static void main(String[] args) {
 	    //**********************************EINGABE
-	    Scanner s = new Scanner(System.in);
-	    //
-	    
-	    
 	    //Deklaration
-	    double hoehe, grundseite, flaeche;
+	    double hoehe, grundseite, flaeche;  
+	    
 	    
 	    //Initialisierung (hier nicht zwingend notwendig)
-	    hoehe = 0; grundseite = 0; flaeche = 0;
-	    
-	    System.out.print("Höhe: \t\t");
-	    hoehe=s.nextDouble();
-	    
-	    System.out.print("Grundseite:\t");
-	    grundseite = s.nextDouble();
-	    
+	    hoehe = 5.8; 
+	    grundseite = 4.5; 
+	    flaeche = 0;
 	    
 	    
 	    //********************************VERARBEITUNG
@@ -34,7 +26,7 @@ public class Dreieck {
 	            
 	    
 	    //*********************************AUSGABE
-	    System.out.println("Die Fläche des Dreicks:"+flaeche+" cm^2");
+	    System.out.println(flaeche);
 		
 	}//ende main
 
