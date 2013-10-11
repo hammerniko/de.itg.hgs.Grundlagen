@@ -7,8 +7,8 @@ public class StartKlasse {
     //erzeugt und sichtbar gemacht.
     
     public static void main(String[] args) {
-        Gui s1 = new Gui();
-        s1.setVisible(true);
+        Gui g = new Gui();
+        g.setVisible(true);
        
     }
 

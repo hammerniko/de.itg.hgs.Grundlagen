@@ -13,17 +13,13 @@ public class Steuerung {
         //Ab diesem Zeitpunkt kennt auch dieSteuerung
         //dieGui
         dieGui = eineGui;
-      
     }
     
     //Methode welche eine Botschaft an
     //dieGui sendet
     public void steuerungsTestMethode(){
         System.out.println("Methode in der Steuerung");
-        
         dieGui.aktualisiereStatus("Steuerung angesprochen");
-      
-        
-    }
+   }
 
 }

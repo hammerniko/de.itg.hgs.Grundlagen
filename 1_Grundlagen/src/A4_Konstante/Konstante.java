@@ -1,8 +1,8 @@
 package A4_Konstante;
-import java.awt.Color;
+
 import java.util.Scanner;
 
-public class Konstante implements Physik,Elektrotechnik	{
+public class Konstante implements Physik{
 	
 	public static void main(String[] args) {
 
@@ -13,7 +13,7 @@ public class Konstante implements Physik,Elektrotechnik	{
 		fallzeit = s.nextDouble();
 				
 		//************************************VERABEITUNG
-		hoehe = 0.5 * Physik.FALLBESCHLEUNIGUNG * fallzeit*fallzeit;
+		hoehe = 0.5 * FALLBESCHLEUNIGUNG * fallzeit*fallzeit;
 		
 		
 		//************************************AUSGABE
