@@ -4,7 +4,7 @@ public class KonsolenAusgabe {
 
     public static void main(String[] args) {
         // Ausgabe von Zahlen
-        //System.out.print("234,45");
+        //System.out.print("234.45");
 
         
         
@@ -20,7 +20,7 @@ public class KonsolenAusgabe {
         //System.out.println("Mein Name ist N. Hammer");
         //
         // Zahlen und Zeichen
-        //System.out.print("Mein Alter ist ");
+       //System.out.print("Mein Alter ist ");
         //System.out.println(44);
         
         
@@ -41,13 +41,13 @@ public class KonsolenAusgabe {
          //System.out.println("Vorname"+" "+"Nachname");
          //System.out.println(1+2+"3");
          //System.out.println("1"+(2+3));
-         //System.out.println(1+2+"3"+(4+5));
+         //System.out.println(1+2+"3"+4+5);
 
         // Zeilenumbruch mit Escape Sequenz
-         System.out.println("Ich erzähle eine \neine neue Geschichte");
+        System.out.println("Ich erzähle eine \nneue Geschichte");
 
         // Tabulator mit Escape Sequenz
-        System.out.println("Name\tVorname\tAdresse");
-        System.out.println("Niko\tHammer\tHauptstrasse 11");
+        System.out.println("Name \t\tVorname\tAdresse");
+        System.out.println("Hammerschlag \tNiko\tHauptstrasse 11");
     }
 }
