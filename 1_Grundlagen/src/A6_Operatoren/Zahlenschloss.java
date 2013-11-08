@@ -8,6 +8,7 @@ public class Zahlenschloss {
         code = 5684;
         
         //VERARBEITUNG
+        //Ziffern bestimmen
         ziffer1 = code % 10;  //4
         code = code / 10;
         
@@ -19,14 +20,13 @@ public class Zahlenschloss {
         
         ziffer4 = code % 10;  //1
         code = code / 10;
-        
-        
-        //Tauschen
+                
+        //Ziffern Tauschen
         merke = ziffer2;
         ziffer2 = ziffer4;
         ziffer4 = merke;
        
-        //neuer Code
+        //neuen Code berechnen
         codeNeu = 1000*ziffer4+100*ziffer3+10*ziffer2+ziffer1;
         
         //AUSGABE
