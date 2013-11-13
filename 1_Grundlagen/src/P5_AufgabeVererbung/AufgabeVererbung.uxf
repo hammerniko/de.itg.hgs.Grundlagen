@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>310</x>
+      <y>20</y>
+      <w>410</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>bg=green
+/Baum &lt;&lt;abstract&gt;&gt;/
+
+--
+stammlaenge:GZ
+stammdicke:GZ
+anzahlAeste:GZ
+
+stammFarbe:Farbe
+--
+/+bewegen(windstaerke:GZ) &lt;&lt;abstract&gt;&gt;/
+/+wachsen() &lt;&lt;abstract&gt;&gt;/
+ 
++Baum(stammlaenge:GZ, stammdicke:GZ,anzahlAeste:GZ)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>630</x>
+      <y>260</y>
+      <w>590</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>bg=gray
+
+Laubbaum
+--
+blattFarbe:Farbe
+--
++bewegen(winstaerke:GZ)
++wachsen()
++Laubbaum(stammlaenge:GZ, stammdicke:GZ, anzahlAeste:GZ, blattFarbe:Farbe)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>510</x>
+      <y>180</y>
+      <w>140</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;120;120</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>180</x>
+      <y>430</y>
+      <w>550</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+Nadelbaum
+--
+nadelFarbe:Farbe
+--
++bewegen(winstaerke:GZ)
++wachsen()
++wachsen(geschwindigkeit:GZ)
++Nadelbaum(stammlaenge:GZ, stammdicke:GZ, anzahlAeste:GZ, nadelFarbe:Farbe)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>360</x>
+      <y>180</y>
+      <w>140</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120;30;30;250</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>800</x>
+      <y>460</y>
+      <w>620</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>bg=gray
+Walnussbaum
+--
+anzahlFreuchte:GZ
+groesseFruechte:GZ
+--
++Walnussbaum(stammlaenge:GZ, stammdicke:GZ, anzahlAeste:GZ, blattFarbe:Farbe)
++wachsen()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>870</x>
+      <y>350</y>
+      <w>50</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;110</additional_attributes>
+  </element>
+</diagram>
