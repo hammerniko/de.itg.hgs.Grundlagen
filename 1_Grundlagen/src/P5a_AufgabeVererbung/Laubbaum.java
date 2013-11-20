@@ -1,4 +1,4 @@
-package P51_AufgabeVererbung;
+package P5a_AufgabeVererbung;
 
 import java.awt.Color;
 

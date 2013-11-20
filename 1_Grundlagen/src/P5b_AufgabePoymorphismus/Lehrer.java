@@ -1,4 +1,4 @@
-package P52_AufgabePoymorphismus;
+package P5b_AufgabePoymorphismus;
 
 public class Lehrer extends Mitarbeiter {
 
