@@ -1,14 +1,15 @@
-package P5_AufgabeVererbung;
+package P51_AufgabeVererbung;
 
 import java.awt.Color;
 
-public class Laubbaum extends Baum {
-    
-    Color farbeBlaetter;
+public class Nadelbaum extends Baum {
 
-    public Laubbaum(int stammlaenge, int stammdicke, int anzAeste, Color blattfarbe) {
+    Color farbeNadeln;
+    
+    
+    public Nadelbaum(int stammlaenge, int stammdicke, int anzAeste, Color farbeNadeln) {
         super(stammlaenge, stammdicke, anzAeste);
-        this.farbeBlaetter = blattfarbe;
+        this.farbeNadeln = farbeNadeln;
     }
 
     @Override
@@ -18,12 +19,18 @@ public class Laubbaum extends Baum {
     }
 
     @Override
+    public void wachsen() {
+        stammlaenge = stammlaenge + 2;
+    }
+
+    @Override
     public String toString() {
-        return "Laubbaum [farbeBlaetter=" + farbeBlaetter + ", stammlaenge="
+        return "Nadelbaum [farbeNadeln=" + farbeNadeln + ", stammlaenge="
                 + stammlaenge + ", anzahlAeste=" + anzahlAeste
                 + ", stammdicke=" + stammdicke + ", farbeStamm=" + farbeStamm
                 + "]";
     }
-
     
+    
+
 }
