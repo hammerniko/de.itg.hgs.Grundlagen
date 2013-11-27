@@ -1,15 +1,16 @@
 package P5b_AufgabePoymorphismus;
 
 public class Lehrer extends Mitarbeiter {
-
+    String kuerzel;
+    String gehaltsgruppe; 
+    
     public Lehrer(String name, String vorname) {
         super(name, vorname);
         gehaltsgruppe = "A13";
     }
 
 
-    String kuerzel;
-    String gehaltsgruppe;
+    
     
     
     @Override

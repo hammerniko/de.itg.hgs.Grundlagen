@@ -5,7 +5,7 @@ public class Angestellte extends Mitarbeiter{
     double stundenlohn;
     double anzahlStunden;
     static final double  TARIFLOHN = 12.5;
-    
+    static final double UEBERSTUNDENSATZ = 20;
     
     public Angestellte(String name, String vorname) {
         super(name, vorname);
@@ -18,8 +18,14 @@ public class Angestellte extends Mitarbeiter{
     
     @Override
     public double gehaltBerechnen() {
-        // TODO Automatisch generierter Methodenstub
-        return 0;
+        double gehalt;
+        if(anzahlStunden>=40){
+            gehalt = 40 * stundenlohn + (anzahlStunden-40)*UEBERSTUNDENSATZ;
+        }
+        else{
+            gehalt = anzahlStunden * stundenlohn;
+        }
+        return gehalt;
     }
 
 
