@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="11.3">
+<diagram program="umlet" version="11.5.1">
   <zoom_level>15</zoom_level>
   <element>
     <type>com.umlet.element.Class</type>
@@ -38,8 +38,8 @@ vorname:text
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>135</x>
-      <y>510</y>
+      <x>105</x>
+      <y>465</y>
       <w>465</w>
       <h>255</h>
     </coordinates>
@@ -101,13 +101,13 @@ zulageNachtdienst:FKZ
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>330</x>
+      <x>300</x>
       <y>330</y>
-      <w>134</w>
-      <h>209</h>
+      <w>164</w>
+      <h>164</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>105;45;45;180</additional_attributes>
+    <additional_attributes>135;45;45;135</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -125,8 +125,8 @@ zulageNachtdienst:FKZ
     <coordinates>
       <x>720</x>
       <y>600</y>
-      <w>104</w>
-      <h>164</h>
+      <w>90</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>45;45;75;135</additional_attributes>
@@ -148,10 +148,10 @@ bg=blue</panel_attributes>
     <coordinates>
       <x>75</x>
       <y>390</y>
-      <w>179</w>
-      <h>149</h>
+      <w>149</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>45;45;150;120</additional_attributes>
+    <additional_attributes>45;45;120;75</additional_attributes>
   </element>
 </diagram>
