@@ -8,16 +8,17 @@ public class QuadratischeGleichung {
     public static void main(String[] args) {
         //***************Eingabe
         String ergebnis = "";
-        double a,b,c,d,x1,x2,dis;
+        double a=0,b,c,d,x1,x2,dis;
         
         Scanner s = new Scanner(System.in);
         
         System.out.println("Bitte geben Sie eine quadratische Gleichung");
         System.out.println("der Form ax^2+bx+c=d ein:");
         
+        
         System.out.print("a:\t");
         a = s.nextDouble();
-        System.out.print("b:\t");
+       System.out.print("b:\t");
         b = s.nextDouble();
         System.out.print("c:\t");
         c = s.nextDouble();
