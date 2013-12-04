@@ -55,6 +55,7 @@ public class PanelEtikett extends JPanel implements Printable {
 		this.add(jLlieferDatum);
 
 		//Drucken des Panels nach der Erstellung
+		System.out.println("Drucken getstartet...");
 		PageFormat pf = new PageFormat();
 
 		try {
