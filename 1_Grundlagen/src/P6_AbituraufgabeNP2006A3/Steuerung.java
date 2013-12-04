@@ -1,72 +1,48 @@
 package P6_AbituraufgabeNP2006A3;
-
 import java.util.Date;
 import java.util.Vector;
 
-
 public class Steuerung {
+	// lokale Variable zur Zwischnspeicherung der Autragsnummer
+	int	            aktuelleAuftragsNummer;
+	
+	// Assoziationen
+	Oberflaeche	    dieOberflaeche;
+	Vector<Auftrag>	dieAuftraege;
+	Etikett dasEtikett;
 
-	int aktuelleAuftragsNummer;
-	Oberflaeche dieOberflaeche;
-	Vector <Auftrag> dieAuftraege;
-	static int anzahlAuftraege;
-		
+	// Konstruktor mit Übergabeparameter für die
+	// bidirektionale Assoziation zur Oberflaeche
 	public Steuerung(Oberflaeche dieOberflaeche) {
+		// Assoziationen herstellen
 		this.dieOberflaeche = dieOberflaeche;
-		dieAuftraege = new Vector <Auftrag>();
-	}
-
-	public static void erstelleAuftrag(double laengeInMeter, double breiteInMeter, Date lieferDatum){
-	Date bestellDatum = new Date();
-	   //addAuftrag(new Auftrag(laengeInMeter, breiteInMeter, lieferDatum, bestellDatum));
-	}
-
-
-	public static void erstelleEtikett(int auftragsNummer){
-		//derAuftrag = getAuftrag(auftragsNummer);
-		//String kundenName = derAuftrag.gibKundenName();
-		//Date lieferDatum = derAuftrag.gibLieferDatum();
-		//String artikelNummer = derAuftrag.gibArtikelNummer();
-		//double rollenGewicht = derAuftrag.ermittleRollenGewicht();
+		// Dynamischer Behälter für alle Aufträge erstellen
+		dieAuftraege = new Vector<Auftrag>();
 		
-		//dasEtikett = new Etikett(kundeName, artikelNummer, rollenGewicht, lieferDatum);
+		
+		//Ein Dummy Auftrag für das zu testende Szenario wird hinzugefügt,
+		//damit ein Etikett drucken getestet werden kann.
+		//Kunden und Artikel werden später über die Obeflaeche
+		//erfasst und ausgewählt
+		//Das Bestelldatum wird mit 1.7.2007 angenommen, da es nicht in der Aufgabe formuliert ist.
+		Artikel dummyArtikel = new Artikel("40312340", 80);
+		Kunde dummyKunde = new Kunde(4711, "Huber");
+		Auftrag dummyAuftrag = new Auftrag(dummyArtikel, dummyKunde, 1002, 2000, 10, new Date("20.11.2007"), new Date("01.11.2007"));
+		
+		dieAuftraege.add(dummyAuftrag);
+	}
+	
+
+	public void erstelleEtikett(int auftragsNummer) {
+		Auftrag derAuftrag = dieAuftraege.get(auftragsNummer);
+		String kundenName = derAuftrag.gibKundenName();
+		Date lieferDatum = derAuftrag.gibLieferDatum();
+		String artikelNummer = derAuftrag.gibArtikelNummer();
+		double rollenGewicht = derAuftrag.ermittleRollengewicht();
+		dasEtikett = new Etikett(kundenName, artikelNummer, rollenGewicht, lieferDatum);
+		
 	}
 
-	public String getKundenName(int auftragsNummer){
-		Auftrag derAuftrag;
-		derAuftrag = getAuftrag(auftragsNummer);
-		return derAuftrag.gibKundenName();
-	}
+
 	
-	public Date getLieferDatum(int auftragsNummer){
-		Auftrag derAuftrag;
-		derAuftrag = getAuftrag(auftragsNummer);
-		return derAuftrag.gibLieferDatum();
-	}
-	
-	public String getArtikelNummer(int auftragsNummer){
-		Auftrag derAuftrag;
-		//derAuftrag = getAuftrag(auftragsNummer);
-		//return derAuftrag.gibArtikelNummer();
-	}
-	
-	public String getRollenGewicht(int auftragsNummer){
-		Auftrag derAuftrag;
-		//derAuftrag = getAuftrag(auftragsNummer);
-		return derAuftrag.ermittleRollenGewicht();
-	}
-	
-	public void addAuftrag(Auftrag auftrag){
-	anzahlAuftraege++;
-	//auftrag.setAuftragsnummer(anzahlAuftraege);
-	dieAuftraege.add(auftrag);
-	}
-	
-	public Auftrag getAuftraege(int auftragsnummer){
-		return dieAuftraege.get(auftragsnummer);
-	}
-	
-	public void remove(Auftrag auftrag){
-		dieAuftraege.remove(auftrag);
-	}
 }

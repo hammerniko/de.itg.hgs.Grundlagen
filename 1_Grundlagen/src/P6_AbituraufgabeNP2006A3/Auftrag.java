@@ -1,56 +1,50 @@
 package P6_AbituraufgabeNP2006A3;
-
 import java.util.Date;
 
 public class Auftrag {
-    Artikel derArtikel;
-    Kunde derKunde;
+	Artikel	derArtikel;
+	Kunde	derKunde;
+	int	    auftragsNummer;
+	double	laengenMeter;
+	double	breiteInMeter;
+	Date	lieferDatum;
+	Date	bestellDatum;
 
-    int auftragsNummer;
-    double laengenMeter;
-    double breiteInMeter;
-    Date lieferDatum;
-    Date bestellDatum;
+	public Auftrag(Artikel derArtikel, Kunde derKunde, int auftragsNummer,
+	        double laengenMeter, double breiteInMeter, Date lieferDatum,
+	        Date bestellDatum) {
+		super();
+		this.derArtikel = derArtikel;
+		this.derKunde = derKunde;
+		this.auftragsNummer = auftragsNummer;
+		this.laengenMeter = laengenMeter;
+		this.breiteInMeter = breiteInMeter;
+		this.lieferDatum = lieferDatum;
+		this.bestellDatum = bestellDatum;
+	}
 
-    public Auftrag(Artikel derArtikel, Kunde derKunde, int auftragsNummer,
-            double laengenMeter, double breiteInMeter, Date lieferDatum,
-            Date bestellDatum) {
-        super();
-        this.derArtikel = derArtikel;
-        this.derKunde = derKunde;
-        this.auftragsNummer = auftragsNummer;
-        this.laengenMeter = laengenMeter;
-        this.breiteInMeter = breiteInMeter;
-        this.lieferDatum = lieferDatum;
-        this.bestellDatum = bestellDatum;
-    }
+	public String gibArtikelNummer() {
+		return derArtikel.gibArtikelNummer();
+	}
 
-    public void getAuftrag(Artikel a) {
-        derArtikel = a;
-    }
+	public void getKunde(Kunde k) {
+		derKunde = k;
+	}
 
-    public void getKunde(Kunde k) {
-        derKunde = k;
-    }
+	public String gibArtikelBezeichnung() {
+		return derArtikel.gibArtikelBezeichnung();
+	}
 
-    public String gibArtikelBezeichnung() {
+	public double ermittleRollengewicht() {
+		double rollenGewicht = laengenMeter * breiteInMeter * derArtikel.gibGewichtProQm();
+		return rollenGewicht;
+	}
 
-        return derArtikel.gibArtikelBezeichnung();
-    }
+	public String gibKundenName() {
+		return derKunde.gibKundenName();
+	}
 
-    public double ermittleRollengewicht() {
-
-        return derArtikel.gibGewichtProQm();
-    }
-
-    public String gibKundenName() {
-        return derKunde.gibKundenName();
-
-    }
-
-    public Date lieferDatum() {
-
-        return lieferDatum;
-    }
-
+	public Date gibLieferDatum() {
+		return lieferDatum;
+	}
 }

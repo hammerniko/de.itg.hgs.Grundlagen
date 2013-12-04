@@ -16,7 +16,6 @@ public class Etikett {
 
 	public Etikett(String kundenName, String artikelNummer,
 			double rollenGewicht, Date lieferDatum) {
-		super();
 		this.kundenName = kundenName;
 		this.artikelNummer = artikelNummer;
 		this.rollenGewicht = rollenGewicht;

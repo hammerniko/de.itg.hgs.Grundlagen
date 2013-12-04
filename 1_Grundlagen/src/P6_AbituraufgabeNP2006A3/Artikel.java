@@ -25,6 +25,7 @@ public class Artikel {
         return artikelbezeichnung;
     }
 	
+    
 	
 	
 }

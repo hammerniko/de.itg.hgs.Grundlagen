@@ -11,8 +11,12 @@ import java.util.Date;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+//Damit das Panel gedruckt werden kann, wird die Schnittstelle
+//Prinatble implementiert -> Die Methode print() muss überschrieben werden.
 public class PanelEtikett extends JPanel implements Printable {
 
+	//Komponenten für die grafische Darstellung
+	//der Etikettdaten in einem Panel
 	JLabel kn;
 	JLabel jLkundenName;
 	JLabel an;
@@ -22,8 +26,8 @@ public class PanelEtikett extends JPanel implements Printable {
 	JLabel ld;
 	JLabel jLlieferDatum;
 
-	// double JLabel = new JLabel(){
-
+	
+	//Konstruktor
 	public PanelEtikett(String kundenName, String artikelNummer,
 			double rollenGewicht, Date lieferDatum) {
 
@@ -49,6 +53,7 @@ public class PanelEtikett extends JPanel implements Printable {
 		this.add(ld);
 		this.add(jLlieferDatum);
 
+		//Drucken des Panels nach der Erstellung
 		PageFormat pf = new PageFormat();
 
 		try {
@@ -67,11 +72,12 @@ public class PanelEtikett extends JPanel implements Printable {
 			return Printable.NO_SUCH_PAGE;
 		}
 
+		//Skalieren des Panels
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.translate(pf.getImageableX(), pf.getImageableY());
-
 		g2d.scale(pf.getImageableWidth() / getWidth(), 1.0);
 
+		//Komponente neu zeichnen
 		paintComponent(g);
 		System.out.println("Druck wird ausgeführt.");
 		return Printable.PAGE_EXISTS;
