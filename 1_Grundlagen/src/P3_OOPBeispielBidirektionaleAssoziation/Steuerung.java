@@ -18,7 +18,12 @@ public class Steuerung {
     //Methode welche eine Botschaft an
     //dieGui sendet
     public void steuerungsTestMethode(){
-        System.out.println("Methode in der Steuerung");
+        
+    	//Ein länger dauernder Prozess wird angestossen
+    	System.out.println("Methode in der Steuerung");
+        
+        
+        
         dieGui.aktualisiereStatus("Steuerung angesprochen");
    }
 

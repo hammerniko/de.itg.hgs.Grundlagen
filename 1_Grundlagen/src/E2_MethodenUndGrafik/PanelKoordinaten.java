@@ -11,6 +11,8 @@ public class PanelKoordinaten extends JPanel {
         // TODO Auto-generated method stub
         super.paintComponent(g);
         
+        
+        
         //Koordinatenlinien
         g.drawLine(getWidth()/2, 0, getWidth()/2, getHeight());
         g.drawLine(0, getHeight()/2, getWidth(), getHeight()/2);
