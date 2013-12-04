@@ -14,6 +14,10 @@ public class Etikett {
 	private Date lieferDatum;
 	private PanelEtikett panelEtikett;
 
+	public PanelEtikett getPanelEtikett() {
+    	return panelEtikett;
+    }
+
 	public Etikett(String kundenName, String artikelNummer,
 			double rollenGewicht, Date lieferDatum) {
 		this.kundenName = kundenName;
@@ -21,6 +25,8 @@ public class Etikett {
 		this.rollenGewicht = rollenGewicht;
 		this.lieferDatum = lieferDatum;
 
+		System.out.println("Etikettobjekt erstellt");
+		
 		panelEtikett = new PanelEtikett(kundenName, artikelNummer,
 				rollenGewicht, lieferDatum);
 

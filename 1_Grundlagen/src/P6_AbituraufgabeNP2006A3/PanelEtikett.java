@@ -1,5 +1,6 @@
 package P6_AbituraufgabeNP2006A3;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.GridLayout;
@@ -30,7 +31,7 @@ public class PanelEtikett extends JPanel implements Printable {
 	//Konstruktor
 	public PanelEtikett(String kundenName, String artikelNummer,
 			double rollenGewicht, Date lieferDatum) {
-
+        this.setBackground(Color.white);
 		this.setLayout(new GridLayout(2, 4));
 
 		kn = new JLabel("Kundenname:");
