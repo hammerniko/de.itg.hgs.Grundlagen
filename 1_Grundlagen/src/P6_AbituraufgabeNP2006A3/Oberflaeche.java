@@ -57,7 +57,7 @@ public class Oberflaeche extends JFrame implements ActionListener {
 		contentPane.add(panelStatus, BorderLayout.NORTH);
 		lbl = new JLabel("Status:");
 		panelStatus.add(lbl);
-		lblStatus = new JLabel("");
+		lblStatus = new JLabel("es existiert nur Dummy Auftrag 1002");
 		panelStatus.add(lblStatus);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
