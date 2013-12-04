@@ -74,23 +74,24 @@ public class Oberflaeche extends JFrame implements ActionListener {
 	}
 
 	private int holeAuftragsNummer() {
-		int nr = -1;
+		int nr = 0;
 		String auftrNrTxt = tfAuftragsnummer.getText();
 		try {
 			nr = Integer.parseInt(auftrNrTxt);
 			System.out.println("Auftragsnummer" + nr + " gelesen.");
 		} catch (NumberFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			zeigeStatus("ungültige Auftragsnummer");
 		}
 		return nr;
 	}
 
 	public void loescheEtikett() {
-		contentPane.remove(etikett);
-		contentPane.revalidate();
-		contentPane.repaint();
-		zeigeStatus("Etikett gelöscht");
+		if (etikett != null) {
+			contentPane.remove(etikett);
+			contentPane.revalidate();
+			contentPane.repaint();
+			
+		}
 	}
 
 	public void zeigeEtikett(PanelEtikett einEtikett) {

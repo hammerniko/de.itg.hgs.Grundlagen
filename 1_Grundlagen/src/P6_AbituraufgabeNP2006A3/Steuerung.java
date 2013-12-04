@@ -70,6 +70,7 @@ public class Steuerung {
 				return auftrag;
 			}
 		}
+		System.out.println("Auftrag existiert nicht");
 		return null;
 	}
 }
