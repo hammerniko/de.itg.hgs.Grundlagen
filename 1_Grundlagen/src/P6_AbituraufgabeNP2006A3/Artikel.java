@@ -4,6 +4,7 @@ public class Artikel {
 
 	private String artikelNummer;
 	private double gewichtProQm;
+	private String artikelbezeichnung;
 	
 	
 	public String gibArtikelNummer() {
@@ -19,6 +20,10 @@ public class Artikel {
 		this.artikelNummer = artikelNummer;
 		this.gewichtProQm = gewichtProQm;
 	}
+
+    public String gibArtikelBezeichnung() {
+        return artikelbezeichnung;
+    }
 	
 	
 	
