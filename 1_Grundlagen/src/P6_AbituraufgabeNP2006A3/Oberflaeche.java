@@ -86,15 +86,18 @@ public class Oberflaeche extends JFrame implements ActionListener {
 	}
 
 	public void loescheEtikett() {
+		System.out.println("loesche Etikett Panel");
 		if (etikett != null) {
 			contentPane.remove(etikett);
-			contentPane.revalidate();
-			contentPane.repaint();
+			
 			
 		}
+		contentPane.revalidate();
+		contentPane.repaint();
 	}
 
 	public void zeigeEtikett(PanelEtikett einEtikett) {
+		loescheEtikett();
 		etikett = einEtikett;
 		contentPane.add(etikett, BorderLayout.CENTER);
 		contentPane.revalidate();
