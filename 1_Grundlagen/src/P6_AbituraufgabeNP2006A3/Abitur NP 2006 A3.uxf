@@ -4,8 +4,8 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>763</x>
-      <y>546</y>
+      <x>707</x>
+      <y>553</y>
       <w>133</w>
       <h>91</h>
     </coordinates>
@@ -21,8 +21,8 @@ Streckenauftrag
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>259</x>
-      <y>273</y>
+      <x>203</x>
+      <y>280</y>
       <w>238</w>
       <h>133</h>
     </coordinates>
@@ -39,8 +39,8 @@ Auftragsteuerung
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>245</x>
-      <y>504</y>
+      <x>189</x>
+      <y>511</y>
       <w>329</w>
       <h>126</h>
     </coordinates>
@@ -59,8 +59,8 @@ Auftragsteuerung
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>483</x>
-      <y>70</y>
+      <x>427</x>
+      <y>77</y>
       <w>175</w>
       <h>91</h>
     </coordinates>
@@ -76,9 +76,9 @@ Auftragsteuerung
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>686</x>
-      <y>70</y>
-      <w>238</w>
+      <x>630</x>
+      <y>77</y>
+      <w>273</w>
       <h>91</h>
     </coordinates>
     <panel_attributes>Artikel
@@ -93,8 +93,8 @@ Auftragsteuerung
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>630</x>
-      <y>273</y>
+      <x>574</x>
+      <y>280</y>
       <w>315</w>
       <h>182</h>
     </coordinates>
@@ -123,8 +123,8 @@ laenge:GZ,breite:GZ,lieferdatum:Datum, bestellDatum:Datum)
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>595</x>
-      <y>546</y>
+      <x>539</x>
+      <y>553</y>
       <w>140</w>
       <h>91</h>
     </coordinates>
@@ -139,8 +139,8 @@ Lagerauftrag
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>266</x>
-      <y>14</y>
+      <x>210</x>
+      <y>21</y>
       <w>182</w>
       <h>126</h>
     </coordinates>
@@ -161,8 +161,8 @@ Oberflaeche
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>637</x>
-      <y>434</y>
+      <x>581</x>
+      <y>441</y>
       <w>34</w>
       <h>125</h>
     </coordinates>
@@ -172,10 +172,10 @@ Oberflaeche
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>707</x>
-      <y>434</y>
-      <w>104</w>
-      <h>125</h>
+      <x>651</x>
+      <y>441</y>
+      <w>105</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>21;21;91;112</additional_attributes>
@@ -183,8 +183,8 @@ Oberflaeche
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>287</x>
-      <y>119</y>
+      <x>231</x>
+      <y>126</y>
       <w>80</w>
       <h>167</h>
     </coordinates>
@@ -200,8 +200,8 @@ r2=dieSteuerung
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>301</x>
-      <y>385</y>
+      <x>245</x>
+      <y>392</y>
       <w>59</w>
       <h>132</h>
     </coordinates>
@@ -214,8 +214,8 @@ r1=dasEtikett
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>546</x>
-      <y>140</y>
+      <x>490</x>
+      <y>147</y>
       <w>132</w>
       <h>146</h>
     </coordinates>
@@ -229,10 +229,10 @@ r1=derKunde
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>700</x>
-      <y>140</y>
-      <w>90</w>
-      <h>146</h>
+      <x>644</x>
+      <y>147</y>
+      <w>91</w>
+      <h>147</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -244,8 +244,8 @@ r1=derArtikel
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>476</x>
-      <y>315</y>
+      <x>420</x>
+      <y>322</y>
       <w>167</w>
       <h>41</h>
     </coordinates>
@@ -259,8 +259,8 @@ r1=derAuftrag[]
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>84</x>
-      <y>224</y>
+      <x>28</x>
+      <y>231</y>
       <w>147</w>
       <h>133</h>
     </coordinates>
@@ -272,8 +272,8 @@ r1=derAuftrag[]
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>140</x>
-      <y>336</y>
+      <x>84</x>
+      <y>343</y>
       <w>139</w>
       <h>181</h>
     </coordinates>
@@ -284,8 +284,8 @@ r2=panelEtikett</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>77</x>
-      <y>70</y>
+      <x>21</x>
+      <y>77</y>
       <w>105</w>
       <h>56</h>
     </coordinates>
@@ -295,8 +295,8 @@ r2=panelEtikett</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>91</x>
-      <y>105</y>
+      <x>35</x>
+      <y>112</y>
       <w>41</w>
       <h>132</h>
     </coordinates>
@@ -306,8 +306,8 @@ r2=panelEtikett</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>140</x>
-      <y>77</y>
+      <x>84</x>
+      <y>84</y>
       <w>139</w>
       <h>160</h>
     </coordinates>
