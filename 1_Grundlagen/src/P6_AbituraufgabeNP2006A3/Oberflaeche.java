@@ -65,11 +65,11 @@ public class Oberflaeche extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnEtikettDrucken) {
 			System.out.println("Etikett drucken geklickt");
-			erstelleEtikettClick();
+			clickErstelleEtikett();
 		}
 	}
 
-	private void erstelleEtikettClick() {
+	private void clickErstelleEtikett() {
 		dieSteuerung.erstelleEtikett(holeAuftragsNummer());
 	}
 
@@ -89,8 +89,6 @@ public class Oberflaeche extends JFrame implements ActionListener {
 		System.out.println("loesche Etikett Panel");
 		if (etikett != null) {
 			contentPane.remove(etikett);
-			
-			
 		}
 		contentPane.revalidate();
 		contentPane.repaint();

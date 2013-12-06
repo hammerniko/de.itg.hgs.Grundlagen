@@ -8,6 +8,7 @@ import java.util.Vector;
 public class Steuerung {
 	// lokale Variable zur Zwischnspeicherung der Autragsnummer
 	private int	            aktuelleAuftragsNummer;
+	
 	// Assoziationen
 	private Oberflaeche	    dieOberflaeche;
 	private Vector<Auftrag>	dieAuftraege;
@@ -18,8 +19,10 @@ public class Steuerung {
 	public Steuerung(Oberflaeche dieOberflaeche) {
 		// Assoziationen herstellen
 		this.dieOberflaeche = dieOberflaeche;
+		
 		// Dynamischer Behälter für alle Aufträge erstellen
 		dieAuftraege = new Vector<Auftrag>();
+		
 		// Ein Dummy Auftrag für das zu testende Szenario wird hinzugefügt,
 		// damit ein Etikett drucken getestet werden kann.
 		// Kunden und Artikel werden später über die Obeflaeche
@@ -28,13 +31,16 @@ public class Steuerung {
 		// Aufgabe formuliert ist.
 		Artikel dummyArtikel = new Artikel("40312340", 0.08);
 		Kunde dummyKunde = new Kunde(4711, "Huber");
+		
 		GregorianCalendar cal1 = new GregorianCalendar(2007, 4, 11);
 		Date bestelldatum = cal1.getTime();
 		SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
 		sdf.format(bestelldatum);
+		
 		GregorianCalendar cal2 = new GregorianCalendar(2007, 4, 11);
 		Date lieferdatum = cal2.getTime();
 		sdf.format(lieferdatum);
+		
 		Auftrag dummyAuftrag = new Auftrag(dummyArtikel, dummyKunde, 1002,
 		        2000, 10, lieferdatum, bestelldatum);
 		dieAuftraege.add(dummyAuftrag);

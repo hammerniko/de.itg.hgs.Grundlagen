@@ -7,9 +7,9 @@ public class EinfacheMethoden {
 	
 	public static void main(String[] args) {
 		
-		BigInteger z = fak(20150);
-		System.out.println(z);
-
+		System.out.println("Start");
+		System.out.println(gibFakultaet(5));
+		System.out.println("Ende");
 	}
 	
 	public static double gibQuadratWurzel(double Zahl){
@@ -21,7 +21,11 @@ public class EinfacheMethoden {
 	public static double gibSinus(double zahl){
 		double winkel =  zahl* Math.PI / 180d ;
 		double sinus = Math.sin(winkel);
+		
+		
+		
 		return sinus;
+		
 	}
 	
 	public static double gibXhochY(double x, double y){
@@ -36,6 +40,9 @@ public class EinfacheMethoden {
 		for (int i = 2; i <= zahl; i++) {
 			ergebnis = i * ergebnis;
 		}
+		
+		System.out.println("FakultŠt berechnet");
+		
 		return ergebnis;
 	}
 	

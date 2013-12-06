@@ -4,9 +4,11 @@ public class EinfuehrungMethoden {
 	// Nach der Ausgabe wird jede Methode einmal aufgerufen
 	public static void main(String[] args) {
 		System.out.println("Hallo hier bin ich");
-		zeichneLinie();
-		zeichneLinie(80);
-		zeichneLinie(80, '*');
+		zeichneLinie(20,'#');
+		zeichneLinie(100);
+		zeichneLinie(80, '+');
+		
+		
 	}
 
 	// Einfache Methode, ohne RŸckgabewert
@@ -18,9 +20,11 @@ public class EinfuehrungMethoden {
 	// ohne RŸckgabewert
 	// Zeichnet eine Linie definierter LŠnge
 	public static void zeichneLinie(int anzahlStriche) {
+	    
 		for (int i = 0; i < anzahlStriche; i++) {
 			System.out.print("-");
 		}
+		
 		System.out.println();
 	}
 
