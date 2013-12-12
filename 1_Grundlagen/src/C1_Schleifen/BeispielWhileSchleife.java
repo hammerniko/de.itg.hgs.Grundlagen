@@ -1,18 +1,19 @@
 package C1_Schleifen;
 
 import java.util.Scanner;
-
+/** 
+ *  Kopfgetseuerte while Schleife
+ *  Wird verwendet wenn die Anzahl Wiederholungen nicht bekannt ist.
+ *  Abbruchbedingung: a!=-4
+ *  Solange die Abbruchbedingung wahr ergibt, wird wiederholt.
+ *  Ist die Abbruchbedingung von Beginn an flasch, wird
+ *  die Schleife komplett Ÿbersprungen.
+ */
 public class BeispielWhileSchleife {
 
     public static void main(String[] args) {
 
-        /** Kopfgetseuerte while Schleife
-        /*  Wird verwendet wenn die Anzahl Wiederholungen nicht bekannt ist.
-         *  Abbruchbedingung: a!=-4
-         *  Solange die Abbruchbedingung wahr ergibt, wird wiederholt.
-         *  Ist die Abbruchbedingung von Beginn an flasch, wird
-         *  die Schleife komplett Ÿbersprungen.
-         */
+       
         int a = 100;
         while (a != -4) {
             a = a / 8 + 1 - 5;
