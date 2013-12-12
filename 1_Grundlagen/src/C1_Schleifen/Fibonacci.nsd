@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root text="&#34;Fibonacci&#34;" comment="&#34;&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;neuGeborene:GZ &#60;- 1&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+		<instruction text="&#34;einMonatAlt:GZ &#60;- 0&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+		<instruction text="&#34;zweiMonateUndAelter:GZ -&#62; 0&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+		<instruction text="&#34;anzKan:GZ&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+		<while text="&#34;für monat &#60;- 0 bis monat &#60; 13 erhöhe monat um 1&#34;" comment="&#34;&#34;" color="ffffff">
+			<qWhile>
+				<instruction text="&#34;anzKan &#60;- neuGeborene + einMonatAlt + zweiMonateUndAelter&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+				<instruction text="&#34;zweiMonateUndAelter &#60;- zweiMonateUndAelter + einMonatAlt&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+				<instruction text="&#34;ausgabe &#34;&#34;Monat: &#34;&#34;+monat+&#34;&#34; ng:&#34;&#34;+neuGeborene+&#34;&#34; 1m:&#34;&#34;+einMonatAlt+&#34;&#34; 2m:&#34;&#34;+zweiMonateUndAelter+&#34;&#34; Anzahl Paare:&#34;&#34;+anzKan                                                                      |&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+				<instruction text="&#34;einMonatAlt &#60;- neuGeborene&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+				<instruction text="&#34;neuGeorene &#60;- zweiMonateUndAelter&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+			</qWhile>
+		</while>
+	</children>
+</root>
