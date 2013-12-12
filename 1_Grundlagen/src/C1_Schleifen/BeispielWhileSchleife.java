@@ -2,17 +2,17 @@ package C1_Schleifen;
 
 import java.util.Scanner;
 
-public class Beispiel {
+public class BeispielWhileSchleife {
 
     public static void main(String[] args) {
 
-        // //Kopfgesteuerte ZŠhlschleife
-        for (int i = 100; i >= 1; i = i - 15) {
-            System.out.println("Hallo" + i);
-        }
-
-        // Kopfgetseuerte while Schleife
-        // Anzahl Wiederholungen nicht bekannt
+        /** Kopfgetseuerte while Schleife
+        /*  Wird verwendet wenn die Anzahl Wiederholungen nicht bekannt ist.
+         *  Abbruchbedingung: a!=-4
+         *  Solange die Abbruchbedingung wahr ergibt, wird wiederholt.
+         *  Ist die Abbruchbedingung von Beginn an flasch, wird
+         *  die Schleife komplett Ÿbersprungen.
+         */
         int a = 100;
         while (a != -4) {
             a = a / 8 + 1 - 5;
