@@ -1,6 +1,9 @@
 package C1_Schleifen;
 import java.util.Scanner;
-
+/**
+ * Eine Email Adresse soll darauf überprüft werden, ob
+ * ein @-Zeichen und .de oder .com enthalten ist.
+ */
 public class Email {
 	public static void main(String[] args) {
 		boolean istEmailKorrekt = false;
@@ -16,6 +19,7 @@ public class Email {
 				istEmailKorrekt=true;
 			}
 			else {
+				istEmailKorrekt=false;
 				System.err.println("Fehler in der Email:"+email);
 				System.out.println("--------------------");
 			}
