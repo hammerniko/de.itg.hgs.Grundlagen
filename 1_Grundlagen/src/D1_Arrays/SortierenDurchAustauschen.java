@@ -1,6 +1,6 @@
 package D1_Arrays;
 
-public class ArrayDirektInitialisieren {
+public class SortierenDurchAustauschen{
 
    
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class ArrayDirektInitialisieren {
        for (int i = 0; i < zahl.length-1; i++) {
            for (int j = i+1; j < zahl.length; j++) {
             
-               if(zahl[i]<zahl[j]){
+               if(zahl[i]>zahl[j]){
                    merke = zahl[i];
                    zahl[i]=zahl[j];
                    zahl[j]=merke;
