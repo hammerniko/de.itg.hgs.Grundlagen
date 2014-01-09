@@ -3,19 +3,30 @@ public class EinfuehrungMethoden {
 	// Hauptprogramm 
 	// Nach der Ausgabe wird jede Methode einmal aufgerufen
 	public static void main(String[] args) {
+	    
+	    //Erste Anweisung im Hauptprogramm
 		System.out.println("Hallo hier bin ich");
-		zeichneLinie(20,'#');
-		zeichneLinie(100);
-		zeichneLinie(80, '+');
 		
+		//Methoden aufrufen
+		zeichneLinie();
+		zeichneLinie(20);
+		zeichneLinie(15,'x');
 		
-	}
-
+		//Nach bearbeitung der Methode
+		//kehrt das PRogramm hierher zurück
+		System.out.println("Ende");
+	}//Ende main
+	
+	
+	
+	
 	// Einfache Methode, ohne Rückgabewert
 	public static void zeichneLinie() {
-		System.out.println("-------------------------");
-	}
+		System.out.println("x-------------------------");
+	}//Ende zeichneLinie()
 
+	
+	
 	// Einfache überladene Methode mit Übergabeparameter
 	// ohne Rückgabewert
 	// Zeichnet eine Linie definierter Länge
@@ -27,6 +38,8 @@ public class EinfuehrungMethoden {
 		
 		System.out.println();
 	}
+	
+	
 
 	// Einfache überladene Methode mit mehreren Übergabeparametern
 	// ohne Rückgabewert
