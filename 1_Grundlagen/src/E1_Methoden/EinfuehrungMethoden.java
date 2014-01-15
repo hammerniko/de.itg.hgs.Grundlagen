@@ -11,10 +11,12 @@ public class EinfuehrungMethoden {
 		zeichneLinie();
 		zeichneLinie(20);
 		zeichneLinie(15,'x');
+		zeichneLinie();
 		
 		//Nach bearbeitung der Methode
 		//kehrt das PRogramm hierher zurück
-		System.out.println("Ende");
+		System.out.println();
+		
 	}//Ende main
 	
 	
@@ -22,7 +24,7 @@ public class EinfuehrungMethoden {
 	
 	// Einfache Methode, ohne Rückgabewert
 	public static void zeichneLinie() {
-		System.out.println("x-------------------------");
+		System.out.println("---");
 	}//Ende zeichneLinie()
 
 	
@@ -38,6 +40,13 @@ public class EinfuehrungMethoden {
 		
 		System.out.println();
 	}
+	
+public static void zeichneLinie(double kommazahl) {
+        
+        
+            System.out.println("-"+kommazahl);
+        
+    }
 	
 	
 

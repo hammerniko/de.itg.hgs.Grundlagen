@@ -31,7 +31,7 @@ public class Methoden {
 	public static int fakultaet(int zahl){
 		int erg=1;
 		if(zahl>=1){
-			//fakultät(3)=1*2*3
+			//fakultaet(3)=1*2*3
 			for (int i = 2; i <= zahl; i++) {
 				erg=erg*i;
 			}
