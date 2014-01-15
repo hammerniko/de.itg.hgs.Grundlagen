@@ -9,7 +9,7 @@ package E1_Methoden;
 public class WurzelZiehen {
 
     public static void main(String[] args) {
-        System.out.println(wurzel(90));
+        System.out.println(wurzel(11));
     }
 
     
@@ -18,7 +18,7 @@ public class WurzelZiehen {
         double x, a;
         a = zahl;
         x = zahl;
-        double fehlertoleranz = 0.0000000001;
+        double fehlertoleranz = 0.00000001;
 
         //Die Iterationsmethode funktioniert
         //nur mit natürlichen Zahlen
