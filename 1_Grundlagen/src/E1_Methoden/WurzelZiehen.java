@@ -1,7 +1,7 @@
 package E1_Methoden;
 
 /**
- * Wurzelziehen mit dem NŠherungsverfahren
+ * Wurzelziehen mit dem Naeherungsverfahren
  * nach Heron.
  * @param zahl
  * @return wurzel der Zahl
