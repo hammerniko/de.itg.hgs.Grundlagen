@@ -3,6 +3,7 @@ package E1_Methoden;
 /**
  * Wurzelziehen mit dem Naeherungsverfahren
  * nach Heron.
+ * @author nikolaihammer
  * @param zahl
  * @return wurzel der Zahl
  */
