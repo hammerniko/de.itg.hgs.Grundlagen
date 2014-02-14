@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>707</x>
+      <y>553</y>
+      <w>133</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>bg=blue
+Streckenauftrag
+--
+...
+--
+...
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>203</x>
+      <y>280</y>
+      <w>238</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>bg=green
+Auftragsteuerung
+--
++aktuelleAufNr:GZ
+--
++Auftragssteuerung(oberflaeche:Oberflaeche) 
++erstelleEtikett(aufNr:GZ)
++gibAuftrag(auftragNummer:GZ):Auftrag</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>189</x>
+      <y>511</y>
+      <w>329</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Etikett
+--
+-kundenName:Text
+-artikelNummer:Text
+-rollenGewicht:FKZ
+-lieferDatum:Datum
+--
++Etikett(kuName:Text, artNummer:Text, roGew:FKZ, liefDat:Datum)
+-drucke()
++getPanelEtikeet():PanelEtikett</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>427</x>
+      <y>77</y>
+      <w>175</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>Kunde
+--
+-kundenName:text
+-kundenNr:GZ
+--
++Kunde(kdNr:GZ, kundenName:Text)
++gibKundenName():Text</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>630</x>
+      <y>77</y>
+      <w>273</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>Artikel
+--
+-artikelNummer:Text
+-gewichtProQm:FKZ
+--
++Artikel(artikelNummerNr:Text, gewichtProQm:FKZ)
++gibArtikelNummer():Text</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>574</x>
+      <y>280</y>
+      <w>315</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>bg=blue
+Auftrag
+--
+-auftragsNummer:GZ
+-laengeInMeter:FKZ
+-breiteInMeter:FKZ
+
+
+-lieferDatum:Datum
+-bestellDatum
+
+--
++Auftrag(artikel:Artikel, Kunde:kunde,auftrNr:GZ, 
+laenge:GZ,breite:GZ,lieferdatum:Datum, bestellDatum:Datum)
++gibArtikelBezeichnung():Text
++ermittleRollengewicht():FKZ
++gibKundenName():Text
++gibLieferdatum():Datum
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>539</x>
+      <y>553</y>
+      <w>140</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>bg=blue
+Lagerauftrag
+--
+...
+--
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>210</x>
+      <y>21</y>
+      <w>182</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+Oberflaeche
+--
+...
+--
++Oberflaeche()
++zeigeStatus(String meldung)
++loescheEtikett()
++zeigeEtikett(PanelEtikett)
+-holeAuftragsnummer():GZ
+-clickErstelleEtikett()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>581</x>
+      <y>441</y>
+      <w>34</w>
+      <h>125</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>21;21;21;112</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>651</x>
+      <y>441</y>
+      <w>105</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>21;21;91;112</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>231</x>
+      <y>126</y>
+      <w>80</w>
+      <h>167</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=   1
+r1=dieOberflaeche
+
+m2=  1
+r2=dieSteuerung
+</panel_attributes>
+    <additional_attributes>42;21;42;154</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>245</x>
+      <y>392</y>
+      <w>59</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+r1=dasEtikett
+</panel_attributes>
+    <additional_attributes>35;119;28;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>490</x>
+      <y>147</y>
+      <w>132</w>
+      <h>146</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+r1=derKunde
+
+</panel_attributes>
+    <additional_attributes>21;21;119;133</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>644</x>
+      <y>147</y>
+      <w>91</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+r1=derArtikel
+
+</panel_attributes>
+    <additional_attributes>77;21;21;133</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>420</x>
+      <y>322</y>
+      <w>167</w>
+      <h>41</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+r1=derAuftrag[]
+
+</panel_attributes>
+    <additional_attributes>154;28;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>28</x>
+      <y>231</y>
+      <w>147</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>PanelEtikett
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>84</x>
+      <y>343</y>
+      <w>139</w>
+      <h>181</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+r2=panelEtikett</panel_attributes>
+    <additional_attributes>126;168;28;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>21</x>
+      <y>77</y>
+      <w>105</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>JPanel</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>35</x>
+      <y>112</y>
+      <w>41</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>21;21;28;119</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>84</x>
+      <y>84</y>
+      <w>139</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+r2=etikett</panel_attributes>
+    <additional_attributes>126;21;21;147</additional_attributes>
+  </element>
+</diagram>

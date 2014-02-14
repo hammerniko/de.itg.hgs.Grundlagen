@@ -1,0 +1,24 @@
+﻿1. Aufgabe Vererbungstruktur
+In einer Schule sind Lehrer und Angestellte Personen beschäftigt. 
+Alle Personen werden mit Namen und Vornamen angelegt. 
+Mitarbeitern wird das Einstellungsdatum festgehalten. 
+Die Lehrer erhalten ein Namenskürzel zur späteren Darstellung der Stundenpläne. 
+Angestellte erhalten einen Stundenlohn und die 
+Anzahl der geleisteten Stunden werden festgehalten. 
+Lehrer werden in Gehaltsgruppen eingeteilt.
+Der Hausmeister bekommt Zulagen für seinen Nachtdienst. 
+Für alle Mitarbeiter muss das Gehalt berechnet werden können.
+
+2. Personen sollen nur mit Namen und Vornamen erstellt werden. 
+Lehrer benötigt eine Gehaltsgruppe („A13“). 
+Der Mindestlohn der Angestellten beträgt 12,50 Euro. 
+
+3. Der ledige Lehrer Fritz Gohm erhält im Moment 2800 Euro, 
+Der Hausmeister hat einen Stundenlohn von 15,80 Euro. 
+Diesen Monat hat der Hausmeister 55 Stunden gearbeitet. 
+Alles über 40 Stunden sind Überstunden. 
+Jede Überstunde wird mit 20 Euro bezahlt. 
+Die Zulage für den Nachtdienst beträgt 75 Euro pro Monat.  
+Erfassen Sie alle Mitarbeiter und berechnen Sie das Gehalt. 
+
+

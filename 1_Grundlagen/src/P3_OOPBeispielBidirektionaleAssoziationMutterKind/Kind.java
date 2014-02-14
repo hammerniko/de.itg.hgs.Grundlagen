@@ -15,10 +15,7 @@ public class Kind extends Person{
 		}
 	}
 
-	@Override
-    public String toString() {
-	    return super.toString()+ " Mutter=" + mutter.getVorname() + "]";
-    }
+	
 	
 	
 }

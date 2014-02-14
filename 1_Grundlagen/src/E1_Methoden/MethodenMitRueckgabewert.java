@@ -5,7 +5,7 @@ public class MethodenMitRueckgabewert {
     public static void main(String[] args) {
         //Eingabe
         double zahl1 = 4;
-        double zahl2 = 11;
+        double zahl2 = 3;
         
         //Verarbeitung
         double summe     = addiere(zahl1, zahl2);
@@ -22,8 +22,13 @@ public class MethodenMitRueckgabewert {
     }
 
     public static double addiere(double zahl1, double zahl2) {
+        //Eingabe
         double returnValue;
+        
+        //Verarbeitung
         returnValue = zahl1 + zahl2;
+        
+        //RŸckgabe
         return returnValue;
     }
 

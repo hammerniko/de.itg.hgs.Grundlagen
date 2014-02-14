@@ -8,6 +8,12 @@ public class Email2 {
 		String email;
 		Scanner s = new Scanner(System.in);
 		
+		/**
+		 * wiederhole, solange die Email-Adresse
+		 * nicht korrekt eingegeben wurde.
+		 * Wurde die Email 3 mal falsch eingegeben, wird
+		 * die Eingabe abgebrochen.
+		 */
 		do {
 			System.out.println();
 			System.out.print("Email:");
@@ -23,6 +29,7 @@ public class Email2 {
 				System.out.println("Email akzeptiert.");
 			}
 			else {
+				istEmailKorrekt=false;
 				System.err.println("Fehler in der Email:"+email);
 				System.out.println("--------------------");
 			}
