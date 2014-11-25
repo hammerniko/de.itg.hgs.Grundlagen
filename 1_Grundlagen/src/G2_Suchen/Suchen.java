@@ -3,7 +3,7 @@ package G2_Suchen;
 public class Suchen {
 
     /**
-     * Sequentielle und BinŠre Suche in Feldern
+     * Sequentielle und Binaere Suche in Feldern
      * Buch S. 102
      * 
      */
@@ -12,13 +12,13 @@ public class Suchen {
         //Zu durchsuchende Felder 
         int[] sortiertesFeld={2,5,9,13,23,43,65};
         int[] unsortiertesFeld={3,67,1,45,7,9,34};
-        String[] unsortierteNamen = {"Meier","Gro§","Huber"};
+        String[] unsortierteNamen = {"Meier","Groï¿½","Huber"};
         String[] sortierteNamen   = {"Arendt","Burger","Maier"};
         
         //Gesuchte Werte
         int gesuchterWert = 45;
         int gesuchterWert2 = 43;
-        String gesuchterName = "Gro§";
+        String gesuchterName = "Groï¿½";
         String gesuchterName2 = "Maier";
                 
         //Sequentielle Suche
@@ -29,15 +29,15 @@ public class Suchen {
          
         //Binaere Suche
         int index2 = binaereSuche(sortiertesFeld, gesuchterWert2);
-        System.out.println("binŠr:      "+gesuchterWert2+" steht an der Stelle "+index2);
+        System.out.println("binï¿½r:      "+gesuchterWert2+" steht an der Stelle "+index2);
         int indexStr2 = binaereSuche(sortierteNamen, gesuchterName2);
-        System.out.println("binŠr:      "+gesuchterName2+" steht an der Stelle "+indexStr2);
+        System.out.println("binï¿½r:      "+gesuchterName2+" steht an der Stelle "+indexStr2);
     }
     
     /**
      * Durchsucht eine unsortiertes Feld nach einem Wert und
-     * gibt den Index zurŸck, wenn der Wert gefunden wird.
-     * Im Fehlerfall wird -1 zurŸckgegeben
+     * gibt den Index zurï¿½ck, wenn der Wert gefunden wird.
+     * Im Fehlerfall wird -1 zurï¿½ckgegeben
      * @param feld
      * @param wert
      * @return
@@ -52,7 +52,7 @@ public class Suchen {
         return -1;
      }
     
-    //†berladene Methode fŸr die Sequentielle Suche in Feldern mit Zeichenketten
+    //ï¿½berladene Methode fï¿½r die Sequentielle Suche in Feldern mit Zeichenketten
     public static int sequentielleSuche(String[] feld, String wert){
         int k=0;
         while (k<feld.length) {
@@ -65,8 +65,8 @@ public class Suchen {
     
     /**
     * Durchsucht eine sortiertes Feld nach einem Wert und
-    * gibt den Index zurŸck, wenn der Wert gefunden wird.
-    * Im Fehlerfall wird -1 zurŸckgegeben.
+    * gibt den Index zurï¿½ck, wenn der Wert gefunden wird.
+    * Im Fehlerfall wird -1 zurï¿½ckgegeben.
     * Der Suchvorgang geht schneller als die Sequentielle Suche.
     * @param feld
     * @param wert
@@ -78,12 +78,12 @@ public class Suchen {
         int obereGrenze=sortiertesFeld.length-1;
         
         while (untereGrenze <= obereGrenze) {
-            index = (untereGrenze+obereGrenze)/2;  //index in der Mitte wŠhlen
+            index = (untereGrenze+obereGrenze)/2;  //index in der Mitte wï¿½hlen
             
             //Falls der Wert gefunden wurde
             if(sortiertesFeld[index]==wert)
                 return index;
-            //eine HŠlfte wŠhlen, wenn der Wert noch nicht gefunden wurde
+            //eine Hï¿½lfte wï¿½hlen, wenn der Wert noch nicht gefunden wurde
             if(wert<sortiertesFeld[index])
                 obereGrenze=index-1;
             else
@@ -98,12 +98,12 @@ public class Suchen {
         int obereGrenze=sortiertesFeld.length-1;
         
         while (untereGrenze <= obereGrenze) {
-            index = (untereGrenze+obereGrenze)/2;  //index in der Mitte wŠhlen
+            index = (untereGrenze+obereGrenze)/2;  //index in der Mitte wï¿½hlen
             
             //Falls der Wert gefunden wurde
             if(sortiertesFeld[index].equals(wert))
                 return index;
-            //eine HŠlfte wŠhlen, wenn der Wert noch nicht gefunden wurde
+            //eine Hï¿½lfte wï¿½hlen, wenn der Wert noch nicht gefunden wurde
             if(wert.charAt(0)<sortiertesFeld[index].charAt(0))
                 obereGrenze=index-1;
             else
