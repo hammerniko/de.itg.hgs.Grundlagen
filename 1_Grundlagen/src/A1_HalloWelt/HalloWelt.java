@@ -6,7 +6,7 @@ public class HalloWelt {
 	public static void main(String[] args) {
 		
 		//Ausgabe auf der Konsole
-		System.out.println("Hallo Weltx ");
+		System.out.println("Hallo Welt");
 		
 	}//Ende des Hauptprogramm
 
