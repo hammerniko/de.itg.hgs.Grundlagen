@@ -20,10 +20,18 @@ public class SchreibeWertInExcelFile {
 		HSSFWorkbook wb = new HSSFWorkbook();
 		Sheet blatt = wb.createSheet("Mein Blatt");
 		
-		//Zelle erstellen
+		//Zelle erstellen und Wert reinschreiben
 		Row row = blatt.createRow(0);
 		Cell cell = row.createCell(0);
 		cell.setCellValue(3.1415);
+		
+		Cell cell2 = row.createCell(1);
+		cell2.setCellValue(2);
+		
+		Cell cell3= row.createCell(2);
+		cell3.setCellFormula("A1*B1");
+		
+		
 		
 		try {			
 			FileOutputStream outputStream  = new FileOutputStream("src/I2_EXCELWertInZelleSchreiben/Excel.xls");
