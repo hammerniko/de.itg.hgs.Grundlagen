@@ -15,14 +15,23 @@ import org.apache.poi.ss.usermodel.Sheet;
 public class ErstelleExcelFile {
 
 	public static void main(String[] args) {
+		//Excel Arbeitsmappe erstellen
 		HSSFWorkbook wb = new HSSFWorkbook();
+		
+		//Register in der Mappe erstellen
 		Sheet blatt = wb.createSheet("Mein Blatt");
 		
-		try {
+		try {			
+			//Ausgabedatenstrom erzeugen und Dateipfad erzeugen
 			FileOutputStream outputStream  = new FileOutputStream("src/I1_EXCEL/Excel.xls");
+			
+			//Datei erzeugen
 			wb.write(outputStream);
+			
+			//Ausgabestrom wieder schliessen
 			outputStream.close();
 		} catch (Exception e) {
+			//vereinfachte Fehlermeldung, wenn etwas schief geht
 			System.out.println("IO Fehler");
 		}
 
