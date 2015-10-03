@@ -1,8 +1,10 @@
-package I1_ExcelDateiErstellen;
+package I2_ExcelWertInZelleSchreiben;
 
 import java.io.FileOutputStream;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 
 /**
@@ -12,29 +14,24 @@ import org.apache.poi.ss.usermodel.Sheet;
  * @author nh
  *
  */
-public class ErstelleExcelFile {
+public class SchreibeWertInExcelFile {
 
 	public static void main(String[] args) {
-		//Excel Arbeitsmappe erstellen
 		HSSFWorkbook wb = new HSSFWorkbook();
-		
-		//Register in der Mappe erstellen
 		Sheet blatt = wb.createSheet("Mein Blatt");
 		
+		//Zelle erstellen
+		Row row = blatt.createRow(0);
+		Cell cell = row.createCell(0);
+		cell.setCellValue(3.1415);
+		
 		try {			
-			//Ausgabedatenstrom erzeugen und Dateipfad erzeugen
-			FileOutputStream outputStream  = new FileOutputStream("src/I1_EXCEL/Excel.xls");
-			
-			//Datei erzeugen
+			FileOutputStream outputStream  = new FileOutputStream("src/I2_EXCELWertInZelleSchreiben/Excel.xls");
 			wb.write(outputStream);
-			 
-			//Ausgabestrom wieder schliessen
 			outputStream.close();
 		} catch (Exception e) {
-			//vereinfachte Fehlermeldung, wenn etwas schief geht
 			System.out.println("IO Fehler");
 		}
-
 	}
 
 }
