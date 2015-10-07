@@ -5,29 +5,28 @@ public class Variablen {
 	public static void main(String[] args) {
 		
 		//***********************EINGABE
-		//deklarieren
-		int alter;
-		double gewichtDesMenschen;
-		String name;
+		//deklarieren und initialisiere
+		//tastatureingabe
+		//sensorwert o.ä.
+		//F=m*a, 
+		double kraft;
+		double masse;
+		double beschleunigung;
+		String meldung;
 		
-		//Wertzuweisung
-		alter = 43;
-		gewichtDesMenschen=4.4562125456;
-		name = "Hammer";
+		masse = 10.5;
+		beschleunigung = 9.81;
+		meldung = "Die größe der Kraft ist:";
 		
-		//***********************VERARBEITUNG
-		//Variable verŠndern
-		alter = alter+1;
-		gewichtDesMenschen=gewichtDesMenschen-1;
-		name = name + " Nikolai";
 		
-		//***********************AUSGABE
-		//Variable verwenden
-		System.out.println(alter);
-		System.out.println(gewichtDesMenschen);
-		System.out.println(name);
+		//Verarbeitung
+		kraft = masse * beschleunigung;
+		meldung = meldung +kraft;
 		
-
+		//Ausgabe
+		System.out.println(meldung);
+		System.out.println(meldung.length());
+		
 	}
 
 }

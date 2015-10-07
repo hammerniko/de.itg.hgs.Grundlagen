@@ -1,4 +1,4 @@
-package A3_Variablen;
+package A5_Eingabe;
 import java.util.Scanner;
 
 public class Brueckenhoehe {
