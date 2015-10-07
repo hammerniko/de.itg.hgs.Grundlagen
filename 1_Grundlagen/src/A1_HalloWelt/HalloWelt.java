@@ -2,7 +2,7 @@ package A1_HalloWelt;
 
 public class HalloWelt {
 
-	//xxHauptprogramm, Einstiegspunkt
+	//Hauptprogramm, Einstiegspunkt
 	public static void main(String[] args) {
 		
 		//Ausgabe auf der Konsole
