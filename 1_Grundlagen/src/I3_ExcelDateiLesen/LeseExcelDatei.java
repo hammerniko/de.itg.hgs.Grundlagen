@@ -19,7 +19,7 @@ public class LeseExcelDatei {
 		JFileChooser fc = new JFileChooser();
 		int auswahl = fc.showOpenDialog(null);
 		
-		//Wenn Öffnen geklickt wurde
+		//Wenn Oeffnen geklickt wurde
 		if(auswahl == JFileChooser.APPROVE_OPTION){
 			try {
 				//ausgewähltes File einlesen
