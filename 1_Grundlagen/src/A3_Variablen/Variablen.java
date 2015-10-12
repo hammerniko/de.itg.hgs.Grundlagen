@@ -1,31 +1,34 @@
 package A3_Variablen;
 
+import D1_Arrays.KartenMischen;
+
+/**
+ * Die Hoehe einer Brücke soll berechnet werden.
+ * Zeit wird gemessen.
+ * g=9.81 m/s^2
+ * 
+ * s = 0.5 * g * t^2
+ * @author hr
+ *
+ */
 public class Variablen {
 
+	//Hauptprogramm, Einstiegspunkt
 	public static void main(String[] args) {
 		
-		//***********************EINGABE
-		//deklarieren und initialisiere
-		//tastatureingabe
-		//sensorwert o.ä.
-		//F=m*a, 
-		double kraft;
-		double masse;
-		double beschleunigung;
-		String meldung;
-		
-		masse = 10.5;
-		beschleunigung = 9.81;
-		meldung = "Die größe der Kraft ist:";
-		
+		//Eingabe
+		double erdfallbeschleunigung = 9.81;
+		double zeit = 1.5;
+		double strecke;
+		String meldung ="Die hoehe der Brücke ist:"; 
 		
 		//Verarbeitung
-		kraft = masse * beschleunigung;
-		meldung = meldung +kraft;
+		strecke = 0.5 * erdfallbeschleunigung * zeit * zeit;
+		meldung = meldung+strecke;
+				
 		
 		//Ausgabe
 		System.out.println(meldung);
-		System.out.println(meldung.length());
 		
 	}
 
