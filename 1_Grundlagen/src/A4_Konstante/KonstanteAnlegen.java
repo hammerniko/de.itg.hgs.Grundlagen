@@ -7,6 +7,9 @@ public class KonstanteAnlegen {
        
         //Eingabe
         final double ERDFALLBESCHLEUNIGUNG = 9.81;
+        
+        
+        
         double kraft;
         double masse=10;
           
