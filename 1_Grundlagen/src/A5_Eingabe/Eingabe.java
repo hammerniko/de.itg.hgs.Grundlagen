@@ -1,22 +1,28 @@
 package A5_Eingabe;
+
 import java.util.Scanner;
+
 
 public class Eingabe {
 	
 	public static void main(String[] args){
 		
 		//EINGABE
-		Scanner s = new Scanner(System.in);
 		
-		//Warten bis auf der Konsole Enter gedrückt wird
+		//Objekt der Klasse Scanner erzeugen
+		//Zeiger s zeigt auf Objekt im HEAP
+		Scanner s = new Scanner(System.in);
+			
+		
+		//Warten bis auf der Konsole Enter gedrueckt wird
 		System.out.print("Name:\t");
 		String name = s.next();
 		
-		System.out.print("Größe:\t");
-		int groesse = s.nextInt();
-		
+		System.out.print("Groesse:\t");
+		int groesse = s.nextInt(); 
+				
 		System.out.print("Gewicht:\t");
-		double gewicht = s.nextDouble();
+		double gewicht = s.nextInt();
 		
 		
 		
