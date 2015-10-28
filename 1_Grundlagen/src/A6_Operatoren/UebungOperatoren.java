@@ -7,48 +7,69 @@ zu Operatoren
 public class UebungOperatoren {
 
   public static void main(final String[] args) {
-         //†bung 1:
+         //Uebung 1:
          //Letzte Ziffer einer Zahl speichern und anschliessend
          //die letzte Ziffer der Zahl abtrennen
          
-//         int ZahlenCode = 12345;
+	  
+//	  		int z = 14;
+//	  		int erg = z % 5;
+//	  		System.out.println(erg);
+	  	
+//         int ZahlenCode = 123;
 //         int letzteZiffer = ZahlenCode % 10;
 //         int neueZahl = ZahlenCode/10;
+//         
 //         System.out.println(letzteZiffer);
 //         System.out.println(neueZahl);
-         
-         //Übung 2:
-         //Deklarieren Sie die Zahl 255 als Hexadezimalzahl
-         //und geben Sie diese aus
-         //Was stellen Sie fest?
-//         int hexadezimalZahl=0x2AFFFFFF;
+//         
+//         ZahlenCode = neueZahl;
+//         letzteZiffer = ZahlenCode % 10;
+//         neueZahl = ZahlenCode/10;
+//         
+//         System.out.println(letzteZiffer);
+//         System.out.println(neueZahl);
+        
+	  
+	  
+	  
+	  
+	  
+//         Übung 2:
+//         Deklarieren Sie die Zahl 255 als Hexadezimalzahl
+//         und geben Sie diese aus
+//         Was stellen Sie fest?
+//         int hexadezimalZahl=0xFF;
 //         System.out.println("\nDie Hexadezimalzahl:"+hexadezimalZahl);
          
          //†bung 3:
          //Reihenfolge der Auswertung in Ausdrücken
          //Welchen Wert hat b?
          //Begründen Sie das Ergebnis.
+//         int a=5;
+//         a=a+1;
+//         a++;
          
-         //a++;
-         //a=a+1;
-         
+                  
+//        System.out.println("\na: " +a);
          //System.out.println("\nb: " +b);
+        
          
          //Übung 4:
          //Welchen Wert hat z4? Begründen Sie Ihr ergebnis.
-         //int a4=6;      //0110
-         //int b4=3;      //0011 
-         //int z4 = a4&b4;//0010
-         //System.out.println("\nz4 "+z4);
+//         int a4=6;      //0110
+//         int b4=3;      //0011 
+//         int z4 = a4&b4;//0010
+//         System.out.println("\nz4 "+z4);
          
          //Übung 5:
          //Welchen Wert hat z5? Begründen Sie Ihr ergebnis.
-         //int a5=11;  //1011
-         //int b5=9;   //1001
-         //int z5;     //1011 
-         
-         //z5=a5|b5;
-         //System.out.println("\nz5 "+z5);
+//         int a5=11;  //1011
+//         int b5=9;   //1001
+//         int z5;     //1011 
+//         
+//         z5=a5|b5;
+//         System.out.println("\nz5 "+z5);
          
          
          //Übung 6:
@@ -65,14 +86,18 @@ public class UebungOperatoren {
 //         System.out.println("prüfSumme2 "+pruefSumme2);
 //         System.out.println("prüfSumme3 "+pruefSumme3);
 //         System.out.println("prüfSumme4 "+pruefSumme4);
-//         
+////         
          
          //†bung 7:
          //Anwenden mathematischer Methoden aus der Klasse Math.*
 //         double pi = Math.PI;
-//
-//         double wi1 = Math.sin(pi);
-//         double wi2 = Math.sin(pi/2);
+//          double wi1 = Math.sin(2*3.1415);  //=0
+//         double wi2 = Math.cos(pi/4);
+//         
+//         double alpha = (wi2*360.0) / (2.0*pi);
+//         System.out.println(alpha);   
+//         
+//         
 //         double wi3 = Math.sin(pi/4);
 //         double wi4 = Math.cos(pi);
 //         double wi5 = Math.cos(pi/2);
@@ -84,7 +109,7 @@ public class UebungOperatoren {
 //         System.out.println("wi4 "+ wi4);
 //         System.out.println("wi5 "+ wi5);
 //         System.out.println("wi6 "+ wi6);
-         
+//         
          
          //Übung 8: Schreiben Sie ein Programm zur Berechnung eines Winkels
          //aus einem Bogenmass
@@ -92,9 +117,11 @@ public class UebungOperatoren {
          
 
          //†BUNG 9
-         int komplement = ~ -1; 
-         //011 
-         //100 -> 011 + 1 - > 100 -> 4
+	     int zahl = 15238;          
+         int komplement = ~ 15238 + 1;  
+         						 
+         
+         System.out.println(zahl);
          System.out.println(komplement);
          
          
