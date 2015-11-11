@@ -26,8 +26,12 @@ public class Wochentag {
 		// Verabreitung
 		anzahlJahre = (jahr - 1900);
 		anzSchaltjahre = anzahlJahre / 4;
+		
+		//Anzahl der Tage vom 1.1.1900 bis zum 1.1. des Jahres
 		anzahlTage = 365 * anzahlJahre + anzSchaltjahre;
 
+		//Ermitteln der Tage der vollen Monate
+		//vor dem gesuchten Datum
 		switch (monat) {
 		case 12:tageDerMonate += 30;
 		case 11:tageDerMonate += 31;
