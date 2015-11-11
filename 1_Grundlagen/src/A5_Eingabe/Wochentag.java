@@ -29,43 +29,19 @@ public class Wochentag {
 		anzahlTage = 365 * anzahlJahre + anzSchaltjahre;
 
 		switch (monat) {
-		case 1:
-			tageDerMonate = 0;
-			anzahlTage--;
-			break;
-		case 2:
-			tageDerMonate = 31;
-			break;
-		case 3:
-			tageDerMonate = 31 + 28;
-			break;
-		case 4:
-			tageDerMonate = 31 + 28 + 31;
-			break;
-		case 5:
-			tageDerMonate = 31 + 28 + 31 + 30;
-			break;
-		case 6:
-			tageDerMonate = 31 + 28 + 31 + 30 + 31;
-			break;
-		case 7:
-			tageDerMonate = 31 + 28 + 31 + 30 + 31 + 30;
-			break;
-		case 8:
-			tageDerMonate = 31 + 28 + 31 + 30 + 31 + 30 + 31;
-			break;
-		case 9:
-			tageDerMonate = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31;
-			break;
-		case 10:
-			tageDerMonate = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30;
-			break;
-		case 11:
-			tageDerMonate = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31;
-			break;
-		case 12:
-			tageDerMonate = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31
-					+ 30;
+		case 12:tageDerMonate += 30;
+		case 11:tageDerMonate += 31;
+		case 10:tageDerMonate += 30;
+		case 9: tageDerMonate += 31;
+		case 8: tageDerMonate +=30;
+		case 7: tageDerMonate +=31;
+		case 6: tageDerMonate +=31;
+		case 5: tageDerMonate +=30;
+		case 4: tageDerMonate +=31;
+		case 3: tageDerMonate +=28;
+		case 2: tageDerMonate +=31;
+		case 1: 
+			if(monat == 1){anzahlTage--;}
 			break;
 		}
 		
@@ -85,9 +61,7 @@ public class Wochentag {
 		}
 		
 		
-		System.out.println(anzahlTage);
-		System.out.println(tageDerMonate);
-		System.out.println(wochentagNr);
+		System.out.println("Anzahl der Tage Seit dem 1.1.1900 = "+anzahlTage);
 		System.out.println(wochentag);
 
 	}
