@@ -16,11 +16,13 @@ public class Wochentag {
 		System.out.println("Jahr (YYYY):");
 		int jahr = sc.nextInt();
 
+		sc.close();
+		
 		int anzahlJahre;
 		int wochentagNr; // 0=Sonntag, 1=Montag ,...
 		int anzSchaltjahre = 0;
-		int anzahlTage = 0;
-		int tageDerMonate = 0;
+		int anzahlTage=0;
+		int tageDerMonate =0;
 		String wochentag="";
 		
 		// Verabreitung
@@ -44,10 +46,11 @@ public class Wochentag {
 		case 4: tageDerMonate +=31;
 		case 3: tageDerMonate +=28;
 		case 2: tageDerMonate +=31;
-		case 1: 
-			if(monat == 1){anzahlTage--;}
-			break;
+		case 1: break;
 		}
+		
+		if(monat <= 2 && ((jahr%4==0 && jahr %100!=0)||jahr%400==0)){anzahlTage--;}
+		
 		
 		anzahlTage = anzahlTage + tageDerMonate + tag ;
 		wochentagNr = anzahlTage % 7;
@@ -65,6 +68,7 @@ public class Wochentag {
 		}
 		
 		
+		//AUSGABE
 		System.out.println("Anzahl der Tage Seit dem 1.1.1900 = "+anzahlTage);
 		System.out.println(wochentag);
 
