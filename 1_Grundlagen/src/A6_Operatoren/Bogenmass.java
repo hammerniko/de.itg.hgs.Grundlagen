@@ -3,8 +3,7 @@ package A6_Operatoren;
 public class Bogenmass {
 
 	public static void main(String[] args) {
-		
-		
+			
 		//Winkel
 		double alpha = 45;
 		
@@ -19,8 +18,7 @@ public class Bogenmass {
 		//und umgekehrt
 		double bm = Math.asin(sin);
 		double alphaBerechnet = bm *360 / (2*Math.PI);
-		System.out.println(alphaBerechnet);
-		
+		System.out.println(alphaBerechnet);		
 		
 	}
 
