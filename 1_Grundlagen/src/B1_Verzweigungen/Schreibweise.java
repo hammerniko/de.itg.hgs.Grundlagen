@@ -26,7 +26,7 @@ public class Schreibweise {
         }
         
         
-        System.out.println("Prüfung beendet");
+        System.out.println("Pruefung beendet");
     }
 
 }

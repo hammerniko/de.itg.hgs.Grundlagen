@@ -12,18 +12,16 @@ public class NoteBerechnen {
         
         System.out.print("Erreichte Punkte:");
         double errPunkte = s.nextDouble();
-        
         double note;       
         
         //VERARBEITUNG & AUSGABE
-        //maxPunkte und errPunkte gültig?
+        //maxPunkte und errPunkte gueltig?
         if(maxPunkte>0 && errPunkte<=maxPunkte && errPunkte>0){
             note = -5/maxPunkte*errPunkte+6;
             System.out.println("Ihre Note ist: "+note);
         }
         else{
-            System.out.println("Ungültige Werte");
+            System.out.println("Ungueltige Werte");
         }
     }
- 
-}
+ }

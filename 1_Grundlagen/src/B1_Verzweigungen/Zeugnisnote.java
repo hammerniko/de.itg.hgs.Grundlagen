@@ -14,7 +14,7 @@ public class Zeugnisnote {
         kommaNote=s.nextDouble();
         
         //Verarbeitung
-        //Ohne Gültigkeitsprüfung der Note
+        //Ohne Gueltigkeitspruefung der Note
         if(kommaNote<1.5){
             zeugnisNote="Sehr Gut";
         }

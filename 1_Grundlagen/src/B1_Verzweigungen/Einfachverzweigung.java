@@ -5,22 +5,21 @@ public class Einfachverzweigung {
     //Hauptprogramm
     public static void main(String[] args) {
        
-        int a=120;
+        int a=50;
         int b= 100;
-         
-        if (a>b) {
-            System.out.println("a ist grš§er b");
-            
+        
+        int menueauswahl = 3; 
+    
+               
+        
+        if (menueauswahl==1) {
+        	System.out.println("1");
+			
         }
-        else {
-            System.out.println("a ist kleiner b");
-        }
-         
-        if (a>=100) {
-            System.out.println("a ist grš§er 100");
-        }
-       
-        System.out.println("Programmende");
+        
+        System.out.println("2");
+        
+        
  
     }
 }

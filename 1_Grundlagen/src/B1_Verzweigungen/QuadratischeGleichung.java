@@ -55,11 +55,5 @@ public class QuadratischeGleichung {
         
         //********************AUSGABE
         System.out.println(ergebnis);
-        
-        
-        
-        
-        
     }
-
 }
