@@ -5,20 +5,36 @@ public class Einfachverzweigung {
     //Hauptprogramm
     public static void main(String[] args) {
        
-        int a=50;
-        int b= 100;
         
-        int menueauswahl = 3; 
+        double gewicht = 100.9; 
+        
+       
     
                
-        
-        if (menueauswahl==1) {
-        	System.out.println("1");
-			
+        if (gewicht > 100 ) {
+			System.out.println("schwer");
         }
+        else if(gewicht >90){
+        	System.out.println("üppig");
+        }
+        else{
+        	System.out.println("normal");
+        }
+       
+        System.out.println("ende");
         
-        System.out.println("2");
         
+        if (gewicht > 100 ) {
+			System.out.println("schwer");
+        }
+        if(gewicht >90 ){
+        	System.out.println("üppig");
+        }
+        else{
+        	System.out.println("normal");
+        }
+       
+        System.out.println("ende");
         
  
     }
