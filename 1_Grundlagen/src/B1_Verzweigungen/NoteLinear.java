@@ -18,11 +18,11 @@ public class NoteLinear {
         pErr = s.nextDouble();
 
         // VERARBEITUNG
-        if (pMax > pErr && pMax > 0 && pErr >= 0) {
+        if (pMax >= pErr && pMax > 0 && pErr >= 0) {
             note = -5 / pMax * pErr + 6;
             meldung = "Ihre Note: \t" + note;
         } else {
-            meldung = "ungültige Eingabe";
+            meldung = "ungueltige Eingabe";
         }
 
         // AUSGABE

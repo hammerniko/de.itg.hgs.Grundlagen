@@ -3,20 +3,20 @@ import java.util.Scanner;
 
 
 public class Getraenkeautomat {
-	/**
-	 * @param args
-	 */
+	
 	public static void main(String[] args) {
 		double preis = 0.99;
 		double betrag, rest,rueckgeld, kosten;
 		int bestellt,anzahlMax, zweiEuro=0,einEuro=0,fuenfzigCent=0,zwanzigCent=0,zehnCent=0,fuenfCent=0,zweiCent=0,cent=0;
 		
+		System.out.println("Ein Getraenk kostet: "+preis);
+		
 		Scanner s = new Scanner(System.in);
 		
-		System.out.print("Betrag:\t\t");
+		System.out.print("Betrag bezahlt:\t");
 		betrag = s.nextDouble();
 		
-		//Anzahl Getränke
+		//Anzahl Getraenke
 		anzahlMax = (int) (betrag / preis);
 		
 		do {
@@ -25,12 +25,12 @@ public class Getraenkeautomat {
         } while (bestellt>anzahlMax);
 		
 		
-		//Rückgeld
+		//Rueckgeld
 		kosten = runden(bestellt * preis);
 		rueckgeld = runden(betrag - kosten);
 		rest=rueckgeld*100;	
 		
-		//Münzen
+		//Muenzen
 		zweiEuro = (int) rest/200;
 		rest = runden(rest%200);
 		
@@ -56,9 +56,9 @@ public class Getraenkeautomat {
 		
 		//Ausgabe
 		System.out.println("\nBetrag:\t\t"+betrag);
-		System.out.println("Anzahl Getränke:"+bestellt);
+		System.out.println("Anz. Getraenke:\t"+bestellt);
 		System.out.println("Kosten:\t\t"+kosten);
-		System.out.println("Rückgeld:\t"+rueckgeld);
+		System.out.println("Rueckgeld:\t"+rueckgeld);
 		System.out.println();
 		System.out.println("2 Euro: \t"+zweiEuro);
 		System.out.println("1 Euro: \t"+einEuro);

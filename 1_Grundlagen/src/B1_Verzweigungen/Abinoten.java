@@ -14,7 +14,7 @@ public class Abinoten {
 		pErr=sc.nextInt();
 		
 		//VERARBEITUNG
-		//Umrechnung auf 60 Punkte Schlüssel
+		//Umrechnung auf 60 Punkte Schluessel
 		punkteNS = 60 * pErr / pMax;
 		//Ermitteln der Abipunkte
 		if(punkteNS<=60 && punkteNS>=57){abiPunkte=15;}
