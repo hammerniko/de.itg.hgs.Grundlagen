@@ -16,6 +16,7 @@ public class Getraenkeautomat {
 		System.out.print("Betrag bezahlt:\t");
 		betrag = s.nextDouble();
 		
+		
 		//Anzahl Getraenke
 		anzahlMax = (int) (betrag / preis);
 		
