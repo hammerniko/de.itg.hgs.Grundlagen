@@ -1,62 +1,61 @@
 package E1_Methoden;
-public class EinfuehrungMethoden {
-	// Hauptprogramm 
-	// Nach der Ausgabe wird jede Methode einmal aufgerufen
-	public static void main(String[] args) {
-	    
-	    //Erste Anweisung im Hauptprogramm
-		System.out.println("Hallo hier bin ich");
-		
-		//Methoden aufrufen
-		zeichneLinie();
-		zeichneLinie(20);
-		zeichneLinie(15,'x');
-		zeichneLinie();
-		
-		//Nach bearbeitung der Methode
-		//kehrt das PRogramm hierher zurück
-		System.out.println();
-		
-	}//Ende main
-	
-	
-	
-	
-	// Einfache Methode, ohne Rückgabewert
-	public static void zeichneLinie() {
-		System.out.println("---");
-	}//Ende zeichneLinie()
 
+import A6_Operatoren.Zahlenschloss;
+
+public class EinfuehrungMethoden {
+	
+	//main-Methode
+	public static void main(String[] args) {
+	    System.out.println("Start");
+		
+	    double zahl1 = getSum(23, 65.5);
+	
+	    System.out.println(zahl1);
+	
+		System.out.println("Ende");
+	}
+	
+	//Mit ‹bergabeparameter
+		public static void zeichneLinie(int pZahl, String zeichen){
+			for (int i = 0; i < pZahl; i++) {
+				System.out.print(zeichen);
+			}
+			System.out.println();
+		}
 	
 	
-	// Einfache überladene Methode mit Übergabeparameter
-	// ohne Rückgabewert
-	// Zeichnet eine Linie definierter Länge
-	public static void zeichneLinie(int anzahlStriche) {
-	    
-		for (int i = 0; i < anzahlStriche; i++) {
+	
+	//Mit ‹bergabeparameter
+	public static void zeichneLinie(int pZahl){
+		for (int i = 0; i < pZahl; i++) {
 			System.out.print("-");
 		}
+		System.out.println();
+	}
+	
+	
+	
+	//¸berladene Methode ohne ‹bergabeparameter
+	public static void zeichneLinie(){
 		
-		System.out.println();
+			System.out.println("------------");
+		
+		
 	}
 	
-public static void zeichneLinie(double kommazahl) {
-        
-        
-            System.out.println("-"+kommazahl);
-        
-    }
 	
-	
-
-	// Einfache überladene Methode mit mehreren Übergabeparametern
-	// ohne Rückgabewert
-	// Zeichnet eine Linie definierter Länge mit einem definierten Zeichen
-	public static void zeichneLinie(int anzahlStriche, char zeichen) {
-		for (int i = 0; i < anzahlStriche; i++) {
-			System.out.print(zeichen);
-		}
-		System.out.println();
+	public static double getSum(double pZahl1, double pZahl2){
+		//Eingabe und Initialisierung
+		double returnValue=0;
+		
+		//verarbeitung
+		returnValue = pZahl1+pZahl2;
+		
+		//R¸ckgabe
+		return returnValue; 
 	}
+	
+	
+	
+	
 }

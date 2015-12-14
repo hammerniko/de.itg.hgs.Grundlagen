@@ -5,13 +5,14 @@ import java.util.Scanner;
 public class Getraenkeautomat {
 	
 	public static void main(String[] args) {
-		double preis = 0.99;
+		double preis=0;
 		double betrag, rest,rueckgeld, kosten;
 		int bestellt,anzahlMax, zweiEuro=0,einEuro=0,fuenfzigCent=0,zwanzigCent=0,zehnCent=0,fuenfCent=0,zweiCent=0,cent=0;
 		
-		System.out.println("Ein Getraenk kostet: "+preis);
-		
+		System.out.print("Ein Getraenk kostet: ");
 		Scanner s = new Scanner(System.in);
+		preis = s.nextDouble();
+		
 		
 		System.out.print("Betrag bezahlt:\t");
 		betrag = s.nextDouble();
@@ -75,6 +76,11 @@ public class Getraenkeautomat {
 	}
 	
 	public static double runden(double zahl){
-		return Math.rint( zahl * 100 ) / 100.;
+		zahl = zahl * 100;
+		zahl = zahl + 0.5;
+		int z = (int) zahl;
+		double neueZahl = (double) z/100;
+				
+		return neueZahl;
 	}
 }
