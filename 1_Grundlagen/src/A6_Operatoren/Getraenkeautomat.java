@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Getraenkeautomat {
 	
 	public static void main(String[] args) {
+		
 		double preis=0;
 		double betrag, rest,rueckgeld, kosten;
 		int bestellt,anzahlMax, zweiEuro=0,einEuro=0,fuenfzigCent=0,zwanzigCent=0,zehnCent=0,fuenfCent=0,zweiCent=0,cent=0;

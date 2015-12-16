@@ -8,7 +8,7 @@ public class EinfuehrungMethoden {
 	public static void main(String[] args) {
 	    System.out.println("Start");
 		
-	    double zahl1 = getSum(23, 65.5);
+	    double zahl1 = getSum(0,0);
 	
 	    System.out.println(zahl1);
 	
@@ -35,6 +35,7 @@ public class EinfuehrungMethoden {
 	
 	
 	
+	
 	//überladene Methode ohne Übergabeparameter
 	public static void zeichneLinie(){
 		
@@ -46,7 +47,7 @@ public class EinfuehrungMethoden {
 	
 	public static double getSum(double pZahl1, double pZahl2){
 		//Eingabe und Initialisierung
-		double returnValue=0;
+		double returnValue;
 		
 		//verarbeitung
 		returnValue = pZahl1+pZahl2;
