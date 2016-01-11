@@ -44,12 +44,11 @@ public class Quad {
 		if (dis > 0) {
 			x1 = -b / 2 + Math.sqrt(dis);
 			x2 = -b / 2 - Math.sqrt(dis);
-			x1 = getRoundedNumber(x1, 2);
-			x2 = getRoundedNumber(x2, 2);
+			x1 = getRoundedNumber(x1, 3);
+			x2 = getRoundedNumber(x2, 3);
 			ergebnis = "\nEs gibt zwei Lösungen: \nx1 = " + x1 + "\nx2 = " + x2;
 		} else if (dis == 0) {
-
-			x1 = getRoundedNumber(-b / 2, 2);
+			x1 = getRoundedNumber(-b / 2, 3);
 			ergebnis = "\nEs gibt eine Lösung: x = " + x1;
 		} else {
 			ergebnis = "\nEs gibt keine Loesung";
