@@ -2,42 +2,29 @@ package D1_Arrays;
 
 public class ArrayDirektInitialisieren {
 
-   
-    public static void main(String[] args) {
-       
-       //Eingabe
-       int merke; 
-       int[] zahl = {3,2,1,7,5};
-       
-       //Verarbeitung
-       for (int i = 0; i < zahl.length-1; i++) {
-           for (int j = i+1; j < zahl.length; j++) {
-            
-               if(zahl[i]<zahl[j]){
-                   merke = zahl[i];
-                   zahl[i]=zahl[j];
-                   zahl[j]=merke;
-                   
-               }
-               
-               
-               
-        }
-        
-    }
-       
-       
-       
-       
-       
-       //Ausgabe
-       for (int k = 0; k < zahl.length; k++) {
-           System.out.println(zahl[k]);
-        
-    }
-       
-        
+	public static void main(String[] args) {
 
-    }
+		// Eingabe
+		// Direkte initialisierung
+		String name[] = {"Müller","Meier","Schmid"};
+
+		
+		//Indirekte Initialisierung
+		String[] vorname = new String[3];
+		vorname[0]="Max";
+		vorname[1]="Moritz";
+		vorname[2]="Fritz";
+		
+		
+		
+		
+		vorname[2] = "Detlef";
+		
+		
+		for (int i = 0; i < name.length; i++) {
+			System.out.print(name[i]+" "+vorname[i]+"\n");
+		}
+
+	}
 
 }
