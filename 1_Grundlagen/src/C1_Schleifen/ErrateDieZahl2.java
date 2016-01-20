@@ -36,7 +36,7 @@ public class ErrateDieZahl2 {
                     meldung = "Zahl ist zu klein";
                 }
             } else {
-                meldung = "Zahl ist zu gro§";
+                meldung = "Zahl ist zu gross";
             }
             System.out.println(meldung);
             

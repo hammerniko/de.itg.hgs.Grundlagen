@@ -28,11 +28,13 @@ public class BeispielForSchleife {
          * Abbruchbedingung: solange  i<=100 wahr ist, wird gezŠhlt
          * Schrittweite: i wird bei jeder Wiederholung um 2 erhšhtt.
          */
-        for (int i = 0; i <= 10; i = i + 2) {
+        for (int i = 0; i <= 10; i = i + 5) {
             System.out.println("Anzahl:" + i);
         }
         
-        
+        for (int i = 0; i<=100; i++) {
+			
+		}
         
         System.out.println("Ende");
         
