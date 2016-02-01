@@ -1,8 +1,5 @@
 package C1_Schleifen;
-
-
 import java.util.Scanner;
-
 /**
  * In diesem Spiel wird zu Beginn zufällig eine Zahl zwischen
  * 1 und 100 gezogen.
@@ -16,14 +13,17 @@ import java.util.Scanner;
 public class ErrateDieZahl2 {
 
     public static void main(String[] args) {
+    	//EINGABE*********************************************
         Scanner s = new Scanner(System.in);
         int eingabeZahl;
         int anzahlVersuche=0;
         String meldung;
         int zufallsZahl;
         
+        //Ziehe eine Zufallszahl zwischen 1 und 100
         zufallsZahl = (int) (Math.random()*100+1);
 
+        //VERARBEITUNG*****************************************
         do {
             System.out.println("Zahl zw. 1-100:");
             eingabeZahl=s.nextInt();
@@ -41,7 +41,8 @@ public class ErrateDieZahl2 {
             System.out.println(meldung);
             
         } while (eingabeZahl!=zufallsZahl);
-        
+                
+        //AUSGABE************************************************
         System.out.println(meldung);
         System.out.println("Sie hatten "+anzahlVersuche+" Versuche");
     }
