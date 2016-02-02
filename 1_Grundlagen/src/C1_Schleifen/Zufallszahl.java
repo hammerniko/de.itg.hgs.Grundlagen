@@ -12,16 +12,19 @@ public class Zufallszahl {
 	 */
     public static void main(String[] args) {
        
-        int zufallfzahl;
+        int zufallszahl;
         
         /**
          * Erzeuge eine Zufallszahl zwischen 1 und 100
          * Wiederhole, solange die Zahl ungleich 53 ist.
          */
+        int i=0;
+        
         do {
-            zufallfzahl= (int) (Math.random()*100+1);
-            System.out.println(zufallfzahl);
-        } while (zufallfzahl!=53);
+        	i++;
+            zufallszahl= (int) (Math.random()*100+1);
+            System.out.println(i+". "+zufallszahl);
+        } while (zufallszahl!=53);
        
         
         

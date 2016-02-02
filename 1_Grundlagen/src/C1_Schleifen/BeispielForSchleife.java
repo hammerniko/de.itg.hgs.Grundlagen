@@ -7,16 +7,18 @@ public class BeispielForSchleife {
     public static void main(String[] args) {
 
         /**
-         * Kopfgesteuerte Zählschleife (Rückwärtszählen)
+         * Kopfgesteuerte Zaehlschleife (Rueckwaertszaehlen)
          * Sie wird verwendet, wenn die Anzahl der Wiederholgungen
          * bekannt ist. 
          * Startwert i=100 
-         * Abbruchbedingung: solange  i>=1 wahr ist, wird gezählt
+         * Abbruchbedingung: solange  i>=1 wahr ist, wird gezaehlt
          * Schrittweite: i wird bei jeder Wiederholung um 1 erniedrigt.
          */
-        for (int i = 100; i >= 1; i = i - 1) {
-            System.out.println("Countdown:" + i);
-        }
+    	
+    	
+       /* for (int zaehler = 100; zaehler >= 1; zaehler = zaehler - 1) {
+            System.out.println("Countdown:" + zaehler);
+        }*/
         
         /**
          * Kopfgesteuerte Zählschleife (Vorwärtszählen)
@@ -26,10 +28,15 @@ public class BeispielForSchleife {
          * Abbruchbedingung: solange  i<=100 wahr ist, wird gezählt
          * Schrittweite: i wird bei jeder Wiederholung um 2 erhöhtt.
          */
-        for (int i = 0; i <= 100; i = i + 2) {
+        for (int i = 0; i <= 10; i = i + 5) {
             System.out.println("Anzahl:" + i);
         }
-
+        
+        for (int i = 0; i<=100; i++) {
+			
+		}
+        
+        System.out.println("Ende");
         
     }
 
