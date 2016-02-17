@@ -34,6 +34,21 @@ public class RotiereArray {
 		return tabNeu;
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	private static String[][] initTabelle() {
 		String[][] tabelle = new String[4][4];
 
