@@ -10,7 +10,7 @@ public class Getraenkeautomat {
 		double preis = 0.99;
 		double betrag, rest, rueckgeld, kosten;
 		int bestellt, anzahlMax;
-		// Felder fŸr Muenzen
+		// Felder fuer Muenzen
 		int[] muenzen = new int[8];
 		int[] muenzWerteInCent = { 200, 100, 50, 20, 10, 5, 2, 1 };
 		String[] muenzNamen = { " 2 Euro", " 1 Euro", "50 Cent", "20 Cent",
@@ -19,7 +19,7 @@ public class Getraenkeautomat {
 		Scanner s = new Scanner(System.in);
 		System.out.print("Betrag:\t\t");
 		betrag = s.nextDouble();
-		// Anzahl GetrŠnke
+		// Anzahl Getraenke
 		anzahlMax = (int) (betrag / preis);
 		
 		do {
@@ -27,12 +27,12 @@ public class Getraenkeautomat {
 			bestellt = s.nextInt();
 		} while (bestellt > anzahlMax);
 		
-		// RŸckgeld
+		// Rueckgeld
 		kosten = runden(bestellt * preis);
 		rueckgeld = runden(betrag - kosten);
 		rest = rueckgeld * 100;
 		
-		// MŸnzen
+		// Muenzen
 		for (int i = 0; i < muenzen.length-1; i++) {
 			muenzen[i] = (int) rest / muenzWerteInCent[i];
 			rest = runden(rest % muenzWerteInCent[i]);
@@ -41,10 +41,10 @@ public class Getraenkeautomat {
 		
 		// Ausgabe
 		System.out.println("\nBetrag:\t\t" + betrag+ " Euro");
-		System.out.println("Anzahl GetrŠnke:" + bestellt+" GetrŠnke");
+		System.out.println("Anzahl Getraenke:" + bestellt+" GetrŠnke");
 		System.out.println("--------------------------------------");
 		System.out.println("Kosten:\t\t" + kosten+" Euro");
-		System.out.println("RŸckgeld:\t" + rueckgeld+ " Euro");
+		System.out.println("Rueckgeld:\t" + rueckgeld+ " Euro");
 		System.out.println("--------------------------------------");
 		System.out.println();
 		ausgabe(muenzen, muenzNamen);
@@ -52,7 +52,7 @@ public class Getraenkeautomat {
 	}
 
 	public static void ausgabe(int[] muenzen, String[] muenzNamen) {
-		System.out.println("Ausgabe der MŸnzen:");
+		System.out.println("Ausgabe der Muenzen:");
 		for (int i = 0; i < muenzen.length; i++) {
 			System.out.println(muenzNamen[i]+": \t"+muenzen[i]);
 		}
