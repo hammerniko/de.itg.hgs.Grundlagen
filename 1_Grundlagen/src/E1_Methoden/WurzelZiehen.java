@@ -10,10 +10,9 @@ package E1_Methoden;
 public class WurzelZiehen {
 
     public static void main(String[] args) {
-        System.out.println(wurzel(11));
+        System.out.println(wurzel(2));
     }
-
-    
+   
     public static double wurzel(double zahl) {
        
         double x, a;
@@ -22,16 +21,16 @@ public class WurzelZiehen {
         double fehlertoleranz = 0.00000001;
 
         //Die Iterationsmethode funktioniert
-        //nur mit natürlichen Zahlen
+        //nur mit natuerlichen Zahlen
         if (zahl >= 0) {
 
-            //Variablen für die Ergebnisse der Iteration
+            //Variablen fuer die Ergebnisse der Iteration
             double x1, x2;
 
             // Iteriere solange, bis
             // der Unterschied zwischen 2
             // Iterationen kleiner dem
-            // gewünschten Fehlerwert ist
+            // gewuenschten Fehlerwert ist
             do {
                 // Iteration n
                 x1 = (x + a / x) / 2;
@@ -49,7 +48,6 @@ public class WurzelZiehen {
         }
 
         return x;
-
-    }
+   }
 
 }
