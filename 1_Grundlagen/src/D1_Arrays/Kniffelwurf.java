@@ -1,5 +1,7 @@
 package D1_Arrays;
 
+import java.util.Arrays;
+
 public class Kniffelwurf {
 
 	public static void main(String[] args) {
@@ -17,6 +19,8 @@ public class Kniffelwurf {
 		for (int i = 0; i < w.length; i++) {
 			w[i]=gibWuerfelZahl();
 		}
+		Arrays.sort(w);
+		
 		return w;
 	}
 	
