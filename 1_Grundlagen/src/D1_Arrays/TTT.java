@@ -1,7 +1,7 @@
 package D1_Arrays;
 
 import java.util.Scanner;
-import org.omg.CosNaming.IstringHelper;
+
 
 public class TTT {
 	
@@ -22,7 +22,13 @@ public class TTT {
 	static int anzahlFreierFelder=0;
 	
 	static Scanner s;
-	static int x,y; //fŸr Umrechnung Ziffernblockeingabe in 2 Dim. Array
+	static int x,y; //fuer Umrechnung Ziffernblockeingabe in 2 Dim. Array
+	
+	
+	
+	
+	
+	
 	
 	
 	//***************Hauptprogramm*************************************
@@ -35,16 +41,25 @@ public class TTT {
 			setzeFeld();
 			wechsleSpieler();
 			ausgabeSpielFeld();			
-			
 		}while(Math.abs(pruefeObGewonnen())!=1 && anzahlFreierFelder>0);
 		
-		
 		ausgabeErgebnis();
-		
-		
-		
+			
 	}//Ende *************Mainmethode***********************************
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	private static void ausgabeErgebnis() {
 	    if(aktuellerStatus==UNENTSCHIEDEN){
 			System.out.println("UNENTSCHIEDEN");
@@ -53,6 +68,25 @@ public class TTT {
 			System.out.println("Spieler "+aktuellerStatus+" hat gewonnen.");
 		}
     }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	private static void wechsleSpieler() {
 	    aktuellerSpieler = aktuellerSpieler*-1;
@@ -109,6 +143,9 @@ public class TTT {
         }
 	}
 	
+	
+	
+	
 	private static void setzeAusgabeFeld(int i, int j) {
 	   switch (spielFeldDaten[i][j]) {
 	   case 1: ausgabeSpielfeld[i][j]="X";break;
@@ -132,11 +169,26 @@ public class TTT {
 		System.out.println();
 	}
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	private static void setSpielStand(){
 		spielFeldDaten[0][0] = -1; spielFeldDaten[0][1] = -1; spielFeldDaten[0][2] = 1;
 		spielFeldDaten[1][0] = 1; spielFeldDaten[1][1] = 1;  spielFeldDaten[1][2] = +1;
 		spielFeldDaten[2][0] = 1; spielFeldDaten[2][1] = -1;  spielFeldDaten[2][2] = 1;
-		
 	}
 	
 	private static int pruefeObGewonnen(){

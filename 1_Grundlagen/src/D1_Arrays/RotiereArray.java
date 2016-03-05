@@ -4,14 +4,15 @@ public class RotiereArray {
 
 	public static void main(String[] args) {
 
-		String[][] tabelle = initTabelle();
+		String[][] tabelle = new String [3][3];
+		
+		tabelle = initTabelle();
 		ausgabe(tabelle);
 
 		tabelle = rotiere(tabelle);
 		ausgabe(tabelle);
 		
-		tabelle = rotiere(tabelle);
-		ausgabe(tabelle);
+		
 
 	}
 
@@ -50,24 +51,20 @@ public class RotiereArray {
 	
 	
 	private static String[][] initTabelle() {
-		String[][] tabelle = new String[4][4];
+		String[][] tabelle = new String[3][3];
 
 		tabelle[0][0] = "A";
 		tabelle[1][0] = "B";
 		tabelle[2][0] = "C";
-		tabelle[3][0] = "D";
-		tabelle[0][1] = "E";
-		tabelle[1][1] = "F";
-		tabelle[2][1] = "G";
-		tabelle[3][1] = "H";
-		tabelle[0][2] = "I";
-		tabelle[1][2] = "J";
-		tabelle[2][2] = "K";
-		tabelle[3][2] = "L";
-		tabelle[0][3] = "M";
-		tabelle[1][3] = "N";
-		tabelle[2][3] = "O";
-		tabelle[3][3] = "P";
+		
+		tabelle[0][1] = "D";
+		tabelle[1][1] = "E";
+		tabelle[2][1] = "F";
+		
+		tabelle[0][2] = "G";
+		tabelle[1][2] = "H";
+		tabelle[2][2] = "I";
+						
 		return tabelle;
 	}
 

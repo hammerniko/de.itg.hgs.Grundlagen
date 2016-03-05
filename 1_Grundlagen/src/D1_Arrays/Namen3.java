@@ -21,6 +21,8 @@ public class Namen3 {
         namen[7] = "Bach";
         namen[8] = "Kneip";
         namen[9] = "Mann";
+        
+        
 
         vornamen[0] = "Max";
         vornamen[1] = "Detlef";
