@@ -3,7 +3,7 @@ package E3_Rekursion;
 public class Fakultaet {
     public static void main (String []args){
       int n=2;
-      System.out.println ("Fakultät von " + n +": "+ faku (n));
+      System.out.println ("Fakultaet von " + n +": "+ faku (n));
       System.exit(0);
     }
 
