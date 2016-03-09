@@ -1,3 +1,4 @@
+//Geht nur bis Java 6. Bei Java 8 sollte Jackcess verwendet werden.
 package H1_Datenbanken;
 
 import java.awt.BorderLayout;
@@ -52,7 +53,7 @@ public class ZugriffAufAccess extends JFrame {
 	        Vector columnNames = new Vector();
 	        Vector data = new Vector();
 	        try{
-	            Connection con = connectDB("Users/nikolaihammer/Dropbox/HGS/Statistik/ITC-2000.mdb");
+	            Connection con = connectDB("Users/nh/Dropbox/HGS/Statistik/ITC-2000.mdb");
 	            
 	            //Abfrage definieren
 	            String query = q;
