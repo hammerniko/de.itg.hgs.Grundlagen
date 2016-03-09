@@ -2,19 +2,44 @@ package E2_MethodenUndGrafik;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
 
 import javax.swing.JPanel;
 
 public class MeinPanel extends JPanel {
 
+	private Image	          buffer;
+	private Graphics2D	      gBuffer;
+	
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-
-        zeichneRasen(g, 50);
+        
+    	loeschen();
+        
+        zeichneRasen(g, 10);
         //zeichneZaun(g,this.getHeight()-80, 50,15,5);
-
+        //g.drawImage(buffer, 0, 0, this);
+		
+		// Verzögerung
+		try {
+			Thread.sleep(250);
+		} catch (InterruptedException e) {
+		}
+		repaint();
+        
+        
     }
+
+	private void loeschen() {
+		if (buffer == null) {
+			buffer = createImage(this.getSize().width, this.getSize().height);
+			gBuffer = (Graphics2D) buffer.getGraphics();
+		}
+		// Zeichenflaeche loeschen
+		gBuffer.clearRect(0, 0, this.getSize().width, this.getSize().height);
+	}
 
     public void zeichneRasen(Graphics g, int hoehe) {
 

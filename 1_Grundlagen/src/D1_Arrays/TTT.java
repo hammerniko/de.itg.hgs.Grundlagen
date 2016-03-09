@@ -28,9 +28,6 @@ public class TTT {
 	
 	
 	
-	
-	
-	
 	//***************Hauptprogramm*************************************
 	public static void main(String[] args) {
 		s = new Scanner(System.in);
@@ -60,6 +57,10 @@ public class TTT {
 	
 	
 	
+	
+	
+	
+	
 	private static void ausgabeErgebnis() {
 	    if(aktuellerStatus==UNENTSCHIEDEN){
 			System.out.println("UNENTSCHIEDEN");
@@ -70,24 +71,6 @@ public class TTT {
     }
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	private static void wechsleSpieler() {
 	    aktuellerSpieler = aktuellerSpieler*-1;
 	    
@@ -96,6 +79,7 @@ public class TTT {
 	private static boolean setzeFeld() {
 		boolean gesetzt=false;
 		boolean istEingabeGueltig=true;
+		
 		System.out.println("Geben Sie Ihr Feld ein:");
 		System.out.println("Spieler "+aktuellerSpieler+":");
 	    int feldNr = s.nextInt();
@@ -119,8 +103,8 @@ public class TTT {
 	    }
 	    else{
 	    	setzeFeld();
-	    	
 	    }
+	    
 	    setzeAusgabeFeld(y, x);
 	    return gesetzt;
 	}
