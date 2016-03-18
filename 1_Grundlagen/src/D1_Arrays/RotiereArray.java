@@ -4,7 +4,7 @@ public class RotiereArray {
 
 	public static void main(String[] args) {
 
-		String[][] tabelle = new String [3][3];
+		int[][] tabelle = new int [3][3];
 		
 		tabelle = initTabelle();
 		ausgabe(tabelle);
@@ -16,10 +16,10 @@ public class RotiereArray {
 
 	}
 
-	private static String[][] rotiere(String[][] tabelle) {
+	private static int[][] rotiere(int[][] tabelle) {
 		int anz = tabelle.length;
 		
-		String[][] tabNeu = new String[anz][anz];
+		int[][] tabNeu = new int[anz][anz];
 		int x2, y2;
 		x2 = 0;
 
@@ -50,25 +50,25 @@ public class RotiereArray {
 	
 	
 	
-	private static String[][] initTabelle() {
-		String[][] tabelle = new String[3][3];
+	private static int[][] initTabelle() {
+		int[][] tabelle = new int[3][3];
 
-		tabelle[0][0] = "A";
-		tabelle[1][0] = "B";
-		tabelle[2][0] = "C";
+		tabelle[0][0] = 3;
+		tabelle[1][0] = 5;
+		tabelle[2][0] = 7;
 		
-		tabelle[0][1] = "D";
-		tabelle[1][1] = "E";
-		tabelle[2][1] = "F";
+		tabelle[0][1] = 1;
+		tabelle[1][1] = 9;
+		tabelle[2][1] = 12;
 		
-		tabelle[0][2] = "G";
-		tabelle[1][2] = "H";
-		tabelle[2][2] = "I";
+		tabelle[0][2] = 2;
+		tabelle[1][2] = 6;
+		tabelle[2][2] = 0;
 						
 		return tabelle;
 	}
 
-	public static void ausgabe(String[][] feld) {
+	public static void ausgabe(int[][] feld) {
 		for (int y = 0; y < feld.length; y++) {
 			for (int x = 0; x < feld.length; x++) {
 				System.out.print(feld[x][y] + " ");

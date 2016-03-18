@@ -36,7 +36,7 @@ public class MethodeRunden {
 		//Nachkommateil abschneiden
 		pZahl = (int) pZahl;
 		
-		//Komma zurückschieben
+		//Komma zurueckschieben
 		pZahl = pZahl / Math.pow(10, pAnzahlStellen);
 				
 		return pZahl;
@@ -59,7 +59,7 @@ public class MethodeRunden {
 			//Nachkommateil abschneiden
 			pZahl = (int) pZahl;
 			
-			//Komma zurückschieben
+			//Komma zurï¿½ckschieben
 			pZahl = pZahl / Math.pow(10, pAnzahlStellen);
 					
 			return pZahl;
