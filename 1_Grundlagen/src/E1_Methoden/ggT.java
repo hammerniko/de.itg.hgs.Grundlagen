@@ -9,15 +9,15 @@ public class ggT {
 		  * Berechnung des ggT zweier Zahlen 
 		  * nach dem Euklidischen Algorithmus
 		  */
-		 private static int ggt(int zahl1, int zahl2) {
-		   while (zahl2 != 0) {
-		     if (zahl1 > zahl2) {
-		       zahl1 = zahl1 - zahl2;
+		 private static int ggt(int z1, int z2) {
+		   while (z2 != 0) {
+		     if (z1 > z2) {
+		       z1 = z1 - z2;
 		     } else {
-		       zahl2 = zahl2 - zahl1;
+		       z2 = z2 - z1;
 		     }
 		   }
-		   return zahl1;
+		   return z1;
 		 }
 		 
 		 /*
