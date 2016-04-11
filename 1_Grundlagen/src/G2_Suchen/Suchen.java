@@ -45,12 +45,16 @@ public class Suchen {
     public static int sequentielleSuche(int[] feld, int wert){
         int k=0;
         while (k<feld.length) {
-            if(feld[k]==wert)
+            if(feld[k]==wert){
                 return k;
+                }
             k++;
         }
         return -1;
      }
+    
+    
+     
     
     //Ueberladene Methode fuer die Sequentielle Suche in Feldern mit Zeichenketten
     public static int sequentielleSuche(String[] feld, String wert){
