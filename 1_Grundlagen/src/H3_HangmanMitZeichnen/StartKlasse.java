@@ -1,4 +1,4 @@
-package H2_HangmanMitZeichnen;
+package H3_HangmanMitZeichnen;
 
 public class StartKlasse {
 
@@ -17,13 +17,7 @@ public class StartKlasse {
 		Anzeige meineAnzeige = new Anzeige();
 		meineAnzeige.setVisible(true);
 		
-		Test derTest = new Test();
-		Test derTest2 = new Test();
-		derTest.setTestNr(5);
 		
-		
-		System.out.println(derTest.getTestNr());
-		System.out.println(derTest2.getTestNr());
 
 	}
 

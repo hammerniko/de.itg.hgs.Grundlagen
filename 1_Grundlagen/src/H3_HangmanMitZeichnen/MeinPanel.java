@@ -1,4 +1,4 @@
-package H2_HangmanMitZeichnen;
+package H3_HangmanMitZeichnen;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -9,7 +9,7 @@ import java.awt.Stroke;
 import javax.swing.JPanel;
 
 public class MeinPanel extends JPanel {
-	
+
 	public static final int LINIENDICKE = 5;
 	public static final Color COLOR_HINTERGUND = Color.yellow;
 	public static final Color COLOR_KOPF = Color.red;
@@ -22,17 +22,18 @@ public class MeinPanel extends JPanel {
 	public static final int BEINLAENGE = 40;
 	public static final int ARMLAENGE = 40;
 	public static final int HALSLAENGE = 10;
-	
+
 	// Objektvariablen
 	private int aktuelleStufe; // Zustand des Hangman 0-15
 	private int b, h;
-	private int aktX,aktY, mitte, mitteRechts, mitteLinks, mitteHalbrechts, mitteHalblinks;
-	
-	
+	private int aktX, aktY, mitte, mitteRechts, mitteLinks, mitteHalbrechts,
+			mitteHalblinks;
+
 	// Konstruktor
 	public MeinPanel() {
-		aktuelleStufe = MAX_STUFE;
+		aktuelleStufe = MIN_STUFE;
 		setBackground(COLOR_HINTERGUND);
+
 	}
 
 	@Override
@@ -55,66 +56,75 @@ public class MeinPanel extends JPanel {
 	}
 
 	private void zeichneLinien(Graphics2D g2D) {
-		mitte = b/2;
-		mitteRechts = mitte+b/4;
-		mitteHalbrechts = mitte+b/8;
-		mitteHalblinks = mitte-b/8;
-		
+		mitte = b / 2;
+		mitteRechts = mitte + b / 4;
+		mitteHalbrechts = mitte + b / 8;
+		mitteHalblinks = mitte - b / 8;
+
 		aktX = mitteRechts;
-		
-		
+
 		switch (aktuelleStufe) {
 		case 11:
-			//Bein rechts
-			aktY = RAND_OBEN+SEILLAENGE+KOPFDICKE+HALSLAENGE+KOERPERLAENGE;
-			g2D.drawLine(aktX, aktY-BEINLAENGE, aktX + 40, aktY);
+			// Bein rechts
+			aktY =  SEILLAENGE + KOPFDICKE + HALSLAENGE
+					+ KOERPERLAENGE;
+			g2D.drawLine(aktX, aktY , aktX + 40, aktY+BEINLAENGE);
 		case 10:
-			//Bein links
+			// Bein links
 			g2D.drawLine(aktX, 130, aktX - BEINLAENGE, 170);
 		case 9:
-			//Koerper
+			// Koerper
 			g2D.drawLine(aktX, 80, aktX, 130);
 		case 8:
-			//Arm rechts
+			// Arm rechts
 			g2D.drawLine(aktX, 80, aktX + ARMLAENGE, 120);
 		case 7:
-			//Arm links
+			// Arm links
 			g2D.drawLine(aktX, 80, aktX - ARMLAENGE, 120);
 		case 6:
-			//Hals
+			// Hals
 			g2D.drawLine(aktX, 70, aktX, 80);
-			
+
 		case 5:
-			//Kopf
+			// Kopf
 			g2D.setColor(COLOR_KOPF);
-			aktX = mitteRechts - KOPFDICKE/2;
-			aktY = 4*RAND_OBEN;
+			aktX = mitteRechts - KOPFDICKE / 2;
+			aktY = 4 * RAND_OBEN;
 			g2D.fillOval(aktX, aktY, KOPFDICKE, KOPFDICKE);
 			g2D.setColor(Color.black);
 		case 4:
-			//Seil
-			
-			g2D.drawLine(mitteRechts, RAND_OBEN, mitteRechts, RAND_OBEN+SEILLAENGE);
+			// Seil
+
+			g2D.drawLine(mitteRechts, RAND_OBEN, mitteRechts, RAND_OBEN
+					+ SEILLAENGE);
 		case 3:
-			//schraeger Stuetzbalken
-			g2D.drawLine(mitte, 4*RAND_OBEN, mitteHalbrechts, RAND_OBEN);
+			// schraeger Stuetzbalken
+			g2D.drawLine(mitte, 4 * RAND_OBEN, mitteHalbrechts, RAND_OBEN);
 		case 2:
-			//waagerechter oberer Balken
+			// waagerechter oberer Balken
 			g2D.drawLine(mitte, RAND_OBEN, mitteRechts, RAND_OBEN);
 		case 1:
-			//Senkrechter Balken
+			// Senkrechter Balken
 			g2D.drawLine(mitte, RAND_OBEN, mitte, h - RAND_OBEN);
 		case 0:
-			//Huegel
+			// Huegel
 			g2D.drawOval(mitteHalblinks, h - RAND_OBEN, b / 4, b / 8);
 			break;
 		}
-		
-		
+
 	}
 
 	public void erhoeheStufe() {
-		aktuelleStufe++;
+		if (aktuelleStufe < MAX_STUFE) {
+			aktuelleStufe++;
+			repaint();
+		}
+	}
+
+	public void resetStufe() {
+		aktuelleStufe = MIN_STUFE;
+		repaint();
+
 	}
 
 }
