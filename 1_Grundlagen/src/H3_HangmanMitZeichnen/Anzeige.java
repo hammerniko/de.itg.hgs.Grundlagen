@@ -114,6 +114,8 @@ public class Anzeige extends JFrame {
 
 	protected void clickedNeustart() {
 		System.out.println("Neustart geklickt");
+		resetStufe();
+		derHangman.neustart();
 		
 	}
 
@@ -121,8 +123,14 @@ public class Anzeige extends JFrame {
 
 	protected void clickedUebernehmen() {
 		System.out.println("Übernehmen geklickt");
+		
+		String eingabe = tfBuchstabe.getText();
+		derHangman.pruefeEingabe(eingabe);
 	}
 
+	public void zeigeToken(String wort){
+		lbAusgabe.setText(wort);
+	}
 
 
 	private void resetStufe() {
