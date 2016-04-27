@@ -13,6 +13,8 @@ public class MeinPanel extends JPanel {
 	public static final int LINIENDICKE = 5;
 	public static final Color COLOR_HINTERGUND = Color.yellow;
 	public static final Color COLOR_KOPF = Color.red;
+	public static final Color COLOR_HUEGEL = Color.green;
+	public static final Color COLOR_BALKEN = new Color(90, 90, 0);
 	public static final int KOPFDICKE = 40;
 	public static final int KOERPERLAENGE = 50;
 	public static final int MIN_STUFE = 0;
@@ -22,6 +24,7 @@ public class MeinPanel extends JPanel {
 	public static final int BEINLAENGE = 40;
 	public static final int ARMLAENGE = 40;
 	public static final int HALSLAENGE = 10;
+	
 
 	// Objektvariablen
 	private int aktuelleStufe; // Zustand des Hangman 0-15
@@ -94,11 +97,12 @@ public class MeinPanel extends JPanel {
 			g2D.setColor(Color.black);
 		case 4:
 			// Seil
-
+			g2D.setColor(COLOR_BALKEN);
 			g2D.drawLine(mitteRechts, RAND_OBEN, mitteRechts, RAND_OBEN
 					+ SEILLAENGE);
 		case 3:
 			// schraeger Stuetzbalken
+			
 			g2D.drawLine(mitte, 4 * RAND_OBEN, mitteHalbrechts, RAND_OBEN);
 		case 2:
 			// waagerechter oberer Balken
@@ -108,7 +112,8 @@ public class MeinPanel extends JPanel {
 			g2D.drawLine(mitte, RAND_OBEN, mitte, h - RAND_OBEN);
 		case 0:
 			// Huegel
-			g2D.drawOval(mitteHalblinks, h - RAND_OBEN, b / 4, b / 8);
+			g2D.setColor(COLOR_HUEGEL);
+			g2D.fillOval(mitteHalblinks, h - RAND_OBEN, b / 4, b / 8);
 			break;
 		}
 

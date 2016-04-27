@@ -14,7 +14,9 @@
 
 --
 +erhoeheStufe()
-+resetStufe()</panel_attributes>
++resetStufe()
+#clickedUebernehmen()
+#clickedNeustart()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>

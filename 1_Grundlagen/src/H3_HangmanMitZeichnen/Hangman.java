@@ -6,6 +6,8 @@ public class Hangman {
 
 	// Varriablen initialisieren
 	int anzahl = 0;
+	int aktuelleStufe = 0;
+	String token="";
 	String aktWort="";
 	String wortliste[] = { "windsurfen", "sandmann", "mauseloch",
 			"sprintrennen", "weihnachtsmann", "feierabend", "schule", "hirsch",
@@ -14,29 +16,37 @@ public class Hangman {
 	// gefundener Buchstabe = 1, offener Buchstabe = 0
 	int[] zustand;
 
+	//Assoziation
 	Anzeige dieAnzeige;
 
+	//Konstruktor
 	public Hangman(Anzeige anzeige) {
 		dieAnzeige = anzeige;
 	}
-
+	
+	//Gib zufaellig ein Wort aus der Liste
 	private String gibWort() {
 		return wortliste[gibIndex(wortliste.length)];
 	}
 
+	//Bilde einen zufälligen Index von 0-anzahl
 	private int gibIndex(int anzahl) {
 		int zufallszahl = (int) (Math.random() * anzahl);
 		return zufallszahl;
 	}
 
+	
 	public void neustart() {
+		anzahl = 0;
+		aktuelleStufe = 0;
 		aktWort = gibWort();
 		zustand = new int[aktWort.length()];
-		dieAnzeige.zeigeToken(bildeToken(aktWort, zustand));
+		dieAnzeige.zeigeToken(bildeToken(aktWort, zustand), anzahl);
 	}
 
+	//Erzeuge den Token für die Ausgabe 	
 	private String bildeToken(String aktWort, int[] zustand) {
-		String token = "";
+		token = "";
 		for (int i = 0; i < zustand.length; i++) {
 			if (zustand[i] == 0) {
 				token = token + "_ ";
@@ -49,42 +59,90 @@ public class Hangman {
 		return token;
 	}
 
+	//Prüft den eingegebenen Text und zeigt das Ergebnis an
 	public void pruefeEingabe(String eingabe) {
+		String token="";
 		if (aktWort != "") {
 			System.out.println("eingegeben: " + eingabe);
 			System.out.println("Akt Wort: " + aktWort);
 
-			zustand = setzeZustand(aktWort, zustand, eingabe);
-			String token = bildeToken(aktWort, zustand);
-			System.out.println(token);
-			dieAnzeige.erhoeheStufe();
-			dieAnzeige.zeigeToken(token);
+			zustand = setzeZustand(aktWort,zustand, eingabe);
+			
+			if(!pruefeZustand()&& aktuelleStufe < MeinPanel.MAX_STUFE){
+				token = bildeToken(aktWort, zustand);
+				
+			}
+			else if(aktuelleStufe == MeinPanel.MAX_STUFE){
+				token = "VERLOREN";
+				dieAnzeige.erzwingeNeustart();
+			}
+			else{
+				token = "GEWONNEN";
+				dieAnzeige.erzwingeNeustart();
+			}
+			
+			
 		}
+		System.out.println(token);
+		dieAnzeige.zeigeToken(token,anzahl);
 	}
 
-	private int[] setzeZustand(String aktWort, int[] zustand, String eingabe) {
+	private boolean pruefeZustand() {
+		boolean hatGewonnen=true;
+		for (int i = 0; i < zustand.length; i++) {
+			if(zustand[i]==0){
+				hatGewonnen = false;
+			}
+		}
+		return hatGewonnen;
+	}
 
+	//Setzt für jeden richtigen Buchstaben eine 1
+	//und für jeden falschen eine 0
+	//Wurde das ganze Wort richtig eingegeben, wird
+	//für jeden Buchstaben eine 1 gesetzt.
+	//Zählt dabei die Anzahl der Versuche mit.
+	//Überprüft ob sich der Zustand verändert oder nicht.
+	//Ändert sich der Zustand nicht, wird die Stufe um 1 erhöht.
+	private int[] setzeZustand(String aktWort, int[] zustand, String eingabe) {
+		boolean zustandChanged=false;
+		
+		anzahl++;
 		// Wenn das eingegebene Wort stimmt
 		if (aktWort.equals(eingabe)) {
 			for (int i = 0; i < zustand.length; i++) {
 				zustand[i] = 1;
-
+				zustandChanged = true;
 			}
 		}
 
-		// Wenn nur ein Zeichen eingegeben wurde
+		// Wenn nur ein Zeichen eingegeben wurde und das Zeichen noch
+		//nicht vorhanden ist
 		char ersterBuchstabe = eingabe.charAt(0);
 		char[] zeichen = aktWort.toCharArray();
 
 		for (int i = 0; i < zustand.length; i++) {
-			if (zeichen[i] == ersterBuchstabe) {
+			if (zeichen[i] == ersterBuchstabe && !token.contains(""+ersterBuchstabe)) {
 				zustand[i] = 1;
-
+				zustandChanged = true;
+				
 			}
 		}
-
+		
+		//Wenn kein richtiger Buchstabe eingegeben wurde
+		if(!zustandChanged){
+			erhoeheStufe();
+		}
+		
+		dieAnzeige.zeigeBuchstabe(ersterBuchstabe); 
+		
 		return zustand;
 
+	}
+	
+	private void erhoeheStufe(){
+		aktuelleStufe++;
+		dieAnzeige.erhoeheStufe();
 	}
 
 }
