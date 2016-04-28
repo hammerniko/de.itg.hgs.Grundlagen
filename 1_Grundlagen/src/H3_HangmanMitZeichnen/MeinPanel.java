@@ -4,8 +4,6 @@ import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.Stroke;
-
 import javax.swing.JPanel;
 
 public class MeinPanel extends JPanel {
@@ -41,20 +39,20 @@ public class MeinPanel extends JPanel {
 
 	@Override
 	protected void paintComponent(Graphics g) {
-		// G2D
+		// G2D Objekt erlaubt mehr Grafikoptionen als das normale Graphics Objekt
 		Graphics2D g2 = (Graphics2D) g;
 
-		// Liniendicke ändern
+		// Liniendicke Aendern
 		g2.setStroke(new BasicStroke(LINIENDICKE));
 
-		// Methode der Oberklasse ausführen
+		// Methode der Oberklasse (JComponent) ausfuehren
 		super.paintComponent(g2);
 
-		// aktuelle Breite und Höhe speichern
+		// aktuelle Breite und Hoehe merken
 		b = getWidth();
 		h = getHeight();
 
-		// Zeichnet den Hangman abhängig von der Stufe
+		// Zeichnet den Hangman abhaengig von der Stufe neu
 		zeichneLinien(g2);
 	}
 
@@ -119,6 +117,7 @@ public class MeinPanel extends JPanel {
 
 	}
 
+	
 	public void erhoeheStufe() {
 		if (aktuelleStufe < MAX_STUFE) {
 			aktuelleStufe++;

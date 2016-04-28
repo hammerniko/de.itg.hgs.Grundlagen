@@ -29,7 +29,7 @@ public class Hangman {
 		return wortliste[gibIndex(wortliste.length)];
 	}
 
-	//Bilde einen zufälligen Index von 0-anzahl
+	//Bilde einen zufaelligen Index von 0-anzahl
 	private int gibIndex(int anzahl) {
 		int zufallszahl = (int) (Math.random() * anzahl);
 		return zufallszahl;
@@ -44,7 +44,7 @@ public class Hangman {
 		dieAnzeige.zeigeToken(bildeToken(aktWort, zustand), anzahl);
 	}
 
-	//Erzeuge den Token für die Ausgabe 	
+	//Erzeuge den Token fuer die Ausgabe 	
 	private String bildeToken(String aktWort, int[] zustand) {
 		token = "";
 		for (int i = 0; i < zustand.length; i++) {
@@ -59,12 +59,12 @@ public class Hangman {
 		return token;
 	}
 
-	//Prüft den eingegebenen Text und zeigt das Ergebnis an
+	//Prueft den eingegebenen Text und zeigt das Ergebnis an
 	public void pruefeEingabe(String eingabe) {
 		String token="";
 		if (aktWort != "") {
-			System.out.println("eingegeben: " + eingabe);
-			System.out.println("Akt Wort: " + aktWort);
+			//System.out.println("eingegeben: " + eingabe);
+			//System.out.println("Akt Wort: " + aktWort);
 
 			zustand = setzeZustand(aktWort,zustand, eingabe);
 			
@@ -97,13 +97,14 @@ public class Hangman {
 		return hatGewonnen;
 	}
 
-	//Setzt für jeden richtigen Buchstaben eine 1
-	//und für jeden falschen eine 0
-	//Wurde das ganze Wort richtig eingegeben, wird
-	//für jeden Buchstaben eine 1 gesetzt.
-	//Zählt dabei die Anzahl der Versuche mit.
-	//Überprüft ob sich der Zustand verändert oder nicht.
-	//Ändert sich der Zustand nicht, wird die Stufe um 1 erhöht.
+	/**	Setzt fuer jeden richtigen Buchstaben eine 1
+		und fuer jeden falschen eine 0
+		Wurde das ganze Wort richtig eingegeben, wird
+		fuer jeden Buchstaben eine 1 gesetzt.
+		Zaehlt dabei die Anzahl der Versuche mit.
+		Ueberprueft ob sich der Zustand veraendert oder nicht.
+		Aendert sich der Zustand nicht, wird die Stufe um 1 erhoeht.
+	**/
 	private int[] setzeZustand(String aktWort, int[] zustand, String eingabe) {
 		boolean zustandChanged=false;
 		
