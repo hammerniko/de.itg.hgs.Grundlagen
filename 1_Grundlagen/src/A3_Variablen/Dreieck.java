@@ -3,31 +3,18 @@ package A3_Variablen;
 import java.util.Scanner;
 
 public class Dreieck {
-
-  
- 
 	
 	public static void main(String[] args) {
-	    //**********************************EINGABE
-	    //Deklaration
-	    double hoehe, grundseite, flaeche;  
-	    
-	    
-	    //Initialisierung (hier nicht zwingend notwendig)
+	    //EINGABE
+ 	    double hoehe, grundseite, flaeche;  
 	    hoehe = 5.8; 
 	    grundseite = 4.5; 
-	    flaeche = 0;
 	    
+	    //VERARBEITUNG
+	    flaeche = hoehe * grundseite/2.0;
 	    
-	    //********************************VERARBEITUNG
-	    flaeche = 0.5 * hoehe * grundseite;
-	    
-	    
-	            
-	    
-	    //*********************************AUSGABE
-	    System.out.println(flaeche);
+	    //AUSGABE
+	    System.out.println("Fläche="+flaeche);
 		
 	}//ende main
-
 }//ende class
