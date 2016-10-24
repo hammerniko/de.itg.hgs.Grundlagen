@@ -10,23 +10,24 @@ import java.util.Scanner;
  * @author hr
  *
  */
-public class Konstante implements Physik{
+public class Brueckenhoehe implements Physik{
 	
 	public static void main(String[] args) {
 
-		//************************************EINGABE
-		double fallzeit, hoehe;
-		
-		System.out.print("Fallzeit:");
-		fallzeit = 1.5; //sekunden
+		//EINGABE
+		double fallzeit, brueckenhoehe;
+		fallzeit = 1.5; //sekunden	
 				
-		//************************************VERABEITUNG
+		//VERABEITUNG
 		//hier mit der Konstanten aus dem Interface Physik
-		hoehe = 0.5 * ERDFALLBESCHLEUNIGUNG * fallzeit*fallzeit;
+		//s=1/2 a t²
+		brueckenhoehe = 0.5 * ERDFALLBESCHLEUNIGUNG * fallzeit*fallzeit;
 		
 		
-		//************************************AUSGABE
-		System.out.println(hoehe);
+		
+		//AUSGABE
+		System.out.print("Fallzeit:"+fallzeit);
+		System.out.println(brueckenhoehe);
 		
 	}
 }
