@@ -14,7 +14,7 @@ public class Dreieck {
 	    flaeche = hoehe * grundseite/2.0;
 	    
 	    //AUSGABE
-	    System.out.println("Fläche="+flaeche);
+	    System.out.println("Fläche="+flaeche+"cm²");
 		
 	}//ende main
 }//ende class

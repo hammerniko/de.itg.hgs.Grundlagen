@@ -12,16 +12,5 @@ public interface Physik {
 	final double ERDFALLBESCHLEUNIGUNG = 9.81; 		// [m/s^2]
 	final double LICHTGESCHWINDIGKEIT = 299792458;	// [m/s]
 	final double ELEKTRISCHE_FELDKONSTANTE = 8987551787.3681764; // [m/F]
-	//...
-	//1 inch = 2,54cm
-	final double INCH = 2.54e-2;
 	
-	//1 foot = 30,48cm
-	final double FOOT = 30.48e-2;
-	
-	//1 yard = 3 FOOT
-	final double YARD = 3*FOOT;
-	
-	//1 mile = 1609m
-	final double MILE = 1609;
 }

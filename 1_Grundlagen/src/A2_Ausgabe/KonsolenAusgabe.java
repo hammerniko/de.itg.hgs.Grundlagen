@@ -21,13 +21,13 @@ public class KonsolenAusgabe {
          //System.out.println("Vorname"+" "+"Nachname");
          //System.out.println(1+2+"3");
          //System.out.println("1"+2+3);
-         System.out.println(1+2+"3"+4+5);
+         //System.out.println(1+2+"3"+4+5);
 
         // Zeilenumbruch mit Escape Sequenz
         //System.out.println("Ich erzaehle eine \n neue \n Geschichte");
 
         // Tabulator mit Escape Sequenz
-        System.out.println("Name \t\tVorname\tAdresse");
-        System.out.println("Hammer\t\tNiko\tHauptstrasse 11");
+        //System.out.println("Name \t\tVorname\tAdresse");
+        //System.out.println("Hammer\t\tNiko\tHauptstrasse 11");
     }
 }
