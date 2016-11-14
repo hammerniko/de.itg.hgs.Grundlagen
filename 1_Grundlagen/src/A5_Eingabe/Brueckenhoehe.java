@@ -37,13 +37,13 @@ public class Brueckenhoehe implements Physik{
 		Scanner sc = new Scanner(System.in);
 				
 		//Deklaration
-		double weg; // in m
+		double weg,zeit; // in m
 				
 		System.out.print("Geben Sie die Zeit ein: ");
-		double zeit=sc.nextDouble();
+		zeit=sc.nextDouble();
 				
 		//Verarbeitung
-		weg = 0.5 * ERDFALLBESCHLEUNIGUNG * zeit * zeit;
+		weg = 1/2.0 * ERDFALLBESCHLEUNIGUNG * zeit * zeit;
 		
 		
 		//Ausgabe
