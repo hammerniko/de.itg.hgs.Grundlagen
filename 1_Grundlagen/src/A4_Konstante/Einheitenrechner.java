@@ -30,6 +30,7 @@ public class Einheitenrechner implements Laengeneinheiten{
 		System.out.println("in Seemeilen:\t"+seemeile+" NM");
 		
 		
+		
 
 	}
 
