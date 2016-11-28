@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Eingabe {
 	
 	public static void main(String[] args){
-		//EINGABE
+		//********** EINGABE
 		//Objekt der Klasse Scanner erzeugen
 		//Zeiger s zeigt auf Objekt im HEAP
 		Scanner s = new Scanner(System.in);
@@ -14,28 +14,23 @@ public class Eingabe {
 		//Warten bis auf der Konsole Enter gedrueckt wird
 		//Einlesen von Text
 		System.out.print("Name:\t");
-		String name = s.next();
+		String name = s.next(); //Prg wartet auf Enter Taste
 		
-		//Einleisen einer ganzen Zahl
-		System.out.print("Wieviele Handy(s) hast Du? ");
+		//Ganze Zahl einlesen
+		System.out.print("Wieviele Handys benutzt Du?");
 		int anzahlHandys = s.nextInt();
 		
-		//Einlesen einer Kommazahl
-		System.out.print("Wie groﬂ bist Du (m)? ");
-		double groesse = s.nextDouble();
-		
+		//Kommazahl
+		System.out.print("Wieviel wiegst Du?");
+		double gewicht = s.nextDouble();
 		
 		//Verarbeitung
-		
-		
+		name = "_"+name; 
 			
 		//AUSGABE
-		System.out.println("Dein Name ist:"+name);
-		System.out.println("Du hast "+anzahlHandys+" Handys");
-		System.out.println("Du bist "+groesse+"m groﬂ");
-
-		
-		
+		System.out.println("Dein Name ist:\t"+name);
+		System.out.println("Anzahl Handys:\t"+anzahlHandys);
+		System.out.println("Dein Gewicht:\t"+gewicht+"kg");
 	}
 	
 	

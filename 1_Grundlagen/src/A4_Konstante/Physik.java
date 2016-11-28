@@ -13,4 +13,6 @@ public interface Physik {
 	final double LICHTGESCHWINDIGKEIT = 299792458;	// [m/s]
 	final double ELEKTRISCHE_FELDKONSTANTE = 8987551787.3681764; // [m/F]
 	
+	
+	
 }

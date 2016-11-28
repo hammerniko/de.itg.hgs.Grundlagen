@@ -12,14 +12,13 @@ public class UebungOperatoren {
          //die letzte Ziffer der Zahl abtrennen
          
 	  
-//	  		int z = 14;
-//	  		int erg = z % 5;
+//	  		int z = 41337;
+//	  		int erg = z % 7;
 //	  		System.out.println(erg);
 	  	
 //         int ZahlenCode = 123;
 //         int letzteZiffer = ZahlenCode % 10;
 //         int neueZahl = ZahlenCode/10;
-//         
 //         System.out.println(letzteZiffer);
 //         System.out.println(neueZahl);
 //         
@@ -35,29 +34,31 @@ public class UebungOperatoren {
 	  
 	  
 	  
-//         Übung 2:
-//         Deklarieren Sie die Zahl 255 als Hexadezimalzahl
-//         und geben Sie diese aus
-//         Was stellen Sie fest?
-//         int hexadezimalZahl=0xFF;
+         //Übung 2:
+         //Deklarieren Sie die Zahl 255 als Hexadezimalzahl
+         //und geben Sie diese aus
+         // Was stellen Sie fest?
+//         int hexadezimalZahl=0x1A;
 //         System.out.println("\nDie Hexadezimalzahl:"+hexadezimalZahl);
-         
+//         
          //†bung 3:
          //Reihenfolge der Auswertung in Ausdrücken
          //Welchen Wert hat b?
          //Begründen Sie das Ergebnis.
 //         int a=5;
 //         a=a+1;
-//         a++;
+//         a--;
+//         a+=5; //a=a+5
+	  
          
                   
-//        System.out.println("\na: " +a);
-         //System.out.println("\nb: " +b);
+        //System.out.println("\na: " +a);
+       //System.out.println("\nb: " +b);
         
          
          //Übung 4:
          //Welchen Wert hat z4? Begründen Sie Ihr ergebnis.
-//         int a4=6;      //0110
+//         int a4=13;     //1101
 //         int b4=3;      //0011 
 //         int z4 = a4&b4;//0010
 //         System.out.println("\nz4 "+z4);
@@ -80,19 +81,19 @@ public class UebungOperatoren {
 //         int b6 = 99;
 //         pruefSumme1 = a6<10 && b6>10;
 //         pruefSumme2 = a6>10 || b6<10;
-//         pruefSumme3 = a6<10 || b6>10;
+//         pruefSumme3 = a6<10 && b6<10;
 //         pruefSumme4 = a6<10 && b6<10;
 //         System.out.println("\nprüfSumme1 "+pruefSumme1);
 //         System.out.println("prüfSumme2 "+pruefSumme2);
 //         System.out.println("prüfSumme3 "+pruefSumme3);
 //         System.out.println("prüfSumme4 "+pruefSumme4);
-////         
+//         
          
          //†bung 7:
          //Anwenden mathematischer Methoden aus der Klasse Math.*
 //         double pi = Math.PI;
-//          double wi1 = Math.sin(2*3.1415);  //=0
-//         double wi2 = Math.cos(pi/4);
+//         double wi1 = Math.sin(pi);  //=0
+//         double wi2 = Math.cos(pi/2);
 //         
 //         double alpha = (wi2*360.0) / (2.0*pi);
 //         System.out.println(alpha);   
@@ -119,10 +120,10 @@ public class UebungOperatoren {
          //†BUNG 9
 	     int zahl = 15238;          
          int komplement = ~ 15238 + 1;  
-         						 
+       						 
          
-         System.out.println(zahl);
-         System.out.println(komplement);
+        System.out.println(zahl);
+        System.out.println(komplement);
          
          
   }

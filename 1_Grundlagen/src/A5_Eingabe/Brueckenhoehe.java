@@ -33,21 +33,23 @@ import java.util.Scanner;
 public class Brueckenhoehe implements Physik{
 	
 	public static void main(String[] args) {
+		
+		
 		//EINGABE
 		Scanner sc = new Scanner(System.in);
 				
 		//Deklaration
 		double weg,zeit; // in m
 				
-		System.out.print("Geben Sie die Zeit ein: ");
+		System.out.print("Zeit: ");
 		zeit=sc.nextDouble();
 				
 		//Verarbeitung
-		weg = 1/2.0 * ERDFALLBESCHLEUNIGUNG * zeit * zeit;
+		weg = 0.5 * ERDFALLBESCHLEUNIGUNG * zeit * zeit;
 		
 		
 		//Ausgabe
-		System.out.println("Der Sprung war "+weg+ " m hoch");
+		System.out.println("Die Bueck ist "+weg+ " m hoch");
 		
 		
 		
