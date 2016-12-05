@@ -4,30 +4,10 @@ Einfache Übungen
 zu Operatoren
 */
 
-public class UebungOperatoren {
+public class A61_Operatoren_Einfuehrung {
 
   public static void main(final String[] args) {
-         //Uebung 1:
-         //Letzte Ziffer einer Zahl speichern und anschliessend
-         //die letzte Ziffer der Zahl abtrennen
-         
-	  
-//	  		int z = 41337;
-//	  		int erg = z % 7;
-//	  		System.out.println(erg);
-	  	
-//         int ZahlenCode = 123;
-//         int letzteZiffer = ZahlenCode % 10;
-//         int neueZahl = ZahlenCode/10;
-//         System.out.println(letzteZiffer);
-//         System.out.println(neueZahl);
-//         
-//         ZahlenCode = neueZahl;
-//         letzteZiffer = ZahlenCode % 10;
-//         neueZahl = ZahlenCode/10;
-//         
-//         System.out.println(letzteZiffer);
-//         System.out.println(neueZahl);
+       
         
 	  
 	  

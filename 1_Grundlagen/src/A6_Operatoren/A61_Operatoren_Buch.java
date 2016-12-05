@@ -1,6 +1,6 @@
 package A6_Operatoren;
 
-public class Operatoren {
+public class A61_Operatoren_Buch {
 
 	public static void main(String[] args) {
 	//****************EINGABE********************

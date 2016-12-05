@@ -1,7 +1,7 @@
 package A6_Operatoren;
 import java.util.Scanner;
 
-public class Hex2Dez {
+public class A63_Zahlensysteme_Hex2Dez {
 	
 	public static void main(String[] args) {
 		
@@ -22,7 +22,7 @@ public class Hex2Dez {
 		//Ausgabe
 		System.out.println("Die Hexadezimalzahl:\t"+hexWert);
 		System.out.println("Dezimalwert:\t\t"+dezZahl);
-		System.out.println("Binärwert:\t\t"+binWert);
+		System.out.println("Binaerwert:\t\t"+binWert);
 		
 	}
 

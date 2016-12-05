@@ -1,6 +1,6 @@
 package A2_Ausgabe;
 
-public class AdresseImViereck {
+public class A22_AdresseImViereck {
 
 	public static void main(String[] args) {
 

@@ -1,6 +1,6 @@
 package A2_Ausgabe;
 
-public class Kraftberechnung {
+public class A23_Kraftberechnung {
 
 	public static void main(String[] args) {
 		System.out.println();

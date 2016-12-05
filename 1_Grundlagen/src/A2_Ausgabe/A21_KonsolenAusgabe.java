@@ -1,6 +1,6 @@
 package A2_Ausgabe;
 
-public class KonsolenAusgabe {
+public class A21_KonsolenAusgabe {
 
     public static void main(String[] args) {
         // Ausgabe von Zahlen

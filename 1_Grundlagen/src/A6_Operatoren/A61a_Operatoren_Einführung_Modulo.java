@@ -1,0 +1,25 @@
+package A6_Operatoren;
+/**
+ * 
+ * @author hr
+ *
+ */
+
+public class A61a_Operatoren_Einführung_Modulo {
+
+	public static void main(String[] args) {
+		//Eingabe
+  		int z = 15;
+  		int teiler = 7;
+  		
+  		//Verarbeitung
+  		int erg = z % teiler;
+  		
+  		//Ausgabe
+  		System.out.println("Zahl:\t\t\t"+z);
+  		System.out.println("Teiler:\t\t\t"+teiler);
+  		System.out.println("Rest der Division:\t"+erg);
+
+	}
+
+}

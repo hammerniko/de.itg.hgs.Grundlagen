@@ -1,4 +1,4 @@
-package A6_Operatoren;
+package B1_Verzweigungen;
 
 
 public class Ggt {

@@ -1,12 +1,12 @@
 package A6_Operatoren;
 
 import java.util.Scanner;
-public class Teilbarkeit {
+public class A62_Modulo_Teilbarkeit {
 	public static void main(String[] args) {
 		//Eingabe
 		Scanner sc = new Scanner(System.in);
 		String meldung;
-		System.out.print("Zu prüfende Zahl:");
+		System.out.print("Zu pruefende Zahl:");
 		int zahl = sc.nextInt();
 		System.out.print("Teiler:");
 		int teiler = sc.nextInt();

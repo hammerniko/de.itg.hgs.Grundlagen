@@ -3,7 +3,7 @@ package A6_Operatoren;
 import java.util.Scanner;
 
 
-public class Hex {
+public class A63_Zahlensysteme_Dez2Hex {
 
 	public static void main(String[] args) {
 		//Eingabe
