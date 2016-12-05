@@ -1,6 +1,6 @@
 package A3_Variablen;
 
-public class EinfuehrungVariablen {
+public class A31_EinfuehrungVariablen {
 
 	public static void main(String[] args) {
 

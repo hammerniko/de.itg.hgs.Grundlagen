@@ -1,6 +1,6 @@
 package A3_Variablen;
 
-public class Kraftberechnung {
+public class A32_Kraftberechnung {
 
 	public static void main(String[] args) {
 		

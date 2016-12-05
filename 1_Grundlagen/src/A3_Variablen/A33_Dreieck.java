@@ -2,7 +2,7 @@ package A3_Variablen;
 
 import java.util.Scanner;
 
-public class Dreieck {
+public class A33_Dreieck {
 	
 	public static void main(String[] args) {
 	    //EINGABE
