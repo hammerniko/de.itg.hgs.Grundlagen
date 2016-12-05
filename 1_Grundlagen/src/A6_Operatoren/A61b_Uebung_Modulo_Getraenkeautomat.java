@@ -32,9 +32,10 @@ public class A61b_Uebung_Modulo_Getraenkeautomat {
 		kosten = runden(bestellt * preis);
 		rueckgeld = runden(betrag - kosten);
 		rest=rueckgeld*100;	
-		
-		//Muenzen
+	
+		//Anzahl der 2 Euro Muenzen mit Rest in Cent
 		zweiEuro = (int) rest/200;
+		//Neuer Restbetrag 
 		rest = runden(rest%200);
 		
 		einEuro = (int) rest/100;
@@ -58,8 +59,6 @@ public class A61b_Uebung_Modulo_Getraenkeautomat {
 		cent = (int) runden(rest);
 		
 		//Ausgabe
-		System.out.println("\nBetrag:\t\t"+betrag);
-		System.out.println("Anz. Getraenke:\t"+bestellt);
 		System.out.println("Kosten:\t\t"+kosten);
 		System.out.println("Rueckgeld:\t"+rueckgeld);
 		System.out.println();
