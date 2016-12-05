@@ -2,7 +2,7 @@ package A6_Operatoren;
 import java.util.Scanner;
 
 
-public class Getraenkeautomat {
+public class A61b_Uebung_Modulo_Getraenkeautomat {
 	
 	public static void main(String[] args) {
 		

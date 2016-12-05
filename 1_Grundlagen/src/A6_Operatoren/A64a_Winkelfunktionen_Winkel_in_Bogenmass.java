@@ -1,6 +1,6 @@
 package A6_Operatoren;
 
-public class A64_Winkelfunktionen_Winkel_in_Bogenmass {
+public class A64a_Winkelfunktionen_Winkel_in_Bogenmass {
 
 	public static void main(String[] args) {
 			

@@ -1,4 +1,4 @@
-package A6_Operatoren;
+package B1_Verzweigungen;
 
 import java.util.Scanner;
 public class A62_Modulo_Teilbarkeit {
