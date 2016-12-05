@@ -5,7 +5,7 @@ package A6_Operatoren;
  * @author hr
  *
  */
-public class Dreieck {
+public class A64_Winkelfunktionen_Dreieck {
 	
 	public static void main(String[] args) {
 		//Eingabe
