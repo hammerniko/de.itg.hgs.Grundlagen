@@ -9,7 +9,7 @@ public class A61a_Operatoren_Einführung_Modulo {
 
 	public static void main(String[] args) {
 		//Eingabe
-  		int z = 15;
+  		int z = 40587;
   		int teiler = 7;
   		
   		//Verarbeitung

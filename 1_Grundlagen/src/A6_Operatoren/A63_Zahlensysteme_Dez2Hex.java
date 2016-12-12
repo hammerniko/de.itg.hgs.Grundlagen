@@ -13,8 +13,9 @@ public class A63_Zahlensysteme_Dez2Hex {
 		System.out.print("Dezimalzahl:\t");
 		dezimalzahl = s.nextInt();
 		
-		//Verarbeitung
+		//Verarbeitung mit Wrapper Klasse
 		String hex = Integer.toHexString(dezimalzahl);
+		
 		
 		//Ausgabe
 		System.out.println("Hexadezimal:\t0x"+hex);
