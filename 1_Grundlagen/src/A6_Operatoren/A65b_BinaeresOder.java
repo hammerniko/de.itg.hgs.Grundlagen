@@ -1,6 +1,6 @@
 package A6_Operatoren;
 
-public class A65a_BinaeresUnd {
+public class A65b_BinaeresOder {
 
 	public static void main(String[] args) {
 		//Übung
@@ -11,7 +11,7 @@ public class A65a_BinaeresUnd {
 	    int anzahlBit = 4;
 	    
 	    //Verarbeitung
-	    int z = a&b;	//0001
+	    int z = a|b;	//0001
 	    str_a=Integer.toBinaryString(a);
 	    while (str_a.length()<anzahlBit) {
 			str_a = "0"+str_a;
@@ -31,7 +31,7 @@ public class A65a_BinaeresUnd {
 	    
 	    
 	    //ausgabe
-	    System.out.println("Binaeres UND");
+	    System.out.println("Binaeres ODER");
 	    System.out.println("--------------------");
 	    System.out.println("a = "+a+"\t= "+str_a);
 	    System.out.println("b = "+b+"\t= "+str_b);

@@ -17,7 +17,6 @@ public class A63_Zahlensysteme_Hex2Dez {
 		//Verarbeitung
 		dezZahl = Integer.parseInt(hexWert,16);
 		binWert = Integer.toBinaryString(dezZahl);
-				
 
 		//Ausgabe
 		System.out.println("Die Hexadezimalzahl:\t"+hexWert);
