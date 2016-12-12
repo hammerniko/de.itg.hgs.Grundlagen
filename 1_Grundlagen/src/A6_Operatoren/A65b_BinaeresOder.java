@@ -4,7 +4,7 @@ public class A65b_BinaeresOder {
 
 	public static void main(String[] args) {
 		//Übung
-	    //Welchen Wert hat z4? Begründen Sie Ihr ergebnis.
+	    //Welchen Wert hat z? 
 	    int a=15;    	//1111
 	    int b=3;     	//0011 
 	    String str_a, str_b, str_z;

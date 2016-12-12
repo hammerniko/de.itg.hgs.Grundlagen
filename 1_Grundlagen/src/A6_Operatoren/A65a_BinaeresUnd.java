@@ -4,7 +4,7 @@ public class A65a_BinaeresUnd {
 
 	public static void main(String[] args) {
 		//Übung
-	    //Welchen Wert hat z4? Begründen Sie Ihr ergebnis.
+	    //Welchen Wert hat z? 
 	    int a=15;    	//1111
 	    int b=3;     	//0011 
 	    String str_a, str_b, str_z;
@@ -13,6 +13,8 @@ public class A65a_BinaeresUnd {
 	    //Verarbeitung
 	    int z = a&b;	//0001
 	    str_a=Integer.toBinaryString(a);
+	    
+	    //Gegeben: fülle führende Nullen auf
 	    while (str_a.length()<anzahlBit) {
 			str_a = "0"+str_a;
 		}
