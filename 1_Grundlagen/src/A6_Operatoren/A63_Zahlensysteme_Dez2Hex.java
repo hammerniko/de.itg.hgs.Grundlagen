@@ -15,10 +15,11 @@ public class A63_Zahlensysteme_Dez2Hex {
 		
 		//Verarbeitung mit Wrapper Klasse
 		String hex = Integer.toHexString(dezimalzahl);
-		
+		String bin = Integer.toBinaryString(dezimalzahl);
 		
 		//Ausgabe
-		System.out.println("Hexadezimal:\t0x"+hex);
+		System.out.println("Hexadezimal:\t"+hex);
+		System.out.println("Binaerwert:\t"+bin);
 	}
 
 }

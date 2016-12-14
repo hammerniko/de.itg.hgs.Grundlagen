@@ -5,7 +5,7 @@ public class A62_RundenUndAbschneiden {
 	public static void main(String[] args) {
 	
 	//Eingabe
-	double number = 2.3854678;
+	double number = 2.379632;
 	double cutNumber;
 	double roundedNumber;
 	
