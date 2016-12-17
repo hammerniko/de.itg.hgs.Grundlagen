@@ -16,9 +16,9 @@ public class A61a_Operatoren_Einfuehrung_Modulo2 {
 		int neueZahl = zahlenCode / 10;
 		
 		//Ausgabe
-		System.out.println("zu k�rzender Code:\t"+zahlenCode);
+		System.out.println("zu kuerzender Code:\t"+zahlenCode);
 		System.out.println("Letzte Ziffer:\t\t"+letzteZiffer);
-		System.out.println("Gek�rzter Code:\t\t"+neueZahl);
+		System.out.println("Gekuerzter Code:\t\t"+neueZahl);
 	}
 
 }
