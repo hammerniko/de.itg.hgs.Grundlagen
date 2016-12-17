@@ -4,7 +4,7 @@ package A6_Operatoren;
  * die letzte Ziffer der Zahl abtrennen 
  * **/
 
-public class A61a_Operatoren_Einführung_Modulo2 {
+public class A61a_Operatoren_Einfuehrung_Modulo2 {
 
 	public static void main(String[] args) {
 		
@@ -16,9 +16,9 @@ public class A61a_Operatoren_Einführung_Modulo2 {
 		int neueZahl = zahlenCode / 10;
 		
 		//Ausgabe
-		System.out.println("zu kürzender Code:\t"+zahlenCode);
+		System.out.println("zu kï¿½rzender Code:\t"+zahlenCode);
 		System.out.println("Letzte Ziffer:\t\t"+letzteZiffer);
-		System.out.println("Gekürzter Code:\t\t"+neueZahl);
+		System.out.println("Gekï¿½rzter Code:\t\t"+neueZahl);
 	}
 
 }

@@ -5,7 +5,7 @@ package A6_Operatoren;
  *
  */
 
-public class A61a_Operatoren_Einführung_Modulo {
+public class A61a_Operatoren_Einfuehrung_Modulo {
 
 	public static void main(String[] args) {
 		//Eingabe
