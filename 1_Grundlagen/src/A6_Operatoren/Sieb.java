@@ -5,7 +5,8 @@ public class Sieb
 	{
 	public static void main(String[] argv)
 	 	{
-		int n = Integer.parseInt (argv[0]); 
+		
+		int n = 91;
 		
 		int zahlenreihe[] = new int[n-1];
 		

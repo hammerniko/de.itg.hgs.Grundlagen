@@ -5,7 +5,7 @@ public class Zahlenschloss {
     public static void main(String[] args) {
         //EINGABE
         int code,codeNeu, ziffer1,ziffer2,ziffer3,ziffer4,merke;
-        code = 5684;
+        code = 1234;
         
         //VERARBEITUNG
         //Ziffern bestimmen
