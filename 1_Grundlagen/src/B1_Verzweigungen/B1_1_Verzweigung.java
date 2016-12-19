@@ -2,7 +2,7 @@ package B1_Verzweigungen;
 
 import java.util.Scanner;
 
-public class Verzweigung {
+public class B1_1_Verzweigung {
 
     public static void main(String[] args) {
 
@@ -10,19 +10,20 @@ public class Verzweigung {
         Scanner s = new Scanner(System.in);
         System.out.print("Gewicht: ");
         double gewicht = s.nextDouble();
+        String meldung="";
 
         // VERARBEITUNG
-        System.out.println(gewicht);
-
         if (gewicht == 30) {
-            System.out.println("Das gewicht ist genau 30 kg");
+            meldung="Das gewicht ist genau 30 kg";
+        }
+        else{
+        	meldung="Das Gewicht entspricht nicht 30kg";
         }
          
-        else {
-            System.out.println("Gewicht hat einen anderen Wert als 30kg");
-        }
-
-        System.out.println("Programmende");
+        
+        //Ausgabe
+        System.out.println(gewicht);
+        System.out.println(meldung);
 
     }
 

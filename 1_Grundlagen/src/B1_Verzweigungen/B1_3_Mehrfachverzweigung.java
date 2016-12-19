@@ -1,6 +1,6 @@
 package B1_Verzweigungen;
 
-public class Einfachverzweigung {
+public class B1_3_Mehrfachverzweigung {
 
     //Hauptprogramm
     public static void main(String[] args) {
