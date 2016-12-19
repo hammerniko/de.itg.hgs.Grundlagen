@@ -1,7 +1,7 @@
 package B1_Verzweigungen;
 import java.util.Scanner;
 
-public class Zeugnisnote {
+public class B1_5_Zeugnisnote {
 
     public static void main(String[] args) {
         

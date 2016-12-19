@@ -1,40 +1,53 @@
 package B1_Verzweigungen;
 
+/**
+ * In diesem Beispiel wird der Unterschied zwischen
+ * mehreren If-Verzwiegungen und einer If-else if-else Verzweigung
+ * verdeutlicht.
+ * @author hr
+ *
+ */
+
 public class B1_3_Mehrfachverzweigung {
 
     //Hauptprogramm
     public static void main(String[] args) {
        
+        //Eingabe
+        double gewicht = 80; 
+        String meldungElseIf="";
+        String meldungIf="";
         
-        double gewicht = 100.9; 
         
-       
-    
-               
+        //Verarbeitung
+        //Prüfung mit if else if und else
         if (gewicht > 100 ) {
-			System.out.println("schwer");
+        	meldungElseIf="schwer";
         }
         else if(gewicht >90){
-        	System.out.println("üppig");
+        	meldungElseIf="üppig";
         }
         else{
-        	System.out.println("normal");
+        	meldungElseIf="normal";
         }
        
-        System.out.println("ende");
         
-        
+        //prüfung mit mehreren if
         if (gewicht > 100 ) {
-			System.out.println("schwer");
+        	meldungIf="schwer";
         }
+        
         if(gewicht >90 ){
-        	System.out.println("üppig");
+        	meldungIf="üppig";
         }
         else{
-        	System.out.println("normal");
+        	meldungIf="normal";
         }
        
-        System.out.println("ende");
+        
+        //Ausgabe
+        System.out.println("Ergebnis mit else if:\t\t"+meldungElseIf);
+        System.out.println("Ergebnis mit mehreren if:\t"+meldungIf);
         
  
     }
