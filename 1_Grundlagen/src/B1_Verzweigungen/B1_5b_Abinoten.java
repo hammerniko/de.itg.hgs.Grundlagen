@@ -2,7 +2,7 @@ package B1_Verzweigungen;
 
 import java.util.Scanner;
 
-public class Abinoten {
+public class B1_5b_Abinoten {
 	
 	public static void main(String[] args) {
 		//EINGABE
