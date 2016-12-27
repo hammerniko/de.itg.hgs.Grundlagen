@@ -1,15 +1,12 @@
 package B1_Verzweigungen;
 
 import java.util.Scanner;
-public class A62_Modulo_Teilbarkeit {
+public class B1_2b_Teilbarkeit {
 	public static void main(String[] args) {
 		//Eingabe
-		Scanner sc = new Scanner(System.in);
 		String meldung;
-		System.out.print("Zu pruefende Zahl:");
-		int zahl = sc.nextInt();
-		System.out.print("Teiler:");
-		int teiler = sc.nextInt();
+		int zahl = 27;
+		int teiler = 3;
 		
 		//Verarbeitung
 		if(zahl%teiler==0){

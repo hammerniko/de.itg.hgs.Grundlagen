@@ -3,7 +3,7 @@ package B1_Verzweigungen;
 
 import java.util.Scanner;
 
-public class QuadratischeGleichung {
+public class B1_6_QuadratischeGleichung {
 
     public static void main(String[] args) {
         //***************Eingabe

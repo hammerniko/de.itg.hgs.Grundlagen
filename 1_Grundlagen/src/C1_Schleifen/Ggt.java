@@ -1,4 +1,4 @@
-package B1_Verzweigungen;
+package C1_Schleifen;
 
 
 public class Ggt {

@@ -5,10 +5,7 @@ public class Schreibweise {
     public static void main(String[] args) {
         
         boolean istPasswortGesetzt;
-        
-        
-        //..Passwortabfrage
-        
+       //..Passwortabfrage
         istPasswortGesetzt = true;
         
         //...

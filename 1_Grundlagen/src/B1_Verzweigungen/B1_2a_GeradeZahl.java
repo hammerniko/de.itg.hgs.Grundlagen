@@ -2,7 +2,7 @@ package B1_Verzweigungen;
 
 import java.util.Scanner;
 
-public class GeradeZahl {
+public class B1_2a_GeradeZahl {
     
     public static void main(String[] args){
         //EINGABE
