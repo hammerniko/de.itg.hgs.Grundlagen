@@ -15,7 +15,10 @@ public class B1_5a_Zeugnisnote {
         
         //Verarbeitung
         //Ohne Gueltigkeitspruefung der Note
-        if(kommaNote<1.5){
+        if(kommaNote<1 || kommaNote>6){
+        	zeugnisNote="Unueltig";
+        }
+        else if(kommaNote<1.5){
             zeugnisNote="Sehr Gut";
         }
         else if(kommaNote<2.5){
@@ -31,8 +34,9 @@ public class B1_5a_Zeugnisnote {
             zeugnisNote="Mangelhaft";
         }
         else {
-            zeugnisNote="UngenŸgend";
+            zeugnisNote="Ungenuegend";
         }
+       
         
         //Ausgabe
         System.out.println("Ihre Zeugnisnote:\t"+zeugnisNote);
