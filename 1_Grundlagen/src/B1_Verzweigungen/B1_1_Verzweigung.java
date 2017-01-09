@@ -7,9 +7,7 @@ public class B1_1_Verzweigung {
     public static void main(String[] args) {
 
         // EINGABE
-        Scanner s = new Scanner(System.in);
-        System.out.print("Gewicht: ");
-        double gewicht = s.nextDouble();
+        double gewicht = 30;
         String meldung="";
 
         // VERARBEITUNG

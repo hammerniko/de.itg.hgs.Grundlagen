@@ -20,7 +20,7 @@ public class B1_4_NoteBerechnen {
         if(pMax<=0){
             meldung = "pMax muss groesser als 0 sein";
         }
-        else if(pErr>=pMax){
+        else if(pErr>pMax){
         	meldung = "pErr darf nicht groesser als pMax sein.";
         }
         else if(pErr<0){
