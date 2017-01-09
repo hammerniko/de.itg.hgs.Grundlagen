@@ -14,7 +14,6 @@ public class B1_5a_Zeugnisnote {
         kommaNote=s.nextDouble();
         
         //Verarbeitung
-        //Ohne Gueltigkeitspruefung der Note
         if(kommaNote<1 || kommaNote>6){
         	zeugnisNote="Unueltig";
         }
