@@ -8,7 +8,7 @@ public class B1_6_QuadratischeGleichung {
     public static void main(String[] args) {
         //***************Eingabe
         String ergebnis = "";
-        double a=0,b,c,d,x1,x2,dis;
+        double a,b,c,d,x1,x2,dis;
         
         Scanner s = new Scanner(System.in);
         
@@ -40,7 +40,7 @@ public class B1_6_QuadratischeGleichung {
         dis = (b*b/4)-c;
         
         if(dis<0){
-            ergebnis = "Es gibt keine Lšsung";
+            ergebnis = "Es gibt keine Loesung";
         }
         else if(dis==0) {
             x1=-b/2;

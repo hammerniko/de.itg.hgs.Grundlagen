@@ -5,7 +5,7 @@ public class B1_2b_Teilbarkeit {
 	public static void main(String[] args) {
 		//Eingabe
 		String meldung;
-		int zahl = 27;
+		int zahl = 123693;
 		int teiler = 3;
 		
 		//Verarbeitung

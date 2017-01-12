@@ -7,7 +7,7 @@ public class B1_2a_GeradeZahl {
     public static void main(String[] args){
         //EINGABE
         Scanner s = new Scanner(System.in);
-        System.out.print("Zu prüfende Zahl: ");
+        System.out.print("Zu pruefende Zahl: ");
         double zahl = s.nextDouble();
         String meldung="";
         
