@@ -9,7 +9,7 @@ import java.util.Scanner;
  *  Ist die Abbruchbedingung von Beginn an flasch, wird
  *  die Schleife komplett Ÿbersprungen.
  */
-public class BeispielWhileSchleife {
+public class C1_2_BeispielWhileSchleife {
 
     public static void main(String[] args) {
 

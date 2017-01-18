@@ -2,7 +2,7 @@ package C1_Schleifen;
 
 import java.util.Scanner;
 
-public class BeispielDoWhileSchleife {
+public class C1_3_BeispielDoWhileSchleife {
 
     public static void main(String[] args) {
 
