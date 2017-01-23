@@ -14,43 +14,21 @@ public class C1_2_BeispielWhileSchleife {
     public static void main(String[] args) {
 
        
-       /* int a = -4;
-        
-        while (a != -4) {
-            a = a / 8 + 1 - 5;
-            System.out.println(a);
-        }
-*/
-        // Fussgesteuerte Schleife
-        // Anzahl der Wiederholungen ist mindestens 1
-        String passwort, benutzer;
-        Scanner s = new Scanner(System.in);
-        boolean loginKorrekt = false;
+		
+		int i=1000000;
+		
+		int anz = 0;
+		
+		do {
+			System.out.println("hALLO");
+			i=i/5*3+1;
+			anz++;
+		}while (i>=10 );
+		
+		System.out.println("anzahl"+anz);
 
-        int anzahl = 0;
-        do {
-        	
-            System.out.println("Benutzername:");
-            benutzer = s.next();
+	}
 
-            System.out.println("Passwort:");
-            passwort = s.next();
-
-            if (benutzer.equals("gast") && passwort.equals("hgs")) {
-                loginKorrekt = true;
-            } else {
-                loginKorrekt = false;
-                System.out.println("Passwort falsch, bitte wiederholen");
-            }
-            
-            
-
-        } while (!loginKorrekt);
-
-        System.out.println("Passwort akzeptiert");
-        
-               
-
-    }
+    
 
 }
