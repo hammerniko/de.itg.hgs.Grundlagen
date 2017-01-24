@@ -6,24 +6,64 @@ public class TSP {
 	static int[][] matrix = new int[5][5];
 	static int[][] penalties = new int[5][5];
 	static int min;
-	static int indexMaxPenaltyReihe;
-	static int indexMaxPenaltySpalte;
-
+	
 	public static void main(String[] args) {
+		//Eingabe Init
 		setMatrix();
 		ausgabeMatrix();
 
+		//Minimieren
 		minimiereAlleReihen();
 		minimiereAlleSpalten();
 
-		kalkulierePenaltiesMax();
+		//Kalkulieren 
+		kalkulierePenalties();
 		ausgabePenalties();
-
 		ausgabeMatrix();
-
+		
+		//Reduzieren der Matrix
+		reduziereMatrix();
+		
+		
+		
 	}
 
-	private static void kalkulierePenaltiesMax() {
+	//Wenn eine maximale Penalty gefunden wurde
+	//Wird die Matrix an dieser Stelle reduziert,
+	//indem diese Reihe und Spalte gelöscht wird.
+	//Gleichzeitig ist dies eine gefundene Beziehung
+	//zwischen 2 Knoten
+	private static void reduziereMatrix() {
+		
+		int max=0;
+		
+		//Merker
+		int colMaxPanelty=-1;
+		int rowMaxPanelty=-1;
+		
+		//finde max Penalty. Bei gleichem Wert wird das zuerst gefundene
+		//Maximum genommen
+		for (int reihe = 0; reihe < penalties.length; reihe++) {
+			for (int spalte = 0; spalte < penalties.length; spalte++) {
+				if(penalties[reihe][spalte]>max){
+					max = penalties[reihe][spalte];
+					colMaxPanelty=spalte;
+					rowMaxPanelty=reihe;
+				}
+			}
+		}
+		
+		
+		trace(""+colMaxPanelty);		
+		trace(""+rowMaxPanelty);
+		
+		
+		
+	}
+
+	
+
+	private static void kalkulierePenalties() {
 		initPenalties();
 
 		kalkulierePenaltyReihen();
