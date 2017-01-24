@@ -1,31 +1,52 @@
 package J1_TSP;
 
+import java.util.Arrays;
+
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
+
 public class TSP {
 
 	static boolean debug = true;
 	static int[][] matrix = new int[5][5];
+	static int[][] matrixCopy = new int[5][5];
 	static int[][] penalties = new int[5][5];
 	static int min;
+	static String loesung="";
+	static int distanz=0;
 	
 	public static void main(String[] args) {
 		//Eingabe Init
-		setMatrix();
-		ausgabeMatrix();
+		trace("Anfangsmatrix:");
+		setMatrix();		
+		setMatrixCopy();		
+		ausgabeArray(matrix);
 
 		//Minimieren
+		trace("Minimieren der Matrix");
 		minimiereAlleReihen();
 		minimiereAlleSpalten();
-
+		ausgabeArray(matrix);
+		
 		//Kalkulieren 
+		trace("Kalkulieren der Penalties");
 		kalkulierePenalties();
-		ausgabePenalties();
-		ausgabeMatrix();
+		ausgabeArray(penalties);
+		
 		
 		//Reduzieren der Matrix
+		trace("Reduzieren der Matrix");
 		reduziereMatrix();
+		ausgabeArray(matrixCopy);
 		
 		
-		
+	}
+
+	private static void setMatrixCopy() {
+		for (int reihe = 0; reihe < matrix.length; reihe++) {
+			for (int spalte = 0; spalte < matrix[0].length; spalte++) {
+				matrixCopy[reihe][spalte]=matrix[reihe][spalte];
+			}
+		}
 	}
 
 	//Wenn eine maximale Penalty gefunden wurde
@@ -53,22 +74,34 @@ public class TSP {
 			}
 		}
 		
+		//setLoesung
+		setLoesung(colMaxPanelty, rowMaxPanelty);
 		
-		trace(""+colMaxPanelty);		
-		trace(""+rowMaxPanelty);
+		//setDistance
+		setDistance(colMaxPanelty, rowMaxPanelty);
 		
 		
 		
+		
+		
+	}
+
+	private static void setDistance(int colMaxPanelty, int rowMaxPanelty) {
+		distanz = distanz + matrixCopy[rowMaxPanelty][colMaxPanelty];
+		trace("-Distanz:"+distanz);
+	}
+
+	private static void setLoesung(int colMaxPanelty, int rowMaxPanelty) {
+		loesung = loesung + rowMaxPanelty + "-"+colMaxPanelty;
+		trace("-Loesung:"+loesung);
 	}
 
 	
 
 	private static void kalkulierePenalties() {
 		initPenalties();
-
 		kalkulierePenaltyReihen();
 		kalkulierePenaltySpalten();
-
 	}
 
 	private static void kalkulierePenaltySpalten() {
@@ -167,14 +200,14 @@ public class TSP {
 	}
 
 	private static void minimiereAlleReihen() {
-		trace("Alle Reihen minimiert");
+		trace("-Alle Reihen minimiert");
 		for (int i = 0; i < 5; i++) {
 			minimiereReihe(i);
 		}
 	}
 
 	private static void minimiereAlleSpalten() {
-		trace("Alle Spalten minimiert");
+		trace("-Alle Spalten minimiert");
 		for (int j = 0; j < 5; j++) {
 			minimiereSpalte(j);
 		}
@@ -234,7 +267,6 @@ public class TSP {
 
 	private static void initPenalties() {
 		for (int i = 0; i < penalties.length; i++) {
-			System.out.println();
 			for (int j = 0; j < penalties.length; j++) {
 				penalties[i][j] = 0;
 			}
@@ -242,33 +274,22 @@ public class TSP {
 
 	}
 
-	private static void ausgabeMatrix() {
-
-		for (int i = 0; i < matrix.length; i++) {
+	private static void ausgabeArray(int[][] array) {
+		
+		for (int i = 0; i < array.length; i++) {
 			System.out.println();
-			for (int j = 0; j < matrix.length; j++) {
-				if (matrix[j][i] == 999) {
+			for (int j = 0; j < array.length; j++) {
+				if (array[j][i] == 999) {
 					System.out.print("-\t");
 				} else {
-					System.out.print(matrix[j][i] + "\t");
+					System.out.print(array[j][i] + "\t");
 				}
 			}
 		}
 		System.out.println("\n-------------------------------------");
 	}
 
-	private static void ausgabePenalties() {
-
-		for (int i = 0; i < penalties.length; i++) {
-			System.out.println();
-			for (int j = 0; j < penalties.length; j++) {
-
-				System.out.print(penalties[i][j] + "\t");
-
-			}
-		}
-		System.out.println("\n-------------------------------------");
-	}
+	
 
 	public static void setMatrix() {
 		// 1.Reihe
