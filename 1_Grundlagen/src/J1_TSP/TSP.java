@@ -1,7 +1,5 @@
 package J1_TSP;
 
-
-
 /**
  * Das Programm berechnet nach dem Travel Salesman Problem - Algorithmus ein
  * Array mit den Daten(Entfernung) von 5 Orten (Knoten)
@@ -56,6 +54,7 @@ public class TSP {
 
 	/**
 	 * Kopiert ein Array Wert fuer Wert und gibt die Kopie zurueck
+	 * 
 	 * @param array
 	 * @return
 	 */
@@ -71,17 +70,17 @@ public class TSP {
 		return copiedArray;
 	}
 
-	/** Wenn eine maximale Penalty gefunden wurde
-	*   Wird die Matrix an dieser Stelle reduziert,
-	*   indem diese Reihe und Spalte gelöscht wird.
-	*   Gleichzeitig ist dies eine gefundene Beziehung
-	*   zwischen 2 Knoten*/
+	/**
+	 * Wenn eine maximale Penalty gefunden wurde Wird die Matrix an dieser
+	 * Stelle reduziert, indem diese Reihe und Spalte gelöscht wird.
+	 * Gleichzeitig ist dies eine gefundene Beziehung zwischen 2 Knoten
+	 */
 	private static void reduziereMatrix() {
 
-		//Initialisiere Maximalen Penaltywert
+		// Initialisiere Maximalen Penaltywert
 		int max = 0;
 
-		//Initialisiere Merker für Zeile und Spalte des max. Penalty-Werts
+		// Initialisiere Merker für Zeile und Spalte des max. Penalty-Werts
 		int colMaxPanelty = -1;
 		int rowMaxPanelty = -1;
 
@@ -90,24 +89,24 @@ public class TSP {
 		for (int reihe = 0; reihe < penalties.length; reihe++) {
 			for (int spalte = 0; spalte < penalties.length; spalte++) {
 				if (penalties[reihe][spalte] > max) {
-					
-					//maximaler Penaltywert wird gespeichert
-					//sobald ein groesserer Wert gefunden wurde
+
+					// maximaler Penaltywert wird gespeichert
+					// sobald ein groesserer Wert gefunden wurde
 					max = penalties[reihe][spalte];
-					
-					//Zeile und Spalte mit max-Penalty merken
+
+					// Zeile und Spalte mit max-Penalty merken
 					colMaxPanelty = spalte;
 					rowMaxPanelty = reihe;
 				}
 			}
 		}
 
-		//Die gefundenen Max-Werte stellen eine Loesung dar
-		//in der Form von Reihe nach Spalte (Festlegung)
+		// Die gefundenen Max-Werte stellen eine Loesung dar
+		// in der Form von Reihe nach Spalte (Festlegung)
 		addLoesung(colMaxPanelty, rowMaxPanelty);
 
-		//Die Distanz der gefundenen Loesung wird 
-		//in der Variablen distance aufaddiert.
+		// Die Distanz der gefundenen Loesung wird
+		// in der Variablen distance aufaddiert.
 		addDistance(colMaxPanelty, rowMaxPanelty);
 
 		// Streiche gefundene Loesung durch setzen von
@@ -125,8 +124,8 @@ public class TSP {
 	}
 
 	/**
-	 * Addiert die Distanz zu einer bereits ermittelten Distanz
-	 * in der Variablen distanz.
+	 * Addiert die Distanz zu einer bereits ermittelten Distanz in der Variablen
+	 * distanz.
 	 * 
 	 * @param colMaxPanelty
 	 * @param rowMaxPanelty
@@ -150,8 +149,8 @@ public class TSP {
 	}
 
 	/**
-	 * initialisiert und berechnet die Penalties aller Nullen der minimierten Matrix
-	 * und speichert das Ergebnis im Array penalties[][]
+	 * initialisiert und berechnet die Penalties aller Nullen der minimierten
+	 * Matrix und speichert das Ergebnis im Array penalties[][]
 	 */
 	private static void kalkulierePenalties() {
 		initPenalties();
@@ -188,25 +187,16 @@ public class TSP {
 			for (int reihe = 0; reihe < matrix.length; reihe++) {
 				if (matrix[reihe][spalte] < min2 && reihe != reiheMitMin1) {
 					min2 = matrix[reihe][spalte];
-
 				}
 			}
 
-			// Wenn eine Null in der Spalte gefunden wurde
-			// Sind mehrer Nullen in einer Spalte ist die Penalty für alle
-			// NUllen
-			// immer 0
-			// d.h. die Prüfung muss nur einmal durchgeführt werden, falls es
-			// nur
-			// eine 0 je Reihe gibt.
+			// Siehe kalkulierePenaltySpalten
 			if (min1 == 0) {
 				// Die stelle mit der Null erhält Penalty des 2.ten Minimums
 				penalties[reiheMitMin1][spalte] = penalties[reiheMitMin1][spalte]
 						+ min2;
-
 			}
 		}
-
 	}
 
 	/**
@@ -242,12 +232,14 @@ public class TSP {
 				}
 			}
 
-			// Wenn eine Null in der Reihe gefunden wurde
-			// Sind mehrer Nullen in einer Reihe ist die Penalty für alle NUllen
-			// immer 0
-			// d.h. die Prüfung muss nur einmal durchgeführt werden, falls es
-			// nur
-			// eine 0 je Reihe gibt.
+			// Nach dem minimieren ist immer mindestens eine 0 in einer Reihe.
+			// Sind mehrere Nullen in einer Reihe ist die Penalty für alle
+			// Nullen
+			// dieser Reihe immer gleich 0.
+			// d.h. die Prüfung muss nur durchgeführt werden,
+			// wenn es nur eine 0 je Reihe gibt.
+			// Das zweite gefundene Minimum der Reihe ergibt die Penalty dieser
+			// Reihe.
 			if (min1 == 0) {
 				// Die stelle mit der Null erhält Penalty des 2.ten Minimums
 				penalties[reihe][spalteMitMin1] = min2;
@@ -277,9 +269,9 @@ public class TSP {
 	}
 
 	/**
-	 * Sucht in der reihe das minimum und zieht von
-	 * allen anderen Werten der reihe dieses Minimum ab.
-	 * Dashes werden ignoriert.
+	 * Sucht in der reihe das minimum und zieht von allen anderen Werten der
+	 * reihe dieses Minimum ab. Dashes werden ignoriert.
+	 * 
 	 * @param reihe
 	 */
 	private static void minimiereReihe(int reihe) {
@@ -291,11 +283,11 @@ public class TSP {
 				matrix[j][reihe] = matrix[j][reihe] - min;
 			}
 		}
-
 	}
 
 	/**
 	 * gibt den Index mit dem Minimum einer Reihe zurueck
+	 * 
 	 * @param reihe
 	 * @return
 	 */
@@ -312,8 +304,9 @@ public class TSP {
 	}
 
 	/**
-	 * Sucht das Minimum einer Spalte und zieht von allen anderen
-	 * Werten der Spalte dieses Minimum ab. Dashes werden ignoriert.
+	 * Sucht das Minimum einer Spalte und zieht von allen anderen Werten der
+	 * Spalte dieses Minimum ab. Dashes werden ignoriert.
+	 * 
 	 * @param spalte
 	 */
 	private static void minimiereSpalte(int spalte) {
@@ -327,7 +320,6 @@ public class TSP {
 				matrix[spalte][i] = matrix[spalte][i] - min;
 			}
 		}
-
 	}
 
 	/**
@@ -357,12 +349,11 @@ public class TSP {
 				penalties[i][j] = 0;
 			}
 		}
-
 	}
 
 	/**
-	 * Gibt ein Array mit zugehoerigen Knotenbeschriftung
-	 * auf der Konsole aus.
+	 * Gibt ein Array mit zugehoerigen Knotenbeschriftung auf der Konsole aus.
+	 * 
 	 * @param array
 	 */
 	private static void ausgabeArray(int[][] array) {
@@ -387,12 +378,12 @@ public class TSP {
 	}
 
 	/**
-	 * Setzt eine Beispielmatrix. Die Anzahld er Zeilen und Spalten
-	 * muss mit der Konstanten ANZAHL uebereinstimmen
+	 * Setzt eine Beispielmatrix. Die Anzahld er Zeilen und Spalten muss mit der
+	 * Konstanten ANZAHL uebereinstimmen
 	 */
 	public static void setMatrix() {
 		// 1.Reihe
-		matrix[0][0] = DASH; 
+		matrix[0][0] = DASH;
 		matrix[1][0] = 10;
 		matrix[2][0] = 8;
 		matrix[3][0] = 2;
