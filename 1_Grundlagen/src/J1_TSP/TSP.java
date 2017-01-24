@@ -8,7 +8,7 @@ public class TSP {
 
 	static String[] buchstaben = {"A","B","C","D","E","F","G","H"};
 	static final int ANZAHL = 5;
-	static boolean debug = true;
+	static boolean debug = false;
 	static int[][] matrix = new int[ANZAHL][ANZAHL];
 	static int[][] matrixCopy = new int[ANZAHL][ANZAHL];
 	static int[][] penalties = new int[ANZAHL][ANZAHL];
@@ -40,10 +40,11 @@ public class TSP {
 		// Reduzieren der Matrix
 		trace("Reduzieren der Matrix");
 		reduziereMatrix();		
-		ausgabeArray(matrix);
+		
 		}
 		
-		
+		System.out.println("Distanz:" + distanz);
+		System.out.println("Loesung:\n"+loesung);
 		
 		
 	}
@@ -109,11 +110,11 @@ public class TSP {
 
 	private static void setDistance(int colMaxPanelty, int rowMaxPanelty) {
 		distanz = distanz + matrixCopy[rowMaxPanelty][colMaxPanelty];
-		System.out.println("Distanz:" + distanz);
+		
 	}
 
 	private static void setLoesung(int colMaxPanelty, int rowMaxPanelty) {		
-		loesung = loesung + buchstaben[rowMaxPanelty] + "->" + buchstaben[colMaxPanelty] +"|";
+		loesung = loesung + buchstaben[rowMaxPanelty] + "->" + buchstaben[colMaxPanelty] +"\n";
 		trace("Loesung:" + loesung);
 	}
 
