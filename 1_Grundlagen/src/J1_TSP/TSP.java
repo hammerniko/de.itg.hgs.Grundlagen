@@ -1,15 +1,13 @@
 package J1_TSP;
 
-import java.util.Arrays;
 
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 
 /**
  * Das Programm berechnet nach dem Travel Salesman Problem - Algorithmus ein
  * Array mit den Daten(Entfernung) von 5 Orten (Knoten)
  * 
  * @author Nikolai Hammer
- *
+ * 
  */
 public class TSP {
 
