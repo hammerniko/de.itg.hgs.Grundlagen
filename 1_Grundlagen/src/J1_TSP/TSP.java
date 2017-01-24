@@ -18,48 +18,112 @@ public class TSP {
 
 		kalkulierePenaltiesMax();
 		ausgabePenalties();
-		
+
 		ausgabeMatrix();
 
 	}
 
 	private static void kalkulierePenaltiesMax() {
 		initPenalties();
+
+		kalkulierePenaltyReihen();
+		kalkulierePenaltySpalten();
+
+	}
+
+	private static void kalkulierePenaltySpalten() {
+				//Merker
+				int min1;
+				int reiheMitMin1;
+				int min2;
+				
+
+				for (int spalte = 0; spalte < matrix.length; spalte++) {
+					
+					//Merker für jede Reihe neu initialisieren
+					min1 = 999;
+					reiheMitMin1 = -1;
+					min2 = 999;
+					
+					
+					
+					// Prüfe reihe
+					// Suche erstes Minimum und merke die Stelle und Wert
+					for (int reihe = 0; reihe < matrix.length; reihe++) {
+						if (matrix[reihe][spalte] < min1) {
+							min1 = matrix[reihe][spalte];
+							reiheMitMin1 = reihe;
+						}
+					}
+
+					// Suche zweites Minimum und merke die Stelle und Wert
+					for (int reihe = 0; reihe < matrix.length; reihe++) {
+						if (matrix[reihe][spalte] < min2 && reihe != reiheMitMin1) {
+							min2 = matrix[reihe][spalte];
+							
+						}
+					}
+
+					// Wenn eine Null in der Spalte gefunden wurde
+					// Sind mehrer Nullen in einer Spalte ist die Penalty für alle NUllen
+					// immer 0
+					// d.h. die Prüfung muss nur einmal durchgeführt werden, falls es
+					// nur
+					// eine 0 je Reihe gibt.
+					if (min1 == 0) {
+						// Die stelle mit der Null erhält Penalty des 2.ten Minimums
+						penalties[reiheMitMin1][spalte] = penalties[reiheMitMin1][spalte]+min2;
+
+					}
+				}
 		
-		int min1=999;
-		int spalteMitMin1=-1;
-		int min2=999;
-		int spalteMitMin2=-1;
-		
-		int reihe = 4;
-		
-		//Prüfe reihe 
-		//Suche erstes Minimum und merke die Stelle und Wert
-		for (int spalte = 0; spalte < matrix.length; spalte++) {
-			if(matrix[reihe][spalte]<min1){
-				min1=matrix[reihe][spalte];
-				spalteMitMin1 = spalte;
-			}
-		}
-		
-		//Suche zweites Minimum und merke die Stelle und Wert
-		for (int spalte = 0; spalte < matrix.length; spalte++) {
-			if(matrix[reihe][spalte]<min2 && spalte != spalteMitMin1){
-				min2=matrix[reihe][spalte];
-				spalteMitMin2 = spalte;
-			}
-		}
-		
-		//Wenn eine Null in der Reihe gefunden wurde
-		if(min1==0){
-			//Die stelle mit der Null erhält Penalty des 2.ten Minimums
-			penalties[reihe][spalteMitMin1]=min2;
-		}
-		
-		trace(""+min1);
-		trace(""+min2);
+	}
+
+	private static void kalkulierePenaltyReihen() {
+		//Merker
+		int min1;
+		int spalteMitMin1;
+		int min2;
 		
 
+		for (int reihe = 0; reihe < matrix.length; reihe++) {
+			
+			//Merker für jede Reihe neu initialisieren
+			min1 = 999;
+			spalteMitMin1 = -1;
+			min2 = 999;
+			
+			
+			
+			// Prüfe reihe
+			// Suche erstes Minimum und merke die Stelle und Wert
+			for (int spalte = 0; spalte < matrix.length; spalte++) {
+				if (matrix[reihe][spalte] < min1) {
+					min1 = matrix[reihe][spalte];
+					spalteMitMin1 = spalte;
+				}
+			}
+
+			// Suche zweites Minimum und merke die Stelle und Wert
+			for (int spalte = 0; spalte < matrix.length; spalte++) {
+				if (matrix[reihe][spalte] < min2 && spalte != spalteMitMin1) {
+					min2 = matrix[reihe][spalte];
+					
+				}
+			}
+
+			// Wenn eine Null in der Reihe gefunden wurde
+			// Sind mehrer Nullen in einer Reihe ist die Penalty für alle NUllen
+			// immer 0
+			// d.h. die Prüfung muss nur einmal durchgeführt werden, falls es
+			// nur
+			// eine 0 je Reihe gibt.
+			if (min1 == 0) {
+				// Die stelle mit der Null erhält Penalty des 2.ten Minimums
+				penalties[reihe][spalteMitMin1] = min2;
+
+			}
+		}
 	}
 
 	private static void minimiereAlleReihen() {
@@ -152,15 +216,15 @@ public class TSP {
 		}
 		System.out.println("\n-------------------------------------");
 	}
-	
+
 	private static void ausgabePenalties() {
 
 		for (int i = 0; i < penalties.length; i++) {
 			System.out.println();
 			for (int j = 0; j < penalties.length; j++) {
-				
-					System.out.print(penalties[i][j] + "\t");
-				
+
+				System.out.print(penalties[i][j] + "\t");
+
 			}
 		}
 		System.out.println("\n-------------------------------------");
