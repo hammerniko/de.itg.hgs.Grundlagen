@@ -66,7 +66,6 @@ public class TSP {
 				copiedArray[reihe][spalte] = array[reihe][spalte];
 			}
 		}
-
 		return copiedArray;
 	}
 
@@ -190,7 +189,7 @@ public class TSP {
 				}
 			}
 
-			// Siehe kalkulierePenaltySpalten
+			// Siehe kalkulierePenaltyReihen
 			if (min1 == 0) {
 				// Die stelle mit der Null erhält Penalty des 2.ten Minimums
 				penalties[reiheMitMin1][spalte] = penalties[reiheMitMin1][spalte]
