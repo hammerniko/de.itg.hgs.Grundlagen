@@ -10,12 +10,12 @@ public class A61b_Uebung_Modulo_Getraenkeautomat {
 		double betrag, rest,rueckgeld, kosten;
 		int bestellt,anzahlMax, zweiEuro=0,einEuro=0,fuenfzigCent=0,zwanzigCent=0,zehnCent=0,fuenfCent=0,zweiCent=0,cent=0;
 		
-		System.out.print("Ein Getraenk kostet: ");
+		System.out.print("Ein Getraenk kostet:\t");
 		Scanner s = new Scanner(System.in);
 		preis = s.nextDouble();
 		
 		
-		System.out.print("Betrag bezahlt:\t");
+		System.out.print("Betrag bezahlt:\t\t");
 		betrag = s.nextDouble();
 		
 		
@@ -23,7 +23,7 @@ public class A61b_Uebung_Modulo_Getraenkeautomat {
 		anzahlMax = (int) (betrag / preis);
 		
 		do {
-			System.out.print("Anzahl:\t\t");
+			System.out.print("Anzahl Getraenke:\t");
 			bestellt = s.nextInt();
         } while (bestellt>anzahlMax);
 		

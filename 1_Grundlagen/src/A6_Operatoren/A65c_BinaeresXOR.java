@@ -5,7 +5,7 @@ public class A65c_BinaeresXOR {
 	public static void main(String[] args) {
 		//Uebung XOR
 	    //Welchen Wert hat z? 
-	    int a=9;    	//1001
+	    int a=7;    	//1001
 	    int b=3;     	//0011 
 	    String str_a, str_b, str_z;
 	    int anzahlBit = 4;

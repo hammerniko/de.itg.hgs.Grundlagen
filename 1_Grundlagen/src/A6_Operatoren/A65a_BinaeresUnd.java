@@ -3,7 +3,7 @@ package A6_Operatoren;
 public class A65a_BinaeresUnd {
 
 	public static void main(String[] args) {
-		//Übung
+		//Uebung
 	    //Welchen Wert hat z? 
 	    int a=15;    	//1111
 	    int b=3;     	//0011 
@@ -14,7 +14,7 @@ public class A65a_BinaeresUnd {
 	    int z = a&b;	//0001
 	    str_a=Integer.toBinaryString(a);
 	    
-	    //Gegeben: fülle führende Nullen auf
+	    //Gegeben: fuelle fuehrende Nullen auf
 	    while (str_a.length()<anzahlBit) {
 			str_a = "0"+str_a;
 		}

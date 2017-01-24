@@ -26,28 +26,50 @@ public class TSP {
 	private static void kalkulierePenaltiesMax() {
 		initPenalties();
 		
-		for (int reihe = 0; reihe < matrix.length; reihe++) {
-
-			for (int spalte = 0; spalte < matrix.length; spalte++) {
-				if (matrix[spalte][reihe] == 0) {
-
-					
-
-					
-				}
+		int min1=999;
+		int spalteMitMin1=-1;
+		int min2=999;
+		int spalteMitMin2=-1;
+		
+		int reihe = 4;
+		
+		//Prüfe reihe 
+		//Suche erstes Minimum und merke die Stelle und Wert
+		for (int spalte = 0; spalte < matrix.length; spalte++) {
+			if(matrix[reihe][spalte]<min1){
+				min1=matrix[reihe][spalte];
+				spalteMitMin1 = spalte;
 			}
 		}
+		
+		//Suche zweites Minimum und merke die Stelle und Wert
+		for (int spalte = 0; spalte < matrix.length; spalte++) {
+			if(matrix[reihe][spalte]<min2 && spalte != spalteMitMin1){
+				min2=matrix[reihe][spalte];
+				spalteMitMin2 = spalte;
+			}
+		}
+		
+		//Wenn eine Null in der Reihe gefunden wurde
+		if(min1==0){
+			//Die stelle mit der Null erhält Penalty des 2.ten Minimums
+			penalties[reihe][spalteMitMin1]=min2;
+		}
+		
+		trace(""+min1);
+		trace(""+min2);
+		
 
 	}
 
-	public static void minimiereAlleReihen() {
+	private static void minimiereAlleReihen() {
 		trace("Alle Reihen minimiert");
 		for (int i = 0; i < 5; i++) {
 			minimiereReihe(i);
 		}
 	}
 
-	public static void minimiereAlleSpalten() {
+	private static void minimiereAlleSpalten() {
 		trace("Alle Spalten minimiert");
 		for (int j = 0; j < 5; j++) {
 			minimiereSpalte(j);
@@ -68,7 +90,7 @@ public class TSP {
 
 	}
 
-	public static int getMinOfRow(int reihe) {
+	private static int getMinOfRow(int reihe) {
 		min = 999;
 		int indexMin = -1;
 		for (int j = 0; j < matrix.length; j++) {
@@ -94,7 +116,7 @@ public class TSP {
 
 	}
 
-	public static int getMinOfCol(int spalte) {
+	private static int getMinOfCol(int spalte) {
 		min = 999;
 		int indexMin = -1;
 		for (int i = 0; i < matrix.length; i++) {
@@ -137,7 +159,7 @@ public class TSP {
 			System.out.println();
 			for (int j = 0; j < penalties.length; j++) {
 				
-					System.out.print(penalties[j][i] + "\t");
+					System.out.print(penalties[i][j] + "\t");
 				
 			}
 		}
@@ -146,7 +168,7 @@ public class TSP {
 
 	public static void setMatrix() {
 		// 1.Reihe
-		matrix[0][0] = 999; // steht f�r -
+		matrix[0][0] = 999; // steht f�r -
 		matrix[1][0] = 7;
 		matrix[2][0] = 12;
 		matrix[3][0] = 3;

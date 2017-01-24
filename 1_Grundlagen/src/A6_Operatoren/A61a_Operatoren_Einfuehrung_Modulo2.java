@@ -9,7 +9,7 @@ public class A61a_Operatoren_Einfuehrung_Modulo2 {
 	public static void main(String[] args) {
 		
 		//Eingabe
-		int zahlenCode = 123;
+		int zahlenCode = 1234;
 		
 		//Verarbeitung
 		int letzteZiffer = zahlenCode % 10;

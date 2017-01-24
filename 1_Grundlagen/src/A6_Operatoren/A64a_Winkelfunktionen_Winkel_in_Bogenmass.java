@@ -5,7 +5,7 @@ public class A64a_Winkelfunktionen_Winkel_in_Bogenmass {
 	public static void main(String[] args) {
 			
 		//Winkel
-		double alpha = 45;
+		double alpha = 50;
 		
 		
 		//Umrechnung in Bogenmass
@@ -13,7 +13,6 @@ public class A64a_Winkelfunktionen_Winkel_in_Bogenmass {
 		
 		//Winkelfunktion vom Bogenmass
 		double sin = Math.sin(bmAlpha);
-		
 
 		
 		//und umgekehrt
@@ -23,9 +22,7 @@ public class A64a_Winkelfunktionen_Winkel_in_Bogenmass {
 		
 		System.out.println("Alpha="+alpha);
 		System.out.println("Bm von Alpha="+bmAlpha);
-		
-		System.out.println("Sinus von 45° im Deg modus"+sin);
-		
+		System.out.println("Sinus von 45 Grad im Deg modus"+sin);		
 		System.out.println(alphaBerechnet);		
 		
 	}
