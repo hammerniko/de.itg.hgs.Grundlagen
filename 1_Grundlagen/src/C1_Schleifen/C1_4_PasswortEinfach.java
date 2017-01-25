@@ -25,7 +25,7 @@ public class C1_4_PasswortEinfach {
 				System.out.println("Falsches Passwort oder Benutzername");
 				System.out.println("------------------------------------");
 			}
-		} while (!isLoginOk);
+		} while (isLoginOk==false);
 
 		s.close();
 		System.out.println("Passwort akzeptiert.");

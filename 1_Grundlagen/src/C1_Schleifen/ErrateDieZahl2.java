@@ -1,13 +1,14 @@
 package C1_Schleifen;
 import java.util.Scanner;
+
 /**
- * In diesem Spiel wird zu Beginn zufällig eine Zahl zwischen
+ * In diesem Spiel wird zu Beginn zufaellig eine Zahl zwischen
  * 1 und 100 gezogen.
  * Dannach wird der Spieler aufgefordert eine Zahl einzugeben.
  * Je nachdem wie nah die geratene Zahl beim Ergebnis
- * liegt, sollen die Meldungen "heiß","lauwarm" und "kalt"
+ * liegt, sollen die Meldungen "zu klein" oder "zu gross" 
  * ausgegeben werden.
- * Die Anzahl der Versuche wird mitgezählt und ausgegeben,
+ * Die Anzahl der Versuche wird mitgezaehlt und am Ende ausgegeben,
  * wenn die Zahl erraten wurde.
  */
 public class ErrateDieZahl2 {

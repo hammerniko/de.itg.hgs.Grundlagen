@@ -2,7 +2,16 @@ package C1_Schleifen;
 
 import java.util.Scanner;
 
-
+/**
+ * In diesem Spiel wird zu Beginn zufaellig eine Zahl zwischen
+ * 1 und 100 gezogen.
+ * Dannach wird der Spieler aufgefordert eine Zahl einzugeben.
+ * Je nachdem wie nah die geratene Zahl beim Ergebnis
+ * liegt, sollen die Meldungen "heiss","lauwarm" und "kalt"
+ * ausgegeben werden.
+ * Die Anzahl der Versuche wird mitgezählt und ausgegeben,
+ * wenn die Zahl erraten wurde.
+ */
 public class ErrateDieZahl {
 	
 	public static void main(String[] args) {
@@ -15,6 +24,7 @@ public class ErrateDieZahl {
 		
 		zz = (int) (Math.random()*100+1);
 		
+		System.out.println("Geben Sie eine Zahl zwischen 1 und 100");
 		
 		do {
 			System.out.println("-----------------");
