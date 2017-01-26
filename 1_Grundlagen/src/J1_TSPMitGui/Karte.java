@@ -141,7 +141,25 @@ public class Karte extends JPanel implements MouseListener {
 
 	}
 
+	private boolean istKanteDoppelt(Knoten k1, Knoten k2){
+		
+		boolean value=false;
+		
+		for (int i = 0; i < kanten.size(); i++) {
+			if(kanten.elementAt(i).getK2().getName().equals(k1.getName()) && kanten.elementAt(i).getK1().getName().equals(k2.getName())){
+				
+				System.out.println("Kante doppelt");
+				value= true;
+				break;
+			}
+			
+		}
+		return value;
+		
+	}
 	public void calcAll() {
+		
+		Knoten k1,k2;
 		// Erzeuge alle Kanten, wenn mind. 2 Knoten vorh. sind
 		if (knoten.size() >= 2) {
 			for (int i = 0; i < knoten.size() - 1; i++) {
@@ -149,9 +167,12 @@ public class Karte extends JPanel implements MouseListener {
 					
 					//Keine Kante bei gleichen Knoten
 					if (i != j) {
-						kanten.addElement(new Kante(knoten.elementAt(i), knoten
-								.elementAt(j)));
-					}
+						k1=knoten.elementAt(i);
+						k2=knoten.elementAt(j);
+						//Keine Doppelkanten
+						if(!istKanteDoppelt(k1,k2)){
+							kanten.addElement(new Kante(k1, k2));
+					}}
 				}
 
 			}
