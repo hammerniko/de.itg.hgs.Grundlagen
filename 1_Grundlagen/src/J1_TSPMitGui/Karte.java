@@ -34,7 +34,7 @@ public class Karte extends JPanel implements MouseListener {
 	}
 
 	private void addPoint(MouseEvent e) {
-		System.out.println(e);
+		//System.out.println(e);
 		int x = e.getX();
 		int y = e.getY();
 
@@ -48,6 +48,7 @@ public class Karte extends JPanel implements MouseListener {
 		kanten.removeAllElements();
 		Knoten.setAnzahl(0);
 		matrix = null;
+		TSP.init();
 		repaint();
 	}
 

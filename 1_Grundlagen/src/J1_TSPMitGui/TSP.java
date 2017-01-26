@@ -54,6 +54,8 @@ public class TSP {
 	}
 	
 	public static void berechneTSP(){
+		init();
+		
 		// Eingabe Init
 				trace("Anfangsmatrix von GUI:");
 				matrixCopy = arrayCopy(matrix);
@@ -82,6 +84,11 @@ public class TSP {
 
 				System.out.println("Distanz:" + distanz);
 				System.out.println("Loesung:" + loesung);
+	}
+
+	public static void init() {
+		loesung="";
+		distanz=0;
 	}
 
 	/**
