@@ -9,7 +9,7 @@ package J1_TSP;
  */
 public class TSP {
 
-	static String[] buchstaben = { "A", "B", "C", "D", "E", "F", "G", "H" };
+	static String[] buchstaben = { "A", "B", "C", "D", "E" };
 	static final int ANZAHL = 5;
 	static final int DASH = 999;
 	static boolean debug = true;
@@ -275,8 +275,8 @@ public class TSP {
 	 * @param reihe
 	 */
 	private static void minimiereReihe(int reihe) {
-		min = Integer.MAX_VALUE;
-		int indexMin = getMinOfRow(reihe);
+		
+		min = getMinOfRow(reihe);
 
 		for (int j = 0; j < matrix.length; j++) {
 			if (matrix[j][reihe] != DASH) {
@@ -292,15 +292,15 @@ public class TSP {
 	 * @return
 	 */
 	private static int getMinOfRow(int reihe) {
-		min = 999;
-		int indexMin = -1;
+		min = DASH;
+		
 		for (int j = 0; j < matrix.length; j++) {
 			if (matrix[j][reihe] < min) {
 				min = matrix[j][reihe];
-				indexMin = j;
+				
 			}
 		}
-		return indexMin;
+		return min;
 	}
 
 	/**
@@ -310,13 +310,12 @@ public class TSP {
 	 * @param spalte
 	 */
 	private static void minimiereSpalte(int spalte) {
-		min = Integer.MAX_VALUE;
-		int indexMin;
+		
 
-		indexMin = getMinOfCol(spalte);
+		min = getMinOfCol(spalte);
 
 		for (int i = 0; i < matrix.length; i++) {
-			if (matrix[spalte][i] != 999) {
+			if (matrix[spalte][i] != DASH) {
 				matrix[spalte][i] = matrix[spalte][i] - min;
 			}
 		}
@@ -329,15 +328,15 @@ public class TSP {
 	 * @return
 	 */
 	private static int getMinOfCol(int spalte) {
-		min = 999;
-		int indexMin = -1;
+		min = DASH;
+		
 		for (int i = 0; i < matrix.length; i++) {
 			if (matrix[spalte][i] < min) {
 				min = matrix[spalte][i];
-				indexMin = i;
+				
 			}
 		}
-		return indexMin;
+		return min;
 	}
 
 	/**
