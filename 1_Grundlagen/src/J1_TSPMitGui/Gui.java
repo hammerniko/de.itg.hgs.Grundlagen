@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
@@ -34,7 +36,24 @@ public class Gui extends JFrame {
 		
 		
 		berechneRoute=new JButton("Calc");
+		berechneRoute.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				clickedCalc();
+				
+			}
+		});
+		
 		loeschen= new JButton("delete");
+		loeschen.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				clickedLoeschen();
+				
+			}
+		});
 		buttons= new JPanel();
 		buttons.setLayout(new FlowLayout());
 		buttons.add(berechneRoute);
@@ -44,6 +63,18 @@ public class Gui extends JFrame {
 		contentPane.add(buttons, BorderLayout.SOUTH);
 		
 		setContentPane(contentPane);
+		
+	}
+
+
+	protected void clickedCalc() {
+		karte.calcAll();
+		
+	}
+
+
+	protected void clickedLoeschen() {
+		karte.deletAllPoints();
 		
 	}
 }

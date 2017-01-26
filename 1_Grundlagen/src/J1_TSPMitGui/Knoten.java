@@ -6,11 +6,15 @@ public class Knoten {
 	private String name;
 	private int x;
 	private int y;
+	private static int anzahl=0;
+	private char firstChar = 'A';
 	
-	public Knoten(String name,int x, int y){
-		this.name = name;
+	public Knoten(int x, int y){
+		
+		this.name = ""+(char)(firstChar+anzahl);
 		this.x = x;
 		this.y = y;
+		anzahl++;
 	}
 	
 	
@@ -32,6 +36,12 @@ public class Knoten {
 	}
 	public void setY(int y) {
 		this.y = y;
+	}
+
+
+
+	public static void setAnzahl(int anzahl) {
+		Knoten.anzahl = anzahl;
 	}
 	
 	

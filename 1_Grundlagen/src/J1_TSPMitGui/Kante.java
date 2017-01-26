@@ -20,6 +20,14 @@ public class Kante {
 		return distanz;
 	}
 
+	public Knoten getK1() {
+		return k1;
+	}
+
+	public Knoten getK2() {
+		return k2;
+	}
+
 	
 
 }
