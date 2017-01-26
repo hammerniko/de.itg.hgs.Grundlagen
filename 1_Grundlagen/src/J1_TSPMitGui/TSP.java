@@ -10,20 +10,21 @@ package J1_TSPMitGui;
 public class TSP {
 
 	static String[] buchstaben = { "A", "B", "C", "D", "E", "F", "G", "H" };
-	static final int ANZAHL = 5;
-	static final int DASH = 999;
+	static int ANZAHL;
+	static final int DASH = 99999;
 	static boolean debug = true;
-	static int[][] matrix = new int[ANZAHL][ANZAHL];
-	static int[][] matrixCopy = new int[ANZAHL][ANZAHL];
-	static int[][] penalties = new int[ANZAHL][ANZAHL];
+	static int[][] matrix; 
+	static int[][] matrixCopy; 
+	static int[][] penalties; 
 	static int min;
 	static String loesung = "";
 	static int distanz = 0;
 
-	public static void main(String[] args) {
+	public static void berechneTSP() {
+		init();
+
 		// Eingabe Init
-		trace("Anfangsmatrix:");
-		setMatrix();
+		trace("Anfangsmatrix von GUI:");
 		matrixCopy = arrayCopy(matrix);
 		ausgabeArray(matrix);
 
@@ -50,45 +51,11 @@ public class TSP {
 
 		System.out.println("Distanz:" + distanz);
 		System.out.println("Loesung:" + loesung);
-
-	}
-	
-	public static void berechneTSP(){
-		init();
-		
-		// Eingabe Init
-				trace("Anfangsmatrix von GUI:");
-				matrixCopy = arrayCopy(matrix);
-				ausgabeArray(matrix);
-
-				// ********************************** TSP Algorithmus
-				for (int i = 0; i < ANZAHL; i++) {
-
-					// Minimieren
-					trace("Minimieren der Matrix");
-					minimiereAlleReihen();
-					minimiereAlleSpalten();
-					ausgabeArray(matrix);
-
-					// Kalkulieren
-					trace("Kalkulieren der Penalties");
-					kalkulierePenalties();
-					ausgabeArray(penalties);
-
-					// Reduzieren der Matrix
-					trace("Reduzieren der Matrix");
-					reduziereMatrix();
-					ausgabeArray(matrix);
-
-				}
-
-				System.out.println("Distanz:" + distanz);
-				System.out.println("Loesung:" + loesung);
 	}
 
 	public static void init() {
-		loesung="";
-		distanz=0;
+		loesung = "";
+		distanz = 0;
 	}
 
 	/**
@@ -291,7 +258,7 @@ public class TSP {
 	 */
 	private static void minimiereAlleReihen() {
 		trace("-Alle Reihen minimiert");
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < matrix.length; i++) {
 			minimiereReihe(i);
 		}
 	}
@@ -301,7 +268,7 @@ public class TSP {
 	 */
 	private static void minimiereAlleSpalten() {
 		trace("-Alle Spalten minimiert");
-		for (int j = 0; j < 5; j++) {
+		for (int j = 0; j < matrix.length; j++) {
 			minimiereSpalte(j);
 		}
 	}
@@ -313,8 +280,8 @@ public class TSP {
 	 * @param reihe
 	 */
 	private static void minimiereReihe(int reihe) {
-		min = Integer.MAX_VALUE;
-		int indexMin = getMinOfRow(reihe);
+		
+		min = getMinOfRow(reihe);
 
 		for (int j = 0; j < matrix.length; j++) {
 			if (matrix[j][reihe] != DASH) {
@@ -330,15 +297,15 @@ public class TSP {
 	 * @return
 	 */
 	private static int getMinOfRow(int reihe) {
-		min = 999;
-		int indexMin = -1;
+		min = DASH;
+		
 		for (int j = 0; j < matrix.length; j++) {
 			if (matrix[j][reihe] < min) {
 				min = matrix[j][reihe];
-				indexMin = j;
+				
 			}
 		}
-		return indexMin;
+		return min;
 	}
 
 	/**
@@ -348,13 +315,12 @@ public class TSP {
 	 * @param spalte
 	 */
 	private static void minimiereSpalte(int spalte) {
-		min = Integer.MAX_VALUE;
-		int indexMin;
+		
 
-		indexMin = getMinOfCol(spalte);
+		min = getMinOfCol(spalte);
 
 		for (int i = 0; i < matrix.length; i++) {
-			if (matrix[spalte][i] != 999) {
+			if (matrix[spalte][i] != DASH) {
 				matrix[spalte][i] = matrix[spalte][i] - min;
 			}
 		}
@@ -367,15 +333,15 @@ public class TSP {
 	 * @return
 	 */
 	private static int getMinOfCol(int spalte) {
-		min = 999;
-		int indexMin = -1;
+		min = DASH;
+		
 		for (int i = 0; i < matrix.length; i++) {
 			if (matrix[spalte][i] < min) {
 				min = matrix[spalte][i];
-				indexMin = i;
+				
 			}
 		}
-		return indexMin;
+		return min;
 	}
 
 	/**
@@ -405,7 +371,7 @@ public class TSP {
 			System.out.print(buchstaben[i] + " ");
 			for (int j = 0; j < array.length; j++) {
 
-				if (array[j][i] == 999) {
+				if (array[j][i] == DASH) {
 					System.out.print("\t-");
 				} else {
 					System.out.print("\t" + array[j][i]);
@@ -415,49 +381,13 @@ public class TSP {
 		System.out.println("\n------------------------------------------");
 	}
 
-	/**
-	 * Setzt eine Beispielmatrix. Die Anzahld er Zeilen und Spalten muss mit der
-	 * Konstanten ANZAHL uebereinstimmen
-	 */
-	public static void setMatrix() {
-		// 1.Reihe
-		matrix[0][0] = DASH;
-		matrix[1][0] = 5; 
-		matrix[2][0] = 3;
-		matrix[3][0] = 2;
-		matrix[4][0] = 4;
-
-		// 2.Reihe
-		matrix[0][1] = 5;
-		matrix[1][1] = DASH;
-		matrix[2][1] = 4;
-		matrix[3][1] = 1;
-		matrix[4][1] = 7;
-
-		// 3.Reihe
-		matrix[0][2] = 3;
-		matrix[1][2] = 4;
-		matrix[2][2] = DASH;
-		matrix[3][2] = 2;
-		matrix[4][2] = 2;
-
-		// 4.Reihe
-		matrix[0][3] = 2;
-		matrix[1][3] = 1;
-		matrix[2][3] = 2;
-		matrix[3][3] = DASH;
-		matrix[4][3] = 3;
-
-		// 5.Reihe
-		matrix[0][4] = 4;
-		matrix[1][4] = 7;
-		matrix[2][4] = 2;
-		matrix[3][4] = 3;
-		matrix[4][4] = DASH;
-	}
-	
-	public static void setMatrix(int[][] pMatrix){
-		matrix= pMatrix;
+	public static void setMatrix(int[][] pMatrix) {
+		ANZAHL = pMatrix.length;
+		matrix = pMatrix;
+		
+		matrixCopy = new int[ANZAHL][ANZAHL];
+		penalties = new int[ANZAHL][ANZAHL];
+		init();
 	}
 
 	public static void trace(String meldung) {
