@@ -7,10 +7,10 @@ package J1_TSP;
  * @author Nikolai Hammer
  * 
  */
-public class TSP {
+public class TSPwithBigArray {
 
-	static String[] buchstaben = { "A", "B", "C", "D", "E", "F", "G", "H" };
-	static final int ANZAHL = 5;
+	static String[] buchstaben = { "A", "B", "C", "D", "E", "F", "G", "H","I" };
+	static final int ANZAHL = 8;
 	static final int DASH = 999;
 	static boolean debug = true;
 	static int[][] matrix = new int[ANZAHL][ANZAHL];
@@ -143,8 +143,7 @@ public class TSP {
 	 */
 	private static void addLoesung(int colMaxPanelty, int rowMaxPanelty) {
 
-		loesung = loesung + buchstaben[rowMaxPanelty] + "->"
-				+ buchstaben[colMaxPanelty] + " ";
+		loesung = loesung + buchstaben[rowMaxPanelty] + "->" + buchstaben[colMaxPanelty] + " ";
 		trace("Loesung:" + loesung);
 	}
 
@@ -193,8 +192,7 @@ public class TSP {
 			// Siehe kalkulierePenaltyReihen
 			if (min1 == 0) {
 				// Die stelle mit der Null erhält Penalty des 2.ten Minimums
-				penalties[reiheMitMin1][spalte] = penalties[reiheMitMin1][spalte]
-						+ min2;
+				penalties[reiheMitMin1][spalte] = penalties[reiheMitMin1][spalte] + min2;
 			}
 		}
 	}
@@ -378,7 +376,7 @@ public class TSP {
 	}
 
 	/**
-	 * Setzt eine Beispielmatrix. Die Anzahld er Zeilen und Spalten muss mit der
+	 * Setzt eine Beispielmatrix. Die Anzahl der Zeilen und Spalten muss mit der
 	 * Konstanten ANZAHL uebereinstimmen
 	 */
 	public static void setMatrix() {
@@ -388,34 +386,80 @@ public class TSP {
 		matrix[2][0] = 3;
 		matrix[3][0] = 2;
 		matrix[4][0] = 4;
+		matrix[5][0] = 7;
+		matrix[6][0] = 11;
+		matrix[7][0] = 2;
 
 		// 2.Reihe
 		matrix[0][1] = 5;
 		matrix[1][1] = DASH;
 		matrix[2][1] = 4;
-		matrix[3][1] = 1;
-		matrix[4][1] = 7;
+		matrix[3][1] = 7;
+		matrix[4][1] = 8;
+		matrix[5][1] = 9;
+		matrix[6][1] = 2;
+		matrix[7][1] = 5;
 
 		// 3.Reihe
 		matrix[0][2] = 3;
 		matrix[1][2] = 4;
 		matrix[2][2] = DASH;
-		matrix[3][2] = 2;
-		matrix[4][2] = 2;
+		matrix[3][2] = 6;
+		matrix[4][2] = 3;
+		matrix[5][2] = 5;
+		matrix[6][2] = 4;
+		matrix[7][2] = 8;
 
 		// 4.Reihe
 		matrix[0][3] = 2;
-		matrix[1][3] = 1;
-		matrix[2][3] = 2;
+		matrix[1][3] = 7;
+		matrix[2][3] = 6;
 		matrix[3][3] = DASH;
-		matrix[4][3] = 3;
+		matrix[4][3] = 2;
+		matrix[5][3] = 1;
+		matrix[6][3] = 5;
+		matrix[7][3] = 7;
 
 		// 5.Reihe
 		matrix[0][4] = 4;
-		matrix[1][4] = 7;
-		matrix[2][4] = 2;
-		matrix[3][4] = 3;
+		matrix[1][4] = 8;
+		matrix[2][4] = 3;
+		matrix[3][4] = 2;
 		matrix[4][4] = DASH;
+		matrix[5][4] = 3;
+		matrix[6][4] = 3;
+		matrix[7][4] = 6;
+
+		// 6.Reihe
+		matrix[0][5] = 7;
+		matrix[1][5] = 9;
+		matrix[2][5] = 5;
+		matrix[3][5] = 1;
+		matrix[4][5] = 3;
+		matrix[5][5] = DASH;
+		matrix[6][5] = 4;
+		matrix[7][5] = 4;
+		
+		// 6.Reihe
+		matrix[0][6] = 11;
+		matrix[1][6] = 2;
+		matrix[2][6] = 4;
+		matrix[3][6] = 5;
+		matrix[4][6] = 3;
+		matrix[5][6] = 4;
+		matrix[6][6] = DASH;
+		matrix[7][6] = 9;
+
+		// 7.Reihe
+		matrix[0][7] = 2;
+		matrix[1][7] = 5;
+		matrix[2][7] = 8;
+		matrix[3][7] = 7;
+		matrix[4][7] = 6;
+		matrix[5][7] = 4;
+		matrix[6][7] = 9;
+		matrix[7][7] = DASH;
+
 	}
 
 	public static void trace(String meldung) {

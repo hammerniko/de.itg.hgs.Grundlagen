@@ -1,4 +1,4 @@
-package J1_TSP;
+package J1_TSPMitGui;
 
 /**
  * Das Programm berechnet nach dem Travel Salesman Problem - Algorithmus ein
