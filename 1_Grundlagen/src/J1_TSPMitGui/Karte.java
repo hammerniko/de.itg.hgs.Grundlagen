@@ -14,14 +14,15 @@ import java.util.Vector;
 import javax.swing.JPanel;
 
 public class Karte extends JPanel implements MouseListener {
-	
+
 	public static final int LINIENDICKE = 3;
 	public static final int KREISGROESSE = 40;
 	public static final int FONTSIZE = 16;
 	private Font font;
 
-	Vector<Knoten> knoten;
-	Vector<Kante> kanten;
+	private Vector<Knoten> knoten;
+	private Vector<Kante> kanten;
+	private int[][] matrix;
 
 	public Karte() {
 		font = new Font("default", Font.BOLD, FONTSIZE);
@@ -46,6 +47,7 @@ public class Karte extends JPanel implements MouseListener {
 		knoten.removeAllElements();
 		kanten.removeAllElements();
 		Knoten.setAnzahl(0);
+		matrix = null;
 		repaint();
 	}
 
@@ -64,7 +66,7 @@ public class Karte extends JPanel implements MouseListener {
 			// Zeichne Distanz
 			posX = (x1 + x2) / 2;
 			posY = (y1 + y2) / 2;
-			distanz = kanten.elementAt(i).getDistanz();
+			distanz = kanten.elementAt(i).calcDistanz();
 			g.setColor(Color.BLUE);
 			g.drawString("" + distanz, posX, posY);
 		}
@@ -72,22 +74,21 @@ public class Karte extends JPanel implements MouseListener {
 	}
 
 	private void drawPoints(Graphics g) {
-		int x,y;
-		
+		int x, y;
+
 		for (int i = 0; i < knoten.size(); i++) {
 			x = knoten.elementAt(i).getX();
 			y = knoten.elementAt(i).getY();
 			g.setColor(Color.white);
-			g.fillOval(x-(KREISGROESSE/2), y-(KREISGROESSE/2), KREISGROESSE, KREISGROESSE);
+			g.fillOval(x - (KREISGROESSE / 2), y - (KREISGROESSE / 2),
+					KREISGROESSE, KREISGROESSE);
 			g.setColor(Color.red);
-			
-			
-			g.drawString(knoten.elementAt(i).getName(),x-(FONTSIZE/2),y);
+
+			g.drawString(knoten.elementAt(i).getName(), x - (FONTSIZE / 2), y);
 		}
 
 	}
-	
-	
+
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		addPoint(e);
@@ -121,24 +122,21 @@ public class Karte extends JPanel implements MouseListener {
 	protected void paintComponent(Graphics g) {
 		// TODO Auto-generated method stub
 		super.paintComponent(g);
-		
+
 		// G2D Objekt erlaubt mehr Grafikoptionen als das normale Graphics
 		// Objekt
 		Graphics2D g2 = (Graphics2D) g;
 
 		// Liniendicke Aendern
 		g2.setStroke(new BasicStroke(LINIENDICKE));
-		
-		//Fette Schrift
+
+		// Fette Schrift
 		g2.setFont(font);
-		
+
 		// Methode der Oberklasse (JComponent) ausfuehren
 		super.paintComponent(g2);
 
-		
-
 		drawEdges(g);
-		
 		drawPoints(g);
 
 	}
@@ -148,12 +146,25 @@ public class Karte extends JPanel implements MouseListener {
 		if (knoten.size() >= 2) {
 			for (int i = 0; i < knoten.size() - 1; i++) {
 				for (int j = 1; j < knoten.size(); j++) {
-					kanten.addElement(new Kante(knoten.elementAt(i), knoten
-							.elementAt(j)));
+					
+					//Keine Kante bei gleichen Knoten
+					if (i != j) {
+						kanten.addElement(new Kante(knoten.elementAt(i), knoten
+								.elementAt(j)));
+					}
 				}
 
 			}
 		}
+
+		// Erzeuge Array für TSP
+		matrix = new int[knoten.size()][knoten.size()];
+
+		// Erzeuge Matrixeinträge
+		// Jede Kante enthält eine Distanz zwischen 2 Knoten
+		// Jeder Eintrag der Matrix enstpricht einer Kante
+		System.out.println(kanten);
+
 		repaint();
 	}
 

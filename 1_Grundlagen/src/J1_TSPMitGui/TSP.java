@@ -384,7 +384,7 @@ public class TSP {
 	public static void setMatrix() {
 		// 1.Reihe
 		matrix[0][0] = DASH;
-		matrix[1][0] = 5;
+		matrix[1][0] = 5; 
 		matrix[2][0] = 3;
 		matrix[3][0] = 2;
 		matrix[4][0] = 4;

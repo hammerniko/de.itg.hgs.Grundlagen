@@ -9,9 +9,10 @@ public class Kante {
 	public Kante(Knoten k1, Knoten k2){
 		this.k1 = k1;
 		this.k2 = k2;
+		calcDistanz();
 	}
 
-	public int getDistanz() {
+	public int calcDistanz() {
 		
 		int dX = Math.abs(k1.getX()-k2.getX());
 		int dY = Math.abs(k1.getY()-k2.getY());
@@ -26,6 +27,11 @@ public class Kante {
 
 	public Knoten getK2() {
 		return k2;
+	}
+
+	@Override
+	public String toString() {
+		return "\nKante [k1=" + k1.getName() + ", k2=" + k2.getName() + ", distanz=" + distanz + "]";
 	}
 
 	
