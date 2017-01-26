@@ -6,6 +6,10 @@ public class Kante {
 	private Knoten k2;
 	private int distanz;
 	
+	public int getDistanz() {
+		return distanz;
+	}
+
 	public Kante(Knoten k1, Knoten k2){
 		this.k1 = k1;
 		this.k2 = k2;

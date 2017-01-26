@@ -52,6 +52,37 @@ public class TSP {
 		System.out.println("Loesung:" + loesung);
 
 	}
+	
+	public static void berechneTSP(){
+		// Eingabe Init
+				trace("Anfangsmatrix von GUI:");
+				matrixCopy = arrayCopy(matrix);
+				ausgabeArray(matrix);
+
+				// ********************************** TSP Algorithmus
+				for (int i = 0; i < ANZAHL; i++) {
+
+					// Minimieren
+					trace("Minimieren der Matrix");
+					minimiereAlleReihen();
+					minimiereAlleSpalten();
+					ausgabeArray(matrix);
+
+					// Kalkulieren
+					trace("Kalkulieren der Penalties");
+					kalkulierePenalties();
+					ausgabeArray(penalties);
+
+					// Reduzieren der Matrix
+					trace("Reduzieren der Matrix");
+					reduziereMatrix();
+					ausgabeArray(matrix);
+
+				}
+
+				System.out.println("Distanz:" + distanz);
+				System.out.println("Loesung:" + loesung);
+	}
 
 	/**
 	 * Kopiert ein Array Wert fuer Wert und gibt die Kopie zurueck
@@ -416,6 +447,10 @@ public class TSP {
 		matrix[2][4] = 2;
 		matrix[3][4] = 3;
 		matrix[4][4] = DASH;
+	}
+	
+	public static void setMatrix(int[][] pMatrix){
+		matrix= pMatrix;
 	}
 
 	public static void trace(String meldung) {

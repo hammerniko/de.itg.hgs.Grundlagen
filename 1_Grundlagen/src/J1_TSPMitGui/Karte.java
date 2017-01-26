@@ -185,6 +185,29 @@ public class Karte extends JPanel implements MouseListener {
 		// Jede Kante enthält eine Distanz zwischen 2 Knoten
 		// Jeder Eintrag der Matrix enstpricht einer Kante
 		System.out.println(kanten);
+		
+		//Dashes eintargen
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix.length; j++) {
+				if(i==j){
+					matrix[j][i]=TSP.DASH;
+				}
+			}
+		}
+		
+		//Kanten eintragen
+		int n=0;
+		for (int i = 0; i < matrix.length-1; i++) {
+			for (int j = i+1; j < matrix.length; j++) {
+				System.out.println(j+","+i);
+				matrix[j][i]=kanten.elementAt(n).getDistanz();
+				matrix[i][j]=kanten.elementAt(n).getDistanz();
+				n++;
+			}
+		}
+		
+		TSP.setMatrix(matrix);
+		TSP.berechneTSP();
 
 		repaint();
 	}
