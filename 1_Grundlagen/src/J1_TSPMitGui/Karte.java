@@ -61,7 +61,17 @@ public class Karte extends JPanel implements MouseListener {
 			x2 = kanten.elementAt(i).getK2().getX();
 			y1 = kanten.elementAt(i).getK1().getY();
 			y2 = kanten.elementAt(i).getK2().getY();
-			g.setColor(Color.black);
+			
+			if(kanten.elementAt(i).istLoesung()){
+				g.setColor(Color.ORANGE);
+				
+				//Pfeilspitze zeichen
+				
+			}
+			else{
+				g.setColor(Color.black);
+			}
+			
 			g.drawLine(x1, y1, x2, y2);
 
 			// Zeichne Distanz
@@ -213,5 +223,7 @@ public class Karte extends JPanel implements MouseListener {
 
 		repaint();
 	}
+	
+	
 
 }

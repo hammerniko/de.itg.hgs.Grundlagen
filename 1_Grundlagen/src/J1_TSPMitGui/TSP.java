@@ -9,7 +9,7 @@ package J1_TSPMitGui;
  */
 public class TSP {
 
-	static String[] buchstaben = { "A", "B", "C", "D", "E", "F", "G", "H" };
+	static String[] buchstaben = { "A", "B", "C", "D", "E", "F", "G", "H" ,"I","J"};
 	static int ANZAHL;
 	static final int DASH = 99999;
 	static boolean debug = true;
@@ -147,10 +147,15 @@ public class TSP {
 	 * @param rowMaxPanelty
 	 */
 	private static void addLoesung(int colMaxPanelty, int rowMaxPanelty) {
-
-		loesung = loesung + buchstaben[rowMaxPanelty] + "->"
-				+ buchstaben[colMaxPanelty] + " ";
+		String nameKnotenVon = buchstaben[rowMaxPanelty];
+		String nameKnotenNach= buchstaben[colMaxPanelty];
+		
+		
+		
+		loesung = loesung + nameKnotenVon + "->"
+				+ nameKnotenNach + " ";
 		trace("Loesung:" + loesung);
+		
 	}
 
 	/**

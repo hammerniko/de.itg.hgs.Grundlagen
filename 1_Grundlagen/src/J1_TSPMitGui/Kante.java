@@ -5,7 +5,16 @@ public class Kante {
 	private Knoten k1;
 	private Knoten k2;
 	private int distanz;
+	private boolean istLoesung;
 	
+	public boolean istLoesung() {
+		return istLoesung;
+	}
+
+	public void setIstLoesung(boolean istLoesung) {
+		this.istLoesung = istLoesung;
+	}
+
 	public int getDistanz() {
 		return distanz;
 	}
