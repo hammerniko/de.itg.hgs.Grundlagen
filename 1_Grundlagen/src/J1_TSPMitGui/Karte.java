@@ -187,7 +187,7 @@ public class Karte extends JPanel implements MouseListener {
 		// Jeder Eintrag der Matrix enstpricht einer Kante
 		System.out.println(kanten);
 		
-		//Dashes eintargen
+		//Dashes in Matrix eintargen
 		for (int i = 0; i < matrix.length; i++) {
 			for (int j = 0; j < matrix.length; j++) {
 				if(i==j){
@@ -196,17 +196,18 @@ public class Karte extends JPanel implements MouseListener {
 			}
 		}
 		
-		//Kanten eintragen
+		//Kantenwerte in Matrix eintragen
 		int n=0;
 		for (int i = 0; i < matrix.length-1; i++) {
 			for (int j = i+1; j < matrix.length; j++) {
-				System.out.println(j+","+i);
+				//System.out.println(j+","+i);
 				matrix[j][i]=kanten.elementAt(n).getDistanz();
 				matrix[i][j]=kanten.elementAt(n).getDistanz();
 				n++;
 			}
 		}
 		
+		//Matrix in TSP setzen und berechnen
 		TSP.setMatrix(matrix);
 		TSP.berechneTSP();
 
