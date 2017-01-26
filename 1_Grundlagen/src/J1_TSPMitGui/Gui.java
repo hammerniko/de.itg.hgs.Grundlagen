@@ -22,7 +22,7 @@ public class Gui extends JFrame {
 	
 
 	public Gui(){
-		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		initGui();
 		setSize(new Dimension(800, 600));
 		setVisible(true);
