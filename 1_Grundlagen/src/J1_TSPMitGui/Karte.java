@@ -189,10 +189,10 @@ public class Karte extends JPanel implements MouseListener {
 			}
 		}
 
-		// Erzeuge Array für TSP
+		// Erzeuge Array fuer TSP
 		matrix = new int[knoten.size()][knoten.size()];
 
-		// Erzeuge Matrixeinträge
+		// Erzeuge Matrixeintraege
 		// Jede Kante enthält eine Distanz zwischen 2 Knoten
 		// Jeder Eintrag der Matrix enstpricht einer Kante
 		System.out.println(kanten);

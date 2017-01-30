@@ -9,9 +9,9 @@ package J1_TSPMitGui;
  */
 public class TSP {
 
-	static String[] buchstaben = { "A", "B", "C", "D", "E", "F", "G", "H" ,"I","J"};
+	static String[] buchstaben = { "A", "B", "C", "D", "E", "F", "G", "H" ,"I","J","K","L","M","N","O","P","R","S","T","U","V","W","X","Y","Z"};
 	static int ANZAHL;
-	static final int DASH = 99999;
+	static final int DASH = 9999;
 	static boolean debug = true;
 	static int[][] matrix; 
 	static int[][] matrixCopy; 
