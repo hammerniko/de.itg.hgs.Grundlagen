@@ -3,9 +3,9 @@ package C1_Schleifen;
 
 public class Ggt {
 	public static void main (String [] argv) {
-		if (argv.length!=0){
-			int a=Integer.parseInt(argv[0]);
-			int b=Integer.parseInt(argv[1]);	
+		
+			int a=1350;
+			int b=125;	
 			int c=a;
 			int d=b;
 			while (c!=d) {
@@ -13,8 +13,6 @@ public class Ggt {
 				else c-=d;
 			}
 			System.out.println("Der groesste gemeinsame Teiler von "+a+" und "+b+" ist: "+c);
-		}
-		else System.out.println("Bitte zwei Parameter angeben");
 		
 	}
 }
