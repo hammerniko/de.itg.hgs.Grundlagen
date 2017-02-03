@@ -22,6 +22,7 @@ public class Karte extends JPanel implements MouseListener {
 
 	private Vector<Knoten> knoten;
 	private Vector<Kante> kanten;
+	
 	private int[][] matrix;
 
 	public Karte() {
