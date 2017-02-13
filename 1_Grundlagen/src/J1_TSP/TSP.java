@@ -22,7 +22,6 @@ public class TSP {
 
 	public static void main(String[] args) {
 		// Eingabe Init
-		trace("Anfangsmatrix:");
 		setMatrix();
 		matrixCopy = arrayCopy(matrix);
 		ausgabeArray(matrix);
@@ -31,21 +30,14 @@ public class TSP {
 		for (int i = 0; i < ANZAHL; i++) {
 
 			// Minimieren
-			trace("Minimieren der Matrix");
 			minimiereAlleReihen();
 			minimiereAlleSpalten();
-			ausgabeArray(matrix);
 
 			// Kalkulieren
-			trace("Kalkulieren der Penalties");
 			kalkulierePenalties();
-			ausgabeArray(penalties);
 
 			// Reduzieren der Matrix
-			trace("Reduzieren der Matrix");
 			reduziereMatrix();
-			ausgabeArray(matrix);
-
 		}
 
 		System.out.println("Distanz:" + distanz);

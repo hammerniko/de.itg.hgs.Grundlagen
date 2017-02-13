@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="http://structorizer.fisch.lu/" version="3.25" text="&#34;Statische Variablen:&#34;,&#34;buchstaben:text[] &#60;- { &#34;&#34;A&#34;&#34;, &#34;&#34;B&#34;&#34;, &#34;&#34;C&#34;&#34;, &#34;&#34;D&#34;&#34;, &#34;&#34;E&#34;&#34; }&#34;,&#34;ANZAHL:GZ &#60;- 5&#34;,&#34;DASH:GZ &#60;- 999&#34;,&#34;debug:boolean  &#60;- wahr&#34;,&#34;matrix:GZ[][] &#60;- GZ[ANZAHL][ANZAHL]&#34;,&#34;matrixCopy:GZ[][] &#60;- GZ[ANZAHL][ANZAHL]&#34;,&#34;penalties:GZ[][] &#60;- GZ[ANZAHL][ANZAHL]&#34;,&#34;min:GZ&#34;,&#34;loesung.text &#60;- &#34;&#34;&#34;&#34;;&#34;,&#34;distanz:GZ = 0;&#34;,&#34;&#34;,&#34;main(args:text[])&#34;" comment="&#34;&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<call text="&#34;setMatrix()&#34;" comment="&#34;&#34;" color="ffffff"></call>
+		<call text="&#34;matrixCopy &#60;- arrayCopy(matrix)&#34;" comment="&#34;&#34;" color="ffffff"></call>
+		<call text="&#34;ausgabeArray(matrix)&#34;" comment="&#34;&#34;" color="ffffff"></call>
+		<while text="&#34;Für i=0 bis i&#60;ANZAHL erhöhe i um 1&#34;" comment="&#34;&#34;" color="ffffff">
+			<qWhile>
+				<call text="&#34;minimiereAlleReihen()&#34;" comment="&#34;&#34;" color="ffffff"></call>
+				<call text="&#34;minimiereAlleSpalten()&#34;" comment="&#34;&#34;" color="ffffff"></call>
+				<call text="&#34;kalkulierePenalties()&#34;" comment="&#34;&#34;" color="ffffff"></call>
+				<call text="&#34;redurziereMatrix()&#34;" comment="&#34;&#34;" color="ffffff"></call>
+			</qWhile>
+		</while>
+		<instruction text="&#34;ausgabe &#34;&#34;Distanz:&#34;&#34; + distanz&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+		<instruction text="&#34;ausgabe &#34;&#34;Loesung:&#34;&#34; + loesung&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+	</children>
+</root>
