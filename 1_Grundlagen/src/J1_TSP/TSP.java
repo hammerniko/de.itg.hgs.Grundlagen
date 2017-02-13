@@ -161,12 +161,12 @@ public class TSP {
 
 		for (int spalte = 0; spalte < matrix.length; spalte++) {
 
-			// Merker für jede Reihe neu initialisieren
+			// Merker fuer jede Reihe neu initialisieren
 			min1 = DASH;
 			reiheMitMin1 = -1;
 			min2 = DASH;
 
-			// Prüfe reihe
+			// Pruefe reihe
 			// Suche erstes Minimum und merke die Stelle und Wert
 			for (int reihe = 0; reihe < matrix.length; reihe++) {
 				if (matrix[reihe][spalte] < min1) {
