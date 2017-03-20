@@ -8,6 +8,8 @@ public class LaengenrechnerTest {
     @Test
 	public void testMeterInZoll() {
 		Laengenrechner umrechner = new Laengenrechner();
+		
+		
 		Assert.assertEquals(39.37, umrechner.meterInZoll(1),0.001);
 	}
 
