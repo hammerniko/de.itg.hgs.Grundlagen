@@ -3,10 +3,10 @@ package F4_JunitTestNotenrechner;
 public class Notenrechner {
     
     //Objektattribute
-    double pErr;
-    double pMax;
-    double note;
-    String meldung;
+    private double pErr;
+    private double pMax;
+    private double note;
+    private String meldung;
     
     //Konstanten
     public static final String FEHLER_PERR_GROESSER_PMAX="pErr darf nicht groesser als pMax sein.";

@@ -9,7 +9,7 @@ public class NotenrechnerTest {
     @Test
     public void testNoteBerechnen() {
         Notenrechner nr = new Notenrechner();
-        Assert.assertEquals(Notenrechner.MELDUNG_NOTE+"6.0",nr.berechneNote(0, 50));
+        Assert.assertEquals(Notenrechner.MELDUNG_NOTE+"5.0",nr.berechneNote(0, 50));
         Assert.assertEquals(Notenrechner.MELDUNG_NOTE+"1.0",nr.berechneNote(50, 50));
         Assert.assertEquals(Notenrechner.MELDUNG_NOTE+"3.5",nr.berechneNote(25, 50));
         
