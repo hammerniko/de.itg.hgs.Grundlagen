@@ -39,8 +39,13 @@ public class Kniffelwurf {
 		meldung = waehlen(wuerfel, s, gezogen);
 		
 		//Nach 3 Wuefen schreiben
+		System.out.print("gewürfelt: ");
 		ausgabeWuerfel(wuerfel);
+		System.out.println();
+		
+		System.out.print("gezogen: ");
 		ausgabeWuerfel(gezogen);
+		System.out.println();
 		
 		System.out.println(meldung);
 	}

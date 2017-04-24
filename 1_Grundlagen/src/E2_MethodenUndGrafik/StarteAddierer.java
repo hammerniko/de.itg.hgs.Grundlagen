@@ -6,6 +6,7 @@ public class StarteAddierer {
 
         //Ein Gui Objekt
         GuiAddierer meinGui = new GuiAddierer();
+        
         meinGui.setVisible(true);
        
         
