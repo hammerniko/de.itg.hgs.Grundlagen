@@ -3,16 +3,19 @@ package G1b_SortierenQuicksort;
 public class QuicksortUebung {
 
     public static void main(String[] args) {
-        int[] unsortiert = {5,12,8,99,156};
+        int[] unsortiert = {-3,5,12,0,1,3,8,99,156};
         int[] sortiert = new int[unsortiert.length];
+ 
         sortiert = quicksort(unsortiert, 0, unsortiert.length-1);
-        
+        ausgabeArray(unsortiert);
         ausgabeArray(sortiert);
+     
 
     }
     
-    public static int[] quicksort(int[] a, int unten, int oben){
+    public static int[] quicksort(int[] array, int unten, int oben){
   
+        int[] a = array.clone();
         int tmp;
         int i=unten;
         int j=oben;

@@ -1,8 +1,6 @@
 package G1a_SortierenUebung;
 
-import javax.swing.plaf.FontUIResource;
 
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 
 public class SortierenDurchAustauschen {
 
@@ -14,7 +12,7 @@ public class SortierenDurchAustauschen {
         int[] sortiert = new int[unsortiert.length];
 
         // Array sortieren
-        sortiert = sortiereArrayDurchEinfuegen(unsortiert);
+        sortiert = sortiereArrayDurchAustauschen(unsortiert);
 
         // Sortiertes Array ausgeben
         ausgabeArray(unsortiert);
@@ -22,12 +20,12 @@ public class SortierenDurchAustauschen {
 
     }
 
-    private static void ausgabeArray(int[] sortiert) {
-        for (int i = 0; i < sortiert.length; i++) {
-            if (i < sortiert.length - 1) {
-                System.out.print(sortiert[i] + ", ");
+    private static void ausgabeArray(int[] zahlen) {
+        for (int i = 0; i < zahlen.length; i++) {
+            if (i < zahlen.length - 1) {
+                System.out.print(zahlen[i] + ", ");
             } else {
-                System.out.print(sortiert[i]);
+                System.out.print(zahlen[i]);
             }
         }
 
