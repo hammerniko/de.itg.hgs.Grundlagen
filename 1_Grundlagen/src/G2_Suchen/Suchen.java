@@ -8,7 +8,8 @@ public class Suchen {
      * 
      */
     public static void main(String[] args) {
-        
+         
+        //**************** EINGABE
         //Zu durchsuchende Felder 
         int[] sortiertesFeld={2,5,9,13,23,43,65};
         int[] unsortiertesFeld={3,67,1,45,7,9,34};
@@ -16,22 +17,25 @@ public class Suchen {
         String[] sortierteNamen   = {"Arendt","Burger","Maier"};
         
         //Gesuchte Werte
-        int gesuchterWert = 45;
+        int gesuchterWert1 = 45;
         int gesuchterWert2 = 43;
-        String gesuchterName = "Grobian";
+        String gesuchterName1 = "Grobian";
         String gesuchterName2 = "Maier";
-                
+       
+        //***************** VERARBEITUNG
         //Sequentielle Suche
-        int index = sequentielleSuche(unsortiertesFeld,gesuchterWert);
-        System.out.println("sequentiell:"+gesuchterWert+" steht an der Stelle "+index);
-        int indexStr = sequentielleSuche(unsortierteNamen,gesuchterName);
-        System.out.println("sequentiell:"+gesuchterName+" steht an der Stelle "+indexStr);
+        int indexWert1 = sequentielleSuche(unsortiertesFeld,gesuchterWert1);
+        int indexName1 = sequentielleSuche(unsortierteNamen,gesuchterName1);
          
         //Binaere Suche
-        int index2 = binaereSuche(sortiertesFeld, gesuchterWert2);
-        System.out.println("binaer:      "+gesuchterWert2+" steht an der Stelle "+index2);
-        int indexStr2 = binaereSuche(sortierteNamen, gesuchterName2);
-        System.out.println("binaer:      "+gesuchterName2+" steht an der Stelle "+indexStr2);
+        int indexWert2 = binaereSuche(sortiertesFeld, gesuchterWert2);
+        int indexName2 = binaereSuche(sortierteNamen, gesuchterName2);
+        
+        //******************* AUSGABE
+        System.out.println("sequentiell:\t"+gesuchterWert1+" steht an der Stelle "+indexWert1);
+        System.out.println("sequentiell:\t"+gesuchterName1+" steht an der Stelle "+indexName1);
+        System.out.println("binaer:     \t"+gesuchterWert2+" steht an der Stelle "+indexWert2);
+        System.out.println("binaer:     \t"+gesuchterName2+" steht an der Stelle "+indexName2);
     }
     
     /**
