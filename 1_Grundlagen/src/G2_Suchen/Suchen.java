@@ -17,7 +17,7 @@ public class Suchen {
         String[] sortierteNamen   = {"Arendt","Burger","Maier"};
         
         //Gesuchte Werte
-        int gesuchterWert1 = 45;
+        int gesuchterWert1 = 100;
         int gesuchterWert2 = 43;
         String gesuchterName1 = "Grobian";
         String gesuchterName2 = "Maier";
