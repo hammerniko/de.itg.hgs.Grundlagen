@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="http://structorizer.fisch.lu/" version="3.25" text="&#34;binaereSuche(sortiertesFeld:GZ[], wert:GZ):GZ&#34;" comment="&#34;&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;index:GZ&#34;" comment="&#34;&#34;" color="80ff80" rotated="0"></instruction>
+		<instruction text="&#34;untereGrenze:GZ &#60;- 0&#34;" comment="&#34;&#34;" color="80ff80" rotated="0"></instruction>
+		<instruction text="&#34;obereGrenze:GZ &#60;- sortiertesFeld.length-1&#34;" comment="&#34;&#34;" color="80ff80" rotated="0"></instruction>
+		<while text="&#34;solange (untereGrenze &#60;= obereGrenze)&#34;" comment="&#34;&#34;" color="ffff80">
+			<qWhile>
+				<instruction text="&#34;index &#60;- (untereGrenze+obereGrenze)/2&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+				<alternative text="&#34;sortiertesFeld[index] == wert&#34;" comment="&#34;&#34;" color="ffffff">
+					<qTrue>
+						<jump text="&#34;rückgabe index&#34;" comment="&#34;&#34;" color="80ffff"></jump>
+					</qTrue>
+					<qFalse>
+					</qFalse>
+				</alternative>
+				<alternative text="&#34;wert&#60;sortiertesFeld[index]&#34;" comment="&#34;&#34;" color="ffffff">
+					<qTrue>
+						<instruction text="&#34;obereGrenze &#60;- index -1&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+					</qTrue>
+					<qFalse>
+						<instruction text="&#34;untereGrenze &#60;- index + 1&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+					</qFalse>
+				</alternative>
+			</qWhile>
+		</while>
+		<jump text="&#34;rückgabe -1&#34;" comment="&#34;&#34;" color="80ffff"></jump>
+	</children>
+</root>

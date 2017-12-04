@@ -22,7 +22,6 @@ public class TSP {
 
 	public static void main(String[] args) {
 		// Eingabe Init
-		trace("Anfangsmatrix:");
 		setMatrix();
 		matrixCopy = arrayCopy(matrix);
 		ausgabeArray(matrix);
@@ -31,21 +30,14 @@ public class TSP {
 		for (int i = 0; i < ANZAHL; i++) {
 
 			// Minimieren
-			trace("Minimieren der Matrix");
 			minimiereAlleReihen();
 			minimiereAlleSpalten();
-			ausgabeArray(matrix);
 
 			// Kalkulieren
-			trace("Kalkulieren der Penalties");
 			kalkulierePenalties();
-			ausgabeArray(penalties);
 
 			// Reduzieren der Matrix
-			trace("Reduzieren der Matrix");
 			reduziereMatrix();
-			ausgabeArray(matrix);
-
 		}
 
 		System.out.println("Distanz:" + distanz);
@@ -169,12 +161,12 @@ public class TSP {
 
 		for (int spalte = 0; spalte < matrix.length; spalte++) {
 
-			// Merker für jede Reihe neu initialisieren
+			// Merker fuer jede Reihe neu initialisieren
 			min1 = DASH;
 			reiheMitMin1 = -1;
 			min2 = DASH;
 
-			// Prüfe reihe
+			// Pruefe reihe
 			// Suche erstes Minimum und merke die Stelle und Wert
 			for (int reihe = 0; reihe < matrix.length; reihe++) {
 				if (matrix[reihe][spalte] < min1) {
