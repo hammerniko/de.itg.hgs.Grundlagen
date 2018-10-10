@@ -1,12 +1,15 @@
 package A3_Variablen;
 
+//Formel Kraftberechnung
+//F = m * a
+
 public class A32_Kraftberechnung {
 
 	public static void main(String[] args) {
 		
 		//EINGABE
-		double masse = 45;
-		double erdfallbeschleunigung = 9.81;
+		double masse = 45; //in kg
+		double erdfallbeschleunigung = 9.81; //m/s^2
 		double kraft;
 
 		

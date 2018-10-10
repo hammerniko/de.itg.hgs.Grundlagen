@@ -4,7 +4,7 @@ public class Einheitenrechner implements Laengeneinheiten{
 
 	public static void main(String[] args) {
 		//Eingabe
-		double messwert = 1609; //in metern
+		double messwert = 5.35; //in metern
 		double inch, foot, yard, miles,seemeile,millimeter, zentimeter,kilometer;
 				
 		//Verarbeitung
