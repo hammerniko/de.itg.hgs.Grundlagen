@@ -38,18 +38,20 @@ public class Brueckenhoehe implements Physik{
 		//EINGABE
 		Scanner sc = new Scanner(System.in);
 				
-		//Deklaration
+		//Deklaration s=1/2 a t²
 		double weg,zeit; // in m
 				
 		System.out.print("Zeit: ");
 		zeit=sc.nextDouble();
 				
 		//Verarbeitung
-		weg = 0.5 * ERDFALLBESCHLEUNIGUNG * zeit * zeit;
+		weg =1.0/2 * ERDFALLBESCHLEUNIGUNG * zeit * zeit;
+				
 		
 		
 		//Ausgabe
-		System.out.println("Die Bueck ist "+weg+ " m hoch");
+		System.out.println("Die gemessene Zeit ist "+zeit+" sekunden.");
+		System.out.println("Die Bruecke ist "+weg+ " m hoch");
 		
 		
 		
