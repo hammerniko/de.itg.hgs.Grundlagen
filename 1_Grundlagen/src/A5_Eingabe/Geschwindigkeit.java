@@ -13,7 +13,7 @@ public class Geschwindigkeit {
 		int anzahlPylonen;
 		 
 		
-		//test
+		
 		
 		System.out.print("gemessene Zeit:\t");
 		t = sc.nextDouble();
