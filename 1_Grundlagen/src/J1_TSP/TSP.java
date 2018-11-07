@@ -26,6 +26,8 @@ public class TSP {
 		matrixCopy = arrayCopy(matrix);
 		ausgabeArray(matrix);
 
+		
+		
 		// ********************************** TSP Algorithmus
 		for (int i = 0; i < ANZAHL; i++) {
 
@@ -62,6 +64,19 @@ public class TSP {
 		return copiedArray;
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	/**
 	 * Wenn eine maximale Penalty gefunden wurde wird die Matrix an dieser
 	 * Stelle reduziert, indem diese Reihe und Spalte geloescht wird.
@@ -278,23 +293,29 @@ public class TSP {
 	}
 
 	/**
-	 * gibt den Index mit dem Minimum einer Reihe zurueck
+	 * gibt das  Minimum einer Reihe zurueck
 	 * 
 	 * @param reihe
 	 * @return
 	 */
 	private static int getMinOfRow(int reihe) {
-		min = DASH;
+		//Initialisierung mit einem möglichst großen Wert
+		min = Integer.MAX_VALUE;
 		
+		//Durchsuche alle Werte einer Reihe 
+		//bnach dem miniminalen Wert
 		for (int j = 0; j < matrix.length; j++) {
 			if (matrix[j][reihe] < min) {
 				min = matrix[j][reihe];
-				
 			}
 		}
 		return min;
 	}
 
+	
+	
+	
+	
 	/**
 	 * Sucht das Minimum einer Spalte und zieht von allen anderen Werten der
 	 * Spalte dieses Minimum ab. Dashes werden ignoriert.
@@ -358,7 +379,7 @@ public class TSP {
 			System.out.print(buchstaben[i] + " ");
 			for (int j = 0; j < array.length; j++) {
 
-				if (array[j][i] == 999) {
+				if (array[j][i] == DASH) {
 					System.out.print("\t-");
 				} else {
 					System.out.print("\t" + array[j][i]);
@@ -368,6 +389,8 @@ public class TSP {
 		System.out.println("\n------------------------------------------");
 	}
 
+	
+	
 	/**
 	 * Setzt eine Beispielmatrix. Die Anzahld er Zeilen und Spalten muss mit der
 	 * Konstanten ANZAHL uebereinstimmen
@@ -376,36 +399,36 @@ public class TSP {
 		// 1.Reihe
 		matrix[0][0] = DASH;
 		matrix[1][0] = 3;
-		matrix[2][0] = 5;
-		matrix[3][0] = 7;
-		matrix[4][0] = 11;
+		matrix[2][0] = 4;
+		matrix[3][0] = 2;
+		matrix[4][0] = 8;
 
 		// 2.Reihe
 		matrix[0][1] = 3;
 		matrix[1][1] = DASH;
-		matrix[2][1] = 1;
-		matrix[3][1] = 8;
+		matrix[2][1] = 3;
+		matrix[3][1] = 5;
 		matrix[4][1] = 7;
 
 		// 3.Reihe
-		matrix[0][2] = 5;
-		matrix[1][2] = 1;
+		matrix[0][2] = 4;
+		matrix[1][2] = 3;
 		matrix[2][2] = DASH;
-		matrix[3][2] = 3;
-		matrix[4][2] = 4;
+		matrix[3][2] = 1;
+		matrix[4][2] = 6;
 
 		// 4.Reihe
-		matrix[0][3] = 7;
-		matrix[1][3] = 8;
-		matrix[2][3] = 3;
+		matrix[0][3] = 2;
+		matrix[1][3] = 5;
+		matrix[2][3] = 1;
 		matrix[3][3] = DASH;
-		matrix[4][3] = 2;
+		matrix[4][3] = 1;
 
 		// 5.Reihe
-		matrix[0][4] = 11;
+		matrix[0][4] = 8;
 		matrix[1][4] = 7;
-		matrix[2][4] = 4;
-		matrix[3][4] = 2;
+		matrix[2][4] = 6;
+		matrix[3][4] = 1;
 		matrix[4][4] = DASH;
 	}
 
