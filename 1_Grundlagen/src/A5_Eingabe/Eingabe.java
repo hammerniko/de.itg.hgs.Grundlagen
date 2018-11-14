@@ -2,71 +2,40 @@ package A5_Eingabe;
 
 import java.util.Scanner;
 
-
 public class Eingabe {
+	
 	
 	public static void main(String[] args){
 		//********** EINGABE
 		//Objekt der Klasse Scanner erzeugen
 		//Zeiger s zeigt auf Objekt im HEAP
-		Scanner s = new Scanner(System.in);
+		Scanner s= new Scanner(System.in);
 				
 		//Warten bis auf der Konsole Enter gedrueckt wird
 		//Einlesen von Text
 		System.out.print("Name:\t");
-		String name = s.next(); //Prg wartet auf Enter Taste
+		String name = s.next();
 		
 		//Ganze Zahl einlesen
-		int anzahlHandys=0;
-		double gewicht=0;
-		boolean loop;
-		
-			System.out.print("Wieviele Handys benutzt Du?");
-			do {
-				try {
-					System.out.print("Wieviele Handys benutzt Du?");
-					loop = false;
-					anzahlHandys = s.nextInt();
-					
-				} catch (Exception e) {
-					System.out.println("\nBitte nur ganze Zahlen eingeben:");
-					
-					//eingabepuffer löschen
-					s.next();
-					
-					loop = true;
-				}
+		System.out.println("Anzahl Handys:\t");
+		int anzahlHandys = s.nextInt();
 				
-			} while (loop);
-			
-			
-			
-			do {
-				try {
-					System.out.print("Wieviel wiegst Du?");
-					gewicht = s.nextDouble();
-					loop = false;
-				} catch (Exception e) {
-					System.out.println("Bitte nur Zahlen eingeben:");
-					loop = true;
-					
-					//eingabepuffer löschen
-					s.next();
-					
-				}
-			} while (loop);
+		//Komazahl einlesen
+		System.out.println("Dein Gewicht:\t");
+		double gewicht = s.nextDouble();
 		
 		
-		
-		
-		//Verarbeitung
-		name = "_"+name; 
 			
 		//AUSGABE
 		System.out.println("Dein Name ist:\t"+name);
 		System.out.println("Anzahl Handys:\t"+anzahlHandys);
 		System.out.println("Dein Gewicht:\t"+gewicht+"kg");
+		
+		//Eingabedatenstream schliesen
 		s.close();
+		s=null;
+		System.gc();
+		
 	}
 	
 	

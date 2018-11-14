@@ -25,8 +25,6 @@ public class TSP {
 		setMatrix();
 		matrixCopy = arrayCopy(matrix);
 		ausgabeArray(matrix);
-
-		
 		
 		// ********************************** TSP Algorithmus
 		for (int i = 0; i < ANZAHL; i++) {
@@ -64,18 +62,7 @@ public class TSP {
 		return copiedArray;
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	/**
 	 * Wenn eine maximale Penalty gefunden wurde wird die Matrix an dieser
@@ -88,8 +75,8 @@ public class TSP {
 		int max = 0;
 
 		// Initialisiere Merker fuer Zeile und Spalte des max. Penalty-Werts
-		int colMaxPanelty = -1;
-		int rowMaxPanelty = -1;
+		int colMaxPenalty = -1;
+		int rowMaxPenalty = -1;
 
 		// finde max Penalty. Bei gleichem Wert wird das zuerst gefundene
 		// Maximum genommen
@@ -102,31 +89,31 @@ public class TSP {
 					max = penalties[reihe][spalte];
 
 					// Zeile und Spalte mit max-Penalty merken
-					colMaxPanelty = spalte;
-					rowMaxPanelty = reihe;
+					colMaxPenalty = spalte;
+					rowMaxPenalty = reihe;
 				}
 			}
 		}
 
 		// Die gefundenen Max-Werte stellen eine Loesung dar
 		// in der Form von Reihe nach Spalte (Festlegung)
-		addLoesung(colMaxPanelty, rowMaxPanelty);
+		addLoesung(colMaxPenalty, rowMaxPenalty);
 
 		// Die Distanz der gefundenen Loesung wird
 		// in der Variablen distance aufaddiert.
-		addDistance(colMaxPanelty, rowMaxPanelty);
+		addDistance(colMaxPenalty, rowMaxPenalty);
 
 		// Streiche gefundene Loesung durch setzen von
 		// unendlich Werten in der gesamten Zeile und Spalte (DASH=999)
 		for (int i = 0; i < matrix.length; i++) {
-			matrix[i][colMaxPanelty] = DASH;
-			matrix[rowMaxPanelty][i] = DASH;
+			matrix[i][colMaxPenalty] = DASH;
+			matrix[rowMaxPenalty][i] = DASH;
 		}
 
 		// Setze unendlich Wert auf den Rueckweg (reihe und spalte vertauscht)
 		// der gefundenen Loesung, da ein Ort nur einmal
 		// besucht werden darf
-		matrix[colMaxPanelty][rowMaxPanelty] = DASH;
+		matrix[colMaxPenalty][rowMaxPenalty] = DASH;
 
 	}
 
@@ -398,37 +385,37 @@ public class TSP {
 	public static void setMatrix() {
 		// 1.Reihe
 		matrix[0][0] = DASH;
-		matrix[1][0] = 3;
-		matrix[2][0] = 4;
+		matrix[1][0] = 5;
+		matrix[2][0] = 3;
 		matrix[3][0] = 2;
-		matrix[4][0] = 8;
+		matrix[4][0] = 4;
 
 		// 2.Reihe
-		matrix[0][1] = 3;
+		matrix[0][1] = 5;
 		matrix[1][1] = DASH;
-		matrix[2][1] = 3;
-		matrix[3][1] = 5;
+		matrix[2][1] = 4;
+		matrix[3][1] = 1;
 		matrix[4][1] = 7;
 
 		// 3.Reihe
-		matrix[0][2] = 4;
-		matrix[1][2] = 3;
+		matrix[0][2] = 3;
+		matrix[1][2] = 4;
 		matrix[2][2] = DASH;
-		matrix[3][2] = 1;
-		matrix[4][2] = 6;
+		matrix[3][2] = 2;
+		matrix[4][2] = 2;
 
 		// 4.Reihe
 		matrix[0][3] = 2;
-		matrix[1][3] = 5;
-		matrix[2][3] = 1;
+		matrix[1][3] = 1;
+		matrix[2][3] = 2;
 		matrix[3][3] = DASH;
-		matrix[4][3] = 1;
+		matrix[4][3] = 3;
 
 		// 5.Reihe
-		matrix[0][4] = 8;
+		matrix[0][4] = 4;
 		matrix[1][4] = 7;
-		matrix[2][4] = 6;
-		matrix[3][4] = 1;
+		matrix[2][4] = 2;
+		matrix[3][4] = 3;
 		matrix[4][4] = DASH;
 	}
 
