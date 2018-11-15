@@ -1,3 +1,5 @@
+package M_AStar;
+
 import java.util.*;
 
 public class AStar {
