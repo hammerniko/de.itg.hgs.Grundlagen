@@ -1,34 +1,53 @@
 package M_AStar;
 
-public class Knoten{
+public class Knoten {
+
 	
-	//Position
-	int x,y;
-	
-	//bekannte Knoten
-	Knoten start;
-	Knoten ziel;
+
+	// Position des Knoten im Gitter
+	int x, y;
+
+	//Knoten kommt von
 	Knoten parent;
-	
-	public Knoten(Knoten parent, Knoten start, Knoten ziel) {
-		this.parent =parent;
-		this.start = start;
-		this.ziel = ziel;
-		
+
+	public Knoten(int posX, int posY, Knoten parent) {
+		this.parent = parent;
+		x = posX;
+		y = posY;
+	}
+
+	// direkte Entfernung von Hier bis zum Ziel bestimmen
+	public int getH() {
+		int kosten = 0;
+
+		return kosten;
+
+	}
+
+	public int getX() {
+		return x;
+	}
+
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	public void setY(int y) {
+		this.y = y;
+	}
+
+	public Knoten getParent() {
+		return parent;
+	}
+
+	public void setParent(Knoten parent) {
+		this.parent = parent;
 	}
 	
-	//direkte Entfernung von Hier bis zum Ziel bestimmen
-	public double getHeuristikKosten() {
-		double kosten=0;
-		
-		
-		double dx = Math.abs(this.x-ziel.x);
-		double dy = Math.abs(this.y-ziel.y);
-		
-		kosten = Math.sqrt(dx*dx+ dy*dy);
-		
-		return kosten;		
 	
-	}
-	
+
 }
