@@ -8,8 +8,19 @@ public class AStern {
 	static ArrayList<Knoten> closedList;
 
 	public static void main(String[] args) {
+		
+		//Suchfeld festlegen als Gitter
+		//Start und Ziel wird definiert
+		//Pfadkosten gerade = 10, diagonal = 14
 		initGrid();
+		
+		//openList und closedList für A* erzeugen
 		initLists();
+		
+		
+		
+		
+		
 
 	}
 
