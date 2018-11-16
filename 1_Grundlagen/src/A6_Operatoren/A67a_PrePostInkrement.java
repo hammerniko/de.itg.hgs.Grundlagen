@@ -1,5 +1,12 @@
 package A6_Operatoren;
 
+/**
+ * 
+ * @author hr
+ *Betrachtet wird in diesem Beispiel der Unterschied
+ *zwischen Pre- und Postinkrement.
+ *
+ */
 public class A67a_PrePostInkrement {
 
 	public static void main(String[] args) {
