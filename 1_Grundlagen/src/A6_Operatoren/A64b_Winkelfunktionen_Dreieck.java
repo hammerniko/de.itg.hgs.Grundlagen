@@ -9,8 +9,8 @@ public class A64b_Winkelfunktionen_Dreieck {
 	
 	public static void main(String[] args) {
 		//Eingabe
-		double a=7;
-		double b=4;
+		double a=13;
+		double b=10;
 		double c;
 		double alpha;
 		double beta;
