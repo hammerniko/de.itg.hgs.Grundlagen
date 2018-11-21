@@ -15,7 +15,23 @@ public class TageDesMonats {
         System.out.print("Monat:");
         monat = s.nextInt();
 
-        switch (monat) {
+        tage = gibAnzahlTageDesMonats(monat, jahr);
+        
+       System.out.println("Der Monat hat "+tage+" tage.");
+    }//Ende main()
+
+    
+    
+    
+    
+    
+    
+    
+    
+	private static int gibAnzahlTageDesMonats(int monat, int jahr) {
+		int tage=0; 
+		
+		switch (monat) {
         case 1:
         case 3:
         case 5:
@@ -35,13 +51,14 @@ public class TageDesMonats {
 
         case 2:
             if (jahr % 4 == 0 && (jahr % 100 != 0 || jahr % 400 == 0)) {
+            	//Schaltjahr
                 tage = 29;
             } else {
+            	//kein Schaltjahr
                 tage = 28;
             }
 
         }// Ende Switch
-        
-       System.out.println("Der Monat hat "+tage+" tage.");
-    }//Ende main()
+		return tage;
+	}
 }
