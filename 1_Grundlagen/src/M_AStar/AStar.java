@@ -29,21 +29,21 @@ public class AStar {
     static PriorityQueue<Cell> open;
      
     static boolean closed[][];
-    static int startI, startJ;
-    static int endI, endJ;
+    static int startX, startY;
+    static int zielX, zielY;
             
-    public static void setBlocked(int i, int j){
-        grid[i][j] = null;
+    public static void setBlocked(int x, int y){
+        grid[x][y] = null;
     }
     
-    public static void setStartCell(int i, int j){
-        startI = i;
-        startJ = j;
+    public static void setStartCell(int x, int y){
+        startX = x;
+        startY = y;
     }
     
-    public static void setEndCell(int i, int j){
-        endI = i;
-        endJ = j; 
+    public static void setEndCell(int x, int y){
+        zielX = x;
+        zielY = y; 
     }
     
     static void checkAndUpdateCost(Cell current, Cell t, int cost){
@@ -61,7 +61,7 @@ public class AStar {
     public static void AStar(){ 
         
         //add the start location to open list.
-        open.add(grid[startI][startJ]);
+        open.add(grid[startX][startY]);
         
         Cell current;
         
@@ -70,7 +70,7 @@ public class AStar {
             if(current==null)break;
             closed[current.i][current.j]=true; 
 
-            if(current.equals(grid[endI][endJ])){
+            if(current.equals(grid[zielX][zielY])){
                 return; 
             } 
 
@@ -146,7 +146,7 @@ public class AStar {
            for(int i=0;i<x;++i){
               for(int j=0;j<y;++j){
                   grid[i][j] = new Cell(i, j);
-                  grid[i][j].heuristicCost = Math.abs(i-endI)+Math.abs(j-endJ);
+                  grid[i][j].heuristicCost = Math.abs(i-zielX)+Math.abs(j-zielY);
 //                  System.out.print(grid[i][j].heuristicCost+" ");
               }
 //              System.out.println();
@@ -185,10 +185,10 @@ public class AStar {
            }
            System.out.println();
             
-           if(closed[endI][endJ]){
+           if(closed[zielX][zielY]){
                //Trace back the path 
                 System.out.println("Path: ");
-                Cell current = grid[endI][endJ];
+                Cell current = grid[zielX][zielY];
                 System.out.print(current);
                 while(current.parent!=null){
                     System.out.print(" -> "+current.parent);
