@@ -5,18 +5,18 @@ public class A62_RundenUndAbschneiden {
 	public static void main(String[] args) {
 	
 	//Eingabe
-	double number = 2.379632;
+	double number = 2.38000019;
 	double cutNumber;
 	double roundedNumber;
 	
 	//Verarbeitung
 	//abschneiden auf 2 Stellen nach dem Komma
 	cutNumber = (int) (number * 100);
-	cutNumber = (double) (cutNumber / 100);
+	cutNumber = cutNumber / 100;
 	
 	//runden auf 2 Stellen nach dem Komma
-	roundedNumber = (int) ((number+0.005)*100);
-	roundedNumber = (double) (roundedNumber / 100);
+	roundedNumber = (int) ((number*100)+0.5);
+	roundedNumber = roundedNumber / 100;
 	
 	//ausgabe
 	System.out.println("abgeschnitten:\t"+cutNumber);
