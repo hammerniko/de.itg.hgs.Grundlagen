@@ -26,7 +26,7 @@ public class AStar {
     //Blocked cells are just null Cell values in grid
     static Cell [][] grid = new Cell[5][5];
     
-    static PriorityQueue<Cell> open;
+    static PriorityQueue<Cell> openList;
      
     static boolean closed[][];
     static int startI, startJ;
@@ -50,23 +50,23 @@ public class AStar {
         if(t == null || closed[t.i][t.j])return;
         int t_final_cost = t.heuristicCost+cost;
         
-        boolean inOpen = open.contains(t);
+        boolean inOpen = openList.contains(t);
         if(!inOpen || t_final_cost<t.finalCost){
             t.finalCost = t_final_cost;
             t.parent = current;
-            if(!inOpen)open.add(t);
+            if(!inOpen)openList.add(t);
         }
     }
     
     public static void AStar(){ 
         
         //add the start location to open list.
-        open.add(grid[startI][startJ]);
+        openList.add(grid[startI][startJ]);
         
         Cell current;
         
         while(true){ 
-            current = open.poll();
+            current = openList.poll();
             if(current==null)break;
             closed[current.i][current.j]=true; 
 
@@ -130,7 +130,7 @@ public class AStar {
             //Reset
            grid = new Cell[x][y];
            closed = new boolean[x][y];
-           open = new PriorityQueue<>((Object o1, Object o2) -> {
+           openList = new PriorityQueue<>((Object o1, Object o2) -> {
                 Cell c1 = (Cell)o1;
                 Cell c2 = (Cell)o2;
 
