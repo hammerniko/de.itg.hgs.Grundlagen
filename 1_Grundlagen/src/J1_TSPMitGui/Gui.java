@@ -68,6 +68,7 @@ public class Gui extends JFrame {
 
 
 	protected void clickedCalc() {
+		
 		karte.calcAll();
 		
 	}

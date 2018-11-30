@@ -182,6 +182,8 @@ public class Karte extends JPanel implements MouseListener {
 						k1=knoten.elementAt(i);
 						k2=knoten.elementAt(j);
 						//Keine Doppelkanten
+						
+						
 						if(!istKanteDoppelt(k1,k2)){
 							kanten.addElement(new Kante(k1, k2));
 					}}
