@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.28-09" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preForIn="foreach" stepFor="by" author="hr" created="2018-11-30" changedby="hr" changed="2018-11-30" origin="Structorizer 3.28-09" text="&#34;Löse Quadratrische Gleichung&#34;,&#34;&#34;,&#34;lokale Variablen:&#34;,&#34;ergebnis:String, &#34;,&#34;a, b, c, d, x1, x2,dis : double&#34;" comment="" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;ausgabe &#34;&#34;Geben sie eine Gleichung &#34;,&#34;der Form 'ax^2+bx+c=d' ein.&#34;&#34;&#34;" comment="" color="80ff80" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;a &#60;-eingabe&#34;" comment="" color="80ff80" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;b &#60;- eingabe&#34;" comment="" color="80ff80" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;c &#60;- eingabe&#34;" comment="" color="80ff80" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;d &#60;- eingabe&#34;" comment="" color="80ff80" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;c &#60;- c-d&#34;" comment="" color="ffff80" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;d &#60;- 0&#34;" comment="" color="ffff80" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;b &#60;- b/a&#34;" comment="" color="ffff80" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;c &#60;- c/a&#34;" comment="" color="ffff80" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;a &#60;- 1&#34;" comment="" color="ffff80" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;dis &#60;- (b/2)^2 - c&#34;" comment="" color="ffff80" rotated="0" disabled="0"></instruction>
+		<case text="&#34;dis=&#34;,&#34;&#62;0&#34;,&#34;=0&#34;,&#34;sonst&#34;" comment="" color="ffff80" disabled="0">
+			<qCase>
+				<instruction text="&#34;x1 &#60;- -b/2 + wurzel(dis)&#34;" comment="" color="ffff80" rotated="0" disabled="0"></instruction>
+				<instruction text="&#34;x2 &#60;- -b/2 - wurzel(dis)&#34;" comment="" color="ffff80" rotated="0" disabled="0"></instruction>
+				<instruction text="&#34;ergebnis = &#34;&#34;x1=&#34;&#34;+x1+&#34;&#34; und x2=&#34;&#34;+x2&#34;" comment="" color="ffff80" rotated="0" disabled="0"></instruction>
+			</qCase>
+			<qCase>
+				<instruction text="&#34;x1 &#60;- -b/2&#34;" comment="" color="ffff80" rotated="0" disabled="0"></instruction>
+				<instruction text="&#34;ergebnis = &#34;&#34;x1=&#34;&#34;+x1&#34;" comment="" color="ffff80" rotated="0" disabled="0"></instruction>
+			</qCase>
+			<qCase>
+				<instruction text="&#34;ergebnis = &#34;&#34;Es gibt keine Lösung&#34;&#34;&#34;" comment="" color="ffff80" rotated="0" disabled="0"></instruction>
+			</qCase>
+		</case>
+		<instruction text="&#34;ausgabe ergebnis&#34;" comment="" color="80ffff" rotated="0" disabled="0"></instruction>
+	</children>
+</root>
