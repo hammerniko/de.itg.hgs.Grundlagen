@@ -192,15 +192,28 @@ public class Karte extends JPanel implements MouseListener {
 			}
 		}
 
+		
+		
+		
+		initTSP(); //martix wird initialisirt
+		
+		//Matrix in TSP setzen und berechnen
+		TSP.setMatrix(matrix);
+		TSP.berechneTSP();
+
+		repaint();
+	}
+
+	private void initTSP() {
 		// Erzeuge Array fuer TSP
 		matrix = new int[knoten.size()][knoten.size()];
 
 		// Erzeuge Matrixeintraege
-		// Jede Kante enthält eine Distanz zwischen 2 Knoten
+		// Jede Kante enthaelt eine Distanz zwischen 2 Knoten
 		// Jeder Eintrag der Matrix enstpricht einer Kante
-		System.out.println(kanten);
+		//System.out.println(kanten);
 		
-		//Dashes in Matrix eintargen
+		//Dash -> Konstante in Klasse TSP mit zahlenwert=9999 - in Matrix eintargen
 		for (int i = 0; i < matrix.length; i++) {
 			for (int j = 0; j < matrix.length; j++) {
 				if(i==j){
@@ -208,6 +221,7 @@ public class Karte extends JPanel implements MouseListener {
 				}
 			}
 		}
+		
 		
 		//Kantenwerte in Matrix eintragen
 		int n=0;
@@ -219,12 +233,6 @@ public class Karte extends JPanel implements MouseListener {
 				n++;
 			}
 		}
-		
-		//Matrix in TSP setzen und berechnen
-		TSP.setMatrix(matrix);
-		TSP.berechneTSP();
-
-		repaint();
 	}
 	
 	
