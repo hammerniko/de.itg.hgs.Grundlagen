@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>10</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>40</x>
-      <y>50</y>
-      <w>210</w>
-      <h>160</h>
+      <x>0</x>
+      <y>144</y>
+      <w>189</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>Gui
 --
@@ -20,30 +20,164 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
-      <y>60</y>
-      <w>210</w>
-      <h>140</h>
+      <x>306</x>
+      <y>153</y>
+      <w>288</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>Karte
 --
-
+-matrix:int[][]
 --
-+calcAll()</panel_attributes>
++calcAll()
+-istKanteDoppelt(k1:Knoten, k2:Knoten):boolean
+-addPoint(MouseEvent e)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
-      <y>120</y>
-      <w>180</w>
-      <h>50</h>
+      <x>180</x>
+      <y>207</y>
+      <w>144</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 r1=karte
 m1=1
 </panel_attributes>
-    <additional_attributes>160.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>243</x>
+      <y>450</y>
+      <w>288</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>Kante
+--
+k1:Knoten
+k2:Knoten
+--
++Kante(k1:Knoten, k2:Knoten)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>279</y>
+      <w>90</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r1=kanten[ ]
+m1=*
+</panel_attributes>
+    <additional_attributes>10.0;190.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>441</y>
+      <w>288</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>Knoten
+--
+-x:int
+-y:int
+-name:String
+_-anzahl:int=0_
+-FIRST_CHAR:char='A'
+
+--
++Knoten(x:int,y:int)
++getX():int
++getY():int
++getName():String
+_+getAnzahl():int_
++setX(x:int)
++setY(y:int)
++setName(name:String)
+_setAnzahl(anzahl:int)_
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>279</y>
+      <w>153</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r1=knoten[ ]
+m1=*
+</panel_attributes>
+    <additional_attributes>100.0;180.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>450</y>
+      <w>288</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>_TSP_
+--
+
+--
++setMatrix(matrix[][]:int)
++berechneTSP()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>585</x>
+      <y>252</y>
+      <w>567</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>610.0;220.0;390.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>351</x>
+      <y>36</y>
+      <w>54</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>0</y>
+      <w>108</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>MouseListener</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

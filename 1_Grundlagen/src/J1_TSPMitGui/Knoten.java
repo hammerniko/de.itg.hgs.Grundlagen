@@ -7,11 +7,11 @@ public class Knoten {
 	private int x;
 	private int y;
 	private static int anzahl=0;
-	private char firstChar = 'A';
+	private final char FIRST_CHAR = 'A';
 	
 	public Knoten(int x, int y){
 		
-		this.name = ""+(char)(firstChar+anzahl);
+		this.name = ""+(char)(FIRST_CHAR+anzahl);
 		this.x = x;
 		this.y = y;
 		anzahl++;
