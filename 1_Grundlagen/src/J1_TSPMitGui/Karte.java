@@ -170,7 +170,7 @@ public class Karte extends JPanel implements MouseListener {
 		
 	}
 	public void calcAll() {
-		
+		Kante kante;
 		Knoten k1,k2;
 		// Erzeuge alle Kanten, wenn mind. 2 Knoten vorh. sind
 		if (knoten.size() >= 2) {
@@ -184,8 +184,10 @@ public class Karte extends JPanel implements MouseListener {
 						//Keine Doppelkanten
 						
 						
+						
 						if(!istKanteDoppelt(k1,k2)){
-							kanten.addElement(new Kante(k1, k2));
+							kante = new Kante(k1, k2);
+							kanten.addElement(kante);
 					}}
 				}
 
