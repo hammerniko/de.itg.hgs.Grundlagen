@@ -1,19 +1,67 @@
 package E1_Methoden;
 
+
+
 public class BeispieleMethoden {
 
 	// Hauptmethode
 	public static void main(String[] args) {
 
-		zeichneLinie();
-		System.out.println("Hammer");
-		zeichneLinie();
-		System.out.println("Nikolai");
-		zeichneLinie("+");
-		zeichneLinie("~", 20);
+		
+		
 
-		double bmiWert = getBmi(78, 1.76);
-		System.out.println("Bmi:"+bmiWert);
+	}
+
+	
+	
+	
+	public static double berecheneSumme(double zahl1, double zahl2) {
+		
+		double ergebnis;
+		
+		ergebnis = zahl1 + zahl2;
+		
+		
+		return ergebnis;
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	private static String ermittleZeugnisNote(double kommaNote) {
+
+		String returnStr = "";
+
+		if (kommaNote < 1.5 && kommaNote >= 1) {
+			returnStr = "Sehr Gut";
+		} else if (kommaNote < 2.5 && kommaNote >= 1.5) {
+			returnStr = "Gut";
+		} else if (kommaNote < 3.5 && kommaNote >= 2.5) {
+			returnStr = "Befriedigend";
+		} else if (kommaNote < 4.5 && kommaNote >= 3.5) {
+			returnStr = "Ausreichend";
+		} else if (kommaNote < 5.5 && kommaNote >= 4.5) {
+			returnStr = "Mangelhaft";
+		} else if (kommaNote <= 6 && kommaNote >= 5.5) {
+			returnStr = "Ungenügend";
+		} else {
+			returnStr = "ungültiger Notenwert";
+		}
+
+		// TODO Auto-generated method stub
+		return returnStr;
 	}
 
 	// Methode zum Zeichnen einer Linie
@@ -21,7 +69,7 @@ public class BeispieleMethoden {
 		System.out.println("------");
 	}
 
-	// Ünerladene Methode mit Übergabeparameter zum Zeichnen einer Linie
+	// Überladene Methode mit Übergabeparameter zum Zeichnen einer Linie
 	public static void zeichneLinie(String pZeichen) {
 		for (int i = 0; i < 5; i++) {
 			System.out.print(pZeichen);
@@ -39,7 +87,7 @@ public class BeispieleMethoden {
 
 	}
 
-	//Methode mit Rückgabewert und Übergabeparameter für BMI
+	// Methode mit Rückgabewert und Übergabeparameter für BMI
 	public static double getBmi(double pMasseInKg, double pGroesseInMeter) {
 
 		// Verarbeitung
