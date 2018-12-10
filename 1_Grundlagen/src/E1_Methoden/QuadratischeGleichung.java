@@ -11,24 +11,23 @@ import java.util.Scanner;
 //diskriminante =0 -> 1 Lšsung
 
 public class QuadratischeGleichung {
-    // Eingabe
-    static double a, b, c, d;
+     
 
     public static void main(String[] args) {
 
         // Eingabe
         String ergebnis;
-        
-
+   
         // Verarbeitung
-        ergebnis = loeseQuadratischeGleichung(2, 3, 5, 6);
+        ergebnis = loeseQuadratischeGleichung(1, 2, 2, 1);
 
         // Ausgabe
         System.out.println(ergebnis);
         
         
     }
-
+    
+    
     public static String loeseQuadratischeGleichung(double a, double b, double c, double d) {
         double x1;
         double x2;
@@ -63,21 +62,5 @@ public class QuadratischeGleichung {
         return loesung;
     }
 
-    public static void eingabe() {
-        Scanner s = new Scanner(System.in);
-       
-        System.out.println("Geben sie die Koeffizienten der Quadratischen Gleichung ein:");
-        System.out.print("a: ");
-        a = s.nextDouble();
-        System.out.print("b: ");
-        b = s.nextDouble();
-        ;
-        System.out.print("c: ");
-        c = s.nextDouble();
-        ;
-        System.out.print("d: ");
-        d = s.nextDouble();
-
-    }
-
+   
 }
