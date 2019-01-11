@@ -18,7 +18,7 @@ public class QuadratischeGleichung {
 		String ergebnis;
 
 		// Verarbeitung
-		ergebnis = loeseQuadratischeGleichung(1, 2, 2, 1);
+		ergebnis = loeseQuadratischeGleichung(5, 3, -7, 2);
 
 		// Ausgabe
 		System.out.println(ergebnis);

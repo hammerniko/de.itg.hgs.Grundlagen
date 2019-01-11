@@ -18,7 +18,7 @@ public class WurzelZiehen {
         double x, a;
         a = zahl;
         x = zahl;
-        double fehlertoleranz = 0.00000001;
+        double fehlertoleranz = 0.0000000000000000001;
 
         //Die Iterationsmethode funktioniert
         //nur mit natuerlichen Zahlen

@@ -15,15 +15,17 @@ public class C1_2_BeispielWhileSchleife {
 
        
 		
-		int i=1000000;
+		int i=10000000;
 		
 		int anz = 0;
 		
-		do {
+		while (i>1) {
 			System.out.println("hALLO");
 			i=i/5*3+1;
 			anz++;
-		}while (i>=10 );
+		}
+			
+		
 		
 		System.out.println("anzahl"+anz);
 

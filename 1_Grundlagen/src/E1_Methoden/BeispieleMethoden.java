@@ -1,7 +1,5 @@
 package E1_Methoden;
 
-
-
 public class BeispieleMethoden {
 
 	// Hauptmethode
@@ -9,37 +7,52 @@ public class BeispieleMethoden {
 
 		
 		
+		
+		
+		System.out.println(berecheneSumme(50, 25));
 
 	}
 
+	// Methode zum Zeichnen einer Linie
+	public static void zeichneLinie() {
+		System.out.println("------");
+	}
+	
+		
+	// Überladene Methode mit Übergabeparameter zum Zeichnen einer Linie
+	public static void zeichneLinie(String pZeichen) {
+			for (int i = 0; i < 5; i++) {
+				System.out.print(pZeichen);
+			}
+			System.out.println();
+
+	}
+	
+	// Überladene Methode mit Übergabeparameter zum Zeichnen einer Linie
+		public static void zeichneLinie(int anzahl) {
+				for (int i = 0; i < anzahl; i++) {
+					System.out.print("-");
+				}
+				System.out.println();
+
+		}
 	
 	
 	
+	
+
 	public static double berecheneSumme(double zahl1, double zahl2) {
-		
+		//eingabe
 		double ergebnis;
-		
+
+		//verarbeitung
 		ergebnis = zahl1 + zahl2;
-		
-		
+
+		//Rückgabe
 		return ergebnis;
-		
+
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	private static String ermittleZeugnisNote(double kommaNote) {
 
 		String returnStr = "";
@@ -64,19 +77,7 @@ public class BeispieleMethoden {
 		return returnStr;
 	}
 
-	// Methode zum Zeichnen einer Linie
-	public static void zeichneLinie() {
-		System.out.println("------");
-	}
-
-	// Überladene Methode mit Übergabeparameter zum Zeichnen einer Linie
-	public static void zeichneLinie(String pZeichen) {
-		for (int i = 0; i < 5; i++) {
-			System.out.print(pZeichen);
-		}
-		System.out.println();
-
-	}
+	
 
 	// Ünerladene Methode mit Übergabeparameter zum Zeichnen einer Linie
 	public static void zeichneLinie(String zeichen, int anzahl) {

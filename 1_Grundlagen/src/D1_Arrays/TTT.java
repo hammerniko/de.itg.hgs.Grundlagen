@@ -115,6 +115,7 @@ public class TTT {
 	    System.out.println("Tic TAc Toe 1.0");
 	    System.out.println("***************");
 	    System.out.println();
+	    System.out.println("Verwenden Sie die NUM-Lock Tasten");
     }
 
 	//neue Methode zur Initialisierung des Spielfeldes
