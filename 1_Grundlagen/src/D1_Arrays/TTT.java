@@ -118,6 +118,10 @@ public class TTT {
 	    System.out.println("Verwenden Sie die NUM-Lock Tasten");
     }
 
+	
+	
+	
+	
 	//neue Methode zur Initialisierung des Spielfeldes
 	private static void initSpielFeld(){
 		for (int i = 0; i < spielFeldDaten.length; i++) {
@@ -127,6 +131,11 @@ public class TTT {
             }
         }
 	}
+	
+	
+	
+	
+	
 	
 	
 	

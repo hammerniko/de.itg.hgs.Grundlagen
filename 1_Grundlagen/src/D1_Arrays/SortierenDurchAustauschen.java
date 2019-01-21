@@ -21,7 +21,7 @@ public class SortierenDurchAustauschen {
 					merke = zahl[i];
 					zahl[i] = zahl[j];
 					zahl[j] = merke;
-					
+				
 				}
 				
 			}
