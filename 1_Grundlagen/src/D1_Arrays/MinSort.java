@@ -31,10 +31,9 @@ public class MinSort {
 			merke = z[i];
 			z[i] = z[minIndex];
 			z[minIndex] = merke;
-			
-			System.out.print("i="+i+" ");
-			ausgabeZahlen(z);
 		}
+		
+		//rueckgabe des sortierten Arrays
 		return z;
 	}
 	
