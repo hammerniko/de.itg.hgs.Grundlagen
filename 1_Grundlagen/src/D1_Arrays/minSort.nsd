@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.28-09" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preForIn="foreach" stepFor="by" author="hr" created="2019-01-25" changedby="hr" changed="2019-01-25" origin="Structorizer 3.28-09" text="&#34;minSort(z:int[ ]):int[ ]&#34;,&#34;&#34;,&#34;lokale Variablen:&#34;,&#34;merke:int, minIndex:int&#34;" comment="&#34;&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<while text="&#34;für i&#60;-0 bis i&#60;z.length-1 SW:+1&#34;" comment="" color="80ff80" disabled="0">
+			<qWhile>
+				<instruction text="&#34;minIndex=i&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+				<while text="&#34;für j&#60;-i+1 bis i&#60;z.length SW:+1&#34;" comment="" color="80ffff" disabled="0">
+					<qWhile>
+						<alternative text="&#34;z[j] &#60; z[minIndex]&#34;" comment="" color="c0c0c0" disabled="0">
+							<qTrue>
+								<instruction text="&#34;minIndex = j&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qTrue>
+							<qFalse color="ffffff">
+							</qFalse>
+						</alternative>
+					</qWhile>
+				</while>
+				<instruction text="&#34;merke &#60;- z[i]&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+				<instruction text="&#34;z[i] &#60;- z[minIndex]&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+				<instruction text="&#34;z[minIndex] &#60;- merke&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qWhile>
+		</while>
+		<instruction text="&#34;rückgabe z&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+	</children>
+</root>

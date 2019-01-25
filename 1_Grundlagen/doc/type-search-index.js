@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"D1_Arrays","l":"MinSort"}]
