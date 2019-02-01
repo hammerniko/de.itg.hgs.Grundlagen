@@ -1,4 +1,4 @@
-package D1_Arrays;
+package G2_Suchen;
 /**
  * Mit der sequentliellen Suche werden Felder / Listen nach
  * einem gesuchten Wert durchsucht. Wird der Wert in der Liste
