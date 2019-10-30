@@ -1,13 +1,20 @@
 package A4_Konstante;
 
-public class KonstanteAnlegen {
+public class KonstanteAnlegen implements Physik{
 
+	 
     
+	
+	
     public static void main(String[] args) {
        
         //Eingabe
-        final double ERDFALLBESCHLEUNIGUNG = 9.81;
+    	//final macht aus einer VAriablen eine Konstante
+    	//Konstanten werden komplett in Grossbuchstaben geschrieben
+    	//Werte Konstanten können nicht mehr geändert werden
+    	
         
+      
         
         double kraft;
         double masse=10;

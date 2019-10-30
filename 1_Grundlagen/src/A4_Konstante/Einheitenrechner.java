@@ -28,9 +28,6 @@ public class Einheitenrechner implements Laengeneinheiten{
 		System.out.println("in Yards:\t"+yard+" yd");
 		System.out.println("in Miles:\t"+miles+" miles");
 		System.out.println("in Seemeilen:\t"+seemeile+" NM");
-		
-		
-		
 
 	}
 

@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
 
-import javafx.scene.layout.Border;
+//import javafx.scene.layout.Border;
 
 public class GuiLotto extends JFrame {
     
@@ -93,7 +93,7 @@ public class GuiLotto extends JFrame {
 
 
     protected void clickedButtonLoeschen() {
-        System.out.println("Löschen klicked");
+        System.out.println("Lï¿½schen klicked");
         jlabelZahlen[0].setText(" - ");
         jlabelZahlen[1].setText(" - ");
         jlabelZahlen[2].setText(" - ");
@@ -113,7 +113,7 @@ public class GuiLotto extends JFrame {
         jpanelButtons = new JPanel();
         jpanelZahlen = new JPanel();
         jlabelZahlen = new JLabel[ANZAHL_ZAHLEN+1]; //Darstellung des Textes SZ: in eigenem jLabel
-        buttonLoeschen = new JButton("Löschen");
+        buttonLoeschen = new JButton("Lï¿½schen");
         buttonZiehen = new JButton("Ziehen");
           
         jContentPane.add(jpanelButtons,BorderLayout.SOUTH);
@@ -160,9 +160,9 @@ public class GuiLotto extends JFrame {
         jmenuItemLaden = new JMenuItem("Lottozahlen laden");
         jmenuItemSpeichernUnter = new JMenuItem("speichern unter");
         jmenuItemStatistikErzeugen = new JMenuItem("Statistik erzeugen");
-        jmenuItemLottozahlenLoeschen = new JMenuItem("Lottozahlen löschen");
+        jmenuItemLottozahlenLoeschen = new JMenuItem("Lottozahlen lï¿½schen");
         jmenuItemLottozahlenZiehen = new JMenuItem("Lottozahlen ziehen");
-        jmenuItemUeber = new JMenuItem("Über");
+        jmenuItemUeber = new JMenuItem("ï¿½ber");
         
         jmenubar.add(jmenuDatei);
         jmenubar.add(jmenuBearbeiten);
