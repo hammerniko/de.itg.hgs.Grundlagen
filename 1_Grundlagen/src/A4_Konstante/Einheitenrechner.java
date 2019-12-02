@@ -4,18 +4,18 @@ public class Einheitenrechner implements Laengeneinheiten{
 
 	public static void main(String[] args) {
 		//Eingabe
-		double messwert = 5.35; //in metern
+		double messwert = 1000; //in metern
 		double inch, foot, yard, miles,seemeile,millimeter, zentimeter,kilometer;
 				
 		//Verarbeitung
-		inch = messwert / INCH;
-		foot = messwert / FOOT;
-		yard = messwert / YARD;
-		miles = messwert / MILE;
-		seemeile = messwert / SEEMEILE;
-		zentimeter = messwert / ZENTIMETER;
-		millimeter = messwert / MILLIMETER;
-		kilometer = messwert / KILOMETER;
+		inch = messwert * METER_IN_INCH;
+		foot = messwert * METER_IN_FOOT;
+		yard = messwert * METER_IN_YARD;
+		miles = messwert * METER_IN_MILE;
+		seemeile = messwert * METER_IN_SEEMEILE;
+		zentimeter = messwert * METER_IN_ZENTIMETER;
+		millimeter = messwert * METER_IN_MILLIMETER;
+		kilometer = messwert * METER_IN_KILOMETER;
 		
 		//Ausgabe
 		System.out.println("Messwert:\t"+messwert+" m");

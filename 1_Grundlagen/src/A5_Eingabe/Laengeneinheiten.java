@@ -1,4 +1,4 @@
-package A4_Konstante;
+package A5_Eingabe;
 
 public interface Laengeneinheiten {
 
