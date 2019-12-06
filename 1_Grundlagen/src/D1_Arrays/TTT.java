@@ -214,7 +214,7 @@ public class TTT {
 				
 				break;
 			}//end if
-		}//end for summen prüfen
+		}//end for summen pruefen
 
 		}
 		return aktuellerStatus;
