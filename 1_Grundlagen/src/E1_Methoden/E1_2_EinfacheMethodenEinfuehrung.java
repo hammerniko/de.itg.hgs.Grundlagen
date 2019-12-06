@@ -60,7 +60,7 @@ public class E1_2_EinfacheMethodenEinfuehrung {
 	}
 
 	private static double getQuotient(double zaehler, double nenner) {
-		//Ungültiger Rueckgabe-Wert bleibt erhalten,
+		//Ungueltiger Rueckgabe-Wert bleibt erhalten,
 		//wenn der Nenner = 0 ist
 		double erg=Double.NaN;
 		
