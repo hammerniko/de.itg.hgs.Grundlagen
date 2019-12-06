@@ -31,7 +31,7 @@ public class LeseExcelDatei {
 				//Alle Zellen des Tabellenblatts auf Konsole ausgeben
 				for(Row reihe : blatt){
 					for(Cell zelle : reihe){
-						zelle.setCellType(Cell.CELL_TYPE_STRING);
+						//zelle.setCellType(Cell.CELL_TYPE_STRING);
 						System.out.print("\t"+zelle.getStringCellValue());
 					}
 					System.out.println();
