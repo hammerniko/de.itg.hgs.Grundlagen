@@ -31,7 +31,7 @@ public class Gleitkommazahl {
 		// Nachkommastellen berechnen
 		int anzahlBitsMantisse = getAnzahlBitsMantisse(anzahlBits, anzahlBitsExponent);
 
-		// Rechenwert für Nachkommastellen
+		// Rechenwert fuer Nachkommastellen
 		z = nkDezimal;
 		pos = 0;
 
