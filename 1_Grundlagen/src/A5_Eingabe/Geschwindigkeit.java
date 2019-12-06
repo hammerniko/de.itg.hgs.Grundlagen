@@ -28,9 +28,9 @@ public class Geschwindigkeit {
 		//AUSGABE
 		System.out.println("----------------------------------------");
 		System.out.println("\nDie gemessene Zeit ist:\t\t"+t+" sekunden.");
-		System.out.println("Die Wegstrecke beträgt:\t\t"+s+" meter.");
-		System.out.println("Die Geschwindigkeit beträgt:\t"+v+" m/s");
-		System.out.println("Die Geschwindigkeit beträgt:\t"+v_kmh+"km/h");
+		System.out.println("Die Wegstrecke betraegt:\t\t"+s+" meter.");
+		System.out.println("Die Geschwindigkeit betraegt:\t"+v+" m/s");
+		System.out.println("Die Geschwindigkeit betraegt:\t"+v_kmh+"km/h");
 		
 
 	}
