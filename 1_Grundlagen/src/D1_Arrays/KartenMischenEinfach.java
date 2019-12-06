@@ -2,7 +2,7 @@ package D1_Arrays;
 public class KartenMischenEinfach {
 
 	public static void main(String[] args) {
-		String[] karten = {"HerzAS","Herz7","Herz8","HerzBube", "HerzKönig","HerzDame"};
+		String[] karten = {"HerzAS","Herz7","Herz8","HerzBube", "HerzKoenig","HerzDame"};
 		int anzkarten = karten.length;
 		String[] kartenNeu = new String[anzkarten];
 		boolean[] gezogeneKarten = new boolean[anzkarten];

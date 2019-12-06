@@ -24,7 +24,7 @@ public class Lotto1 {
 		
 		final int LEER = 0;
 		
-		//Array welches alle möglichen Lottokugelwerte enthält
+		//Array welches alle moeglichen Lottokugelwerte enthaelt
 		int[] lottoZahlenMenge = new int[49];
 		
 		//index der letzten Kugel
@@ -36,13 +36,13 @@ public class Lotto1 {
 		//Array welches die gefundenen Lottozahlen bekommen soll.
 		int[] lotto = new int[6];
 		
-		//Variable für die Zufallszahl
+		//Variable fuer die Zufallszahl
 		int zz;
 		
 		//Variable um eine position einer gefundenen Lottozahl zu merken
 		int merke;
 		
-		//Wiederhole für jede Lottozahl einmal
+		//Wiederhole fuer jede Lottozahl einmal
 		for (int i = 0; i < lotto.length; i++) {
 			
 			//Position der gezogenen Lottozahl
@@ -57,7 +57,7 @@ public class Lotto1 {
 			//An die Stelle der gez. Lottozahl den Inhalt der letzten Zahl schreiben
 			lottoZahlenMenge[zz]=merke;
 			
-			//Letzte Stelle ungültig markieren
+			//Letzte Stelle ungueltig markieren
 			lottoZahlenMenge[letzteKugel-i]=LEER;
 		}
 		

@@ -54,7 +54,7 @@ public class E1_InitArray {
      */
     public static int[] initArray(int[] feld, int wert) {
 
-        // Ein neues Array mit derselben Größe wie feld
+        // Ein neues Array mit derselben Groesse wie feld
         // wird angelegt, da sonst das uebergebene Array veraendert wird.
         int laenge = feld.length;
         int[] initialisiertesFeld = new int[laenge];
