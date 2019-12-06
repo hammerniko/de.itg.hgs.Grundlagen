@@ -9,7 +9,7 @@ public class A61_Operatoren_Buch {
 		String lsg_a, lsg_b, lsg_c;
 		int z1, z2, a, b, c;
 
-		// Binäre Zahlen als Strings
+		// Binaere Zahlen als Strings
 		str_z1 = "1111";
 		str_z2 = "1001";
 
@@ -18,12 +18,12 @@ public class A61_Operatoren_Buch {
 		z1 = Integer.parseInt(str_z1, 2);
 		z2 = Integer.parseInt(str_z2, 2);
 
-		// logisch Verknüpfen
+		// logisch Verknuepfen
 		a = z1 & z2; //9
 		b = z1 | z2; //15
 		c = z1 ^ z2; //6
 
-	// Umwandeln Binärzahl als String
+	// Umwandeln Binaerzahl als String
 		lsg_a = Integer.toBinaryString(a);
 		lsg_b = Integer.toBinaryString(b);
 		lsg_c = Integer.toBinaryString(c);
