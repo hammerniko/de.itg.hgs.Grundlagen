@@ -16,7 +16,7 @@ public class MeinPanel extends JPanel {
 	@Override
 	protected void paintComponent(Graphics g) {
 		
-		//Methode der Oberklasse ausführen
+		//Methode der Oberklasse ausfuehren
 		super.paintComponent(g);
 		
 		//Zeichnen in der Komponente
