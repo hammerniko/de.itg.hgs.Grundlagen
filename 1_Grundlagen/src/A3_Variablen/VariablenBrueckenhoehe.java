@@ -10,7 +10,7 @@ public class VariablenBrueckenhoehe {
 		double zeit=4;
 		double beschleunigung=9.81;
 			
-		String meldung ="Die Höhe der Brücke ist:";
+		String meldung ="Die Hoehe der Bruecke ist:";
 		
 		//Verarbeitung
 		strecke = 0.5 * beschleunigung * zeit * zeit;

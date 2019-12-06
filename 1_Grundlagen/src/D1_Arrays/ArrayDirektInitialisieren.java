@@ -6,7 +6,7 @@ public class ArrayDirektInitialisieren {
 
 		// Eingabe
 		// Direkte initialisierung
-		String name[] = {"Müller","Meier","Schmid"};
+		String name[] = {"Mueller","Meier","Schmid"};
 
 		
 		//Indirekte Initialisierung
