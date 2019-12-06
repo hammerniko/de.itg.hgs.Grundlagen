@@ -4,13 +4,13 @@ package G2_Suchen;
  * einem gesuchten Wert durchsucht. Wird der Wert in der Liste
  * gefunden, wird der Index an welchem der Wert gefunden wurde zurueckgegeben.
  * 
- * Für die Suche in Listen mir verschiedenen Datentypen kann die
+ * Fuer die Suche in Listen mir verschiedenen Datentypen kann die
  * Methode suche(..) ueberladen werden. Dies bedeutet, dass die Methode
  * denselben Namen hat, aber sich in den Uerbgabeparametern / dem Rueckgabewert
  * unterscheidet.
  * Ueberladen wird in der OOP auch als statische Polymorphie
  * bezeichnet. D.h. der Compiler erkennt welche Methode
- * er ausführen muss, bereits vor der Ausführung des Codes.
+ * er ausfuehren muss, bereits vor der Ausfuehrung des Codes.
  */
 
 public class SequentielleSuche {
@@ -59,7 +59,7 @@ public class SequentielleSuche {
 	
 	
 	
-	//1.) Methode für sequentlielle Suche
+	//1.) Methode fuer sequentlielle Suche
 	public static int suche(int gesWert, int[] liste) {
 		
 		//Durchsuche die gesamte Liste
@@ -68,7 +68,7 @@ public class SequentielleSuche {
 			//Wenn der gesuchte Wert gefunden wird
 			if(liste[index] == gesWert) {
 				
-				//gib den Index zurück
+				//gib den Index zurueck
 				return index;
 			}
 		}
@@ -79,7 +79,7 @@ public class SequentielleSuche {
 	}
 	
 	
-	//überladene Methode für sequentlielle Suche
+	//ueberladene Methode fuer sequentlielle Suche
 	public static int suche(double gesWert, double[] liste) {
 			
 			//Durchsuche die gesamte Liste
@@ -88,7 +88,7 @@ public class SequentielleSuche {
 				//Wenn der gesuchte Wert gefunden wird
 				if(liste[index] == gesWert) {
 					
-					//gib den Index zurück
+					//gib den Index zurueck
 					return index;
 				}
 			}
@@ -101,7 +101,7 @@ public class SequentielleSuche {
 		
 		
 		
-		//überladene Methode für sequentlielle Suche (Texte)
+		//ueberladene Methode fuer sequentlielle Suche (Texte)
 		public static int suche(String gesWert, String[] liste) {
 					
 					//Durchsuche die gesamte Liste
@@ -110,7 +110,7 @@ public class SequentielleSuche {
 						//Wenn der gesuchte Wert gefunden wird
 						if(liste[index].equals(gesWert)) {
 							
-							//gib den Index zurück
+							//gib den Index zurueck
 							return index;
 						}
 					}
