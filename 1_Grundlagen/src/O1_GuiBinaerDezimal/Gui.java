@@ -11,6 +11,7 @@ import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.RowSpec;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
@@ -52,10 +53,10 @@ public class Gui extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
-		
+
 		JPanel panelButtons = new JPanel();
 		contentPane.add(panelButtons, BorderLayout.SOUTH);
-		
+
 		JButton btnBerechne = new JButton("Berechne");
 		btnBerechne.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -63,94 +64,81 @@ public class Gui extends JFrame {
 			}
 		});
 		panelButtons.add(btnBerechne);
-		
+
 		JButton btnAbbrechen = new JButton("Abbrechen");
 		btnAbbrechen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
+
 				clickedAbbrechen();
-				
+
 			}
 		});
 		panelButtons.add(btnAbbrechen);
-		
+
 		JPanel panelMain = new JPanel();
 		contentPane.add(panelMain, BorderLayout.CENTER);
 		panelMain.setLayout(new GridLayout(0, 2, 0, 0));
-		
+
 		JLabel lblDezimalzahl = new JLabel("Dezimalzahl");
 		panelMain.add(lblDezimalzahl);
-		
+
 		textFieldDezimal = new JTextField();
 		panelMain.add(textFieldDezimal);
 		textFieldDezimal.setColumns(10);
 		textFieldDezimal.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+
 				status = DEZ_TO_BINAER;
 				clickedBerechne();
 			}
 		});
-		
+
 		JLabel lblBinaerzahl = new JLabel("Binaerzahl");
 		panelMain.add(lblBinaerzahl);
-		
+
 		textFieldBinaer = new JTextField();
 		panelMain.add(textFieldBinaer);
 		textFieldBinaer.setColumns(10);
 		textFieldBinaer.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				status = BINAER_TO_DEZ;
 				clickedBerechne();
 			}
 		});
-		
 	}
 
-		protected void clickedBerechne() {
+	protected void clickedBerechne() {
 		System.out.println("Berechne geklickt");
-		
-		//Eingabe
+
+		// Eingabe
 		String strBinaer = textFieldBinaer.getText();
 		String strDez = textFieldDezimal.getText();
-		
-		
-		
-		
-		//Verabeitung
-		if (status == BINAER_TO_DEZ){
-			int ergDezimal = Integer.parseInt(strBinaer,2);
-			textFieldDezimal.setText(""+ergDezimal);
+
+		try {
+			// Verabeitung
+			if (status == BINAER_TO_DEZ) {
+				int ergDezimal = Integer.parseInt(strBinaer, 2);
+				textFieldDezimal.setText("" + ergDezimal);
+			} else {
+				int dezimalZahlEingabe = Integer.parseInt(strDez);
+				String ergBinaer = Integer.toBinaryString(dezimalZahlEingabe);
+				textFieldBinaer.setText(ergBinaer);
+			}
+		} catch (NumberFormatException e) {
+			JOptionPane.showMessageDialog(this, "Falsches Zahlenformat");
 		}
-		else{
-			int dezimalZahlEingabe = Integer.parseInt(strDez);		
-			String ergBinaer = Integer.toBinaryString(dezimalZahlEingabe);
-			textFieldBinaer.setText(ergBinaer);
-		}
-		
-		
-		
-		
-		
-		
-		//Ausgabe
-		
-		
-		
-		
-		
-		
+
 	}
 
 	protected void clickedAbbrechen() {
 		System.out.println("Abbrechen geklickt");
 		textFieldBinaer.setText("");
 		textFieldDezimal.setText("");
-		
+
 	}
 
 }
