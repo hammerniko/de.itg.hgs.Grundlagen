@@ -1,4 +1,4 @@
-package E2_MethodenUndGrafik;
+package E21_MethodenUndGrafik;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

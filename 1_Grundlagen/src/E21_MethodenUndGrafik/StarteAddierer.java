@@ -1,4 +1,4 @@
-package E2_MethodenUndGrafik;
+package E21_MethodenUndGrafik;
 
 public class StarteAddierer {
 

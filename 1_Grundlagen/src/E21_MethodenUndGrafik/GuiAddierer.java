@@ -1,4 +1,4 @@
-package E2_MethodenUndGrafik;
+package E21_MethodenUndGrafik;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

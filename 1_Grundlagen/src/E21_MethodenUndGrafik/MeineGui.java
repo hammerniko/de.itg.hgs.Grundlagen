@@ -1,4 +1,4 @@
-package E2_MethodenUndGrafik;
+package E21_MethodenUndGrafik;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
