@@ -54,7 +54,7 @@ public class Horner extends JFrame {
 		JPanel panelEingabe = new JPanel();
 		panelTop.add(panelEingabe);
 		panelEingabe.setBorder(new TitledBorder(null, "Eingabe", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		panelEingabe.setLayout(new GridLayout(0, 5, 5, 5));
+		panelEingabe.setLayout(new GridLayout(2, 5, 5, 5));
 		
 		JLabel lblNullstellenVon = new JLabel("Nullstellen von:");
 		panelEingabe.add(lblNullstellenVon);
@@ -136,6 +136,11 @@ public class Horner extends JFrame {
 		contentPane.add(panelBottom, BorderLayout.SOUTH);
 		
 		JButton btnNewButton = new JButton("Neu");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				clickedNeu();
+			}
+		});
 		panelBottom.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Beenden");
@@ -144,6 +149,12 @@ public class Horner extends JFrame {
 		textField = new JTextField();
 		panelBottom.add(textField);
 		textField.setColumns(20);
+	}
+
+
+	protected void clickedNeu() {
+		System.out.println("Neu geklickt");
+		
 	}
 
 
