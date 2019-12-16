@@ -34,6 +34,19 @@ import java.awt.Font;
 
 public class GuiGetraenke extends JFrame {
 
+	private static final String PFAD_1_CENT_JPG = "/O2_GuiGetraenkeautomat/1Cent.jpg";
+	private static final String PFAD_2_CENT_JPG = "/O2_GuiGetraenkeautomat/2Cent.jpg";
+	private static final String PFAD_5_CENT_JPG = "/O2_GuiGetraenkeautomat/5Cent.jpg";
+	private static final String PFAD_10_CENT_JPG = "/O2_GuiGetraenkeautomat/10Cent.jpg";
+	private static final String PFAD_20_CENT_JPG = "/O2_GuiGetraenkeautomat/20Cent.jpg";
+	private static final String PFAD_50_CENT_JPG = "/O2_GuiGetraenkeautomat/50Cent.jpg";
+	private static final String PFAD_1_EURO_JPG = "/O2_GuiGetraenkeautomat/1Euro.jpg";
+	private static final String PFAD_2_EURO_JPG = "/O2_GuiGetraenkeautomat/2Euro.jpg";
+	private static final String RETURN_MONEY = "Return money";
+	private static final int COLUMNS_TEXTFIELD = 10;
+	//Konstanten
+	private static final String PLEASE_ADD_PAY = "please add pay:";
+	private static final String WERT_GEAENDERT = "wert geaendert";
 	private static final String CANCEL = "Cancel";
 	private static final String ORDER = "Order";
 	private static final String FONT = "Tahoma";
@@ -52,6 +65,8 @@ public class GuiGetraenke extends JFrame {
 	private static final String MONEY = "Money";
 	private static final String COSTS = "Costs";
 	private static final String TITEL = "MyDrinks";
+	
+	//grafische Komponenten
 	private JPanel contentPane;
 	private JTextField textFieldChange;
 	private JFormattedTextField textFieldMoney;
@@ -123,7 +138,7 @@ public class GuiGetraenke extends JFrame {
 		textFieldMoney.setText(ZERO);
 		textFieldMoney.setHorizontalAlignment(SwingConstants.RIGHT);
 		panelPay.add(textFieldMoney);
-		textFieldMoney.setColumns(10);
+		textFieldMoney.setColumns(COLUMNS_TEXTFIELD);
 		textFieldMoney.addActionListener(new ActionListener() {
 			
 			@Override
@@ -144,7 +159,7 @@ public class GuiGetraenke extends JFrame {
 		textFieldPrice.setText(ZERO);
 		textFieldPrice.setBackground(Color.GREEN);
 		textFieldPrice.setEditable(false);
-		textFieldPrice.setColumns(10);
+		textFieldPrice.setColumns(COLUMNS_TEXTFIELD);
 		panelPay.add(textFieldPrice);
 
 		JPanel panelChoose = new JPanel();
@@ -187,7 +202,7 @@ public class GuiGetraenke extends JFrame {
 		JPanel panelBackpay = new JPanel();
 		panelBackpay.setBorder(new TitledBorder(
 				new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)),
-				"Return money", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
+				RETURN_MONEY, TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		FlowLayout flowLayout = (FlowLayout) panelBackpay.getLayout();
 		flowLayout.setAlignment(FlowLayout.LEFT);
 		panelMain.add(panelBackpay);
@@ -201,6 +216,7 @@ public class GuiGetraenke extends JFrame {
 		textFieldChange.setColumns(10);
 
 		JPanel panelChange = new JPanel();
+		panelChange.setBackground(Color.WHITE);
 		panelChange.setBorder(new TitledBorder(
 				new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)),
 				CALCULATE_COINS, TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
@@ -208,35 +224,35 @@ public class GuiGetraenke extends JFrame {
 		panelChange.setLayout(new GridLayout(2, 8, 2, 0));
 
 		JLabel lbl2Euro = new JLabel();
-		lbl2Euro.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/2Euro.jpg")));
+		lbl2Euro.setIcon(new ImageIcon(GuiGetraenke.class.getResource(PFAD_2_EURO_JPG)));
 		panelChange.add(lbl2Euro);
 
 		JLabel lblEuro_1 = new JLabel();
-		lblEuro_1.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/1Euro.jpg")));
+		lblEuro_1.setIcon(new ImageIcon(GuiGetraenke.class.getResource(PFAD_1_EURO_JPG)));
 		panelChange.add(lblEuro_1);
 
 		JLabel lblCent = new JLabel();
-		lblCent.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/50Cent.jpg")));
+		lblCent.setIcon(new ImageIcon(GuiGetraenke.class.getResource(PFAD_50_CENT_JPG)));
 		panelChange.add(lblCent);
 
 		JLabel lblCent_1 = new JLabel();
-		lblCent_1.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/20Cent.jpg")));
+		lblCent_1.setIcon(new ImageIcon(GuiGetraenke.class.getResource(PFAD_20_CENT_JPG)));
 		panelChange.add(lblCent_1);
 
 		JLabel lblCent_2 = new JLabel();
-		lblCent_2.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/10Cent.jpg")));
+		lblCent_2.setIcon(new ImageIcon(GuiGetraenke.class.getResource(PFAD_10_CENT_JPG)));
 		panelChange.add(lblCent_2);
 
 		JLabel lblCent_3 = new JLabel();
-		lblCent_3.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/5Cent.jpg")));
+		lblCent_3.setIcon(new ImageIcon(GuiGetraenke.class.getResource(PFAD_5_CENT_JPG)));
 		panelChange.add(lblCent_3);
 
 		JLabel lblCent_4 = new JLabel();
-		lblCent_4.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/2Cent.jpg")));
+		lblCent_4.setIcon(new ImageIcon(GuiGetraenke.class.getResource(PFAD_2_CENT_JPG)));
 		panelChange.add(lblCent_4);
 
 		JLabel lblCent_5 = new JLabel();
-		lblCent_5.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/1Cent.jpg")));
+		lblCent_5.setIcon(new ImageIcon(GuiGetraenke.class.getResource(PFAD_1_CENT_JPG)));
 		panelChange.add(lblCent_5);
 
 		textField2Euro = new JTextField();
@@ -321,7 +337,6 @@ public class GuiGetraenke extends JFrame {
 
 			@Override
 			public void stateChanged(ChangeEvent e) {
-				System.out.println("wert geaendert");
 				berechnePreis();
 			}
 		});
@@ -330,7 +345,6 @@ public class GuiGetraenke extends JFrame {
 
 			@Override
 			public void stateChanged(ChangeEvent e) {
-				System.out.println("wert geaendert");
 				berechnePreis();
 			}
 		});
@@ -339,7 +353,6 @@ public class GuiGetraenke extends JFrame {
 
 			@Override
 			public void stateChanged(ChangeEvent e) {
-				System.out.println("wert geaendert");
 				berechnePreis();
 			}
 		});
@@ -400,7 +413,7 @@ public class GuiGetraenke extends JFrame {
 		} else {
 
 			double fehlbetrag = runden(preis - bezahlt);
-			JOptionPane.showMessageDialog(this, "please add pay:" + fehlbetrag);
+			JOptionPane.showMessageDialog(this, PLEASE_ADD_PAY + fehlbetrag);
 		}
 
 	}
@@ -426,14 +439,9 @@ public class GuiGetraenke extends JFrame {
 
 		// Anzahl der Getraenke auslesen
 		int anzahlFanta = (int) spinnerFanta.getValue();
-		System.out.println("Anzahl Fanta:" + anzahlFanta);
-
 		int anzahlCola = (int) spinnerCola.getValue();
-		System.out.println("Anzahl Fanta:" + anzahlFanta);
-
 		int anzahlSprite = (int) spinnerSprite.getValue();
-		System.out.println("Anzahl Fanta:" + anzahlFanta);
-
+		
 		// Preise auslesen
 		double preisFanta = anzahlFanta * Double.parseDouble(labelPreisFanta.getText());
 		double preisCola = anzahlCola * Double.parseDouble(labelPreisCola.getText());
@@ -442,8 +450,10 @@ public class GuiGetraenke extends JFrame {
 		// Preis berechnen
 		double neuerPreis = runden(preisFanta + preisCola + preisSprite);
 
+		//Preis anzeigen
 		textFieldPrice.setText("" + neuerPreis);
 		
+		//Farbe des Textfeldes ändern, wenn geld fehlt
 		double bezahlt = Double.parseDouble(textFieldMoney.getText());
 		if(bezahlt > neuerPreis) {
 			textFieldMoney.setBackground(Color.green);
