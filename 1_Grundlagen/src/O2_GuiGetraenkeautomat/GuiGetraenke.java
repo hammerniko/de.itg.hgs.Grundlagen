@@ -207,35 +207,35 @@ public class GuiGetraenke extends JFrame {
 		panelMain.add(panelChange);
 		panelChange.setLayout(new GridLayout(2, 8, 2, 0));
 
-		JLabel lbl2Euro = new JLabel("2 Euro");
+		JLabel lbl2Euro = new JLabel();
 		lbl2Euro.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/2Euro.jpg")));
 		panelChange.add(lbl2Euro);
 
-		JLabel lblEuro_1 = new JLabel("1 Euro");
+		JLabel lblEuro_1 = new JLabel();
 		lblEuro_1.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/1Euro.jpg")));
 		panelChange.add(lblEuro_1);
 
-		JLabel lblCent = new JLabel("50 Cent");
+		JLabel lblCent = new JLabel();
 		lblCent.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/50Cent.jpg")));
 		panelChange.add(lblCent);
 
-		JLabel lblCent_1 = new JLabel("20 Cent");
+		JLabel lblCent_1 = new JLabel();
 		lblCent_1.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/20Cent.jpg")));
 		panelChange.add(lblCent_1);
 
-		JLabel lblCent_2 = new JLabel("10 Cent");
+		JLabel lblCent_2 = new JLabel();
 		lblCent_2.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/10Cent.jpg")));
 		panelChange.add(lblCent_2);
 
-		JLabel lblCent_3 = new JLabel("5 Cent");
+		JLabel lblCent_3 = new JLabel();
 		lblCent_3.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/5Cent.jpg")));
 		panelChange.add(lblCent_3);
 
-		JLabel lblCent_4 = new JLabel("2 Cent");
+		JLabel lblCent_4 = new JLabel();
 		lblCent_4.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/2Cent.jpg")));
 		panelChange.add(lblCent_4);
 
-		JLabel lblCent_5 = new JLabel("1 Cent");
+		JLabel lblCent_5 = new JLabel();
 		lblCent_5.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/1Cent.jpg")));
 		panelChange.add(lblCent_5);
 
