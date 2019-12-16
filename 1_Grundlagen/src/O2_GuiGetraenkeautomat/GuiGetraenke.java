@@ -34,6 +34,11 @@ import java.awt.Font;
 
 public class GuiGetraenke extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//Konstanten
 	private static final String PFAD_1_CENT_JPG = "/O2_GuiGetraenkeautomat/1Cent.jpg";
 	private static final String PFAD_2_CENT_JPG = "/O2_GuiGetraenkeautomat/2Cent.jpg";
 	private static final String PFAD_5_CENT_JPG = "/O2_GuiGetraenkeautomat/5Cent.jpg";
@@ -44,9 +49,7 @@ public class GuiGetraenke extends JFrame {
 	private static final String PFAD_2_EURO_JPG = "/O2_GuiGetraenkeautomat/2Euro.jpg";
 	private static final String RETURN_MONEY = "Return money";
 	private static final int COLUMNS_TEXTFIELD = 10;
-	//Konstanten
 	private static final String PLEASE_ADD_PAY = "please add pay:";
-	private static final String WERT_GEAENDERT = "wert geaendert";
 	private static final String CANCEL = "Cancel";
 	private static final String ORDER = "Order";
 	private static final String FONT = "Tahoma";
