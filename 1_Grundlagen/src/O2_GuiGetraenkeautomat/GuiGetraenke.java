@@ -29,9 +29,29 @@ import javax.swing.border.TitledBorder;
 import javax.swing.border.EtchedBorder;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+import java.awt.Font;
 
 public class GuiGetraenke extends JFrame {
 
+	private static final String CANCEL = "Cancel";
+	private static final String ORDER = "Order";
+	private static final String FONT = "Tahoma";
+	private static final String CALCULATE_COINS = "Calculate Coins";
+	private static final String CHANGE = "Change";
+	private static final String PRIZE_SPRITE = "1.49";
+	private static final String SPRITE = "Sprite";
+	private static final String PRIZE_COLA = "1.85";
+	private static final String COLA = "Cola";
+	private static final String PRIZE_FANTA = "1.59";
+	private static final String FANTA = "Fanta";
+	private static final String YOUR_DRINKS = "Your Drinks";
+	private static final String ZERO = "0";
+	private static final String PRICE = "Price";
+	private static final String NUMBERFORMAT = "#,##";
+	private static final String MONEY = "Money";
+	private static final String COSTS = "Costs";
+	private static final String TITEL = "MyDrinks";
 	private JPanel contentPane;
 	private JTextField textFieldChange;
 	private JFormattedTextField textFieldMoney;
@@ -71,9 +91,9 @@ public class GuiGetraenke extends JFrame {
 	 * Create the frame.
 	 */
 	public GuiGetraenke() {
-		setTitle("MyDrinks");
+		setTitle(TITEL);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 430, 529);
+		setBounds(100, 100, 998, 577);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -88,19 +108,19 @@ public class GuiGetraenke extends JFrame {
 
 		JPanel panelPay = new JPanel();
 		panelPay.setBorder(new TitledBorder(
-				new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "Costs",
+				new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), COSTS,
 				TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panelMain.add(panelPay);
 		panelPay.setLayout(new GridLayout(0, 2, 0, 0));
 
-		JLabel lblEingeworfenerGeldbetrag = new JLabel("Money");
+		JLabel lblEingeworfenerGeldbetrag = new JLabel(MONEY);
 		lblEingeworfenerGeldbetrag.setHorizontalAlignment(SwingConstants.LEFT);
 		panelPay.add(lblEingeworfenerGeldbetrag);
 
-		textFieldMoney = new JFormattedTextField(new DecimalFormat("#,##"));
+		textFieldMoney = new JFormattedTextField(new DecimalFormat(NUMBERFORMAT));
 		textFieldMoney.setBackground(Color.GREEN);
 
-		textFieldMoney.setText("0");
+		textFieldMoney.setText(ZERO);
 		textFieldMoney.setHorizontalAlignment(SwingConstants.RIGHT);
 		panelPay.add(textFieldMoney);
 		textFieldMoney.setColumns(10);
@@ -114,14 +134,14 @@ public class GuiGetraenke extends JFrame {
 			}
 		});
 
-		JLabel lblPrice = new JLabel("Price");
+		JLabel lblPrice = new JLabel(PRICE);
 		lblPrice.setHorizontalAlignment(SwingConstants.LEFT);
 		panelPay.add(lblPrice);
 
-		textFieldPrice = new JFormattedTextField(new DecimalFormat("#,##"));
+		textFieldPrice = new JFormattedTextField(new DecimalFormat(NUMBERFORMAT));
 
 		textFieldPrice.setHorizontalAlignment(SwingConstants.RIGHT);
-		textFieldPrice.setText("0");
+		textFieldPrice.setText(ZERO);
 		textFieldPrice.setBackground(Color.GREEN);
 		textFieldPrice.setEditable(false);
 		textFieldPrice.setColumns(10);
@@ -129,14 +149,14 @@ public class GuiGetraenke extends JFrame {
 
 		JPanel panelChoose = new JPanel();
 		panelChoose
-				.setBorder(new TitledBorder(null, "Your Drinks", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+				.setBorder(new TitledBorder(null, YOUR_DRINKS, TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		panelMain.add(panelChoose);
 		panelChoose.setLayout(new GridLayout(3, 3, 0, 0));
 
-		JLabel chckbxNewCheckBox_1 = new JLabel("Fanta");
+		JLabel chckbxNewCheckBox_1 = new JLabel(FANTA);
 		panelChoose.add(chckbxNewCheckBox_1);
 
-		labelPreisFanta = new JLabel("1.59");
+		labelPreisFanta = new JLabel(PRIZE_FANTA);
 		panelChoose.add(labelPreisFanta);
 
 		spinnerFanta = new JSpinner();
@@ -144,20 +164,20 @@ public class GuiGetraenke extends JFrame {
 
 		panelChoose.add(spinnerFanta);
 
-		JLabel chckbxCola = new JLabel("Cola");
+		JLabel chckbxCola = new JLabel(COLA);
 		panelChoose.add(chckbxCola);
 
-		labelPreisCola = new JLabel("1.85");
+		labelPreisCola = new JLabel(PRIZE_COLA);
 		panelChoose.add(labelPreisCola);
 
 		spinnerCola = new JSpinner();
 		spinnerCola.setModel(new SpinnerNumberModel(0, 0, 4, 1));
 		panelChoose.add(spinnerCola);
 
-		JLabel chckbxNewCheckBox = new JLabel("Sprite");
+		JLabel chckbxNewCheckBox = new JLabel(SPRITE);
 		panelChoose.add(chckbxNewCheckBox);
 
-		labelPreisSprite = new JLabel("1.49");
+		labelPreisSprite = new JLabel(PRIZE_SPRITE);
 		panelChoose.add(labelPreisSprite);
 
 		spinnerSprite = new JSpinner();
@@ -172,7 +192,7 @@ public class GuiGetraenke extends JFrame {
 		flowLayout.setAlignment(FlowLayout.LEFT);
 		panelMain.add(panelBackpay);
 
-		JLabel lblChange = new JLabel("Change");
+		JLabel lblChange = new JLabel(CHANGE);
 		lblChange.setHorizontalAlignment(SwingConstants.LEFT);
 		panelBackpay.add(lblChange);
 
@@ -183,77 +203,93 @@ public class GuiGetraenke extends JFrame {
 		JPanel panelChange = new JPanel();
 		panelChange.setBorder(new TitledBorder(
 				new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)),
-				"Calculate Coins", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
+				CALCULATE_COINS, TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panelMain.add(panelChange);
 		panelChange.setLayout(new GridLayout(2, 8, 2, 0));
 
-		JLabel lblEuro = new JLabel("2 Euro");
-		panelChange.add(lblEuro);
+		JLabel lbl2Euro = new JLabel("2 Euro");
+		lbl2Euro.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/2Euro.jpg")));
+		panelChange.add(lbl2Euro);
 
 		JLabel lblEuro_1 = new JLabel("1 Euro");
+		lblEuro_1.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/1Euro.jpg")));
 		panelChange.add(lblEuro_1);
 
 		JLabel lblCent = new JLabel("50 Cent");
+		lblCent.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/50Cent.jpg")));
 		panelChange.add(lblCent);
 
 		JLabel lblCent_1 = new JLabel("20 Cent");
+		lblCent_1.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/20Cent.jpg")));
 		panelChange.add(lblCent_1);
 
 		JLabel lblCent_2 = new JLabel("10 Cent");
+		lblCent_2.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/10Cent.jpg")));
 		panelChange.add(lblCent_2);
 
 		JLabel lblCent_3 = new JLabel("5 Cent");
+		lblCent_3.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/5Cent.jpg")));
 		panelChange.add(lblCent_3);
 
 		JLabel lblCent_4 = new JLabel("2 Cent");
+		lblCent_4.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/2Cent.jpg")));
 		panelChange.add(lblCent_4);
 
 		JLabel lblCent_5 = new JLabel("1 Cent");
+		lblCent_5.setIcon(new ImageIcon(GuiGetraenke.class.getResource("/O2_GuiGetraenkeautomat/1Cent.jpg")));
 		panelChange.add(lblCent_5);
 
 		textField2Euro = new JTextField();
+		textField2Euro.setFont(new Font(FONT, Font.BOLD, 16));
 		textField2Euro.setHorizontalAlignment(SwingConstants.CENTER);
 		textField2Euro.setEditable(false);
 		panelChange.add(textField2Euro);
 		textField2Euro.setColumns(10);
 
 		textField1Euro = new JTextField();
+		textField1Euro.setFont(new Font(FONT, Font.BOLD, 16));
 		textField1Euro.setHorizontalAlignment(SwingConstants.CENTER);
 		textField1Euro.setEditable(false);
 		textField1Euro.setColumns(10);
 		panelChange.add(textField1Euro);
 
 		textField50Cent = new JTextField();
+		textField50Cent.setFont(new Font(FONT, Font.BOLD, 16));
 		textField50Cent.setHorizontalAlignment(SwingConstants.CENTER);
 		textField50Cent.setEditable(false);
 		textField50Cent.setColumns(10);
 		panelChange.add(textField50Cent);
 
 		textField20Cent = new JTextField();
+		textField20Cent.setFont(new Font(FONT, Font.BOLD, 16));
 		textField20Cent.setHorizontalAlignment(SwingConstants.CENTER);
 		textField20Cent.setEditable(false);
 		textField20Cent.setColumns(10);
 		panelChange.add(textField20Cent);
 
 		textField10Cent = new JTextField();
+		textField10Cent.setFont(new Font(FONT, Font.BOLD, 16));
 		textField10Cent.setHorizontalAlignment(SwingConstants.CENTER);
 		textField10Cent.setEditable(false);
 		textField10Cent.setColumns(10);
 		panelChange.add(textField10Cent);
 
 		textField5Cent = new JTextField();
+		textField5Cent.setFont(new Font(FONT, Font.BOLD, 16));
 		textField5Cent.setHorizontalAlignment(SwingConstants.CENTER);
 		textField5Cent.setEditable(false);
 		textField5Cent.setColumns(10);
 		panelChange.add(textField5Cent);
 
 		textField2Cent = new JTextField();
+		textField2Cent.setFont(new Font(FONT, Font.BOLD, 16));
 		textField2Cent.setHorizontalAlignment(SwingConstants.CENTER);
 		textField2Cent.setEditable(false);
 		textField2Cent.setColumns(10);
 		panelChange.add(textField2Cent);
 
 		textField1Cent = new JTextField();
+		textField1Cent.setFont(new Font(FONT, Font.BOLD, 16));
 		textField1Cent.setHorizontalAlignment(SwingConstants.CENTER);
 		textField1Cent.setEditable(false);
 		textField1Cent.setColumns(10);
@@ -262,7 +298,7 @@ public class GuiGetraenke extends JFrame {
 		JPanel panelButtons = new JPanel();
 		contentPane.add(panelButtons, BorderLayout.SOUTH);
 
-		JButton btnOrder = new JButton("Order");
+		JButton btnOrder = new JButton(ORDER);
 		btnOrder.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				clickOrder();
@@ -270,7 +306,7 @@ public class GuiGetraenke extends JFrame {
 		});
 		panelButtons.add(btnOrder);
 
-		JButton btnAbbrechen = new JButton("Cancel");
+		JButton btnAbbrechen = new JButton(CANCEL);
 		btnAbbrechen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				clickCancel();
