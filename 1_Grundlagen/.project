@@ -20,4 +20,11 @@
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>O2_GuiGetraenkeautomat</name>
+			<type>2</type>
+			<location>H:/Eigene Dokumente/Git/de.itg.hgs.Grundlagen/1_Grundlagen/src/O2_GuiGetraenkeautomat</location>
+		</link>
+	</linkedResources>
 </projectDescription>
