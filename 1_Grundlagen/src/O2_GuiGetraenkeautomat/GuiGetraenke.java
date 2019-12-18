@@ -109,9 +109,10 @@ public class GuiGetraenke extends JFrame {
 	 * Create the frame.
 	 */
 	public GuiGetraenke() {
+		setResizable(false);
 		setTitle(TITEL);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 874, 540);
+		setBounds(100, 100, 874, 599);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -131,17 +132,19 @@ public class GuiGetraenke extends JFrame {
 		panelMain.add(panelPay);
 		panelPay.setLayout(new GridLayout(0, 2, 0, 0));
 
-		JLabel lblEingeworfenerGeldbetrag = new JLabel(MONEY);
+		JLabel lblEingeworfenerGeldbetrag = new JLabel("Money paid:");
+		lblEingeworfenerGeldbetrag.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblEingeworfenerGeldbetrag.setHorizontalAlignment(SwingConstants.LEFT);
 		panelPay.add(lblEingeworfenerGeldbetrag);
 
 		textFieldMoney = new JFormattedTextField(new DecimalFormat(NUMBERFORMAT));
+		textFieldMoney.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		textFieldMoney.setBackground(Color.GREEN);
 
 		textFieldMoney.setText(ZERO);
 		textFieldMoney.setHorizontalAlignment(SwingConstants.RIGHT);
 		panelPay.add(textFieldMoney);
-		textFieldMoney.setColumns(COLUMNS_TEXTFIELD);
+		textFieldMoney.setColumns(6);
 		textFieldMoney.addActionListener(new ActionListener() {
 			
 			@Override
@@ -152,17 +155,19 @@ public class GuiGetraenke extends JFrame {
 			}
 		});
 
-		JLabel lblPrice = new JLabel(PRICE);
+		JLabel lblPrice = new JLabel("Price:");
+		lblPrice.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblPrice.setHorizontalAlignment(SwingConstants.LEFT);
 		panelPay.add(lblPrice);
 
 		textFieldPrice = new JFormattedTextField(new DecimalFormat(NUMBERFORMAT));
+		textFieldPrice.setFont(new Font("Tahoma", Font.PLAIN, 24));
 
 		textFieldPrice.setHorizontalAlignment(SwingConstants.RIGHT);
 		textFieldPrice.setText(ZERO);
 		textFieldPrice.setBackground(Color.GREEN);
 		textFieldPrice.setEditable(false);
-		textFieldPrice.setColumns(COLUMNS_TEXTFIELD);
+		textFieldPrice.setColumns(6);
 		panelPay.add(textFieldPrice);
 
 		JPanel panelChoose = new JPanel();
@@ -172,33 +177,42 @@ public class GuiGetraenke extends JFrame {
 		panelChoose.setLayout(new GridLayout(3, 3, 0, 0));
 
 		JLabel chckbxNewCheckBox_1 = new JLabel(FANTA);
+		chckbxNewCheckBox_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		panelChoose.add(chckbxNewCheckBox_1);
 
 		labelPreisFanta = new JLabel(PRIZE_FANTA);
+		labelPreisFanta.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		panelChoose.add(labelPreisFanta);
 
 		spinnerFanta = new JSpinner();
+		spinnerFanta.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		spinnerFanta.setModel(new SpinnerNumberModel(0, 0, 4, 1));
 
 		panelChoose.add(spinnerFanta);
 
 		JLabel chckbxCola = new JLabel(COLA);
+		chckbxCola.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		panelChoose.add(chckbxCola);
 
 		labelPreisCola = new JLabel(PRIZE_COLA);
+		labelPreisCola.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		panelChoose.add(labelPreisCola);
 
 		spinnerCola = new JSpinner();
+		spinnerCola.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		spinnerCola.setModel(new SpinnerNumberModel(0, 0, 4, 1));
 		panelChoose.add(spinnerCola);
 
 		JLabel chckbxNewCheckBox = new JLabel(SPRITE);
+		chckbxNewCheckBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		panelChoose.add(chckbxNewCheckBox);
 
 		labelPreisSprite = new JLabel(PRIZE_SPRITE);
+		labelPreisSprite.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		panelChoose.add(labelPreisSprite);
 
 		spinnerSprite = new JSpinner();
+		spinnerSprite.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		spinnerSprite.setModel(new SpinnerNumberModel(0, 0, 4, 1));
 		panelChoose.add(spinnerSprite);
 
@@ -211,10 +225,12 @@ public class GuiGetraenke extends JFrame {
 		panelMain.add(panelBackpay);
 
 		JLabel lblChange = new JLabel(CHANGE);
+		lblChange.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblChange.setHorizontalAlignment(SwingConstants.LEFT);
 		panelBackpay.add(lblChange);
 
 		textFieldChange = new JTextField();
+		textFieldChange.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		panelBackpay.add(textFieldChange);
 		textFieldChange.setColumns(10);
 
@@ -432,9 +448,9 @@ public class GuiGetraenke extends JFrame {
 		textField5Cent.setText("");
 		textField2Cent.setText("");
 		textField1Cent.setText("");
-		textFieldMoney.setText("");
-		textFieldChange.setText("");
-		textFieldPrice.setText("");
+		textFieldMoney.setText("0.00");
+		textFieldChange.setText("0.00");
+		textFieldPrice.setText("0.00");
 
 	}
 

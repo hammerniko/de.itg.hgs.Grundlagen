@@ -1,7 +1,6 @@
 package F3_JunitTest;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.*;
 
 public class LaengenrechnerTest {
 	
