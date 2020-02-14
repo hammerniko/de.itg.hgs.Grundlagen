@@ -8,7 +8,7 @@ public class B1_2a_GeradeZahl {
         //EINGABE
         Scanner s = new Scanner(System.in);
         System.out.print("Zu pruefende Zahl: ");
-        double zahl = s.nextDouble();
+        int zahl = s.nextInt();
         String meldung="";
         
         //VERARBEITUNG

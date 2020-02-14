@@ -5,8 +5,12 @@ public class B1_2b_Teilbarkeit {
 	public static void main(String[] args) {
 		//Eingabe
 		String meldung;
-		int zahl = 123693;
-		int teiler = 3;
+		Scanner s = new Scanner(System.in);
+		System.out.println("Bitte Zahl eingeben: ");
+		int zahl = s.nextInt();
+		
+		System.out.println("Bitte Teiler eingeben:");
+		int teiler = s.nextInt();
 		
 		//Verarbeitung
 		if(zahl%teiler==0){

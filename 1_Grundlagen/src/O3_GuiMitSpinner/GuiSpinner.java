@@ -51,6 +51,9 @@ public class GuiSpinner extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		
+		
+		
 		//2. Deklaration im Konstruktor entfernen
 		//-> sonst existieren 2 Deklarationen
 		spinner = new JSpinner();
@@ -134,6 +137,8 @@ public class GuiSpinner extends JFrame {
 		//Diese Methode wird aufgerufen wenn
 		// der Spinnerwert geaendert wird
 		System.out.println("Spinnerwert geaendert "+spinner.getValue());
+		
+		
 		
 	}
 }

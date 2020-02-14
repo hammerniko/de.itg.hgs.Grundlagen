@@ -15,7 +15,7 @@ public class B1_5a_Zeugnisnote {
         
         //Verarbeitung
         if(kommaNote<1 || kommaNote>6){
-        	zeugnisNote="Unueltig";
+        	zeugnisNote="Ungueltig";
         }
         else if(kommaNote<1.5){
             zeugnisNote="Sehr Gut";
