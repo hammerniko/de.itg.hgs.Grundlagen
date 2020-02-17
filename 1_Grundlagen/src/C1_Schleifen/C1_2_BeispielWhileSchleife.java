@@ -21,7 +21,7 @@ public class C1_2_BeispielWhileSchleife {
 		
 		while (i>1) {
 			System.out.println("hALLO");
-			i=i/5*3+1;
+			i=i/6*3+1;
 			anz++;
 		}
 			

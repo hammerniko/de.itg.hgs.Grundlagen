@@ -1,7 +1,7 @@
 package C1_Schleifen;
 import java.util.Scanner;
 /**
- * Eine Email Adresse soll darauf ŸberprŸft werden, ob
+ * Eine Email Adresse soll darauf Ueberprueft werden, ob
  * ein @-Zeichen und .de oder .com enthalten ist.
  */
 public class Email {

@@ -22,13 +22,20 @@ public class ErrateDieZahl2 {
 		// Ziehe eine Zufallszahl zwischen 1 und 100
 		zufallsZahl = (int) (Math.random() * 100 + 1);
 
+		
+		
+		
 		// VERARBEITUNG*****************************************
 		do {
+			
+			//Zahl raten
 			System.out.println("Zahl zw. 1-100:");
 			eingabeZahl = s.nextInt();
 
+			//Versuche mitzaehlen
 			anzahlVersuche++;
 
+			//Zahl prüfen und meldung genrerieren
 			if (eingabeZahl < zufallsZahl) {
 				meldung = "Zahl ist zu klein";
 			}
@@ -42,7 +49,6 @@ public class ErrateDieZahl2 {
 		} while (eingabeZahl != zufallsZahl);
 
 		// AUSGABE************************************************
-		System.out.println(meldung);
 		System.out.println("Sie hatten " + anzahlVersuche + " Versuche");
 
 	}
