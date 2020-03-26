@@ -5,54 +5,56 @@ public class BeispieleMethoden {
 	// Hauptmethode
 	public static void main(String[] args) {
 
-		
-		
-		
-		
 		System.out.println(berecheneSumme(50, 25));
 
 	}
 
-	// Methode zum Zeichnen einer Linie
+	// 1. Einfache Methode zum Zeichnen einer Linie
 	public static void zeichneLinie() {
 		System.out.println("------");
 	}
-	
-		
-	// Überladene Methode mit Übergabeparameter zum Zeichnen einer Linie
+
+	// 2. Methode mit Uebergabeparameter zum Zeichnen einer Linie
 	public static void zeichneLinie(String pZeichen) {
-			for (int i = 0; i < 5; i++) {
-				System.out.print(pZeichen);
-			}
-			System.out.println();
+		for (int i = 0; i < 5; i++) {
+			System.out.print(pZeichen);
+		}
+		System.out.println();
 
 	}
-	
-	// Überladene Methode mit Übergabeparameter zum Zeichnen einer Linie
-		public static void zeichneLinie(int anzahl) {
-				for (int i = 0; i < anzahl; i++) {
-					System.out.print("-");
-				}
-				System.out.println();
 
+	// 3. Ueberladene Methode mit Uebergabeparameter zum Zeichnen einer Linie
+	public static void zeichneLinie(int anzahl) {
+		for (int i = 0; i < anzahl; i++) {
+			System.out.print("-");
 		}
-	
-	
-	
-	
+		System.out.println();
 
+	}
+
+	// 4. Weitere Ueberladene Methode mit Uebergabeparameter zum Zeichnen einer Linie
+	public static void zeichneLinie(String zeichen, int anzahl) {
+		for (int i = 0; i < anzahl; i++) {
+			System.out.print(zeichen);
+		}
+		System.out.println();
+
+	}
+
+	// 5. Methode mit RÃ¼ckgabewert
 	public static double berecheneSumme(double zahl1, double zahl2) {
-		//eingabe
+		// eingabe
 		double ergebnis;
 
-		//verarbeitung
+		// verarbeitung
 		ergebnis = zahl1 + zahl2;
 
-		//Rückgabe
+		// Rueckgabe
 		return ergebnis;
 
 	}
 
+	// Methode mit RÃ¼ckgabewert
 	private static String ermittleZeugnisNote(double kommaNote) {
 
 		String returnStr = "";
@@ -68,33 +70,22 @@ public class BeispieleMethoden {
 		} else if (kommaNote < 5.5 && kommaNote >= 4.5) {
 			returnStr = "Mangelhaft";
 		} else if (kommaNote <= 6 && kommaNote >= 5.5) {
-			returnStr = "Ungenügend";
+			returnStr = "Ungenuegend";
 		} else {
-			returnStr = "ungültiger Notenwert";
+			returnStr = "ungueltiger Notenwert";
 		}
 
-		// TODO Auto-generated method stub
+		// Rueckgabe
 		return returnStr;
 	}
 
-	
-
-	// Ünerladene Methode mit Übergabeparameter zum Zeichnen einer Linie
-	public static void zeichneLinie(String zeichen, int anzahl) {
-		for (int i = 0; i < anzahl; i++) {
-			System.out.print(zeichen);
-		}
-		System.out.println();
-
-	}
-
-	// Methode mit Rückgabewert und Übergabeparameter für BMI
+	// Methode mit Rueckgabewert und Uebergabeparameter fuer BMI
 	public static double getBmi(double pMasseInKg, double pGroesseInMeter) {
 
 		// Verarbeitung
 		double bmi = pMasseInKg / (pGroesseInMeter * pGroesseInMeter);
 
-		// Rückgabe
+		// Rueckgabe
 		return bmi;
 	}
 
