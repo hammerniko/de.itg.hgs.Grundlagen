@@ -5,21 +5,56 @@ public class BeispieleMethoden {
 	// Hauptmethode
 	public static void main(String[] args) {
 
-		System.out.println(berecheneSumme(50, 25));
+		double summe = berecheneSumme(5, 6);
+		System.out.println(summe);
+		
+		double differenz = berechneDifferenz(10,4);
+		System.out.println(differenz);
+		
 
 	}
+
+	
+	
+	
+	public static double berechneDifferenz(double zahl1, double zahl2) {
+		//eingabe
+		double ergebnis;
+		
+		//verarbeitung
+		ergebnis = zahl1 - zahl2;
+		
+		//Rueckgabe
+		return ergebnis;
+	}
+	
+	public static int berechneDifferenz(int zahl1, int zahl2) {
+		//eingabe
+		int ergebnis;
+		
+		//verarbeitung
+		ergebnis = zahl1 - zahl2;
+		
+		//Rueckgabe
+		return ergebnis;
+	}
+
+
+
+
 
 	// 1. Einfache Methode zum Zeichnen einer Linie
 	public static void zeichneLinie() {
 		System.out.println("------");
 	}
 
-	// 2. Methode mit Uebergabeparameter zum Zeichnen einer Linie
+	// 2. Überladen Methode mit Uebergabeparameter zum Zeichnen einer Linie
 	public static void zeichneLinie(String pZeichen) {
 		for (int i = 0; i < 5; i++) {
 			System.out.print(pZeichen);
 		}
 		System.out.println();
+		
 
 	}
 

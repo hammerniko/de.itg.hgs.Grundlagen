@@ -12,7 +12,7 @@ public class Suchen {
         //**************** EINGABE
         //Zu durchsuchende Felder 
         int[] sortiertesFeld={2,5,9,13,23,43,65};
-        int[] unsortiertesFeld={3,67,1,45,7,9,34};
+        int[] unsortiertesFeld={3,67,100,1,45,100,7,9,34};
         String[] unsortierteNamen = {"Meier","Grobian","Huber"};
         String[] sortierteNamen   = {"Arendt","Burger","Maier"};
         
@@ -48,7 +48,7 @@ public class Suchen {
      */
     public static int sequentielleSuche(int[] feld, int wert){
         int k=0;
-        while (k<feld.length) {
+        while (k<feld.length-1) {
             if(feld[k]==wert){
                 return k;
                 }
@@ -86,11 +86,14 @@ public class Suchen {
         int obereGrenze=sortiertesFeld.length-1;
         
         while (untereGrenze <= obereGrenze) {
+        	
+        	
             index = (untereGrenze+obereGrenze)/2;  //index in der Mitte waehlen
             
             //Falls der Wert gefunden wurde
             if(sortiertesFeld[index]==wert)
                 return index;
+            
             //eine Haelfte waehlen, wenn der Wert noch nicht gefunden wurde
             if(wert<sortiertesFeld[index])
                 obereGrenze=index-1;
