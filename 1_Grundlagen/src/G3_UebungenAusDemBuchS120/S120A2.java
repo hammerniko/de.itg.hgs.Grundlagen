@@ -1,4 +1,4 @@
-package G3_AufgabenZuStruktogrammenBuch;
+package G3_UebungenAusDemBuchS120;
 
 public class S120A2 {
 	
