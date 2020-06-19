@@ -5,18 +5,37 @@ public class KartenMischen {
 	static String[][] kartenSpieler = new String[3][10];
 	static String[] skat = new String[2];
 	
+	
+	
+	
+	
+	
+	
+	
+	
 	public static void main(String[] args) {
+	
 		String[] karten = erstelleKarten();
+		testausgabe(karten);
+		
+		
+		
+		
+		
+		
+		
 		karten = mischeKarten(karten);
-		geben(karten);
-		ausgabeSpielkarten();
+		
+		
+    	//geben(karten);
+		//ausgabeSpielkarten();
 		
 	}//END MAIN
 
 	public static String[] erstelleKarten() {
 		String[] karten = new String[32]; 	
 		String[] kartenFarbe = {"Karo ","Herz ","Pik  ","Kreuz"};
-		String[] kartenBez = {"7     ","8     ","9     ","Bube ","Dame ","König","Zehn ","As   "};
+		String[] kartenBez = {"7     ","8     ","9     ","Bube ","Dame ","König","10   ","As   "};
 		
 		int nr = 0;
 		
@@ -26,9 +45,7 @@ public class KartenMischen {
 				karten[nr] = kartenFarbe[farbe]+" "+kartenBez[bez];
 				nr++;
 			}
-			
 		}
-		
 		
 		return karten;
 	}
@@ -98,6 +115,12 @@ public class KartenMischen {
 		skat[0]=karten[30];
 		skat[1]=karten[31];
 				
+	}
+	
+	public static void testausgabe(String[] karten) {
+		for (int i = 0; i < karten.length; i++) {
+			System.out.println(karten[i]);
+		}
 	}
 	
 	
