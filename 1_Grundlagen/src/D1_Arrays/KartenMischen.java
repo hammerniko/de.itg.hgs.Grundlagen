@@ -16,19 +16,11 @@ public class KartenMischen {
 	public static void main(String[] args) {
 	
 		String[] karten = erstelleKarten();
-		testausgabe(karten);
-		
-		
-		
-		
-		
-		
-		
+		//testausgabe(karten);
+			
 		karten = mischeKarten(karten);
-		
-		
-    	//geben(karten);
-		//ausgabeSpielkarten();
+		geben(karten);
+		ausgabeSpielkarten();
 		
 	}//END MAIN
 
