@@ -1,7 +1,7 @@
 package G1b_SortierenQuicksort;
 
 public class QuicksortUebung {
-
+ 
     public static void main(String[] args) {
         int[] unsortiert = {0,10,3,8,99,1};
         int[] sortiert = unsortiert.clone();
@@ -10,6 +10,42 @@ public class QuicksortUebung {
         ausgabeArray(unsortiert);
         ausgabeArray(sortiert);
      }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     public static int[] quicksort(int[] a, int unten, int oben){
   

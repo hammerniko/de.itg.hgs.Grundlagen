@@ -18,17 +18,45 @@ public class Quicksort {
 
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public static int[] quicksort(int[] a, int unten, int oben, boolean firstRun) {
 
-		        // Damit das original Array nicht verändert wird
-				// wird beim ersten Aufruf eine Kopie des Arrays erstellt.
-				// Der eigentliche Sortiervorgang wird dann
-				// mit der Kopie nochmal aufgerufen und gestartet
-				if (firstRun) {
-					int[] kopie = a.clone();
-					quicksort(kopie, unten, oben, false);
-					return kopie;
-				}
+		// Damit das original Array nicht verändert wird
+		// wird beim ersten Aufruf eine Kopie des Arrays erstellt.
+		// Der eigentliche Sortiervorgang wird dann
+		// mit der Kopie nochmal aufgerufen und gestartet
+		if (firstRun) {
+			int[] kopie = a.clone();
+			quicksort(kopie, unten, oben, false);
+			return kopie;
+		}
 
 		int tmp;
 		int i = unten;
@@ -54,7 +82,7 @@ public class Quicksort {
 			}
 
 		} while (i <= j);
-		
+
 		if (unten < j) {
 			quicksort(a, unten, j, false);
 		}

@@ -3,7 +3,6 @@ package G3_UebungenAusDemBuchS120;
 public class S120A3 {
 	
 	public static void main(String[] args) {
-		
 		//Einfacher 6-stelliger Beispielcode
 		int zifferncode = 123456;
 				
@@ -14,11 +13,7 @@ public class S120A3 {
 		//AUSGABE
 		System.out.println(ersteZiffer);
 		System.out.println(letzteZiffer);
-				
 	}
-
-	
-	
 	
 	private static int gibLetzteZiffer(int zifferncode) {
 		// hier beginnt Aufgabe 3 Teil 1
