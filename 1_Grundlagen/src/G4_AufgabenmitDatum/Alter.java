@@ -47,7 +47,7 @@ public class Alter {
 		int monat = calHeute.get(Calendar.MONTH);
 		int tag = calHeute.get(Calendar.DAY_OF_MONTH);
 		
-		//...vervollständigen
+		//...bitte vervollständigen
 		
 		
 		

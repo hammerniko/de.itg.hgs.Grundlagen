@@ -6,9 +6,21 @@ import java.time.Period;
 public class AlterMitLocalDate {
 
 	public static void main(String[] args) {
-		LocalDate d1 = LocalDate.of(1968,12,16);
-		System.out.println( gibAlter(d1));
+		LocalDate geburtsDatum = LocalDate.of(2001,2,5);
+		int alter =  gibAlter(geburtsDatum);
+		System.out.println(alter);
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	public static int gibAlter(LocalDate datum) {
