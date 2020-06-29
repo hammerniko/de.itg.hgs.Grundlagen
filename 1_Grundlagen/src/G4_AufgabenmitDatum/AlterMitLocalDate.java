@@ -11,18 +11,6 @@ public class AlterMitLocalDate {
 		System.out.println(alter);
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	public static int gibAlter(LocalDate datum) {
 		LocalDate dheute = LocalDate.now();
 
