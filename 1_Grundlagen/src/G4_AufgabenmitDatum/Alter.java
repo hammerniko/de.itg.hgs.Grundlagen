@@ -10,32 +10,25 @@ import java.util.GregorianCalendar;
 public class Alter {
 
 	public static void main(String[] args) throws ParseException {
-
-		// Aktuelles Datum
-		Calendar cal = new GregorianCalendar();
-		int jahr = cal.get(Calendar.YEAR);
-		int monat = cal.get(Calendar.MONTH);
-		int tag = cal.get(Calendar.DAY_OF_MONTH);
-
-		// variante 1
+		//Eingabe
 		String geburtsdatum = "03.04.2001";
 
-		// variante 2
-		int gebJahr = 2001;
-		int gebMonat = 4;
-		int gebTag = 3;
-
-		int alter1 = gibAlter(geburtsdatum);
-		int alter2 = gibAlter(gebTag, gebMonat, gebJahr);
+		//Verarbeitung
+		int alter = gibAlter(geburtsdatum);
+		
+		//Ausgabe
+		System.out.println(alter);
+		
 
 	}
 
 	private static int gibAlter(String geburtsdatum) throws ParseException {
+		
+		//Geburtsdatum
 		DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
-		Date date = formatter.parse(geburtsdatum);
-
+		Date birthdate = formatter.parse(geburtsdatum);
 		Calendar cal = new GregorianCalendar();
-		cal.setTime(date);
+		cal.setTime(birthdate);
 
 		int gebjahr = cal.get(Calendar.YEAR);
 		int gebmonat = cal.get(Calendar.MONTH);

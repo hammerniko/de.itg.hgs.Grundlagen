@@ -12,7 +12,7 @@ public class AktuellesDatum {
 	
 
 	public static String getDateAsString() {
-	   DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+	   DateFormat formatter = new SimpleDateFormat("dd.MMM.yyyy");
 	   return formatter.format(new Date());
 	}
 	

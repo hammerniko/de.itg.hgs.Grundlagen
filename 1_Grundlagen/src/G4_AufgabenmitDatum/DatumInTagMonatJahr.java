@@ -13,7 +13,7 @@ public class DatumInTagMonatJahr {
 		
 		
 		
-		System.out.println(jahr);
+		System.out.println(monat);
 
 	}
 
