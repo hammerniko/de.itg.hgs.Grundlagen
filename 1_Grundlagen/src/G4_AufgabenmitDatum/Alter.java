@@ -10,47 +10,77 @@ import java.util.GregorianCalendar;
 public class Alter {
 
 	public static void main(String[] args) throws ParseException {
-		//Eingabe
-		String geburtsdatum = "03.04.2001";
+		// Eingabe
+		String geburtsdatum = "06.07.2000";
 
-		//Verarbeitung
+		// Verarbeitung
 		int alter = gibAlter(geburtsdatum);
-		
-		//Ausgabe
-		System.out.println(alter);
-		
 
+		// Ausgabe
+		System.out.println(alter);
 	}
 
 	private static int gibAlter(String geburtsdatum) throws ParseException {
-		
-		//Geburtsdatum
+		// Geburtsdatum
 		DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
 		Date birthdate = formatter.parse(geburtsdatum);
-		Calendar cal = new GregorianCalendar();
-		cal.setTime(birthdate);
+		Calendar calGeb = new GregorianCalendar();
+		calGeb.setTime(birthdate);
 
-		int gebjahr = cal.get(Calendar.YEAR);
-		int gebmonat = cal.get(Calendar.MONTH);
-		int gebtag = cal.get(Calendar.DAY_OF_MONTH);
+		int gebjahr = calGeb.get(Calendar.YEAR);
+		int gebmonat = calGeb.get(Calendar.MONTH)+1;
+		int gebtag = calGeb.get(Calendar.DAY_OF_MONTH);
+		
+		
+		
 
 		// Aktuelles Datum
 		Calendar calHeute = new GregorianCalendar();
 		int jahr = calHeute.get(Calendar.YEAR);
-		int monat = calHeute.get(Calendar.MONTH);
+		int monat = calHeute.get(Calendar.MONTH)+1;
 		int tag = calHeute.get(Calendar.DAY_OF_MONTH);
 		
-		//...bitte vervollständigen
+		//Testausgabe
+		System.out.println("Geb Datum:"+gebtag+"."+gebmonat+"."+gebjahr);
+		System.out.println("Heute:"+tag+"."+monat+"."+jahr);
+
+		// Prüfen auf Gültigkeit
+		if (gebjahr > jahr) {
+			System.out.println("Jahr ungültig");
+			return -1;
+		}
+
+		if (monat < 1 || monat > 12) {
+			System.out.println("Monat ungültig");
+			return -1;
+		}
+
+		if (tag < 1 || tag > 31) {
+			System.out.println("Tag ungültig");
+			return -1;
+		}
+
+		// Alter bestimmen
+		int alter;
+		
+		if(gebmonat<monat) {
+			alter = jahr-gebjahr;
+		}
+		else if(gebmonat>monat) {
+			alter = jahr-gebjahr-1;
+		}
+		else {
+			if(gebtag>tag) {
+				alter = jahr-gebjahr-1;
+			}
+			else {
+				alter = jahr-gebjahr;
+			}
+		}
+
 		
 		
-		
-
-		return 0;
-	}
-
-	private static int gibAlter(int pTag, int pMonat, int pJahr) {
-
-		return 0;
+		return alter;
 	}
 
 }
