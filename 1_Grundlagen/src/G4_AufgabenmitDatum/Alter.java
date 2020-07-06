@@ -28,21 +28,18 @@ public class Alter {
 		calGeb.setTime(birthdate);
 
 		int gebjahr = calGeb.get(Calendar.YEAR);
-		int gebmonat = calGeb.get(Calendar.MONTH)+1;
+		int gebmonat = calGeb.get(Calendar.MONTH) + 1;
 		int gebtag = calGeb.get(Calendar.DAY_OF_MONTH);
-		
-		
-		
 
 		// Aktuelles Datum
 		Calendar calHeute = new GregorianCalendar();
 		int jahr = calHeute.get(Calendar.YEAR);
-		int monat = calHeute.get(Calendar.MONTH)+1;
+		int monat = calHeute.get(Calendar.MONTH) + 1;
 		int tag = calHeute.get(Calendar.DAY_OF_MONTH);
-		
-		//Testausgabe
-		System.out.println("Geb Datum:"+gebtag+"."+gebmonat+"."+gebjahr);
-		System.out.println("Heute:"+tag+"."+monat+"."+jahr);
+
+		// Testausgabe
+		System.out.println("Geb Datum:" + gebtag + "." + gebmonat + "." + gebjahr);
+		System.out.println("Heute:" + tag + "." + monat + "." + jahr);
 
 		// Prüfen auf Gültigkeit
 		if (gebjahr > jahr) {
@@ -62,24 +59,19 @@ public class Alter {
 
 		// Alter bestimmen
 		int alter;
-		
-		if(gebmonat<monat) {
-			alter = jahr-gebjahr;
-		}
-		else if(gebmonat>monat) {
-			alter = jahr-gebjahr-1;
-		}
-		else {
-			if(gebtag>tag) {
-				alter = jahr-gebjahr-1;
-			}
-			else {
-				alter = jahr-gebjahr;
+
+		if (gebmonat < monat) {
+			alter = jahr - gebjahr;
+		} else if (gebmonat > monat) {
+			alter = jahr - gebjahr - 1;
+		} else {
+			if (gebtag > tag) {
+				alter = jahr - gebjahr - 1;
+			} else {
+				alter = jahr - gebjahr;
 			}
 		}
 
-		
-		
 		return alter;
 	}
 
