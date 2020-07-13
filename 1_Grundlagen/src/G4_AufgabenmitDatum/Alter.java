@@ -38,8 +38,8 @@ public class Alter {
 		int tag = calHeute.get(Calendar.DAY_OF_MONTH);
 
 		// Testausgabe
-		System.out.println("Geb Datum:" + gebtag + "." + gebmonat + "." + gebjahr);
-		System.out.println("Heute:" + tag + "." + monat + "." + jahr);
+		//System.out.println("Geb Datum:" + gebtag + "." + gebmonat + "." + gebjahr);
+		//System.out.println("Heute:" + tag + "." + monat + "." + jahr);
 
 		// Prüfen auf Gültigkeit
 		if (gebjahr > jahr) {

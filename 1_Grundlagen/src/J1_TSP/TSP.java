@@ -45,6 +45,24 @@ public class TSP {
 
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	/**
 	 * Kopiert ein Array Wert fuer Wert und gibt die Kopie zurueck
 	 * 
