@@ -2,6 +2,7 @@ package H1_GUIEinfachZeichnen;
 
 import java.awt.Color;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -13,15 +14,17 @@ public class Anzeige extends JFrame {
 	//Komponenten
 	MeinPanel cp;
 
+
 	//Konstruktor
 	public Anzeige(){
 		
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setTitle(TITEL);
-		
+			
 		cp = new MeinPanel();
 		setContentPane(cp);
 		
 	}
+	
 	
 }

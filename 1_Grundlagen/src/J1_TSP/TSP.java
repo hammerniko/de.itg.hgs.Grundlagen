@@ -13,12 +13,12 @@ public class TSP {
 	static final int ANZAHL = 5;
 	static final int DASH = 999;
 	static boolean debug = true;
-	static int[][] matrix = new int[ANZAHL][ANZAHL];
-	static int[][] matrixCopy = new int[ANZAHL][ANZAHL];
-	static int[][] penalties = new int[ANZAHL][ANZAHL];
-	static int min;
-	static String loesung = "";
-	static int distanz = 0;
+	public static int[][] matrix = new int[ANZAHL][ANZAHL];
+	public static int[][] matrixCopy = new int[ANZAHL][ANZAHL];
+	public static int[][] penalties = new int[ANZAHL][ANZAHL];
+	public static int min;
+	public static String loesung = "";
+	public static int distanz = 0;
 
 	public static void main(String[] args) {
 		// Eingabe Init

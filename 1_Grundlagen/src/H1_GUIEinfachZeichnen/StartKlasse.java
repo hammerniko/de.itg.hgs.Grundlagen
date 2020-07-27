@@ -8,7 +8,12 @@ public class StartKlasse {
 		
 		//Objekt der Anzeige
 		Anzeige meineAnzeige = new Anzeige();
+		
+		
+		
+		
 		meineAnzeige.setVisible(true);
+		
 		
 		
 
