@@ -1,7 +1,7 @@
 package D1_Arrays;
 
 /**
- * Um eine Kommunikation einfach zuverschlüsseln, wird eine Code Tabelle
+ * Um eine Kommunikation einfach zu verschlüsseln, wird eine Code Tabelle
  * verwendet. In der Methode iniCodes() wird diese initialisiert.
  * Die Methode ausgabeCodes() gibt die Codetabelle aus.
  * Sowohl Sender als auch Empfänger müssen die gleich Codetabelle verwenden.
