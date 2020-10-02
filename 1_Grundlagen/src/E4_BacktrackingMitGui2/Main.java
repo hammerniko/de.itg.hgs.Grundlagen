@@ -14,6 +14,9 @@ import java.awt.Graphics;
  *  Recommended Maze Maker: https://hereandabove.com/maze/mazeorig.form.html
  *  Add start and finish with GIMP, Paint.net, ...
  *  
+ *  - David Specht
+ *  - 02.10.2020
+ *  
  ********************************************************************/
 
 import java.awt.image.BufferedImage;
