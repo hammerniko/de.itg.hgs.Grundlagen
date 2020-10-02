@@ -20,7 +20,19 @@ public class RotiereCodeTabelle {
 
 		initCodes();
 		ausgabeCodes();
+		rotateCodes();
+		ausgabeCodes();
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		String nachricht = "Daniel 00 Singen und 01 Fritz";
 		ausgabeNachricht(nachricht);
 
@@ -58,17 +70,45 @@ public class RotiereCodeTabelle {
 		codesNeu = null;
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	private static void ausgabeCodes() {
-		for (int i = 0; i < codes.length; i++) {
+		
+		for (int y = 0; y < codes.length; y++) {
 			System.out.println();
-			for (int j = 0; j < codes.length; j++) {
-				System.out.print(i + "" + j + " " + codes[j][i] + "\t");
+			for (int x = 0; x < codes.length; x++) {
+				System.out.print(y + "" + x + " " + codes[x][y] + "\t");
 			}
 		}
 		System.out.println("\n---------------------------------------------------------");
 
 	}
 
+	
+	
+	
+	
+	
+	
+	
 	private static void initCodes() {
 		codes[0][0] = "gehe zu Ort        ";
 		codes[0][1] = "warte Minuten      ";
