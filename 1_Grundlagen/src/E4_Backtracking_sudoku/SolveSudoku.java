@@ -62,13 +62,14 @@ public class SolveSudoku {
 			}
 		}
 
+		//Wenn kein Freies Feld mehr vorhanden
 		return true;
 
 	}
 
 	private static boolean istZahlErlaubt(int y, int x, int z) {
 
-		if (s[y][x] == 0 && pruefeReihe(y, z) && pruefeSpalte(x, z) && pruefeQuadrat(y, x, z)) {
+		if (pruefeReihe(y, z) && pruefeSpalte(x, z) && pruefeQuadrat(y, x, z)) {
 			return true;
 		}
 
