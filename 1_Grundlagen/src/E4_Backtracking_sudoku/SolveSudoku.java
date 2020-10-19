@@ -3,7 +3,7 @@ package E4_Backtracking_sudoku;
 public class SolveSudoku {
 
 	static int[][] s = { 
-			{ 8, 0, 0, 0, 0, 0, 0, 0, 0 }, 
+			{ 2, 0, 0, 0, 0, 0, 0, 0, 0 }, 
 			{ 0, 0, 3, 6, 0, 0, 0, 0, 0 }, 
 			{ 0, 7, 0, 0, 9, 0, 2, 0, 0 },
 			{ 0, 5, 0, 0, 0, 7, 0, 0, 0 }, 
@@ -40,13 +40,11 @@ public class SolveSudoku {
 						//Wenn TL funktioniert
 						if (istZahlErlaubt(y, x, zahl)) {
 							
-							
 							//Wähle TL
 							s[y][x] = zahl;
 
 							//Wenn Ziel erreicht
 							if (solveSudoku()) {
-								
 								//Lösung gefunden
 								return true;
 							} else {
