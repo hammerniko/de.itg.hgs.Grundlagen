@@ -28,19 +28,23 @@ public class TestSerializeObject implements Serializable {
 		//testobjekt erzeugen
 		TestSerializeObject t1 = new TestSerializeObject(1, "Max");
 		
-		//Objekt speichern und laden
+		
 		try {
 			
+			//Objekt speichern im angegebenen Package
 			//Evtl Pfad angeben
 			File file = new File("src//P_Seriealisieren//meineTestObjekte.to");
 			FileOutputStream fos = new FileOutputStream(file);
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			oos.writeObject(t1);
 			
+			
+			//Objekt aus Package laden 
 			FileInputStream fis = new FileInputStream(file);
 			ObjectInputStream ois = new ObjectInputStream(fis);
 			TestSerializeObject loaded = (TestSerializeObject) ois.readObject();
 			
+			//Testausgabe des geladenen Objektes
 			System.out.println(loaded.nummer);
 			System.out.println(loaded.name);
 			
