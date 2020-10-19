@@ -27,8 +27,6 @@ public class SolveSudoku {
 	}
 
 	private static boolean solveSudoku() {
-
-		
 		//Suche leeres Feld mit dem Wert 0
 		for (int y = 0; y < s.length; y++) {
 			for (int x = 0; x < s.length; x++) {
@@ -39,7 +37,7 @@ public class SolveSudoku {
 						
 						//Wenn TL funktioniert
 						if (istZahlErlaubt(y, x, zahl)) {
-							
+
 							//Wähle TL
 							s[y][x] = zahl;
 
@@ -59,10 +57,8 @@ public class SolveSudoku {
 				}
 			}
 		}
-
 		//Wenn kein Freies Feld mehr vorhanden
 		return true;
-
 	}
 
 	private static boolean istZahlErlaubt(int y, int x, int z) {
@@ -91,6 +87,13 @@ public class SolveSudoku {
 
 	}
 
+	
+	
+	
+	
+	
+	
+	
 	private static boolean pruefeSpalte(int spalte, int zahl) {
 		for (int j = 0; j < s.length; j++) {
 			if (s[j][spalte] == zahl) {
@@ -109,6 +112,21 @@ public class SolveSudoku {
 		return true;
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	private static void ausgabeSudoku() {
 		int wx = 0;
 		// Erste Trennlinie
