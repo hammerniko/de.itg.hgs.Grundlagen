@@ -37,7 +37,7 @@ public class SolveSudoku {
 						
 						//Wenn TL funktioniert
 						if (istZahlErlaubt(y, x, zahl)) {
-	
+
 							//Wähle TL
 							s[y][x] = zahl;
 
