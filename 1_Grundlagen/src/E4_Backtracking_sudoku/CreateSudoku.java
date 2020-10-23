@@ -1,63 +1,113 @@
 package E4_Backtracking_sudoku;
 
-public class SolveSudoku {
+import java.util.ArrayList;
+import java.util.Random;
 
-	static int[][] s = { 
-			{ 8, 0, 0, 0, 0, 0, 0, 0, 0 }, 
-			{ 0, 0, 3, 6, 0, 0, 0, 0, 0 }, 
-			{ 0, 7, 0, 0, 9, 0, 2, 0, 0 },
-			{ 0, 5, 0, 0, 0, 7, 0, 0, 0 }, 
-			{ 0, 0, 0, 0, 4, 5, 7, 0, 0 }, 
-			{ 0, 0, 0, 1, 0, 0, 0, 3, 0 },
-			{ 0, 0, 1, 0, 0, 0, 0, 6, 8 }, 
-			{ 0, 0, 8, 5, 0, 0, 0, 1, 0 }, 
-			{ 0, 9, 0, 0, 0, 0, 4, 0, 0 } };
+public class CreateSudoku {
+
+	static int[][] s = { { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+			{ 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+			{ 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0 } };
 
 	public static void main(String[] args) {
 
-		// Spielfeld anzeigen
+		// Fülle erste Reihe mit einer zufälligen Folge
+		// von 1-9 -> Viele Varianten möglich
+		initFirstRow();
+
+		// Ausgangs Spielfeld anzeigen
 		ausgabeSudoku();
 
 		// Lösen
 		solveSudoku();
 
-		// Spielfeld anzeigen
+		// Gelöstes Spielfeld anzeigen
+		ausgabeSudoku();
+
+		// Zufällig Felder Löschen
+		deleteFields(50);
+
+		// Ausgabe des Rätsels
 		ausgabeSudoku();
 
 	}
 
+	private static void deleteFields(int anz) {
+
+		// 81 Felder gibt es insgesamt
+		// 17 Felder benötigt ein Sudoku mindestes
+		if (anz <= (81 - 17) && anz >= 5) {
+
+			// Lösche Zufällig Felder aus dem gelösten
+			// Sudoku
+			Random r = new Random();
+
+			// Schweres Sudoku
+			for (int i = 0; i < anz; i++) {
+				int x, y;
+
+				do {
+					y = r.nextInt(9);
+					x = r.nextInt(9);
+				} while (s[y][x] == 0);
+
+				s[y][x] = 0;
+			}
+		}
+	}
+
+	private static void initFirstRow() {
+		ArrayList<Integer> zahlen = new ArrayList<Integer>();
+		int zahl = 0;
+		for (int i = 0; i < s.length; i++) {
+
+			do {
+				zahl = (int) (Math.random() * 9 + 1);
+			} while (zahlen.contains(zahl));
+
+			zahlen.add(i, zahl);
+
+			// Zahl in Sudoku-Feld reinschreiben
+			s[0][i] = zahl;
+
+		}
+		System.out.println("Ertse Reihe" + zahlen.toString());
+
+	}
+
 	private static boolean solveSudoku() {
-		//Suche leeres Feld mit dem Wert 0
+		// Suche zufällig leeres Feld mit dem Wert 0
+
 		for (int y = 0; y < s.length; y++) {
 			for (int x = 0; x < s.length; x++) {
 				if (s[y][x] == 0) {
-					
-					//Prüfe Zahl (alle Zahlen) an freier Stelle
+
+					// Prüfe Zahl (alle Zahlen) an freier Stelle
 					for (int zahl = 1; zahl <= 9; zahl++) {
-						
-						//Wenn TL funktioniert
+
+						// Wenn TL funktioniert
 						if (istZahlErlaubt(y, x, zahl)) {
-	
-							//Wähle TL
+
+							// Wähle TL
 							s[y][x] = zahl;
 
-							//Wenn Ziel erreicht
+							// Wenn Ziel erreicht
 							if (solveSudoku()) {
-								//Lösung gefunden
+								// Lösung gefunden
 								return true;
 							} else {
-								
-								//Setze Falsche Teillösung zurück
+
+								// Setze Falsche Teillösung zurück
 								s[y][x] = 0;
 							}
 						}
 					}
-					//Sackgasse
+					// Sackgasse
 					return false;
 				}
 			}
 		}
-		//Wenn kein Freies Feld mehr vorhanden
+		// Wenn kein Freies Feld mehr vorhanden
 		return true;
 	}
 
@@ -87,13 +137,6 @@ public class SolveSudoku {
 
 	}
 
-	
-	
-	
-	
-	
-	
-	
 	private static boolean pruefeSpalte(int spalte, int zahl) {
 		for (int j = 0; j < s.length; j++) {
 			if (s[j][spalte] == zahl) {
@@ -112,21 +155,6 @@ public class SolveSudoku {
 		return true;
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	private static void ausgabeSudoku() {
 		int wx = 0;
 		// Erste Trennlinie
@@ -144,7 +172,13 @@ public class SolveSudoku {
 				if (wx == 0 || wx == 3 || wx == 6) {
 					System.out.print("|");
 				}
-				System.out.print(" " + s[y][x] + " ");
+				if (s[y][x] != 0) {
+					System.out.print(" " + s[y][x] + " ");
+				}
+				else {
+					System.out.print(" " + " " + " ");
+				}
+				
 				wx++;
 				if (wx >= 9) {
 					System.out.print("|");
