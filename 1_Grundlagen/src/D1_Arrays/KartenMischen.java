@@ -16,7 +16,7 @@ public class KartenMischen {
 	public static String[] erstelleKarten() {
 		String[] karten = new String[32]; 	
 		String[] kartenFarbe = {"Karo ","Herz ","Pik  ","Kreuz"};
-		String[] kartenBez = {"7     ","8     ","9     ","Bube ","Dame ","König","Zehn ","As   "};
+		String[] kartenBez = {"7     ","8     ","9     ","Bube ","Dame ","Koenig","Zehn ","As   "};
 		
 		int nr = 0;
 		
