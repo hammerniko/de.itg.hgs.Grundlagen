@@ -11,7 +11,7 @@ public class CreateSudoku {
 
 	public static void main(String[] args) {
 
-		// Fülle erste Reihe mit einer zufälligen Folge
+		//Fülle erste Reihe mit einer zufälligen Folge
 		// von 1-9 -> Viele Varianten möglich
 		initFirstRow();
 
