@@ -27,7 +27,11 @@ public class KartenMischen {
 	public static String[] erstelleKarten() {
 		String[] karten = new String[32]; 	
 		String[] kartenFarbe = {"Karo ","Herz ","Pik  ","Kreuz"};
+<<<<<<< HEAD
 		String[] kartenBez = {"7     ","8     ","9     ","Bube ","Dame ","König","10   ","As   "};
+=======
+		String[] kartenBez = {"7     ","8     ","9     ","Bube ","Dame ","Koenig","Zehn ","As   "};
+>>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.Grundlagen.git
 		
 		int nr = 0;
 		
