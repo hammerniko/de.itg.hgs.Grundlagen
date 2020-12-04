@@ -1,7 +1,7 @@
 # Prisoner's Dilemma
 
 ## Beschreibung
-Bei diesem Spiel treten immer sind 2 Gefangene bei einem
+Bei diesem Spiel sind 2 Gefangene bei einem
 Verhör. Die Gefangenen werden unabhängig 400 mal zu einem Tathergang befragt, an dem beide beteiligt waren. 
 
 ## Szenarien
