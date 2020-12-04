@@ -14,6 +14,11 @@ public class PrisonerHammer {
 	 * @param pGegner
 	 * @return
 	 */
+	
+	
+	
+	
+	
 	public static boolean entscheidung(boolean[] pIch, boolean[] pGegner) {
 		//true  verraten
 		//false nicht verraten

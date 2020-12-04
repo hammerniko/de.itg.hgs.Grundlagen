@@ -12,6 +12,17 @@ public class Main {
 		return PrisonerNoah.entscheideAnastasia(pIch, pGegner);
 	}
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	private static boolean[] getArray(ArrayList<Boolean> playerOne) {
 		Boolean[] _b1 = new Boolean[playerOne.size()];
 		playerOne.toArray(_b1);

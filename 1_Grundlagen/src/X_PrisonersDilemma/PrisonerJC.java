@@ -7,6 +7,35 @@ public class PrisonerJC {
 
 	
 		public static boolean entscheidung(boolean[] spieler, boolean[] gegner) {
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			if (spieler.length == 0) {
 				return true;
 			}
