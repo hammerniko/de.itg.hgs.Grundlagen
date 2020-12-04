@@ -13,11 +13,14 @@ Verhör. Die Gefangenen werden unabhängig 400 mal zu einem Tathergang befragt, an
 Entwickeln sie einen einen Algorithmus welcher `true` oder `false` zurückgibt.
 Dabei steht `true` für Verrat. Als Entscheidungsgrundlage verwenden Sie ein bool'sches Array aller Entscheidungen von g1 (Sie selbst) und g2.
 
-```
+```java
 class Prisoner_MEINNAME{
-	public static boolean entscheidung(pIch[]:boolean, pGegner[]:boolean{
+	public static boolean entscheidung(pIch[]:boolean, pGegner[]:boolean){
+		boolean meineEntscheidung = true;
 
 		//... Ihr Algorithmus
+		
+		return meineEntscheidung;
 	}
 }
 ```
