@@ -1,7 +1,7 @@
 package X_PrisonersDilemma;
 import java.util.Random;
 
-public class PrisonerNoah {
+public class PrisonerNoah extends Prisoner {
 
 	// true / true 0/0
 	// false / true 0/2
@@ -20,7 +20,7 @@ public class PrisonerNoah {
 	}
 	
 	
-	public static boolean entscheideAnastasia(boolean[] pIch, boolean[] pGegner) {
+	public boolean entscheidung(boolean[] pIch, boolean[] pGegner) {
 
 		Random r = new Random();
 		int random = r.nextInt(10);

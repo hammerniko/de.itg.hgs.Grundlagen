@@ -3,10 +3,10 @@ package X_PrisonersDilemma;
 import java.util.Random;
 import java.util.Random;
 
-public class PrisonerJC {
+public class PrisonerJC extends Prisoner {
 
 	
-		public static boolean entscheidung(boolean[] spieler, boolean[] gegner) {
+		public boolean entscheidung(boolean[] spieler, boolean[] gegner) {
 			
 			
 			

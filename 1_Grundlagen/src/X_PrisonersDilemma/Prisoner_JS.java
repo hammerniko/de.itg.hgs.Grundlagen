@@ -1,8 +1,8 @@
 package X_PrisonersDilemma;
 
-public class Prisoner_JS {
+public class Prisoner_JS extends Prisoner {
 
-	public static boolean entscheidung(boolean[] pIch, boolean[] pGegner) {
+	public boolean entscheidung(boolean[] pIch, boolean[] pGegner) {
 
 		int[] array = new int[pIch.length];
 		int zwischenwert = 0;

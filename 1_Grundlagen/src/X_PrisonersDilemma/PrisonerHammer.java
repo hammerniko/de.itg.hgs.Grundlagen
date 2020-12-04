@@ -2,7 +2,7 @@ package X_PrisonersDilemma;
 
 import E1_Methoden.ggT;
 
-public class PrisonerHammer {
+public class PrisonerHammer extends Prisoner {
 	
 	/**
 	 * Wertung: Verräter beklommt 2 Punkte 
@@ -19,7 +19,7 @@ public class PrisonerHammer {
 	
 	
 	
-	public static boolean entscheidung(boolean[] pIch, boolean[] pGegner) {
+	public boolean entscheidung(boolean[] pIch, boolean[] pGegner) {
 		//true  verraten
 		//false nicht verraten
 		int maxIterates = 400;

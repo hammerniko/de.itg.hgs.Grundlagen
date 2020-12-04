@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class Main {
 
 	public static boolean entscheidung1(boolean[] pIch, boolean[] pGegner) {
-		return Prisoner_JS.entscheidung(pIch, pGegner);
+		return Prisoner_Andre.entscheidung(pIch, pGegner);
 	}
 	
 	public static boolean entscheidung2(boolean[] pIch, boolean[] pGegner) {
-		return PrisonerNoah.entscheideAnastasia(pIch, pGegner);
+		return Prisoner_BenjaminS.entscheidung(pIch, pGegner);
 	}
 	
 	

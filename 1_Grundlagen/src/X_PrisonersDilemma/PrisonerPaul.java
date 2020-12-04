@@ -1,9 +1,8 @@
 package X_PrisonersDilemma;
 
-
-public class PrisonerPaul {
+public class PrisonerPaul extends Prisoner {
 	
-	public static boolean entscheidung(boolean[] pIch, boolean[] pGegner) {
+	public boolean entscheidung(boolean[] pIch, boolean[] pGegner) {
 		//true verraten
 		//false nicht verraten
 		// Wertung:         PIch  |    pGegner  | punkteIch  | punkteGegner
