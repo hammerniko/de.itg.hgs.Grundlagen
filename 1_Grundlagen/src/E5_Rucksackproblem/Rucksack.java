@@ -16,8 +16,9 @@ public class Rucksack {
 	//Ergebnis für jeden Volumenwert speichern
 	static int matrix[][];
 	
-	//Initialisieren der Matrix mit -1
-	//-1 ist ein Wert, der bei den Gegenständen nicht vorkommen kann
+	/*Initialisieren der Matrix mit -1
+	 *-1 ist ein Wert, der bei den Gegenständen nicht vorkommen kann
+	 */
 	static int[][] initMatrix() {
 		int[][] m = new int[rVol+1][gVol.length];
 		
@@ -31,7 +32,7 @@ public class Rucksack {
 	}
 
 	//rekursiver Algorithmus
-	static int pack(int restVol, int i) {
+	static int packen(int restVol, int i) {
 
 		if (i < gVol.length) {
 			
@@ -41,12 +42,12 @@ public class Rucksack {
 			}
 		
 			// Nicht einpacken
-			int nicht = pack(restVol, i + 1);
+			int nicht = packen(restVol, i + 1);
 
 			//Einpacken
 			int drin = 0;
 			if (restVol - gVol[i] >= 0) {
-				drin = gWert[i]+pack(restVol-gVol[i], i+1);
+				drin = gWert[i]+packen(restVol-gVol[i], i+1);
 			}
 			
 			if(nicht>drin) {
@@ -93,7 +94,7 @@ public class Rucksack {
 		matrix = initMatrix();
 
 		//Den Rucksack packen
-		int erg = pack(rVol, 0);
+		int erg = packen(rVol, 0);
 		System.out.println(erg);
 
 		//Zwischenspeicher ausgeben
