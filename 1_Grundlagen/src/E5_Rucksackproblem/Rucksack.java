@@ -41,11 +41,13 @@ public class Rucksack {
 				return matrix[restVol][i];
 			}
 		
-			// Nicht einpacken
+			// Nicht einpacken -> gehe zum nächsten Gegenstand
 			int nicht = packen(restVol, i + 1);
 
 			//Einpacken
 			int drin = 0;
+			
+			//Wenn der Gegenstand noch reinpasst
 			if (restVol - gVol[i] >= 0) {
 				drin = gWert[i]+packen(restVol-gVol[i], i+1);
 			}
