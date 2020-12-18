@@ -22,5 +22,5 @@ Erstellen Sie ein Struktogramm fuer die Methoden `packen(...)` und `findG(...)` 
 Struktorizer.
 
 ## Fragen
-1. Dynamische Programmierung wird in dem Video erwähnt. Erklären Sie den Begriff.
-2. Erklären Sie den Begriff Rekursion
+1. Dynamische Programmierung wird in dem Video erwaehnt. Erklaeren Sie den Begriff.
+2. Erklaeren Sie den Begriff Rekursion
