@@ -18,7 +18,7 @@ Informieren Sie sich über das Rucksack Problem. Schauen Sie dazu folgendes
 Programmieren Sie das gezeigte Problem in Java. Testen Sie Ihren Algorithmus.
 
 ## Dokumentation `20 min`
-Erstellen Sie ein Struktogramm für den Algorithmus mit dem Programm
+Erstellen Sie ein Struktogramm fuer die Methoden `packen(...)` und `findG(...)` mit dem Programm
 Struktorizer.
 
 ## Fragen
