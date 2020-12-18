@@ -83,19 +83,23 @@ public class Rucksack {
 				System.out.println(i+" ");
 				aktWert = aktWert-gVol[i];
 			}
-			
+		
 		}
 		
 	}
 
 	public static void main(String[] args) {
+		//Zwischenspeicher initialisieren
 		matrix = initMatrix();
+
+		//Den Rucksack packen
 		int erg = pack(rVol, 0);
-		
 		System.out.println(erg);
 
+		//Zwischenspeicher ausgeben
 		printGrid(matrix);
 		
+		//Die gepackten Gegenstnde ausgeben
 		findG(erg);
 	}
 	
