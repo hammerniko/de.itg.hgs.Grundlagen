@@ -5,29 +5,33 @@ import java.util.ArrayList;
 public class Login {
 
 	public static void main(String[] args) {
-		// Teste login mit Quersumme 15
-		System.out.println(login("x002"));
-		System.out.println(login("y001"));
-		System.out.println(login("z000"));
-		System.out.println(login("6801"));
-		System.out.println(login("9213"));
 
-		generateLoginKeys("x002");
+		// zeigeAlleAssciiCodes();
+
+		// Teste login mit Quersumme 15
+		// System.out.println(login("x002"));
+		// System.out.println(login("y001"));
+		// System.out.println(login("z000"));
+		// System.out.println(login("6801"));
+		// System.out.println(login("9213"));
+
+		generateLoginKeys(20);
 
 	}
 
+	
 	public static boolean login(String key) {
 
 		boolean loginOk = false;
 
-		// Länge prüfen
+		// Laenge pruefen
 		if (key.length() != 4) {
 			return false; // Abbruch
 		}
-	 
-		// Prüfen obe Prüfsumme stimmt
-		// Minimale Prüfsumme = 48+48+48+48 = 192 -> 0000
-		// Maximale Prüfsumme = 122+122+122+122 = 488 -> zzzz
+
+		// Pruefen obe Pruefsumme stimmt
+		// Minimale Pruefsumme = 48+48+48+48 = 192 -> 0000
+		// Maximale Pruefsumme = 122+122+122+122 = 488 -> zzzz
 		// System.out.println(summeASCIIZahlen);
 
 		if (getPruefsumme(key) == 266) {
@@ -37,18 +41,38 @@ public class Login {
 		return loginOk;
 	}
 
-	public static void generateLoginKeys(String code) {
+	public static void generateLoginKeys(int anzahl) {
 
-		int summeASCIIZahlen = getPruefsumme(code);
-		System.out.println("Prüfsumme des Codes ist:" + summeASCIIZahlen);
+		// generiere zufaelligen Pruefsumme zw. 192-488
+		int pruefsumme = (int) (Math.random() * (488 - 192) + 192);
+		System.out.println("Prüfumme:"+pruefsumme);
 
-		// Finde alle Kombinationen für welche die Quersumme
-		// von 4 Zahlen = x ist und gebe sie aus
+		// Alle Ziffern 62
+		int ziffern[] = { 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77,
+				78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107,
+				108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122 };
 
-		//Liste für zu erstellende LoginKeys
-		ArrayList<Integer> keys = new ArrayList<Integer>();
-		int ziffern[] = {48,49,50,51};
-		
+		// Liste fuer zu erstellende LoginKeys
+		ArrayList<char[]> keys = new ArrayList<char[]>();
+
+		// erstelle 4 zufällige Positionen aus der Ziffernliste
+		int z = 0; // Position im Ziffernarray
+		int assci = 0; // ascii Wert an der Position z
+		char[] chars = new char[4]; // CharArray für generierten Key
+
+		do {
+
+			for (int i = 0; i < 4; i++) {
+				z = (int) (Math.random() * ziffern.length - 1);
+				int ascii = ziffern[z];
+				chars[i] = (char) ascii;
+			}
+
+			keys.add(chars);
+			System.out.println(chars);
+			
+		} while (keys.size() < anzahl);
+
 		
 
 	}
@@ -64,13 +88,22 @@ public class Login {
 		// a -> 97, b -> 98 ...
 		int[] asciiValues = new int[chars.length];
 		int summeASCIIZahlen = 0;
-		
+
 		for (int i = 0; i < chars.length; i++) {
 			asciiValues[i] = chars[i];
 
 			summeASCIIZahlen = summeASCIIZahlen + asciiValues[i];
 		}
 		return summeASCIIZahlen;
+	}
+
+	public static void zeigeAlleAssciiCodes() {
+		char z;
+		for (int i = 0; i < 127; i++) {
+			z = (char) i;
+
+			System.out.println(i + " -> " + z);
+		}
 	}
 
 }
