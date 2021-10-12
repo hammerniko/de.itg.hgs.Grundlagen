@@ -4,25 +4,26 @@ public class A31_EinfuehrungVariablen {
 
 	public static void main(String[] args) {
 
-		//EINGABE
+		//***** EINGABE
 		//Deklaration 
-		double zahl2;   //Kommazahl IEEE754 64Bit 
-		double zahl3;
+		double zahl1;   //Kommazahl IEEE754 64Bit 
+		double zahl2;
 		double summe;
-		
-		
+				
 		//Initialisierung, Wertzuweisung
-		zahl2 = -3.4;
-		zahl3 = 5.5;
+		zahl1 = -3.4;
+		zahl2 = 5.5;
 		
 		
-		//VERARBEITUNG
-		summe = zahl2 + zahl3;
+		//*** VERARBEITUNG
+		summe = zahl1 + zahl2;
 		
 		
 		
-		//AUSGABE
-		System.out.println(summe);
+		//***  AUSGABE
+		System.out.println("Zahl1:"+zahl1);
+		System.out.println("Zahl2:"+zahl2);
+		System.out.println("Summe:"+summe);
 		
 		
 		
