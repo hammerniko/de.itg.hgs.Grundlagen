@@ -73,7 +73,7 @@ public class A61b_Uebung_Modulo_Getraenkeautomat {
 		
 		 
 		
-	}
+	}//Ende main
 	
 	public static double runden(double zahl){
 		zahl = zahl * 100;
@@ -82,5 +82,6 @@ public class A61b_Uebung_Modulo_Getraenkeautomat {
 		double neueZahl = (double) z/100;
 				
 		return neueZahl;
-	}
-}
+	}//Ende runden
+	
+}//Ende class

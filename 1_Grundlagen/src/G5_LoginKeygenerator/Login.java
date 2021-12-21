@@ -1,25 +1,45 @@
 package G5_LoginKeygenerator;
 
 import java.util.ArrayList;
+import java.util.Set;
 
+/**
+ * Fuer eine Website mit Feedbacks werden regelmässig neue Passwoerter fuer
+ * ganze Gruppen benoetigt. Das Passwort soll sicherstellen, dass jedes Feedback
+ * nur einmalig ausgefuehrt werden kann.
+ * 
+ * Der Code soll 4 Stellen haben. Gueltige Ziffern sind A-Z, a-z und 1-9.
+ * 
+ * Da über die Login-Methode alle Passwoerter ueberpruefbar sein sollen, ist ein
+ * Algorithmus dafuer notwendig. Hier sollen Codes mit der gleichen Quersumme
+ * des ASCII-Codes der 4 Zeichen den Zugang erlauben.
+ * 
+ * Die Methode generateLoginKeys(int anzahl) soll im Gegenzug eine definierte
+ * Anzahl von Login Keys erzeugen, welche dann an eine Gruppe gegeben werden
+ * kann. Es reicht aus, die generierten LoginKeys über die Konsole auszugeben.
+ * 
+ * Der Code hat noch einige Schwächen.
+ * So können z.B. doppelte Codes vorkommen.
+ * Desweiteren kann es passieren, dass nicht genuegend Codes zur Verfuegung stehen.
+ * Wäre der erste zufällige Code = "0000" gäbe es nur eine Möglichkeit. 
+ * @author hr
+ *
+ */
 public class Login {
 
 	public static void main(String[] args) {
 
 		// zeigeAlleAssciiCodes();
 
-		// Teste login mit Quersumme 15
-		// System.out.println(login("x002"));
-		// System.out.println(login("y001"));
+		// Teste login mit Quersumme
+		// System.out.println(login("3UFh"));
+		// System.out.println(login("XLEM"));
 		// System.out.println(login("z000"));
-		// System.out.println(login("6801"));
-		// System.out.println(login("9213"));
 
-		generateLoginKeys(20);
+		generateLoginKeys(10);
 
 	}
 
-	
 	public static boolean login(String key) {
 
 		boolean loginOk = false;
@@ -34,7 +54,7 @@ public class Login {
 		// Maximale Pruefsumme = 122+122+122+122 = 488 -> zzzz
 		// System.out.println(summeASCIIZahlen);
 
-		if (getPruefsumme(key) == 266) {
+		if (getPruefsumme(key) == 310) {
 			loginOk = true;
 		}
 
@@ -42,17 +62,20 @@ public class Login {
 	}
 
 	public static void generateLoginKeys(int anzahl) {
-
-		// generiere zufaelligen Pruefsumme zw. 192-488
-		int pruefsumme = (int) (Math.random() * (488 - 192) + 192);
-		System.out.println("Prüfumme:"+pruefsumme);
+		int pruefsumme = 0;
+		int wertZufallsCode = 0;
+		int anzahlVersuche = 0;
 
 		// Alle Ziffern 62
 		int ziffern[] = { 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77,
 				78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107,
 				108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122 };
 
-		// Liste fuer zu erstellende LoginKeys
+		/*
+		 * Liste fuer zu erstellende LoginKeys Diese könnten auch als Rueckgabewert
+		 * eingesetzt werden. Evtl. ein Set verwenden, um doppelte Eintraege zu
+		 * vermeiden.
+		 */
 		ArrayList<char[]> keys = new ArrayList<char[]>();
 
 		// erstelle 4 zufällige Positionen aus der Ziffernliste
@@ -63,17 +86,38 @@ public class Login {
 		do {
 
 			for (int i = 0; i < 4; i++) {
-				z = (int) (Math.random() * ziffern.length - 1);
+				// Bilde zufaelligen Code
+				z = (int) (Math.random() * ziffern.length);
 				int ascii = ziffern[z];
 				chars[i] = (char) ascii;
 			}
 
-			keys.add(chars);
-			System.out.println(chars);
-			
-		} while (keys.size() < anzahl);
+			// Der erste generierte Code bestimmt die Quersumme
+			if (pruefsumme == 0) {
+				pruefsumme = getPruefsumme(chars);
+				System.out.println("Pruefsumme:" + pruefsumme);
 
-		
+				// Prüfe ob es genug mögliche Kombinationen
+				// gibt, um die notwendige Anzahl von Keys
+				// zu erzeugen
+				// ????
+			}
+
+			// Wenn die ermittelte Pruefsumme des
+			// generierten Codes stimmt uebernehme ihn
+			// in die Liste
+
+			if (getPruefsumme(chars) == pruefsumme) {
+				keys.add(chars);
+				System.out.print(chars);
+				System.out.println(" AnzVersuche:" + anzahlVersuche);
+				anzahlVersuche = 0;
+			} else {
+				// genrieren neuen Code
+				anzahlVersuche++;
+			}
+
+		} while (keys.size() < anzahl);
 
 	}
 
@@ -92,9 +136,24 @@ public class Login {
 		for (int i = 0; i < chars.length; i++) {
 			asciiValues[i] = chars[i];
 
+			// Quersumme bilden
+			// Anstatt der Quersumme könnte hier auch ein
+			// komplexerer Algorithmus verwendet werden
 			summeASCIIZahlen = summeASCIIZahlen + asciiValues[i];
 		}
 		return summeASCIIZahlen;
+	}
+
+	private static int getPruefsumme(char[] chars) {
+		String strChars = "";
+
+		for (int i = 0; i < chars.length; i++) {
+			strChars = strChars + chars[i];
+		}
+
+		int summeASCIIZahlen = getPruefsumme(strChars);
+		return summeASCIIZahlen;
+
 	}
 
 	public static void zeigeAlleAssciiCodes() {
