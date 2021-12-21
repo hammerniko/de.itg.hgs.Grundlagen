@@ -7,6 +7,8 @@ import java.util.Scanner;
 public class Alter {
 
 	public static void main(String[] args) {
+		
+		//test
 		//********* EINGABE
 		Scanner s = new Scanner(System.in);
 		
