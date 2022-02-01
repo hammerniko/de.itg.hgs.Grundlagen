@@ -5,25 +5,35 @@ import java.util.Scanner;
 public class B1_2a_GeradeZahl {
     
     public static void main(String[] args){
-        //EINGABE
-        Scanner s = new Scanner(System.in);
-        System.out.print("Zu pruefende Zahl: ");
-        int zahl = s.nextInt();
-        String meldung="";
-        
-        //VERARBEITUNG
-        if(zahl%2==0){
-            meldung="Die Zahl ist gerade";
-        }
-        else{
-            meldung="Die Zahl ist ungerade";
-        }
-        
-        //AUSGABE
-        System.out.println(meldung);
-        
-        
-        
+    	
+    	boolean istEsSonnig = false;
+    	int menu = 2;
+    	
+    	if (menu == 1) {
+			System.out.println("Menu 1");
+		}
+    	   	
+    	else if(menu == 2) {
+    		System.out.println("Menu 2");
+    	}
+    	else {
+    		System.out.println("ungültig");
+    	}
+    	
+    	
+    	switch (menu) {
+		case 1: System.out.println("Menu 1"); break;
+		case 2: System.out.println("Menu 2");break;
+		default:
+			System.out.println("ungültig");
+			break;
+		}
+    	
+    	
+    	
+    	
+    	
+    	
         
     }
 

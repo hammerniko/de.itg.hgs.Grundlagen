@@ -5,17 +5,8 @@ import java.util.Scanner;
 public class TageDesMonats {
 
     public static void main(String[] args) {
-        // Eingabe
-        Scanner s = new Scanner(System.in);
-        int monat, jahr, tage = 0;
-
-        System.out.print("Jahr:");
-        jahr = s.nextInt();
-
-        System.out.print("Monat:");
-        monat = s.nextInt();
-
-        tage = gibAnzahlTageDesMonats(monat, jahr);
+        
+        int tage = gibAnzahlTageDesMonats(2, 2004);
         
        System.out.println("Der Monat hat "+tage+" tage.");
     }//Ende main()

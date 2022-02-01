@@ -13,11 +13,13 @@ public class AlterMitLocalDate {
 	
 	public static int gibAlter(LocalDate datum) {
 		LocalDate dheute = LocalDate.now();
-
+		
+		
 		Period period = Period.between(datum, dheute);
 		int alter = period.getYears();
 		
 		return alter;
+		
 	}
 
 }
