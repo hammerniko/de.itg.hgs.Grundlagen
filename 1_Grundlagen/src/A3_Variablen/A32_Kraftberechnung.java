@@ -3,6 +3,14 @@ package A3_Variablen;
 //Formel Kraftberechnung
 //F = m * a
 
+
+
+
+
+
+
+
+
 public class A32_Kraftberechnung {
 
 	public static void main(String[] args) {

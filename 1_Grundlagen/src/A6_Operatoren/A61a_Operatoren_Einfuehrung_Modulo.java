@@ -19,6 +19,8 @@ public class A61a_Operatoren_Einfuehrung_Modulo {
   		System.out.println("Zahl:\t\t\t"+z);
   		System.out.println("Teiler:\t\t\t"+teiler);
   		System.out.println("Rest der Division:\t"+erg);
+  		
+  		  		
 
 	}
 

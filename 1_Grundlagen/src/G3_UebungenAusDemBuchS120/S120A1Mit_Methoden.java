@@ -16,8 +16,7 @@ public class S120A1Mit_Methoden {
 		
 		//VERARBEITUNG
 		min = gibMin(zahlen);
-		
-		
+				
 		//AUSGABE
 		System.out.println(min);
 	}

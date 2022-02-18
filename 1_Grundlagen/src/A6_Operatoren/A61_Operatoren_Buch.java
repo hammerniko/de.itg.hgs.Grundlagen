@@ -1,7 +1,5 @@
 package A6_Operatoren;
-
 public class A61_Operatoren_Buch {
-
 	public static void main(String[] args) {
 	//****************EINGABE********************
 		// Deklaration
@@ -9,8 +7,11 @@ public class A61_Operatoren_Buch {
 		String lsg_a, lsg_b, lsg_c;
 		int z1, z2, a, b, c;
 
+		
+		
+		
 		// Binaere Zahlen als Strings
-		str_z1 = "1111";
+		str_z1 = "0101";
 		str_z2 = "1001";
 
      //**************VERARBEITUNG***********************
@@ -23,7 +24,7 @@ public class A61_Operatoren_Buch {
 		b = z1 | z2; //15
 		c = z1 ^ z2; //6
 
-	// Umwandeln Binaerzahl als String
+	    // Umwandeln Binaerzahl als String
 		lsg_a = Integer.toBinaryString(a);
 		lsg_b = Integer.toBinaryString(b);
 		lsg_c = Integer.toBinaryString(c);

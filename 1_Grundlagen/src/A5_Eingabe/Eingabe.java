@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Eingabe {
 	
-	
 	public static void main(String[] args){
 		//********** EINGABE
 		//Objekt der Klasse Scanner erzeugen

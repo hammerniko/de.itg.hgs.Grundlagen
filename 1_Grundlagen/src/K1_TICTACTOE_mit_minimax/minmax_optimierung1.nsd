@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.29-10" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" author="hr" created="2020-11-13" changedby="hr" changed="2020-11-13" origin="Structorizer 3.29-10" text="&#34;minmax(depth:GZ, turn:GZ)&#34;" comment="" color="ffffff" type="program" style="nice">
+	<children>
+		<alternative text="&#34;hasXWon()&#34;" comment="" color="ffff80" disabled="0">
+			<qTrue>
+				<jump text="&#34;rückgabe +1&#34;" comment="" color="ffffff" disabled="0"></jump>
+			</qTrue>
+			<qFalse color="ffffff">
+			</qFalse>
+		</alternative>
+		<alternative text="&#34;hasOWon()=true&#34;" comment="" color="ffff80" disabled="0">
+			<qTrue>
+				<jump text="&#34;rückgabe -1&#34;" comment="" color="ffffff" disabled="0"></jump>
+			</qTrue>
+			<qFalse color="ffffff">
+			</qFalse>
+		</alternative>
+		<instruction text="&#34;pointAvailable:List &#60;- getAvailableStates()&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<alternative text="&#34;pointAvailable.isEmpty()&#34;" comment="" color="ffffff" disabled="0">
+			<qTrue>
+				<jump text="&#34;rückgabe 0&#34;" comment="" color="ffffff" disabled="0"></jump>
+			</qTrue>
+			<qFalse color="ffffff">
+			</qFalse>
+		</alternative>
+		<instruction text="&#34;scores:ArrayList&#60;Integer&#62; &#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<alternative text="&#34;depth = 0 &amp;&amp; turn = 1&#34;" comment="&#34;&#34;" color="ffff80" disabled="0">
+			<qTrue>
+				<instruction text="&#34;rootsChildrenScores.add(new PointsAndScores(currentScore, point);&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qTrue>
+			<qFalse color="ffffff">
+			</qFalse>
+		</alternative>
+		<while text="&#34;für i&#60;-0 bis i&#60;pointsavailable.size() ++i&#34;" comment="" color="80ff80" disabled="0">
+			<qWhile>
+				<instruction text="&#34;point:Point &#60;- pointsAvailable.get(i)&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+				<alternative text="&#34;turn = 1&#34;" comment="" color="ffff80" disabled="0">
+					<qTrue>
+						<instruction text="&#34;placeAMove(point,1);&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+						<instruction text="&#34;currentScore:GZ &#60;- minmax(depth+1, 2);&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+						<instruction text="&#34;scroes.add(currentScore)&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+					</qTrue>
+					<qFalse>
+						<instruction text="&#34;placeAMove(point,2);&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+						<instruction text="&#34;currentScore:GZ &#60;- minmax(depth+1, 1);&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+						<instruction text="&#34;scroes.add(currentScore)&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+					</qFalse>
+				</alternative>
+				<instruction text="&#34;boad[point.x][point.y] &#60;-0&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qWhile>
+		</while>
+		<alternative text="&#34;turn = 1&#34;" comment="" color="ffff80" disabled="0">
+			<qTrue>
+				<jump text="&#34;returnMax(scores)&#34;" comment="" color="ffffff" disabled="0"></jump>
+			</qTrue>
+			<qFalse>
+				<jump text="&#34;returnMin(scores)&#34;" comment="" color="ffffff" disabled="0"></jump>
+			</qFalse>
+		</alternative>
+	</children>
+</root>
