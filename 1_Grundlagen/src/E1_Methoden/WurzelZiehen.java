@@ -10,9 +10,29 @@ package E1_Methoden;
 public class WurzelZiehen {
 
     public static void main(String[] args) {
-        System.out.println(wurzel(2));
+    	
+    	//Zahl aus der die Wurzel gezogen werden soll
+    	double z = 2;
+    	
+    	//Methode nach Heron
+        double w1 = wurzel(z);
+        
+        //Methode aus Java-Bibliothek
+        double w2 = Math.sqrt(z);
+        
+        System.out.println("w1="+w1);
+        System.out.println("w2="+w2);
+        
     }
    
+    
+    
+    
+    
+    
+    
+    
+    
     public static double wurzel(double zahl) {
        
         double x, a;

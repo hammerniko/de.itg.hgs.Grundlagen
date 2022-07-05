@@ -54,9 +54,9 @@ public class SolveSudoku {
 					}
 					//Sackgasse
 					return false;
-				}
-			}
-		}
+				}//Ende Prüfung freies feld
+			}//Ende for x
+		}//Ende for y
 		//Wenn kein Freies Feld mehr vorhanden
 		return true;
 	}
@@ -71,7 +71,6 @@ public class SolveSudoku {
 	}
 
 	private static boolean pruefeQuadrat(int reihe, int spalte, int zahl) {
-
 		int r = reihe - reihe % 3;
 		int c = spalte - spalte % 3;
 
@@ -84,7 +83,6 @@ public class SolveSudoku {
 
 		}
 		return true;
-
 	}
 
 	

@@ -2,14 +2,11 @@ package D1_Arrays;
 
 public class Lotto1 {
 
-	
-
 	public static void main(String[] args) {
 		
 		//Eingabe
 		int[] lotto = new int[6];
-		
-		
+				
 		//Verarbeitung
 		lotto = zieheLottozahlen();
 		
@@ -19,6 +16,13 @@ public class Lotto1 {
 	}
 
 
+	
+	
+	
+	
+	
+	
+	
 
 	public static int[] zieheLottozahlen() {
 		

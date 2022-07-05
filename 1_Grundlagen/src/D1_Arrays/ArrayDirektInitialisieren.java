@@ -13,7 +13,7 @@ public class ArrayDirektInitialisieren {
 		String[] vorname = new String[3];
 		vorname[0]="Max";
 		vorname[1]="Moritz";
-		vorname[2]="Fritz";
+		vorname[3]="Fritz";
 		
 		
 		

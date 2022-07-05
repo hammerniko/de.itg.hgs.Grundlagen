@@ -8,7 +8,7 @@ public class Start {
         Notenrechner nr = new Notenrechner();
         
         //Ein Testergebnis des Notenrechnerobjektes speichern
-        String testnote = nr.berechneNote(-50, 50);
+        String testnote = nr.berechneNote(50, 50);
         
         //Ergebnis ausgeben
         System.out.println(testnote);

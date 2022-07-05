@@ -86,6 +86,7 @@ public class Quicksort {
 		if (unten < j) {
 			quicksort(a, unten, j, false);
 		}
+		
 		if (i < oben) {
 			quicksort(a, i, oben, false);
 		}

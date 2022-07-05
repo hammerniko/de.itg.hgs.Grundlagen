@@ -4,11 +4,11 @@ public class RotiereArray {
 
 	public static void main(String[] args) {
 
-		int[][] tabelle = new int [3][3];
-		
-		tabelle = initTabelle();
+		//3x3 Tabelle initialisieren und ausgeben
+		int[][] tabelle = initTabelle();
 		ausgabe(tabelle);
 
+		//Tabelle rotieren und ausgeben
 		tabelle = rotiere(tabelle);
 		ausgabe(tabelle);
 		

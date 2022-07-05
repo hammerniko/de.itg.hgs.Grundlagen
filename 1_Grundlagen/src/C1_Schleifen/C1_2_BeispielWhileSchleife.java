@@ -13,21 +13,23 @@ public class C1_2_BeispielWhileSchleife {
 
     public static void main(String[] args) {
 
-       
+     
 		
-		int i=10000000;
-		
+		int i=0;
 		int anz = 0;
 		
-		while (i>1) {
-			System.out.println("hALLO");
-			i=i/6*3+1;
+		//Wiederhole solange, bis eine 6 geworfen wird
+		while (i!=6) {
+			
+			//Zufällige Zahl zwischen 1 und 6
+			i = (int) (Math.random()*10+1);
+			System.out.println("Gewuerfelt:"+i);
+			
+			//Anzahl würfe um 1 erhöhen
 			anz++;
 		}
-			
 		
-		
-		System.out.println("anzahl"+anz);
+		System.out.println("anzahl Würfe: "+anz);
 
 	}
 

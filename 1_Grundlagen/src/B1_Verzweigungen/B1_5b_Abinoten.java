@@ -15,8 +15,24 @@ public class B1_5b_Abinoten {
 		
 		//VERARBEITUNG
 		//Umrechnung auf 60 Punkte Schluessel
-		punkteNS = 60 * pErr / pMax;
+		punkteNS = gib60Pkte(pErr, pMax);
 		//Ermitteln der Abipunkte
+		abiPunkte = gibAbinote(punkteNS);
+		
+		//AUSGABE
+		System.out.println("Abiturpunkte:"+abiPunkte);
+		
+		
+	}
+
+	private static int gib60Pkte(int pErr, int pMax) {
+		int punkteNS;
+		punkteNS = 60 * pErr / pMax;
+		return punkteNS;
+	}
+
+	private static int gibAbinote(int punkteNS) {
+		int abiPunkte;
 		if(punkteNS<=60 && punkteNS>=57){abiPunkte=15;}
 		else if(punkteNS>=54){abiPunkte=14;}
 		else if(punkteNS>=51){abiPunkte=13;}
@@ -33,10 +49,6 @@ public class B1_5b_Abinoten {
 		else if(punkteNS>=12){abiPunkte=2;}
 		else if(punkteNS>=7){abiPunkte=1;}
 		else{abiPunkte=0;}
-		
-		//AUSGABE
-		System.out.println("Abiturpunkte:"+abiPunkte);
-		
-		
+		return abiPunkte;
 	}
 }

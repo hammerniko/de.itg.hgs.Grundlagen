@@ -5,16 +5,14 @@ import java.util.Scanner;
 
 public class E1_1_EinfuehrungMethoden {
 
+	public static Scanner s = new Scanner(System.in);
+	
 	public static void main(String[] args) {
 
 		//Eingabe
 		zeichneLinie(25);
-		Scanner s = new Scanner(System.in);
-		System.out.print("Zahl1:");
-		double z1=s.nextDouble();
-				
-		System.out.print("Zahl2:");
-		double z2=s.nextDouble();
+		double z1 = input("Zahl1:");
+		double z2 = input("Zahl2:");
 		
 		//Verarbeitung
 		double summe=gibSumme(z1,z2);
@@ -28,9 +26,20 @@ public class E1_1_EinfuehrungMethoden {
 		System.out.println("Differenz\t= "+diff);
 		System.out.println("Produkt\t\t= "+prod);
 		System.out.println("Quotient\t= "+quot);
+		
+		s.close();
+	}//Ende Main
+
+
+	private static double input(String eingabetext) {
+		System.out.print(eingabetext);
+		double z1=s.nextDouble();
+		return z1;
 	}
 
 	
+	
+
 	/**
 	 * Methode zum zeichnen einer Linie
 	 * @param anzahl
@@ -92,4 +101,4 @@ public class E1_1_EinfuehrungMethoden {
 	}
 	
 
-}
+}//Ende Klasse

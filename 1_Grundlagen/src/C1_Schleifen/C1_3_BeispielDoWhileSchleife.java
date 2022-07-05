@@ -6,6 +6,9 @@ public class C1_3_BeispielDoWhileSchleife {
 
     public static void main(String[] args) {
 
+    	  	
+    	
+    	
         String passwort, benutzer;
         Scanner s = new Scanner(System.in);
         boolean loginKorrekt = false;
@@ -26,13 +29,7 @@ public class C1_3_BeispielDoWhileSchleife {
             System.out.println("Passwort:");
             passwort = s.next();
 
-            if (benutzer.equals("gast") && passwort.equals("hgs")) {
-                loginKorrekt = true;
-            } else {
-                loginKorrekt = false;
-            }
-
-        } while (!loginKorrekt);
+        } while (!benutzer.equals("gast") || !passwort.equals("hgs"));
 
         System.out.println("Anmeldung akzeptiert");
 
