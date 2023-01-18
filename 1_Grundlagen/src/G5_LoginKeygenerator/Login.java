@@ -4,27 +4,24 @@ import java.util.ArrayList;
 import java.util.Set;
 
 /**
- * Fuer eine Website mit Feedbacks werden regelmässig neue Passwoerter fuer
+ * Fuer eine Website mit Feedbacks werden regelmï¿½ssig neue Passwoerter fuer
  * ganze Gruppen benoetigt. Das Passwort soll sicherstellen, dass jedes Feedback
  * nur einmalig ausgefuehrt werden kann.
  * 
  * Der Code soll 4 Stellen haben. Gueltige Ziffern sind A-Z, a-z und 1-9.
  * 
- * Da über die Login-Methode alle Passwoerter ueberpruefbar sein sollen, ist ein
+ * Da ueber die Login-Methode alle Passwoerter ueberpruefbar sein sollen, ist ein
  * Algorithmus dafuer notwendig. Hier sollen Codes mit der gleichen Quersumme
  * des ASCII-Codes der 4 Zeichen den Zugang erlauben.
  * 
  * Die Methode generateLoginKeys(int anzahl) soll im Gegenzug eine definierte
  * Anzahl von Login Keys erzeugen, welche dann an eine Gruppe gegeben werden
- * kann. Es reicht aus, die generierten LoginKeys über die Konsole auszugeben.
+ * kann. Es reicht aus, die generierten LoginKeys ï¿½ber die Konsole auszugeben.
  * 
-<<<<<<< HEAD
- * Der Code hat noch einige Schwächen.
- * So können z.B. doppelte Codes vorkommen.
+ * Der Code hat noch einige Schwï¿½chen.
+ * So kï¿½nnen z.B. doppelte Codes vorkommen.
  * Desweiteren kann es passieren, dass nicht genuegend Codes zur Verfuegung stehen.
- * Wäre der erste zufällige Code = "0000" gäbe es nur eine Möglichkeit. 
-=======
->>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.Grundlagen.git
+ * Wï¿½re der erste zufï¿½llige Code = "0000" gï¿½be es nur eine Mï¿½glichkeit. 
  * @author hr
  *
  */
@@ -34,18 +31,12 @@ public class Login {
 
 		 //zeigeAlleAssciiCodes();
 
-<<<<<<< HEAD
+
 		// Teste login mit Quersumme
-=======
+
 		// Teste login mit Quersumme 15
->>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.Grundlagen.git
-		// System.out.println(login("3UFh"));
 		// System.out.println(login("XLEM"));
 		// System.out.println(login("z000"));
-<<<<<<< HEAD
-=======
-		
->>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.Grundlagen.git
 
 		generateLoginKeys(10);
 
@@ -83,48 +74,35 @@ public class Login {
 	public static void generateLoginKeys(int anzahl) {
 		int pruefsumme = 0;
 		int wertZufallsCode = 0;
-<<<<<<< HEAD
 		int anzahlVersuche = 0;
-=======
-		int anzahlVersuche=0;
->>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.Grundlagen.git
+		
 
 		// Alle Ziffern 62
 		int ziffern[] = { 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77,
 				78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107,
 				108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122 };
 
-<<<<<<< HEAD
 		/*
-		 * Liste fuer zu erstellende LoginKeys Diese könnten auch als Rueckgabewert
+		 * Liste fuer zu erstellende LoginKeys Diese kï¿½nnten auch als Rueckgabewert
 		 * eingesetzt werden. Evtl. ein Set verwenden, um doppelte Eintraege zu
 		 * vermeiden.
 		 */
-=======
-		/* Liste fuer zu erstellende LoginKeys
-		   Diese könnten auch als Rueckgabewert
-		   eingesetzt werden.
-		*/
->>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.Grundlagen.git
 		ArrayList<char[]> keys = new ArrayList<char[]>();
 
-		// erstelle 4 zufällige Positionen aus der Ziffernliste
+		// erstelle 4 zufï¿½llige Positionen aus der Ziffernliste
 		int z = 0; 					// Position im Ziffernarray
 		int assci = 0;				// ascii Wert an der Position z
-		char[] chars = new char[4]; // CharArray für generierten Key
+		char[] chars = new char[4]; // CharArray fï¿½r generierten Key
 
 		
 		do {
 			
 			for (int i = 0; i < 4; i++) {
-<<<<<<< HEAD
 				// Bilde zufaelligen Code
 				z = (int) (Math.random() * ziffern.length);
-=======
 				
 				//Bilde zufaelligen Code
 				z = (int) (Math.random() * ziffern.length - 1);
->>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.Grundlagen.git
 				int ascii = ziffern[z];
 				chars[i] = (char) ascii;
 			}
@@ -133,17 +111,12 @@ public class Login {
 			if (pruefsumme == 0) {
 				pruefsumme = getPruefsumme(chars);
 				System.out.println("Pruefsumme:" + pruefsumme);
-<<<<<<< HEAD
-=======
 			}
->>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.Grundlagen.git
-
-<<<<<<< HEAD
-				// Prüfe ob es genug mögliche Kombinationen
+				// Prï¿½fe ob es genug mï¿½gliche Kombinationen
 				// gibt, um die notwendige Anzahl von Keys
 				// zu erzeugen
 				// ????
-			}
+			
 
 			// Wenn die ermittelte Pruefsumme des
 			// generierten Codes stimmt uebernehme ihn
@@ -158,7 +131,6 @@ public class Login {
 				// genrieren neuen Code
 				anzahlVersuche++;
 			}
-=======
 			// Wenn die ermittelte Pruefsumme des
 			// generierten Codes stimmt uebernehme ihn
 			// in die Liste
@@ -174,8 +146,6 @@ public class Login {
 			}
 			
 			
->>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.Grundlagen.git
-
 		} while (keys.size() < anzahl);
 
 	}
@@ -196,36 +166,16 @@ public class Login {
 			asciiValues[i] = chars[i];
 
 			// Quersumme bilden
-			// Anstatt der Quersumme könnte hier auch ein
+			// Anstatt der Quersumme kï¿½nnte hier auch ein
 			// komplexerer Algorithmus verwendet werden
 			summeASCIIZahlen = summeASCIIZahlen + asciiValues[i];
 		}
 		return summeASCIIZahlen;
 	}
 
-<<<<<<< HEAD
-=======
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
->>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.Grundlagen.git
+
 	private static int getPruefsumme(char[] chars) {
 		String strChars = "";
 
