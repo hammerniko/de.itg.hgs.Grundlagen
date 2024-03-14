@@ -16,7 +16,7 @@ public class LambdaMitParametern {
 	}
 	
 	interface Mathe{
-		int fkt(int a, int b);
+		double fkt(int a, int b);
 	}
 
 }

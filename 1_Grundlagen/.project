@@ -24,7 +24,18 @@
 		<link>
 			<name>O2_GuiGetraenkeautomat</name>
 			<type>2</type>
-			<location>H:/Eigene Dokumente/Git/de.itg.hgs.Grundlagen/1_Grundlagen/src/O2_GuiGetraenkeautomat</location>
+			<location>/workspaces/de.itg.hgs.Grundlagen/H::/Eigene Dokumente/Git/de.itg.hgs.Grundlagen/1_Grundlagen/src/O2_GuiGetraenkeautomat</location>
 		</link>
 	</linkedResources>
+	<filteredResources>
+		<filter>
+			<id>1710400555726</id>
+			<name></name>
+			<type>30</type>
+			<matcher>
+				<id>org.eclipse.core.resources.regexFilterMatcher</id>
+				<arguments>node_modules|\.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
 </projectDescription>

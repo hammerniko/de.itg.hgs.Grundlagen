@@ -1,6 +1,7 @@
 package h4_lambda;
 
 public class Kreis {
+
 	interface Circle{
 		public double getArea(double radius);
 	}
