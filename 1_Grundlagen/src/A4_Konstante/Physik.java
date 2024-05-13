@@ -10,8 +10,8 @@ package A4_Konstante;
  */
 public interface Physik {
 	
-	double ELEMENTARLADUNG = 1.602e-19; 		// [C]
-	double ERDFALLBESCHLEUNIGUNG = 9.81; 		// [m/s^2]
+	double ELEMENTARLADUNG = -1.602e-19; 		// [C]
+	double NORMALFALLBESCHLEUNIGUNG = 9.81; 		// [m/s^2]
 	double LICHTGESCHWINDIGKEIT = 299792458;	// [m/s]
 	double ELEKTRISCHE_FELDKONSTANTE = 8987551787.3681764; // [m/F]
 	

@@ -21,7 +21,7 @@ public class Brueckenhoehe implements Physik{
 		//VERABEITUNG
 		//hier mit der Konstanten aus dem Interface Physik
 		//s=1/2 a t²
-		brueckenhoehe = 0.5 * ERDFALLBESCHLEUNIGUNG * fallzeit*fallzeit;
+		brueckenhoehe = 0.5 * NORMALFALLBESCHLEUNIGUNG * fallzeit*fallzeit;
 		
 		
 		

@@ -7,7 +7,7 @@ public class HalloWelt {
 		
 		
 		//Ausgabe auf der Konsole
-		    System.out.println("Hallo Welt");
+		 System.out.println("Hallo Welt");
 		
 	}//Ende des Hauptprogramm
 

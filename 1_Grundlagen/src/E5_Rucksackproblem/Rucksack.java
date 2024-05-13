@@ -6,10 +6,10 @@ public class Rucksack {
 	static int rVol = 30;
 	
 	//Volumina der einzelnen Gegenstände
-	static int[] gVol = { 5, 5, 6, 9, 6, 11, 12, 15, 17, 30 };
+	static int[] gVol = {5,5,6,9,6,11,12,15,17,30};
 	
 	//Werte der einzelnen Gegenstnde
-	static int[] gWert = { 7, 7, 6, 5, 10, 5, 14, 17, 20, 21 };
+	static int[] gWert = {7,7,6,5,10,5,14,17,20,21};
 	
 	
 	//Für dynamische Programmierung
@@ -27,30 +27,30 @@ public class Rucksack {
 				m[i][j] = -1;
 			}
 		}
-		
 		return m;
 	}
 
 	//rekursiver Algorithmus
 	static int packen(int restVol, int i) {
-
+		
 		if (i < gVol.length) {
 			
-			
+			System.out.println("Restvol:"+restVol+"\ti"+i);
 			if(matrix[restVol][i]!=-1) {
 				return matrix[restVol][i];
 			}
 		
 			// Nicht einpacken -> gehe zum nächsten Gegenstand
 			int nicht = packen(restVol, i + 1);
-
+				
 			//Einpacken
 			int drin = 0;
 			
 			//Wenn der Gegenstand noch reinpasst
 			if (restVol - gVol[i] >= 0) {
-				drin = gWert[i]+packen(restVol-gVol[i], i+1);
+					drin = gWert[i]+packen(restVol-gVol[i], i+1);
 			}
+			
 			
 			if(nicht>drin) {
 				matrix[restVol][i]= nicht;
@@ -61,6 +61,8 @@ public class Rucksack {
 			return matrix[restVol][i];
 		}
 
+		
+		
 		return 0;
 	}
 	
@@ -74,19 +76,18 @@ public class Rucksack {
 	}
 	
 	static void findG(int maxWert) {
-		int aktWert = 0;
+		int aktVol = 0;
 		for (int i = 0; i < matrix.length; i++) {
 			if(matrix[i][0]==maxWert) {
-				aktWert = i;
+				aktVol = i;
 			}
 		}
 		
 		for (int i = 0; i < gVol.length; i++) {
-			if(aktWert-gVol[i]>= 0 && matrix[aktWert-gVol[i]][i+1]==matrix[aktWert][i]-gWert[i]) {
+			if(aktVol-gVol[i]>= 0 && matrix[aktVol-gVol[i]][i+1]==matrix[aktVol][i]-gWert[i]) {
 				System.out.println(i+" ");
-				aktWert = aktWert-gVol[i];
+				aktVol = aktVol-gVol[i];
 			}
-		
 		}
 		
 	}

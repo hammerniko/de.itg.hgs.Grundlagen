@@ -13,7 +13,7 @@ public class KonstanteAnlegen implements Physik{
         double masse=10;
         
         //Verarbeitung
-        kraft = masse * ERDFALLBESCHLEUNIGUNG;
+        kraft = masse * NORMALFALLBESCHLEUNIGUNG;
      
         //Ausgabe
         System.out.println(kraft);

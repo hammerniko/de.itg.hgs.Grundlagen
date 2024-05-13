@@ -5,6 +5,20 @@ package A6_Operatoren;
  * @author hr
  *
  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 public class A64b_Winkelfunktionen_Dreieck {
 	
 	public static void main(String[] args) {
@@ -18,9 +32,15 @@ public class A64b_Winkelfunktionen_Dreieck {
 		
 		//Verarbeiten
 		c=Math.sqrt(a*a + b*b);
+		
+		
 			
-		alphaBogenmass = Math.atan(b/a);
+		//alphaBogenmass = Math.atan(b/a);
+		//alpha = alphaBogenmass *360 / (2*Math.PI);
+		
+		alphaBogenmass = Math.asin(b/c); //cosA = a/c
 		alpha = alphaBogenmass *360 / (2*Math.PI);
+		
 		beta = 90-alpha;
 		
 		//Ausgabe
