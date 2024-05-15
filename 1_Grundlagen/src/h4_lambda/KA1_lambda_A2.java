@@ -9,6 +9,10 @@ public class KA1_lambda_A2 {
         public double getArea(double length, double width);
     }
 
+    /**
+     * 
+     * @param args
+     */
     public static void main(String[] args) {
        
         System.out.println("Rechteck berechnen");
@@ -22,5 +26,24 @@ public class KA1_lambda_A2 {
         double area =rectangle.getArea(l,w);
         System.out.println("Area\t=\t"+area+" cm²");
       
+    }
+    
+    /**
+     * Addiert 2 Zahlen im Kommaformat und gibt das Ergebnis als
+     * Kommazahl zurück
+     * 
+     * @author hr
+     * 
+     * @param zahl1
+     * Erste Zahl 
+     * 
+     * @param zahl2
+     * Zweite Zahl
+     * 
+     * @return
+     * Ergebnis der Addition
+     */
+    public double addiere(double zahl1, double zahl2) {
+    	return zahl1+zahl2;
     }
 }

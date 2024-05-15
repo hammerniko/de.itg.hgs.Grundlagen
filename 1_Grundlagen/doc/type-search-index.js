@@ -1,1 +1,1 @@
-typeSearchIndex = [{"p":"D1_Arrays","l":"MinSort"}]
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"h4_lambda","l":"KA1_lambda_A2"}];updateSearchResults();
